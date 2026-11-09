@@ -1,0 +1,166 @@
+{
+  "what_this_is": "Layer 2 of the grounding measurement. Hand-graded verdicts on whether the chunk a spoken line cited actually supports that line. docs/06 §7.4 requires human labels before an LLM judge ships, and none exist; these are them. Graded by reading each cited chunk's full text against the line, not by a model. Re-graded for Milestone 4.7 on the post-4.4 core; the pre-4.4 grading it replaces is summarised in previous_grading below and described in eval/README.md.",
+  "measured_commit": "aeb1425",
+  "sampled_from": "every cited line of Harness A (30 scenarios) and Harness B (8 scenarios × 2 branches), core agent against Bedrock, dumps .runs/m47_a.json + .runs/m47_b.json; 69 cited line instances, 44 distinct cited claims. The 20 graded here are the 20 claims of the pre-4.4 grading carried forward where the post-4.4 core still produces them (16 of 20, each with the same citation set), plus 4 replacements for the 4 that it no longer produces, taken in order from eval.grounding.sample_claims over the post-4.4 pool (seed 45) skipping claims already carried.",
+  "previous_grading": {
+    "commit": "394e123",
+    "core": "pre-4.4",
+    "result": "13 supported / 6 partial / 1 unsupported out of 20 = 65.0%",
+    "claims_no_longer_produced_post_4.4": [
+      "Can I ask: how old the camera is and whether it has ever held the date before. (was partial)",
+      "The camera's power management may be affected by its age or a recent change in the vehicle's power supply. (was unsupported — the only unsupported claim in the pre-4.4 sample)",
+      "The card may be incompatible or too slow for the dash cam. (was supported)",
+      "The memory card's specifications may not meet the required performance standards for the dash cam. (was supported)"
+    ]
+  },
+  "rubric": [
+    "supported — the cited chunk states the fact the line asserts, or documents the condition/procedure the line asks about.",
+    "partial — the chunk is on the same topic but does not contain the specific thing asserted or asked. Scores 0: the measurement is whether the chunk supports the claim AS STATED.",
+    "unsupported — the chunk does not bear on the line at all. Scores 0.",
+    "Where a line cites several chunks, one supporting chunk is enough; the note says which one carried it.",
+    "A question that offers an option the corpus does not name (a battery pack, an OS version) is still supported if the chunk carries the distinction the question turns on. The option is offered, not asserted."
+  ],
+  "structural_failures_graded": "none to grade — both harnesses had 0 uncited device-specific spans at aeb1425 (A 3/3, B 1/1)",
+  "verdicts": [
+    {
+      "claim": "Can I ask: how the camera is powered with the ignition off -- hardwire kit, battery pack, or the cigarette-lighter socket.",
+      "chunk_ids": ["H:troubleshoot-index#TROUBLESHOOT#c1"],
+      "verdict": "supported",
+      "note": "The Troubleshoot index chunk carries both named power paths: 'Hardwire kit Not Detected', and 'My Camera does NOT Turn OFF (Always stays ON)' — 'your vehicle's 12V socket keeps supplying power after the engine turns off'. Ignition-off power is documented there. 'Battery pack' is offered as an option in the question rather than asserted as a Rove accessory. Spoken at A:EVAL-15 and A:EVAL-27.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Can I ask: whether any other device works from that same socket in the car.",
+      "chunk_ids": ["H:camera-does-not-turn-on#MY_CAMERA_DOES_NOT_TURN_ON#c1"],
+      "verdict": "supported",
+      "note": "The chunk's 'Before you begin' tells the user to run the camera from a 110V wall outlet 'to eliminate vehicle power as a variable', and names a faulty cable or charger as the most common cause. The question probes exactly that variable. Spoken at A:EVAL-03 and A:EVAL-13.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Can I ask: whether the caller can see their own dashboard or car interior in the footage.",
+      "chunk_ids": ["H:blurry-video#WHY_IS_MY_VIDEO_BLURRY_OR_OUT_OF_FOCUS#c1"],
+      "verdict": "partial",
+      "note": "The blurry-video chunk covers protective film, dirty lens, windshield fog, 'interior haze', low light and resolution. Seeing your own dashboard in frame is a mounting-angle and reflection symptom; the chunk names interior haze as a blur cause but never the interior being visible in the recording. Same category, different symptom. Unchanged from the pre-4.4 grading, re-read at aeb1425. Spoken at A:EVAL-18.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Can I ask: whether the camera comes back on by itself once the car has cooled down.",
+      "chunk_ids": ["H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1"],
+      "verdict": "supported",
+      "note": "The chunk states the operating range (-4°F to 140°F) and that beyond it 'the device may slow down, shut off, or stop recording' to protect itself. The question asks about recovery from exactly that thermal shutdown and asserts nothing the chunk contradicts — though note the chunk does not itself state that the camera resumes on cooling. Spoken at A:EVAL-24.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Can I ask: whether the drop happens even while actively using the app, or only when the phone has been idle on the connection.",
+      "chunk_ids": ["H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"],
+      "verdict": "partial",
+      "note": "Replacement claim, new to the post-4.4 sample (8 instances across A:EVAL-16, A:EVAL-23 and four B branches). The chunk documents the Android 'No Internet' pop-up that must be accepted to stay on the camera's network, and signal interference / 10 m range — both ways a connection can fail. Neither is framed as idle-versus-active, which is the specific distinction the question turns on. Right topic, not the thing asked.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Can I ask: whether the phone is an iPhone or Android, and roughly which OS version.",
+      "chunk_ids": ["H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"],
+      "verdict": "supported",
+      "note": "Replacement claim, new to the post-4.4 sample. The chunk makes the iPhone/Android split load-bearing: 'For an Android user, there is one extra step you will have to take for the first time' — accepting the 'No Internet' notification to stay connected. The OS-version half is not documented anywhere in the chunk, but it is a probe offered alongside the distinction the chunk does carry. Spoken at B:EVAL-23 turns 3-4.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you check the lens for a clear plastic film still stuck on it, and whether lens and glass are clean.",
+      "chunk_ids": ["H:blurry-video#WHY_IS_MY_VIDEO_BLURRY_OR_OUT_OF_FOCUS#c1", "H:licence-plate#WHY_CAN_T_I_READ_THE_LICENSE_PLATE_NUMBE#c1"],
+      "verdict": "supported",
+      "note": "Carried by the blurry-video chunk, whose Step 1 is 'Remove the protective lens film' and Steps 2-3 are cleaning the lens and the windshield. The licence-plate chunk independently says to clean the windshield and lens. Spoken at A:EVAL-08.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you check the lens for a clear plastic film still stuck on it, and whether lens and glass are clean.",
+      "chunk_ids": ["H:licence-plate#WHY_CAN_T_I_READ_THE_LICENSE_PLATE_NUMBE#c1", "H:blurry-video#WHY_IS_MY_VIDEO_BLURRY_OR_OUT_OF_FOCUS#c1", "H:blurry-video#WHAT_USUALLY_FIXES_BLURRY_OR_FOGGY_VIDEO#c2"],
+      "verdict": "supported",
+      "note": "Same line, same carrying chunk (blurry-video c1, Steps 1-3). Flagged for citation precision rather than grounding: the third citation, WHAT_USUALLY_FIXES_BLURRY_OR_FOGGY_VIDEO#c2, is the article's support-hours-and-phone-number footer and supports nothing at all. Still present post-4.4, at A:EVAL-05.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you confirm the camera is powered on and awake right now, and say what its screen is showing.",
+      "chunk_ids": ["H:wifi-name-not-showing#ROVE_WIFI_NAME_NOT_SHOWING_ON_MY_PHONE#c1"],
+      "verdict": "supported",
+      "note": "The chunk's procedure opens with 'ensure that the dash cam is Turned ON and a memory card is inserted' before any Wi-Fi step, and ends with turning Wi-Fi on from the dash cam itself. The question checks that documented precondition. Spoken at A:EVAL-01.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you open one failing file in a different media player.",
+      "chunk_ids": ["H:licence-plate#WHY_CAN_T_I_READ_THE_LICENSE_PLATE_NUMBE#c1", "H:no-audio-sound#WHY_MY_VIDEO_RECORDING_HAS_NO_AUDIO_SOUN#c1"],
+      "verdict": "supported",
+      "note": "The licence-plate chunk's Step 3 is 'Play the original file using VLC Media Player' and warns Windows Media Player handles high-bitrate 4K badly; the no-audio chunk's step says to try a different media player. Both state the move. Spoken at A:EVAL-25.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you power off, remove and firmly reseat the card, and power back on.",
+      "chunk_ids": ["H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"],
+      "verdict": "partial",
+      "note": "The Memory-Card-Too-Slow chunk's own steps are format, replace, upgrade — reseating the card is not among them, and the only handling instruction is 'Always safely eject the memory card when using a computer'. The remove-and-reinsert procedure does exist in the corpus (camera-does-not-turn-on, Option 2), but that chunk is still not cited here. Unchanged from the pre-4.4 grading, re-read at aeb1425. Spoken on both B:EVAL-27 branches, turn 2.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you read me what is printed on the card itself — the brand, the size, and any markings — and tell me roughly how long it has been in use?",
+      "chunk_ids": ["H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"],
+      "verdict": "supported",
+      "note": "The chunk makes both halves of the question load-bearing: 'Memory cards have a limited lifespan… repeated recording and overwriting may cause the card to slow down' (time in use) and 'Replace the memory card with a Class 10 U3 high-speed microSD card' plus 'Low-quality or counterfeit cards may cause recording issues' (brand and markings). The most-repeated claim in the post-4.4 run: 6 instances across A:EVAL-02, A:EVAL-12, A:EVAL-17 and three B turns.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you read me what is printed on the card itself — the brand, the size, and any markings — and tell me roughly how long it has been in use?",
+      "chunk_ids": ["H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1", "O1#ABOUT_MICROSD_CARDS#c2", "H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1"],
+      "verdict": "supported",
+      "note": "Same line, and here three chunks carry it: O1 states the 'basic requirement of the micro SD cards for ROVE dashcam's is Class 10 or U3', the overheating chunk ties a 'low-quality or non-U3-rated memory card' to heat, and the too-slow chunk ties card age to write speed. Same three chunks as the pre-4.4 grading, emitted in a different order. Spoken at B:EVAL-17/ordinary_consumer_card turn 1.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you read out (or type) the network name shown on the camera's screen.",
+      "chunk_ids": ["H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"],
+      "verdict": "supported",
+      "note": "Replacement claim, new to the post-4.4 sample. The chunk's opening line states both the network-name shape and where it is shown: 'Join the \"ROVE_R***_*******\" network using the default password \"12345678\" displayed on your dash camera's screen'. Reading that name back is a documented check. Spoken at A:EVAL-09.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you read out everything on the camera's screen, word for word.",
+      "chunk_ids": ["H:missing-videos#START_RECORDING_AND_CONFIRM_THE_RED_DOT#c2", "H:missing-videos#I_HAVE_MISSING_VIDEOS_ON_MY_ROVE_DASH_CA#c1"],
+      "verdict": "supported",
+      "note": "Replacement claim, new to the post-4.4 sample. The START_RECORDING chunk makes the screen the diagnostic surface for this symptom: 'You should see the flashing red dot and the recording timer counting up on the top-right area of the screen… Flashing red dot + timer counting up = the camera is actively recording.' Reading the screen back is the documented check. Spoken at A:EVAL-04.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you read the password aloud character by character, stating upper or lower case for each.",
+      "chunk_ids": ["H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2", "H:know-your-dashcam-how-to#HOW_CAN_I_REMOVE_THE_ICONS#c2"],
+      "verdict": "supported",
+      "note": "The WiFi-not-connecting chunk states the network name shape and that the default password '12345678' is 'displayed on your dash camera's screen', which is what makes reading it back a documented check; the second chunk carries 'How to change the WiFi name and password of my dash cam?', so a non-default password is documented too. Case-marking is a speech protocol, not a product claim. Spoken at A:EVAL-06.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Could you switch the camera into photo mode and take one picture, and tell me whether you hear a shutter sound?",
+      "chunk_ids": ["H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"],
+      "verdict": "partial",
+      "note": "The chunk is about the card no longer sustaining write speed — the right hypothesis for this scenario — but it contains no photo mode, no shutter sound and no single-write test. The step is a sensible write probe that the cited chunk does not document. Unchanged from the pre-4.4 grading, re-read at aeb1425, and now the second-most-repeated claim in the run: 5 instances across B:EVAL-17 and both B:EVAL-27 branches.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "Hand to a human engineer with the handoff payload.",
+      "chunk_ids": ["H:camera-does-not-turn-on#MY_CAMERA_DOES_NOT_TURN_ON#c1"],
+      "verdict": "partial",
+      "note": "The chunk does end its ladder with 'Contact ROVE support', so escalation is documented; nothing in it bears on a 'handoff payload'. Worth separating from grounding: this line is the ontology's internal step description reaching the spoken turn verbatim, which is a composition defect rather than a citation one. Unchanged from the pre-4.4 grading and still present at A:EVAL-30.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "The issue is likely with the SD card, not the camera slot.",
+      "chunk_ids": ["H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"],
+      "verdict": "supported",
+      "note": "The chunk says the warning 'means your dash cam is functioning properly and is simply alerting you that the memory card may need maintenance or replacement' — card at fault, camera not, which is the claim. Spoken on both B:EVAL-27 branches, turn 1.",
+      "origin": "sampled-cited"
+    },
+    {
+      "claim": "The issue may be specific to the phone's operating system.",
+      "chunk_ids": ["H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"],
+      "verdict": "partial",
+      "note": "Still partial after 4.4, but for half the reason it was before. The chunk establishes one OS-specific behaviour — 'For an Android user, there is one extra step' to stay on a no-internet network — so OS-specific Wi-Fi handling is documented; it does not support a general claim that this session's fault is OS-specific. The pre-4.4 grading also objected that the line was spoken on EVAL-23's heat-restart branch, which is not about Wi-Fi; 4.4 fixed that, and post-4.4 the line is spoken at B:EVAL-23/wifi_drops_only turn 3, where the topic at least matches.",
+      "origin": "sampled-cited"
+    }
+  ]
+}

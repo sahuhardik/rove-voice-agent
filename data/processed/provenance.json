@@ -1,0 +1,64 @@
+{
+  "generated_by": "Muse (coordinator) \u2014 factual record verified on the EC2; attestation pending Hardik's confirmation",
+  "generated_date": "2026-11-08",
+  "purpose": "Close the RAG provenance hole in docs/06 section 4.7 for production: the five operator-uploaded manuals (M1-M5) have no public source URL. Until the attestation below is signed, these files stay prototype-only speakable (docs/06 section 4.7).",
+  "attestation": {
+    "status": "PENDING",
+    "statement": "I, Hardik Sahu, attest that the five files listed below are the official ROVE user manuals as published by ROVE, obtained by me from [TO CONFIRM: source \u2014 e.g. rovedashcam.com downloads / ROVE support / product packaging] on 2026-11-07, and uploaded by me to this project via scp on 2026-11-07 08:09-08:10 UTC. The SHA-256 hashes below match the files I uploaded; the files have not been modified since.",
+    "attested_by": null,
+    "attested_date": null
+  },
+  "manuals": [
+    {
+      "doc_code": "M1",
+      "file": "data/raw/manuals/dc3831.pdf",
+      "model": "R2-4K (original, mini-USB)",
+      "size_bytes": 17999032,
+      "sha256": "8e349795373070212b59a0104dab67536056f1a606c2c4847e7ef4a4963baa2a",
+      "uploaded_utc": "2026-11-07 08:09:59",
+      "source_url": null,
+      "provenance": "operator_attested"
+    },
+    {
+      "doc_code": "M2",
+      "file": "data/raw/manuals/ROVE R2-4K User Manual.pdf",
+      "model": "R2-4K",
+      "size_bytes": 8474860,
+      "sha256": "a27226c6a9e8699afa2c5cd58f247a3d38499b76318e11f3d9195cb7b67765b5",
+      "uploaded_utc": "2026-11-07 08:10:24",
+      "source_url": null,
+      "provenance": "operator_attested"
+    },
+    {
+      "doc_code": "M3",
+      "file": "data/raw/manuals/User Manual For New R2-4K.pdf",
+      "model": "R2-4K (USB-C revision)",
+      "size_bytes": 8714134,
+      "sha256": "40deab8b387341f91679395691256607a3a5aac946af42d95895dcdf2969b1ae",
+      "uploaded_utc": "2026-11-07 08:10:14",
+      "source_url": null,
+      "provenance": "operator_attested"
+    },
+    {
+      "doc_code": "M4",
+      "file": "data/raw/manuals/ROVE R2-4K Dual Dash Cam Instruction Manual.pdf",
+      "model": "R2-4K DUAL",
+      "size_bytes": 1882882,
+      "sha256": "5314ab01140592f1754bdcd2460e5c256e2165a7d2db49f5e53b957eda4085ba",
+      "uploaded_utc": "2026-11-07 08:10:27",
+      "source_url": null,
+      "provenance": "operator_attested"
+    },
+    {
+      "doc_code": "M5",
+      "file": "data/raw/manuals/B0F9SX3JB9.pdf",
+      "model": "R2-4K (revision TBD from text)",
+      "size_bytes": 1497774,
+      "sha256": "1cb88de6282042c561a400c637f1a604bae9c6744cc8a0d8abe52d2476fe62fa",
+      "uploaded_utc": "2026-11-07 08:10:02",
+      "source_url": null,
+      "provenance": "operator_attested"
+    }
+  ],
+  "not_covered": "M6 (r3-manual-website-files.pdf) and M7 (ROVE_R2-4K_DUAL_PRO_User_Manual_Updated.pdf) have public source URLs in data/processed/sources.json and need no attestation. The ManualsLib R2-4K PRO mirror in data/raw/manuals-tier3/ is Tier 3 and is NOT covered by this attestation."
+}

@@ -1,0 +1,89 @@
+{
+  "source": "Amazon product reviews (R2-4K, R2-4K DUAL, R2-4K DUAL PRO, R3)",
+  "tier": "Tier 2 - discovery only (symptom language / frequency / eval scenarios). NEVER a fix.",
+  "status": "NOT COLLECTED",
+  "retrieved_utc": "2026-11-08",
+  "review_count": 0,
+  "reviews": [],
+  "reason": "No Amazon review source was reachable from this host without an API key. amazon.com was deliberately NOT requested (constraint: aggregators or an API only).",
+  "constraint_honoured": "No request was made to any amazon.com host. The probes below are aggregators and third-party APIs only.",
+  "network_control": "General outbound HTTPS from this host works - https://openlibrary.org/ returned 200 in the same probe run, and both app-store collections in this directory succeeded. The blocker is source access, not egress.",
+  "probes": [
+    {
+      "target": "Desertcart product page (Amazon mirror named in docs/04-data-sources.md 2.1)",
+      "url": "https://www.desertcart.com/products/B0F9SX3JB9",
+      "result": "HTTP 403 - Cloudflare interstitial ('Just a moment...')",
+      "verdict": "unusable"
+    },
+    {
+      "target": "Desertcart search (listing)",
+      "url": "https://www.desertcart.com/search?q=rove+dash+cam",
+      "result": "HTTP 200 but a client-rendered Next.js shell - zero /products/<ASIN> links and one incidental 'rove' string in the HTML; no review text server-rendered",
+      "verdict": "no review data"
+    },
+    {
+      "target": "Desertcart reviews sub-path and candidate JSON APIs",
+      "url": "https://www.desertcart.com/products/B0F9SX3JB9/reviews, https://www.desertcart.com/api/products/B0F9SX3JB9, https://api.desertcart.com/v1/products/B0F9SX3JB9",
+      "result": "HTTP 403, HTTP 404, HTTP 404",
+      "verdict": "no public review endpoint"
+    },
+    {
+      "target": "Desertcart regional mirror",
+      "url": "https://www.desertcart.in/products/B0F9SX3JB9",
+      "result": "HTTP 404",
+      "verdict": "unusable"
+    },
+    {
+      "target": "Rainforest API (structured Amazon reviews)",
+      "url": "https://api.rainforestapi.com/request?type=reviews&amazon_domain=amazon.com&asin=B0F9SX3JB9",
+      "result": "HTTP 503 - {\"success\":false,\"message\":\"reviews request type is temporarily unavailable\"}",
+      "verdict": "review endpoint disabled vendor-side, and would require a paid api_key regardless"
+    },
+    {
+      "target": "Amazon Product Advertising API v5",
+      "url": "https://webservices.amazon.com/paapi5/getitems",
+      "result": "HTTP 405 to an unsigned GET",
+      "verdict": "requires signed Associate credentials; none present in env, and Bash(aws:*) is denied by .claude/settings.json. PA-API also returns at most review summaries, not review text."
+    },
+    {
+      "target": "ReviewMeta",
+      "url": "https://reviewmeta.com/amazon/B0F9SX3JB9",
+      "result": "HTTP 403 - Kubernetes default-backend JSON ('system:anonymous cannot get path'), i.e. the service is no longer served",
+      "verdict": "defunct"
+    },
+    {
+      "target": "Keepa API",
+      "url": "https://api.keepa.com/product?domain=1&asin=B0F9SX3JB9",
+      "result": "HTTP 400 without a key",
+      "verdict": "requires a paid key; Keepa also carries price/rank history, not review text"
+    },
+    {
+      "target": "Apify (Amazon review actors)",
+      "url": "https://api.apify.com/v2/acts",
+      "result": "HTTP 401 - token-not-provided",
+      "verdict": "requires an account token"
+    },
+    {
+      "target": "Ubuy mirror",
+      "url": "https://www.ubuy.co.in/product/B0F9SX3JB9",
+      "result": "HTTP 403",
+      "verdict": "unusable"
+    },
+    {
+      "target": "Trustpilot (not Amazon, probed as a fallback discovery source)",
+      "url": "https://www.trustpilot.com/review/rovedashcam.com",
+      "result": "HTTP 403",
+      "verdict": "unusable"
+    }
+  ],
+  "asins_known_to_repo": {
+    "B0F9SX3JB9": "ROVE R2-4K DUAL PRO - from docs/05-step1b-verification.md manual M5",
+    "B0DB7261DP": "unconfirmed model - from a failed manuals.plus fetch in data/raw/DOWNLOAD_LOG.txt"
+  },
+  "note_on_asins": "ASINs for R2-4K, R2-4K DUAL and R3 were never established, because no reachable catalogue source could be queried to resolve them. Do not guess ASINs.",
+  "what_would_unblock": [
+    "A Rainforest API / Oxylabs / ScraperAPI key in the environment, once Rainforest re-enables its reviews request type.",
+    "Amazon Associate PA-API credentials - but PA-API returns rating summaries, not review text, so it would give frequency only, not symptom language.",
+    "A manual review export performed in a browser and dropped into this directory, matching the schema used by the two app-store files."
+  ]
+}

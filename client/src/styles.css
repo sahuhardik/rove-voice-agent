@@ -1,0 +1,800 @@
+/* One stylesheet. Still no framework: the page is four panels and a status bar,
+   and a dependency with a build step of its own would be a worse trade than the
+   CSS below.
+
+   **Light, cartoon, for kids.** The page this replaces was dark, dense and read
+   beside a terminal. This one is read by someone holding a dashcam and a phone,
+   so: a warm light background, bright flat fills, thick dark outlines, chunky
+   rounded shapes, offset solid shadows, and a rounded typeface.
+
+   Two constraints shaped every rule here, and both are about *not* changing the
+   program while changing how it looks:
+
+   * **Every class name the components use is still here, spelled the same.**
+     Nothing in `src/components/` had to change for the theme, so no transport,
+     room-join, transcript or diagnostic-state logic could change with it. The
+     only markup edits are in `App.jsx`, and they add decorative SVG and
+     wrapper classes — never text.
+
+   * **Nothing is said with colour alone, and nothing readable is dimmed to
+     make it pretty.** The `no secure context` audio pill is the case that
+     matters: a user whose browser refuses the microphone must see it on a
+     bright background as plainly as they did on a dark one, so it keeps a
+     tinted chip, a dark red value, and the banner underneath it.
+
+   Headings are uppercased by `text-transform` only. The accessible text in the
+   JSX stays `Transcript`, `Current step`, `Diagnostic state`, `Session trace`,
+   so a screen reader reads words and not initialisms. */
+
+:root {
+  /* -- surfaces ---------------------------------------------------------- */
+  --bg: #fdf6e9;
+  --bg-tint: #d9eeff;
+  --panel: #ffffff;
+  /* Inset wells: the old stylesheet used a near-black for these. The light
+     equivalent has to stay distinguishable from --panel without going grey
+     enough to drag the muted text on it under 4.5:1. */
+  --panel-soft: #f1f5fd;
+  --panel-edge: #2b3a55;
+
+  /* -- ink --------------------------------------------------------------- */
+  --ink: #1d2740;
+  --ink-muted: #4c5a78;
+
+  /* -- the status palette, as *text* colours ------------------------------ */
+  --accent: #1456c4;
+  --good: #0b7244;
+  --warn: #8a5300;
+  --bad: #be2f26;
+
+  /* -- the status palette, as *fills* ------------------------------------- */
+  --accent-soft: #dceaff;
+  --good-soft: #d8f5e5;
+  --warn-soft: #ffeec9;
+  --bad-soft: #ffe3df;
+
+  /* -- the cartoon fills --------------------------------------------------
+     Bright, flat, and only ever behind --ink. They carry the mood; none of
+     them is ever asked to carry small text in a light colour. */
+  --sun: #ffd25e;
+  --sky: #bfe3ff;
+  --mint: #a8e6c9;
+  --grape: #8b6bd9;
+  --bubble-caller: #e3f1ff;
+  --bubble-agent: #e4f8ee;
+
+  /* -- shape --------------------------------------------------------------
+     A cartoon outline is thick and a cartoon corner is generous. The shadow is
+     a solid offset rather than a blur, which is what makes a flat shape read as
+     a drawn one. */
+  --radius: 14px;
+  --radius-lg: 22px;
+  --edge: 3px;
+  --drop: 0 4px 0 var(--panel-edge);
+  --drop-sm: 0 3px 0 var(--panel-edge);
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Belt and braces: the fixed-position blobs must never create a sideways
+   scrollbar. `clip` (unlike `hidden`) does not turn the element into a scroll
+   container, so sticky/fixed children keep working. */
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  /* Two soft washes rather than a flat field, fixed so the page does not swim
+     while a long transcript scrolls under it. */
+  background-image:
+    radial-gradient(60rem 32rem at 12% -8%, var(--bg-tint) 0%, rgba(217, 238, 255, 0) 70%),
+    radial-gradient(44rem 28rem at 102% 6%, #ffe6f0 0%, rgba(255, 230, 240, 0) 70%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font:
+    16px/1.6 ui-rounded,
+    'SF Pro Rounded',
+    'Varela Round',
+    Quicksand,
+    Nunito,
+    'Trebuchet MS',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  /* Belt and braces against a long room id or ICE candidate pair widening the
+     page on a phone. Nothing here is meant to scroll sideways. */
+  overflow-wrap: break-word;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  font-size: 0.88em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 7px;
+  padding: 0.05em 0.4em;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--ink);
+}
+
+h2 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink);
+  margin: 0 0 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h3 {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+  margin: 1.1rem 0 0.4rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  position: relative;
+}
+
+/* -- masthead ------------------------------------------------------------- */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.25rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--panel);
+  border: var(--edge) solid var(--panel-edge);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--drop);
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+/* The mascot and the title, kept on one line until there is no line left. */
+.masthead-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  min-width: 0;
+  flex: 1 1 18rem;
+}
+
+.mascot {
+  width: 64px;
+  height: 58px;
+  flex: none;
+  color: var(--panel-edge);
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  max-width: 52ch;
+}
+
+/* -- connection bar ------------------------------------------------------- */
+
+/* No `min-width` here. The old 360px floor was wider than a 320px phone
+   viewport minus the page padding, so the whole document scrolled sideways on
+   a small screen. `flex-basis` asks for the same comfortable width and
+   `min-width: 0` lets it give the width back when there is none to have. */
+.connection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1 1 21rem;
+  min-width: 0;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pill {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  background: var(--panel-soft);
+  border: 2px solid var(--panel-edge);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.pill-label {
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.68rem;
+  font-weight: 800;
+  flex: none;
+}
+
+.pill-value {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.pill-good {
+  background: var(--good-soft);
+}
+.pill-good .pill-value {
+  color: var(--good);
+}
+
+.pill-warn {
+  background: var(--warn-soft);
+}
+.pill-warn .pill-value {
+  color: var(--warn);
+}
+
+/* The one that must never be missed: the browser has refused the microphone.
+   Tinted chip, dark red value, and the banner below says it again in words. */
+.pill-bad {
+  background: var(--bad-soft);
+}
+.pill-bad .pill-value {
+  color: var(--bad);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background: var(--panel);
+  color: var(--ink);
+  border: var(--edge) solid var(--panel-edge);
+  border-radius: 999px;
+  box-shadow: var(--drop-sm);
+  padding: 0.5rem 1.1rem;
+  min-height: 44px;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 80ms ease,
+    box-shadow 80ms ease,
+    background-color 120ms ease;
+}
+
+button:hover:not(:disabled) {
+  background: var(--sky);
+}
+
+/* The press: the button drops onto its own shadow. */
+button:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--panel-edge);
+}
+
+button:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+  transform: translateY(3px);
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: var(--sun);
+  color: var(--ink);
+}
+
+button.primary:hover:not(:disabled) {
+  background: #ffdf8c;
+}
+
+button.danger:hover:not(:disabled) {
+  background: var(--bad-soft);
+  color: var(--bad);
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  min-height: 38px;
+  font-size: 0.88rem;
+  border-width: 2px;
+  box-shadow: 0 2px 0 var(--panel-edge);
+}
+
+.chip:hover:not(:disabled) {
+  background: var(--mint);
+}
+
+.chip:active:not(:disabled) {
+  transform: translateY(2px);
+}
+
+.room-line {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  overflow-wrap: anywhere;
+}
+
+/* -- level meter ---------------------------------------------------------- */
+
+.meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.meter-idle {
+  opacity: 0.6;
+}
+
+.meter-track {
+  height: 16px;
+  background: var(--panel-soft);
+  border: 2px solid var(--panel-edge);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 110ms linear;
+}
+
+.meter-speaking {
+  background: var(--good);
+}
+
+.meter-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  justify-content: space-between;
+  font-size: 0.78rem;
+}
+
+/* -- layout --------------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  grid-template-areas:
+    'transcript step'
+    'transcript state'
+    'events state';
+  gap: 1.1rem;
+  align-items: start;
+}
+
+.panel {
+  background: var(--panel);
+  border: var(--edge) solid var(--panel-edge);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--drop);
+  padding: 1.1rem;
+  min-width: 0;
+}
+
+.panel-transcript {
+  grid-area: transcript;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+.panel-step {
+  grid-area: step;
+}
+.panel-state {
+  grid-area: state;
+}
+.panel-events {
+  grid-area: events;
+}
+
+/* The four marks from `components/Doodles.jsx`, one colour each so the panels
+   are told apart at a glance and not only by reading their headings. */
+.panel-icon {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+.panel-transcript .panel-icon {
+  color: var(--accent);
+}
+.panel-step .panel-icon {
+  color: #b2540b;
+}
+.panel-state .panel-icon {
+  color: var(--good);
+}
+.panel-events .panel-icon {
+  color: var(--grape);
+}
+
+@media (max-width: 950px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'transcript' 'step' 'state' 'events';
+  }
+}
+
+/* -- transcript ----------------------------------------------------------- */
+
+.transcript {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-height: 55vh;
+  padding-right: 0.25rem;
+}
+
+.transcript-empty {
+  justify-content: center;
+}
+
+/* Each turn is a speech bubble. `.line-caller` and `.line-agent` already
+   existed for the role colour; this gives them a shape as well. */
+.line {
+  background: var(--panel-soft);
+  border: 2px solid var(--panel-edge);
+  border-radius: var(--radius-lg);
+  padding: 0.6rem 0.85rem;
+  min-width: 0;
+}
+
+.line-caller {
+  background: var(--bubble-caller);
+  border-bottom-right-radius: 6px;
+}
+
+.line-agent {
+  background: var(--bubble-agent);
+  border-bottom-left-radius: 6px;
+}
+
+.line-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: baseline;
+  font-size: 0.74rem;
+  margin-bottom: 0.25rem;
+}
+
+.line-role {
+  font-weight: 800;
+}
+
+.line-caller .line-role {
+  color: var(--accent);
+}
+
+.line-agent .line-role {
+  color: var(--good);
+}
+
+.line-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* A hypothesis, not a line: dashed, because it may yet be replaced. */
+.line-pending {
+  border-style: dashed;
+}
+
+.line-pending .line-text {
+  font-style: italic;
+}
+
+.badge {
+  background: var(--panel);
+  border: 2px solid var(--panel-edge);
+  border-radius: 999px;
+  padding: 0.05rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--ink-muted);
+}
+
+.badge-worked {
+  color: var(--good);
+  background: var(--good-soft);
+}
+.badge-failed,
+.badge-no_change {
+  color: var(--warn);
+  background: var(--warn-soft);
+}
+
+/* -- composer ------------------------------------------------------------- */
+
+.composer {
+  border-top: 2px dashed var(--panel-edge);
+  padding-top: 0.85rem;
+  margin-top: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.composer-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.composer input {
+  flex: 1;
+  min-width: 0;
+  background: var(--panel-soft);
+  border: var(--edge) solid var(--panel-edge);
+  border-radius: 999px;
+  box-shadow: inset 0 2px 0 rgba(43, 58, 85, 0.1);
+  color: var(--ink);
+  padding: 0.5rem 1rem;
+  min-height: 44px;
+  font: inherit;
+}
+
+.composer input::placeholder {
+  color: var(--ink-muted);
+  opacity: 1;
+}
+
+.composer input:focus {
+  outline: 3px solid var(--accent);
+  outline-offset: 1px;
+  background: var(--panel);
+}
+
+/* -- key/value panels ----------------------------------------------------- */
+
+.kv {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+  gap: 0.5rem;
+  padding: 0.22rem 0;
+  font-size: 0.88rem;
+}
+
+.kv-key {
+  color: var(--ink-muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-top: 0.2rem;
+}
+
+.kv-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* The step, exactly as spoken — the one sentence on the page that is meant to
+   be read before anything else, so it gets the loudest shape. */
+.step-spoken {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.85rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--sun);
+  border: var(--edge) solid var(--panel-edge);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--drop-sm);
+}
+
+.citations,
+.ledger {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ledger li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: baseline;
+  font-size: 0.83rem;
+}
+
+/* -- events --------------------------------------------------------------- */
+
+.events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 22vh;
+  overflow-y: auto;
+  font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.events li {
+  display: grid;
+  grid-template-columns: 3.4rem minmax(0, 13rem) minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.event-time {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.event-type {
+  overflow-wrap: anywhere;
+}
+
+/* -- misc ----------------------------------------------------------------- */
+
+.muted {
+  color: var(--ink-muted);
+}
+.good-text {
+  color: var(--good);
+  font-weight: 700;
+}
+.warn-text {
+  color: var(--warn);
+  font-weight: 700;
+}
+
+.banner {
+  border-radius: var(--radius-lg);
+  border: var(--edge) solid var(--panel-edge);
+  box-shadow: var(--drop-sm);
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.banner-error {
+  background: var(--bad-soft);
+  border-color: var(--bad);
+  color: var(--bad);
+  font-weight: 600;
+}
+
+.banner-error code {
+  background: var(--panel);
+  color: var(--bad);
+}
+
+/* The atmospheric blobs behind the page. Decorative, non-interactive, and
+   never over anything that has to be read. */
+.blob {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  width: 26rem;
+  height: 26rem;
+}
+
+.blob-one {
+  color: var(--sky);
+  top: -9rem;
+  right: -8rem;
+}
+
+.blob-two {
+  color: var(--mint);
+  bottom: -11rem;
+  left: -9rem;
+}
+
+/* -- narrow screens -------------------------------------------------------
+   Everything above already wraps; this is about the two fixed-track grids and
+   the padding, which are what actually bite under about 420px. */
+
+@media (max-width: 560px) {
+  .app {
+    padding: 0.75rem;
+  }
+
+  .masthead,
+  .panel {
+    padding: 0.85rem;
+    border-radius: var(--radius);
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .mascot {
+    width: 48px;
+    height: 44px;
+  }
+
+  /* The trace stops being three columns and becomes two lines per event: the
+     clock and the type, then the detail. 13rem of fixed middle column does not
+     fit beside anything on a 320px screen. */
+  .events li {
+    grid-template-columns: 3.2rem minmax(0, 1fr);
+  }
+
+  .events li .muted:last-child {
+    grid-column: 2;
+  }
+
+  .kv {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+  }
+
+  .transcript {
+    max-height: 48vh;
+  }
+
+  .blob {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+/* Someone who has asked for less motion gets the shapes and none of the
+   movement; nothing here conveys information by moving. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

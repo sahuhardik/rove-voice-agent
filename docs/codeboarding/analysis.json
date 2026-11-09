@@ -1,0 +1,4904 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-08T17:45:32Z",
+    "repo_name": "rove-voice-agent",
+    "source_commit": "c3d5ebfdb5b45d1b409e46ff34946cff0e0dd04a",
+    "depth_level": 2,
+    "generator": "hand-authored in CodeBoarding analysis.json shape; NOT produced by the CodeBoarding engine",
+    "engine_run": false,
+    "engine_version_consulted": "codeboarding 0.15.3 (/home/ubuntu/codeboarding-upstream)",
+    "description_step": "written by Claude Sonnet 5.5 from reading the code; see README.md",
+    "relation_semantics": "is_static is false on every relation: they are cited imports and calls (see 'evidence'), not CFG analysis"
+  },
+  "description": "Rove is a voice troubleshooting agent for a consumer dash-cam line. A React page joins a LiveKit room; a Python agent worker in the FastAPI process hears the caller (Amazon Transcribe), decides when the turn has ended, and speaks (Amazon Polly). Every turn runs through a LangGraph state machine that retrieves Tier-1 chunks from Postgres plus pgvector, filters the legal next steps in code, lets a Bedrock Nova model choose among them, and passes the result through a deterministic output guard. The corpus is built offline by ingest/, the whole system is scored by three eval harnesses, an https page reaches the media server through a same-origin wss relay, and a separate support console can join a live session.",
+  "components": [
+    {
+      "component_id": "1",
+      "name": "React Client",
+      "description": "The browser page (Vite + React 18, `livekit-client` as the only runtime dependency besides React). It renders a projection of the server's diagnostic state in four panels and offers click-or-type next to the voice channel. It never owns state: a reload loses nothing.",
+      "key_entities": [
+        {
+          "qualified_name": "useSession",
+          "reference_file": "client/src/useSession.js",
+          "reference_start_line": 26,
+          "reference_end_line": 26
+        },
+        {
+          "qualified_name": "openSession",
+          "reference_file": "client/src/api.js",
+          "reference_start_line": 9,
+          "reference_end_line": 9
+        },
+        {
+          "qualified_name": "LiveKitLink",
+          "reference_file": "client/src/livekit.js",
+          "reference_start_line": 57,
+          "reference_end_line": 57
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "client/src/useSession.js",
+          "methods": [
+            {
+              "qualified_name": "useSession",
+              "start_line": 26,
+              "end_line": 26,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/api.js",
+          "methods": [
+            {
+              "qualified_name": "openSession",
+              "start_line": 9,
+              "end_line": 9,
+              "node_type": "reference"
+            },
+            {
+              "qualified_name": "renewToken",
+              "start_line": 24,
+              "end_line": 24,
+              "node_type": "reference"
+            },
+            {
+              "qualified_name": "controlSocketUrl",
+              "start_line": 64,
+              "end_line": 64,
+              "node_type": "reference"
+            },
+            {
+              "qualified_name": "postOffer",
+              "start_line": 35,
+              "end_line": 35,
+              "node_type": "reference"
+            },
+            {
+              "qualified_name": "postCandidates",
+              "start_line": 55,
+              "end_line": 55,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/main.jsx",
+          "methods": []
+        },
+        {
+          "file_path": "client/src/livekit.js",
+          "methods": [
+            {
+              "qualified_name": "LiveKitLink",
+              "start_line": 57,
+              "end_line": 57,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/webrtc.js",
+          "methods": [
+            {
+              "qualified_name": "MediaLink",
+              "start_line": 30,
+              "end_line": 30,
+              "node_type": "reference"
+            },
+            {
+              "qualified_name": "microphoneAvailable",
+              "start_line": 206,
+              "end_line": 206,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/stats.js",
+          "methods": [
+            {
+              "qualified_name": "summariseStats",
+              "start_line": 14,
+              "end_line": 14,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/App.jsx",
+          "methods": [
+            {
+              "qualified_name": "App",
+              "start_line": 44,
+              "end_line": 44,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/Transcript.jsx",
+          "methods": [
+            {
+              "qualified_name": "Transcript",
+              "start_line": 32,
+              "end_line": 32,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/StepPanel.jsx",
+          "methods": [
+            {
+              "qualified_name": "StepPanel",
+              "start_line": 18,
+              "end_line": 18,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/StatePanel.jsx",
+          "methods": [
+            {
+              "qualified_name": "StatePanel",
+              "start_line": 22,
+              "end_line": 22,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/Composer.jsx",
+          "methods": [
+            {
+              "qualified_name": "Composer",
+              "start_line": 25,
+              "end_line": 25,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/ConnectionBar.jsx",
+          "methods": [
+            {
+              "qualified_name": "ConnectionBar",
+              "start_line": 63,
+              "end_line": 63,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/LevelMeter.jsx",
+          "methods": [
+            {
+              "qualified_name": "LevelMeter",
+              "start_line": 18,
+              "end_line": 18,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/EventLog.jsx",
+          "methods": [
+            {
+              "qualified_name": "EventLog",
+              "start_line": 63,
+              "end_line": 63,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/components/Doodles.jsx",
+          "methods": [
+            {
+              "qualified_name": "Mascot",
+              "start_line": 51,
+              "end_line": 51,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "client/src/styles.css",
+          "methods": []
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "1.1",
+          "name": "Session Control Plane",
+          "description": "One WebSocket plus the REST calls that start it. `api.js` mints the session and renews the token; `useSession` holds the state projection the panels render from.",
+          "key_entities": [
+            {
+              "qualified_name": "useSession",
+              "reference_file": "client/src/useSession.js",
+              "reference_start_line": 26,
+              "reference_end_line": 26
+            },
+            {
+              "qualified_name": "openSession",
+              "reference_file": "client/src/api.js",
+              "reference_start_line": 9,
+              "reference_end_line": 9
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "client/src/useSession.js",
+              "methods": [
+                {
+                  "qualified_name": "useSession",
+                  "start_line": 26,
+                  "end_line": 26,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/api.js",
+              "methods": [
+                {
+                  "qualified_name": "openSession",
+                  "start_line": 9,
+                  "end_line": 9,
+                  "node_type": "reference"
+                },
+                {
+                  "qualified_name": "renewToken",
+                  "start_line": 24,
+                  "end_line": 24,
+                  "node_type": "reference"
+                },
+                {
+                  "qualified_name": "controlSocketUrl",
+                  "start_line": 64,
+                  "end_line": 64,
+                  "node_type": "reference"
+                },
+                {
+                  "qualified_name": "postOffer",
+                  "start_line": 35,
+                  "end_line": 35,
+                  "node_type": "reference"
+                },
+                {
+                  "qualified_name": "postCandidates",
+                  "start_line": 55,
+                  "end_line": 55,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/main.jsx",
+              "methods": []
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "1.2",
+          "name": "Media Links",
+          "description": "The two media legs. `LiveKitLink` joins a LiveKit room with the minted token (the default transport); `MediaLink` is the Pipecat SmallWebRTC fallback. `summariseStats` turns browser `getStats()` into the RTT, jitter and loss numbers the page shows and the trace records.",
+          "key_entities": [
+            {
+              "qualified_name": "LiveKitLink",
+              "reference_file": "client/src/livekit.js",
+              "reference_start_line": 57,
+              "reference_end_line": 57
+            },
+            {
+              "qualified_name": "MediaLink",
+              "reference_file": "client/src/webrtc.js",
+              "reference_start_line": 30,
+              "reference_end_line": 30
+            },
+            {
+              "qualified_name": "summariseStats",
+              "reference_file": "client/src/stats.js",
+              "reference_start_line": 14,
+              "reference_end_line": 14
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "client/src/livekit.js",
+              "methods": [
+                {
+                  "qualified_name": "LiveKitLink",
+                  "start_line": 57,
+                  "end_line": 57,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/webrtc.js",
+              "methods": [
+                {
+                  "qualified_name": "MediaLink",
+                  "start_line": 30,
+                  "end_line": 30,
+                  "node_type": "reference"
+                },
+                {
+                  "qualified_name": "microphoneAvailable",
+                  "start_line": 206,
+                  "end_line": 206,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/stats.js",
+              "methods": [
+                {
+                  "qualified_name": "summariseStats",
+                  "start_line": 14,
+                  "end_line": 14,
+                  "node_type": "reference"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "1.3",
+          "name": "Panels and Page",
+          "description": "`App` lays out transcript, current step, diagnostic state and connection bar. Each panel is a small component; `Composer` is the click-or-type input and `EventLog` shows the live trace.",
+          "key_entities": [
+            {
+              "qualified_name": "App",
+              "reference_file": "client/src/App.jsx",
+              "reference_start_line": 44,
+              "reference_end_line": 44
+            },
+            {
+              "qualified_name": "Transcript",
+              "reference_file": "client/src/components/Transcript.jsx",
+              "reference_start_line": 32,
+              "reference_end_line": 32
+            },
+            {
+              "qualified_name": "StepPanel",
+              "reference_file": "client/src/components/StepPanel.jsx",
+              "reference_start_line": 18,
+              "reference_end_line": 18
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "client/src/App.jsx",
+              "methods": [
+                {
+                  "qualified_name": "App",
+                  "start_line": 44,
+                  "end_line": 44,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/Transcript.jsx",
+              "methods": [
+                {
+                  "qualified_name": "Transcript",
+                  "start_line": 32,
+                  "end_line": 32,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/StepPanel.jsx",
+              "methods": [
+                {
+                  "qualified_name": "StepPanel",
+                  "start_line": 18,
+                  "end_line": 18,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/StatePanel.jsx",
+              "methods": [
+                {
+                  "qualified_name": "StatePanel",
+                  "start_line": 22,
+                  "end_line": 22,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/Composer.jsx",
+              "methods": [
+                {
+                  "qualified_name": "Composer",
+                  "start_line": 25,
+                  "end_line": 25,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/ConnectionBar.jsx",
+              "methods": [
+                {
+                  "qualified_name": "ConnectionBar",
+                  "start_line": 63,
+                  "end_line": 63,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/LevelMeter.jsx",
+              "methods": [
+                {
+                  "qualified_name": "LevelMeter",
+                  "start_line": 18,
+                  "end_line": 18,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/EventLog.jsx",
+              "methods": [
+                {
+                  "qualified_name": "EventLog",
+                  "start_line": 63,
+                  "end_line": 63,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/components/Doodles.jsx",
+              "methods": [
+                {
+                  "qualified_name": "Mascot",
+                  "start_line": 51,
+                  "end_line": 51,
+                  "node_type": "reference"
+                }
+              ]
+            },
+            {
+              "file_path": "client/src/styles.css",
+              "methods": []
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "supplies the state projection and transcript",
+          "src_name": "Session Control Plane",
+          "dst_name": "Panels and Page",
+          "src_id": "1.1",
+          "dst_id": "1.3",
+          "is_static": false,
+          "evidence": [
+            "client/src/App.jsx:useSession"
+          ]
+        },
+        {
+          "relation": "supplies mic level and link statistics",
+          "src_name": "Media Links",
+          "dst_name": "Panels and Page",
+          "src_id": "1.2",
+          "dst_id": "1.3",
+          "is_static": false,
+          "evidence": [
+            "client/src/App.jsx:LiveKitLink"
+          ]
+        },
+        {
+          "relation": "reuses api.js for the SDP offer on the fallback path",
+          "src_name": "Media Links",
+          "dst_name": "Session Control Plane",
+          "src_id": "1.2",
+          "dst_id": "1.1",
+          "is_static": false,
+          "evidence": [
+            "client/src/webrtc.js:postOffer"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "2",
+      "name": "FastAPI Server",
+      "description": "One FastAPI process on one port. It mints short-lived session credentials, serves the built client, owns the control WebSocket, runs every typed turn against the diagnostic core, and holds consent, handoff, trace and transcript records. In the default transport it does not carry media.",
+      "key_entities": [
+        {
+          "qualified_name": "create_app",
+          "reference_file": "server/app.py",
+          "reference_start_line": 486,
+          "reference_end_line": 797
+        },
+        {
+          "qualified_name": "Settings",
+          "reference_file": "server/config.py",
+          "reference_start_line": 101,
+          "reference_end_line": 279
+        },
+        {
+          "qualified_name": "main",
+          "reference_file": "server/__main__.py",
+          "reference_start_line": 26,
+          "reference_end_line": 113
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "server/app.py",
+          "methods": [
+            {
+              "qualified_name": "create_app",
+              "start_line": 486,
+              "end_line": 797,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "AppState",
+              "start_line": 89,
+              "end_line": 384,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "run_turn",
+              "start_line": 398,
+              "end_line": 483,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "broadcast",
+              "start_line": 387,
+              "end_line": 395,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/config.py",
+          "methods": [
+            {
+              "qualified_name": "Settings",
+              "start_line": 101,
+              "end_line": 279,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/__main__.py",
+          "methods": [
+            {
+              "qualified_name": "main",
+              "start_line": 26,
+              "end_line": 113,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/livekit_tokens.py",
+          "methods": [
+            {
+              "qualified_name": "mint",
+              "start_line": 87,
+              "end_line": 148,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "verify",
+              "start_line": 151,
+              "end_line": 230,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Claims",
+              "start_line": 69,
+              "end_line": 84,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/tokens.py",
+          "methods": [
+            {
+              "qualified_name": "mint",
+              "start_line": 225,
+              "end_line": 276,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "verify",
+              "start_line": 279,
+              "end_line": 364,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "MintedSession",
+              "start_line": 382,
+              "end_line": 415,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "new_room_id",
+              "start_line": 418,
+              "end_line": 420,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/core_bridge.py",
+          "methods": [
+            {
+              "qualified_name": "Session",
+              "start_line": 126,
+              "end_line": 226,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "SessionRegistry",
+              "start_line": 229,
+              "end_line": 267,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "run_typed_turn",
+              "start_line": 275,
+              "end_line": 427,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "fanout",
+              "start_line": 517,
+              "end_line": 544,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "project_state",
+              "start_line": 570,
+              "end_line": 630,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "session_snapshot",
+              "start_line": 654,
+              "end_line": 679,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/consent.py",
+          "methods": [
+            {
+              "qualified_name": "ConsentState",
+              "start_line": 101,
+              "end_line": 314,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/handoff.py",
+          "methods": [
+            {
+              "qualified_name": "build_handoff",
+              "start_line": 366,
+              "end_line": 466,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/trace.py",
+          "methods": [
+            {
+              "qualified_name": "Trace",
+              "start_line": 36,
+              "end_line": 136,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/transcripts.py",
+          "methods": [
+            {
+              "qualified_name": "collect",
+              "start_line": 282,
+              "end_line": 416,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "check_consent",
+              "start_line": 267,
+              "end_line": 279,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "redact",
+              "start_line": 170,
+              "end_line": 183,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/verify.py",
+          "methods": [
+            {
+              "qualified_name": "run",
+              "start_line": 386,
+              "end_line": 398,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "BackgroundServer",
+              "start_line": 62,
+              "end_line": 115,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "verify_mint",
+              "start_line": 163,
+              "end_line": 247,
+              "node_type": "function"
+            }
+          ]
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "2.1",
+          "name": "App and Settings",
+          "description": "`create_app` assembles the routes (`/healthz`, `/api/session`, `/api/session/{room}/token`, `/api/offer`, `/api/ice`, `/api/trace/{room}`, `/ws`), the static client, the `/support` console and the support routes, and, under the livekit transport, `/lk`. `/api/offer` and `/api/ice` serve only the Pipecat fallback. `Settings` reads every option from the environment; `main` runs uvicorn.",
+          "key_entities": [
+            {
+              "qualified_name": "create_app",
+              "reference_file": "server/app.py",
+              "reference_start_line": 486,
+              "reference_end_line": 797
+            },
+            {
+              "qualified_name": "Settings",
+              "reference_file": "server/config.py",
+              "reference_start_line": 101,
+              "reference_end_line": 279
+            },
+            {
+              "qualified_name": "main",
+              "reference_file": "server/__main__.py",
+              "reference_start_line": 26,
+              "reference_end_line": 113
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/app.py",
+              "methods": [
+                {
+                  "qualified_name": "create_app",
+                  "start_line": 486,
+                  "end_line": 797,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "AppState",
+                  "start_line": 89,
+                  "end_line": 384,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "run_turn",
+                  "start_line": 398,
+                  "end_line": 483,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "broadcast",
+                  "start_line": 387,
+                  "end_line": 395,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "server/config.py",
+              "methods": [
+                {
+                  "qualified_name": "Settings",
+                  "start_line": 101,
+                  "end_line": 279,
+                  "node_type": "class"
+                }
+              ]
+            },
+            {
+              "file_path": "server/__main__.py",
+              "methods": [
+                {
+                  "qualified_name": "main",
+                  "start_line": 26,
+                  "end_line": 113,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "2.2",
+          "name": "Session Credentials",
+          "description": "Mints and verifies the short-lived, single-room, single-identity tokens. `livekit_tokens` is the JWT the LiveKit media server accepts; `tokens` is the earlier token for the Pipecat fallback.",
+          "key_entities": [
+            {
+              "qualified_name": "mint",
+              "reference_file": "server/livekit_tokens.py",
+              "reference_start_line": 87,
+              "reference_end_line": 148
+            },
+            {
+              "qualified_name": "mint",
+              "reference_file": "server/tokens.py",
+              "reference_start_line": 225,
+              "reference_end_line": 276
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/livekit_tokens.py",
+              "methods": [
+                {
+                  "qualified_name": "mint",
+                  "start_line": 87,
+                  "end_line": 148,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "verify",
+                  "start_line": 151,
+                  "end_line": 230,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Claims",
+                  "start_line": 69,
+                  "end_line": 84,
+                  "node_type": "class"
+                }
+              ]
+            },
+            {
+              "file_path": "server/tokens.py",
+              "methods": [
+                {
+                  "qualified_name": "mint",
+                  "start_line": 225,
+                  "end_line": 276,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "verify",
+                  "start_line": 279,
+                  "end_line": 364,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "MintedSession",
+                  "start_line": 382,
+                  "end_line": 415,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "new_room_id",
+                  "start_line": 418,
+                  "end_line": 420,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "2.3",
+          "name": "Turn Bridge",
+          "description": "The click-or-type path and the session registry. A click, a typed string and a transcribed utterance enter as the same event; `run_typed_turn` calls `agent.core.diagnose`, `fanout` pushes the result to every participant.",
+          "key_entities": [
+            {
+              "qualified_name": "Session",
+              "reference_file": "server/core_bridge.py",
+              "reference_start_line": 126,
+              "reference_end_line": 226
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/core_bridge.py",
+              "methods": [
+                {
+                  "qualified_name": "Session",
+                  "start_line": 126,
+                  "end_line": 226,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "SessionRegistry",
+                  "start_line": 229,
+                  "end_line": 267,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "run_typed_turn",
+                  "start_line": 275,
+                  "end_line": 427,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "fanout",
+                  "start_line": 517,
+                  "end_line": 544,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "project_state",
+                  "start_line": 570,
+                  "end_line": 630,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "session_snapshot",
+                  "start_line": 654,
+                  "end_line": 679,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "2.4",
+          "name": "Consent, Handoff and Records",
+          "description": "Per-session consent, the escalation handoff rendered from `DiagnosticState`, the per-session JSONL trace, and consented transcripts written to Postgres (`pilot_sessions`, `pilot_transcript_lines`).",
+          "key_entities": [
+            {
+              "qualified_name": "ConsentState",
+              "reference_file": "server/consent.py",
+              "reference_start_line": 101,
+              "reference_end_line": 314
+            },
+            {
+              "qualified_name": "build_handoff",
+              "reference_file": "server/handoff.py",
+              "reference_start_line": 366,
+              "reference_end_line": 466
+            },
+            {
+              "qualified_name": "Trace",
+              "reference_file": "server/trace.py",
+              "reference_start_line": 36,
+              "reference_end_line": 136
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/consent.py",
+              "methods": [
+                {
+                  "qualified_name": "ConsentState",
+                  "start_line": 101,
+                  "end_line": 314,
+                  "node_type": "class"
+                }
+              ]
+            },
+            {
+              "file_path": "server/handoff.py",
+              "methods": [
+                {
+                  "qualified_name": "build_handoff",
+                  "start_line": 366,
+                  "end_line": 466,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "server/trace.py",
+              "methods": [
+                {
+                  "qualified_name": "Trace",
+                  "start_line": 36,
+                  "end_line": 136,
+                  "node_type": "class"
+                }
+              ]
+            },
+            {
+              "file_path": "server/transcripts.py",
+              "methods": [
+                {
+                  "qualified_name": "collect",
+                  "start_line": 282,
+                  "end_line": 416,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "check_consent",
+                  "start_line": 267,
+                  "end_line": 279,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "redact",
+                  "start_line": 170,
+                  "end_line": 183,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "2.5",
+          "name": "Server Verifier",
+          "description": "`python -m server.verify` starts a server, checks the mint, the media path, the trace and a typed turn, then stops it.",
+          "key_entities": [
+            {
+              "qualified_name": "run",
+              "reference_file": "server/verify.py",
+              "reference_start_line": 386,
+              "reference_end_line": 398
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/verify.py",
+              "methods": [
+                {
+                  "qualified_name": "run",
+                  "start_line": 386,
+                  "end_line": 398,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "BackgroundServer",
+                  "start_line": 62,
+                  "end_line": 115,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "verify_mint",
+                  "start_line": 163,
+                  "end_line": 247,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "mints a token for each new session",
+          "src_name": "App and Settings",
+          "dst_name": "Session Credentials",
+          "src_id": "2.1",
+          "dst_id": "2.2",
+          "is_static": false,
+          "evidence": [
+            "server/app.py:create_app"
+          ]
+        },
+        {
+          "relation": "routes control-socket turns and typed input",
+          "src_name": "App and Settings",
+          "dst_name": "Turn Bridge",
+          "src_id": "2.1",
+          "dst_id": "2.3",
+          "is_static": false,
+          "evidence": [
+            "server/app.py:run_turn"
+          ]
+        },
+        {
+          "relation": "writes the trace and builds the handoff from session state",
+          "src_name": "Turn Bridge",
+          "dst_name": "Consent, Handoff and Records",
+          "src_id": "2.3",
+          "dst_id": "2.4",
+          "is_static": false,
+          "evidence": [
+            "server/core_bridge.py:Session"
+          ]
+        },
+        {
+          "relation": "starts and probes the real app",
+          "src_name": "Server Verifier",
+          "dst_name": "App and Settings",
+          "src_id": "2.5",
+          "dst_id": "2.1",
+          "is_static": false,
+          "evidence": [
+            "server/verify.py:BackgroundServer"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "3",
+      "name": "LiveKit Voice Pipeline",
+      "description": "The media path in production: an agent worker that joins the LiveKit room as a participant, with Silero VAD, context-dependent endpointing, streaming Amazon Transcribe, incremental Amazon Polly, speculative prefetch and a latency ladder. A Pipecat SmallWebRTC path is kept as a documented fallback.",
+      "key_entities": [
+        {
+          "qualified_name": "AgentWorker",
+          "reference_file": "server/livekit_agent.py",
+          "reference_start_line": 1350,
+          "reference_end_line": 1425
+        },
+        {
+          "qualified_name": "Endpointer",
+          "reference_file": "server/endpointing.py",
+          "reference_start_line": 341,
+          "reference_end_line": 470
+        },
+        {
+          "qualified_name": "TranscribeStream",
+          "reference_file": "server/transcribe.py",
+          "reference_start_line": 349,
+          "reference_end_line": 535
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "server/livekit_agent.py",
+          "methods": [
+            {
+              "qualified_name": "AgentWorker",
+              "start_line": 1350,
+              "end_line": 1425,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "RoomVoiceAgent",
+              "start_line": 313,
+              "end_line": 1318,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "entrypoint",
+              "start_line": 1326,
+              "end_line": 1346,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "AgentHost",
+              "start_line": 152,
+              "end_line": 182,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "VoiceStats",
+              "start_line": 225,
+              "end_line": 237,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/endpointing.py",
+          "methods": [
+            {
+              "qualified_name": "Endpointer",
+              "start_line": 341,
+              "end_line": 470,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "classify_turn",
+              "start_line": 198,
+              "end_line": 243,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Hangover",
+              "start_line": 74,
+              "end_line": 87,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "EndpointDecision",
+              "start_line": 328,
+              "end_line": 337,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/transcribe.py",
+          "methods": [
+            {
+              "qualified_name": "TranscribeStream",
+              "start_line": 349,
+              "end_line": 535,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "ensure_vocabulary",
+              "start_line": 111,
+              "end_line": 159,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "alias_candidates",
+              "start_line": 271,
+              "end_line": 295,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/polly.py",
+          "methods": [
+            {
+              "qualified_name": "synthesize_incremental",
+              "start_line": 268,
+              "end_line": 366,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "synthesize_pcm",
+              "start_line": 67,
+              "end_line": 118,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "split_clauses",
+              "start_line": 223,
+              "end_line": 226,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "ClauseBuffer",
+              "start_line": 152,
+              "end_line": 220,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/prefetch.py",
+          "methods": [
+            {
+              "qualified_name": "SpeculativePrefetch",
+              "start_line": 298,
+              "end_line": 481,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "shortlist_for",
+              "start_line": 254,
+              "end_line": 276,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "category_bearing",
+              "start_line": 279,
+              "end_line": 290,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/latency.py",
+          "methods": [
+            {
+              "qualified_name": "LatencyBook",
+              "start_line": 669,
+              "end_line": 799,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "TurnLatency",
+              "start_line": 274,
+              "end_line": 391,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "measure_core",
+              "start_line": 494,
+              "end_line": 511,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "summarise",
+              "start_line": 807,
+              "end_line": 833,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/ladder.py",
+          "methods": [
+            {
+              "qualified_name": "Ladder",
+              "start_line": 220,
+              "end_line": 408,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "shed_for",
+              "start_line": 159,
+              "end_line": 172,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Shed",
+              "start_line": 112,
+              "end_line": 154,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/livekit_dev.py",
+          "methods": [
+            {
+              "qualified_name": "start_dev_server",
+              "start_line": 158,
+              "end_line": 172,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "DevServer",
+              "start_line": 77,
+              "end_line": 155,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "find_binary",
+              "start_line": 51,
+              "end_line": 59,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/livekit_peer.py",
+          "methods": [
+            {
+              "qualified_name": "HeadlessParticipant",
+              "start_line": 89,
+              "end_line": 305,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "open_session",
+              "start_line": 308,
+              "end_line": 312,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/verify_livekit.py",
+          "methods": [
+            {
+              "qualified_name": "run",
+              "start_line": 658,
+              "end_line": 679,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "verify_barge_in",
+              "start_line": 469,
+              "end_line": 610,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/pipeline.py",
+          "methods": [
+            {
+              "qualified_name": "attach_media",
+              "start_line": 430,
+              "end_line": 439,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "MediaSession",
+              "start_line": 223,
+              "end_line": 427,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "SpeechReporter",
+              "start_line": 102,
+              "end_line": 220,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "server/headless_peer.py",
+          "methods": [
+            {
+              "qualified_name": "HeadlessPeer",
+              "start_line": 149,
+              "end_line": 263,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "open_session",
+              "start_line": 266,
+              "end_line": 270,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "server/sdp.py",
+          "methods": [
+            {
+              "qualified_name": "rewrite_host_candidates",
+              "start_line": 35,
+              "end_line": 67,
+              "node_type": "function"
+            }
+          ]
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "3.1",
+          "name": "Agent Worker",
+          "description": "`AgentWorker` runs the LiveKit worker; `entrypoint` joins a room; `RoomVoiceAgent` owns one room's audio loop, barge-in and turn dispatch.",
+          "key_entities": [
+            {
+              "qualified_name": "AgentWorker",
+              "reference_file": "server/livekit_agent.py",
+              "reference_start_line": 1350,
+              "reference_end_line": 1425
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/livekit_agent.py",
+              "methods": [
+                {
+                  "qualified_name": "AgentWorker",
+                  "start_line": 1350,
+                  "end_line": 1425,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "RoomVoiceAgent",
+                  "start_line": 313,
+                  "end_line": 1318,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "entrypoint",
+                  "start_line": 1326,
+                  "end_line": 1346,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "AgentHost",
+                  "start_line": 152,
+                  "end_line": 182,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "VoiceStats",
+                  "start_line": 225,
+                  "end_line": 237,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "3.2",
+          "name": "Endpointing",
+          "description": "Decides end-of-turn with a hangover chosen by FSM state rather than one global silence threshold.",
+          "key_entities": [
+            {
+              "qualified_name": "Endpointer",
+              "reference_file": "server/endpointing.py",
+              "reference_start_line": 341,
+              "reference_end_line": 470
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/endpointing.py",
+              "methods": [
+                {
+                  "qualified_name": "Endpointer",
+                  "start_line": 341,
+                  "end_line": 470,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "classify_turn",
+                  "start_line": 198,
+                  "end_line": 243,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Hangover",
+                  "start_line": 74,
+                  "end_line": 87,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "EndpointDecision",
+                  "start_line": 328,
+                  "end_line": 337,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "3.3",
+          "name": "Streaming ASR",
+          "description": "Amazon Transcribe Streaming with custom-vocabulary biasing; emits partials that the prefetch consumes.",
+          "key_entities": [
+            {
+              "qualified_name": "TranscribeStream",
+              "reference_file": "server/transcribe.py",
+              "reference_start_line": 349,
+              "reference_end_line": 535
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/transcribe.py",
+              "methods": [
+                {
+                  "qualified_name": "TranscribeStream",
+                  "start_line": 349,
+                  "end_line": 535,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "ensure_vocabulary",
+                  "start_line": 111,
+                  "end_line": 159,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "alias_candidates",
+                  "start_line": 271,
+                  "end_line": 295,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "3.4",
+          "name": "Incremental TTS",
+          "description": "Amazon Polly Neural: whole-utterance synthesis with a disk cache, and clause-by-clause incremental synthesis.",
+          "key_entities": [
+            {
+              "qualified_name": "synthesize_incremental",
+              "reference_file": "server/polly.py",
+              "reference_start_line": 268,
+              "reference_end_line": 366
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/polly.py",
+              "methods": [
+                {
+                  "qualified_name": "synthesize_incremental",
+                  "start_line": 268,
+                  "end_line": 366,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "synthesize_pcm",
+                  "start_line": 67,
+                  "end_line": 118,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "split_clauses",
+                  "start_line": 223,
+                  "end_line": 226,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "ClauseBuffer",
+                  "start_line": 152,
+                  "end_line": 220,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "3.5",
+          "name": "Speculative Prefetch",
+          "description": "On a category-bearing ASR partial of enough words, runs retrieval early and discards the result if the final transcript disagrees.",
+          "key_entities": [
+            {
+              "qualified_name": "SpeculativePrefetch",
+              "reference_file": "server/prefetch.py",
+              "reference_start_line": 298,
+              "reference_end_line": 481
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/prefetch.py",
+              "methods": [
+                {
+                  "qualified_name": "SpeculativePrefetch",
+                  "start_line": 298,
+                  "end_line": 481,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "shortlist_for",
+                  "start_line": 254,
+                  "end_line": 276,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "category_bearing",
+                  "start_line": 279,
+                  "end_line": 290,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "3.6",
+          "name": "Latency and Ladder",
+          "description": "Measures the nine-component latency budget per turn and applies the graded degradation ladder on a measured breach.",
+          "key_entities": [
+            {
+              "qualified_name": "LatencyBook",
+              "reference_file": "server/latency.py",
+              "reference_start_line": 669,
+              "reference_end_line": 799
+            },
+            {
+              "qualified_name": "Ladder",
+              "reference_file": "server/ladder.py",
+              "reference_start_line": 220,
+              "reference_end_line": 408
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/latency.py",
+              "methods": [
+                {
+                  "qualified_name": "LatencyBook",
+                  "start_line": 669,
+                  "end_line": 799,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "TurnLatency",
+                  "start_line": 274,
+                  "end_line": 391,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "measure_core",
+                  "start_line": 494,
+                  "end_line": 511,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "summarise",
+                  "start_line": 807,
+                  "end_line": 833,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "server/ladder.py",
+              "methods": [
+                {
+                  "qualified_name": "Ladder",
+                  "start_line": 220,
+                  "end_line": 408,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "shed_for",
+                  "start_line": 159,
+                  "end_line": 172,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Shed",
+                  "start_line": 112,
+                  "end_line": 154,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "3.7",
+          "name": "Dev Media Server and Headless Peers",
+          "description": "Runs `livekit-server --dev` locally, joins rooms without a browser, and verifies the voice path end to end (`python -m server.verify_livekit`).",
+          "key_entities": [
+            {
+              "qualified_name": "start_dev_server",
+              "reference_file": "server/livekit_dev.py",
+              "reference_start_line": 158,
+              "reference_end_line": 172
+            },
+            {
+              "qualified_name": "HeadlessParticipant",
+              "reference_file": "server/livekit_peer.py",
+              "reference_start_line": 89,
+              "reference_end_line": 305
+            },
+            {
+              "qualified_name": "run",
+              "reference_file": "server/verify_livekit.py",
+              "reference_start_line": 658,
+              "reference_end_line": 679
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/livekit_dev.py",
+              "methods": [
+                {
+                  "qualified_name": "start_dev_server",
+                  "start_line": 158,
+                  "end_line": 172,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "DevServer",
+                  "start_line": 77,
+                  "end_line": 155,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "find_binary",
+                  "start_line": 51,
+                  "end_line": 59,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "server/livekit_peer.py",
+              "methods": [
+                {
+                  "qualified_name": "HeadlessParticipant",
+                  "start_line": 89,
+                  "end_line": 305,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "open_session",
+                  "start_line": 308,
+                  "end_line": 312,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "server/verify_livekit.py",
+              "methods": [
+                {
+                  "qualified_name": "run",
+                  "start_line": 658,
+                  "end_line": 679,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "verify_barge_in",
+                  "start_line": 469,
+                  "end_line": 610,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "3.8",
+          "name": "Pipecat Fallback",
+          "description": "The Pipecat SmallWebRTC peer connection inside the server process (`/api/offer`), its headless test peer, and the ICE-candidate rewrite for hosts behind 1:1 NAT.",
+          "key_entities": [
+            {
+              "qualified_name": "attach_media",
+              "reference_file": "server/pipeline.py",
+              "reference_start_line": 430,
+              "reference_end_line": 439
+            },
+            {
+              "qualified_name": "HeadlessPeer",
+              "reference_file": "server/headless_peer.py",
+              "reference_start_line": 149,
+              "reference_end_line": 263
+            },
+            {
+              "qualified_name": "rewrite_host_candidates",
+              "reference_file": "server/sdp.py",
+              "reference_start_line": 35,
+              "reference_end_line": 67
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/pipeline.py",
+              "methods": [
+                {
+                  "qualified_name": "attach_media",
+                  "start_line": 430,
+                  "end_line": 439,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "MediaSession",
+                  "start_line": 223,
+                  "end_line": 427,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "SpeechReporter",
+                  "start_line": 102,
+                  "end_line": 220,
+                  "node_type": "class"
+                }
+              ]
+            },
+            {
+              "file_path": "server/headless_peer.py",
+              "methods": [
+                {
+                  "qualified_name": "HeadlessPeer",
+                  "start_line": 149,
+                  "end_line": 263,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "open_session",
+                  "start_line": 266,
+                  "end_line": 270,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "server/sdp.py",
+              "methods": [
+                {
+                  "qualified_name": "rewrite_host_candidates",
+                  "start_line": 35,
+                  "end_line": 67,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "asks for an end-of-turn decision",
+          "src_name": "Agent Worker",
+          "dst_name": "Endpointing",
+          "src_id": "3.1",
+          "dst_id": "3.2",
+          "is_static": false,
+          "evidence": [
+            "server/livekit_agent.py:RoomVoiceAgent"
+          ]
+        },
+        {
+          "relation": "streams 16 kHz frames in, receives partials and finals",
+          "src_name": "Agent Worker",
+          "dst_name": "Streaming ASR",
+          "src_id": "3.1",
+          "dst_id": "3.3",
+          "is_static": false,
+          "evidence": [
+            "server/livekit_agent.py:RoomVoiceAgent"
+          ]
+        },
+        {
+          "relation": "speaks each cleared clause",
+          "src_name": "Agent Worker",
+          "dst_name": "Incremental TTS",
+          "src_id": "3.1",
+          "dst_id": "3.4",
+          "is_static": false,
+          "evidence": [
+            "server/livekit_agent.py:RoomVoiceAgent"
+          ]
+        },
+        {
+          "relation": "offers it every ASR partial",
+          "src_name": "Agent Worker",
+          "dst_name": "Speculative Prefetch",
+          "src_id": "3.1",
+          "dst_id": "3.5",
+          "is_static": false,
+          "evidence": [
+            "server/livekit_agent.py:RoomVoiceAgent"
+          ]
+        },
+        {
+          "relation": "records per-turn timings and applies shed tiers",
+          "src_name": "Agent Worker",
+          "dst_name": "Latency and Ladder",
+          "src_id": "3.1",
+          "dst_id": "3.6",
+          "is_static": false,
+          "evidence": [
+            "server/livekit_agent.py:RoomVoiceAgent"
+          ]
+        },
+        {
+          "relation": "joins a room the worker serves",
+          "src_name": "Dev Media Server and Headless Peers",
+          "dst_name": "Agent Worker",
+          "src_id": "3.7",
+          "dst_id": "3.1",
+          "is_static": false,
+          "evidence": [
+            "server/livekit_peer.py:HeadlessParticipant"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "4",
+      "name": "LangGraph Diagnostic Core",
+      "description": "The `agent` package: a typed `DiagnosticState`, a LangGraph `StateGraph` whose nodes are authored step functions, a next-step policy that removes illegal moves before the model sees a candidate list, a Bedrock Nova wrapper, and a deterministic output guard. `core.diagnose(utterance, state)` is the entry point.",
+      "key_entities": [
+        {
+          "qualified_name": "DiagnosticState",
+          "reference_file": "agent/state.py",
+          "reference_start_line": 773,
+          "reference_end_line": 997
+        },
+        {
+          "qualified_name": "build_graph",
+          "reference_file": "agent/graph.py",
+          "reference_start_line": 375,
+          "reference_end_line": 387
+        },
+        {
+          "qualified_name": "diagnose",
+          "reference_file": "agent/core.py",
+          "reference_start_line": 1248,
+          "reference_end_line": 1273
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "agent/state.py",
+          "methods": [
+            {
+              "qualified_name": "DiagnosticState",
+              "start_line": 773,
+              "end_line": 997,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "State",
+              "start_line": 66,
+              "end_line": 87,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "Interrupt",
+              "start_line": 124,
+              "end_line": 135,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "Ledger",
+              "start_line": 638,
+              "end_line": 673,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "DeviceIdentification",
+              "start_line": 429,
+              "end_line": 545,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "agent/graph.py",
+          "methods": [
+            {
+              "qualified_name": "build_graph",
+              "start_line": 375,
+              "end_line": 387,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "run_turn",
+              "start_line": 473,
+              "end_line": 504,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "resume_turn",
+              "start_line": 507,
+              "end_line": 542,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "make_checkpointer",
+              "start_line": 414,
+              "end_line": 424,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "route_triage",
+              "start_line": 231,
+              "end_line": 233,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "agent/core.py",
+          "methods": [
+            {
+              "qualified_name": "diagnose",
+              "start_line": 1248,
+              "end_line": 1273,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "output_guard",
+              "start_line": 277,
+              "end_line": 315,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "step_triage",
+              "start_line": 586,
+              "end_line": 660,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "step_select_step",
+              "start_line": 746,
+              "end_line": 1016,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "step_destructive_gate",
+              "start_line": 1025,
+              "end_line": 1049,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "CoreAgent",
+              "start_line": 1671,
+              "end_line": 1707,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "TurnResult",
+              "start_line": 448,
+              "end_line": 468,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "agent/policy.py",
+          "methods": [
+            {
+              "qualified_name": "candidate_steps",
+              "start_line": 116,
+              "end_line": 248,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "select",
+              "start_line": 355,
+              "end_line": 373,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "escalation",
+              "start_line": 405,
+              "end_line": 554,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "legal_step_ids",
+              "start_line": 291,
+              "end_line": 292,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "CandidateDecision",
+              "start_line": 95,
+              "end_line": 113,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "agent/answers.py",
+          "methods": [
+            {
+              "qualified_name": "read_answer",
+              "start_line": 753,
+              "end_line": 768,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "validate_rules",
+              "start_line": 851,
+              "end_line": 916,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "AnswerRule",
+              "start_line": 110,
+              "end_line": 137,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "agent/symptoms.py",
+          "methods": [
+            {
+              "qualified_name": "assess",
+              "start_line": 530,
+              "end_line": 580,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "is_nearest_category_force",
+              "start_line": 483,
+              "end_line": 504,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Coverage",
+              "start_line": 513,
+              "end_line": 527,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "agent/llm.py",
+          "methods": [
+            {
+              "qualified_name": "BedrockLLM",
+              "start_line": 311,
+              "end_line": 462,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "NullLLM",
+              "start_line": 518,
+              "end_line": 532,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "LLM",
+              "start_line": 84,
+              "end_line": 96,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "parse_json_object",
+              "start_line": 104,
+              "end_line": 147,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Classification",
+              "start_line": 61,
+              "end_line": 68,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "TurnDecision",
+              "start_line": 72,
+              "end_line": 81,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/ontology.py",
+          "methods": [
+            {
+              "qualified_name": "legal_candidates",
+              "start_line": 1067,
+              "end_line": 1101,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "validate",
+              "start_line": 1113,
+              "end_line": 1136,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "AttemptedStep",
+              "start_line": 1002,
+              "end_line": 1040,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "Step",
+              "start_line": 169,
+              "end_line": 188,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "Family",
+              "start_line": 45,
+              "end_line": 50,
+              "node_type": "class"
+            }
+          ]
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "4.1",
+          "name": "Diagnostic State",
+          "description": "The typed record the policy reads instead of the transcript: 13 FSM states, five interrupts, the attempted-step ledger, hypotheses, device identification.",
+          "key_entities": [
+            {
+              "qualified_name": "DiagnosticState",
+              "reference_file": "agent/state.py",
+              "reference_start_line": 773,
+              "reference_end_line": 997
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/state.py",
+              "methods": [
+                {
+                  "qualified_name": "DiagnosticState",
+                  "start_line": 773,
+                  "end_line": 997,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "State",
+                  "start_line": 66,
+                  "end_line": 87,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "Interrupt",
+                  "start_line": 124,
+                  "end_line": 135,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "Ledger",
+                  "start_line": 638,
+                  "end_line": 673,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "DeviceIdentification",
+                  "start_line": 429,
+                  "end_line": 545,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "4.2",
+          "name": "State Graph",
+          "description": "The LangGraph `StateGraph`: routing functions, an in-memory checkpointer, and `run_turn` / `resume_turn`.",
+          "key_entities": [
+            {
+              "qualified_name": "build_graph",
+              "reference_file": "agent/graph.py",
+              "reference_start_line": 375,
+              "reference_end_line": 387
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/graph.py",
+              "methods": [
+                {
+                  "qualified_name": "build_graph",
+                  "start_line": 375,
+                  "end_line": 387,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "run_turn",
+                  "start_line": 473,
+                  "end_line": 504,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "resume_turn",
+                  "start_line": 507,
+                  "end_line": 542,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "make_checkpointer",
+                  "start_line": 414,
+                  "end_line": 424,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "route_triage",
+                  "start_line": 231,
+                  "end_line": 233,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "4.3",
+          "name": "Step Functions and Output Guard",
+          "description": "One function per FSM state, `diagnose` as the entry point, and `output_guard`, the last deterministic check before text is spoken or rendered.",
+          "key_entities": [
+            {
+              "qualified_name": "diagnose",
+              "reference_file": "agent/core.py",
+              "reference_start_line": 1248,
+              "reference_end_line": 1273
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/core.py",
+              "methods": [
+                {
+                  "qualified_name": "diagnose",
+                  "start_line": 1248,
+                  "end_line": 1273,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "output_guard",
+                  "start_line": 277,
+                  "end_line": 315,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "step_triage",
+                  "start_line": 586,
+                  "end_line": 660,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "step_select_step",
+                  "start_line": 746,
+                  "end_line": 1016,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "step_destructive_gate",
+                  "start_line": 1025,
+                  "end_line": 1049,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "CoreAgent",
+                  "start_line": 1671,
+                  "end_line": 1707,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "TurnResult",
+                  "start_line": 448,
+                  "end_line": 468,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "4.4",
+          "name": "Next-Step Policy",
+          "description": "Produces the legal candidate set: hazard stop, no-repeat, model clearance, destructive gate; also decides escalation.",
+          "key_entities": [
+            {
+              "qualified_name": "candidate_steps",
+              "reference_file": "agent/policy.py",
+              "reference_start_line": 116,
+              "reference_end_line": 248
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/policy.py",
+              "methods": [
+                {
+                  "qualified_name": "candidate_steps",
+                  "start_line": 116,
+                  "end_line": 248,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "select",
+                  "start_line": 355,
+                  "end_line": 373,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "escalation",
+                  "start_line": 405,
+                  "end_line": 554,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "legal_step_ids",
+                  "start_line": 291,
+                  "end_line": 292,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "CandidateDecision",
+                  "start_line": 95,
+                  "end_line": 113,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "4.5",
+          "name": "Answers and Symptom Coverage",
+          "description": "`answers.py` stores what the caller said in reply to a question as typed data; `symptoms.py` tells a genuine route apart from a nearest-category force.",
+          "key_entities": [
+            {
+              "qualified_name": "read_answer",
+              "reference_file": "agent/answers.py",
+              "reference_start_line": 753,
+              "reference_end_line": 768
+            },
+            {
+              "qualified_name": "assess",
+              "reference_file": "agent/symptoms.py",
+              "reference_start_line": 530,
+              "reference_end_line": 580
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/answers.py",
+              "methods": [
+                {
+                  "qualified_name": "read_answer",
+                  "start_line": 753,
+                  "end_line": 768,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "validate_rules",
+                  "start_line": 851,
+                  "end_line": 916,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "AnswerRule",
+                  "start_line": 110,
+                  "end_line": 137,
+                  "node_type": "class"
+                }
+              ]
+            },
+            {
+              "file_path": "agent/symptoms.py",
+              "methods": [
+                {
+                  "qualified_name": "assess",
+                  "start_line": 530,
+                  "end_line": 580,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "is_nearest_category_force",
+                  "start_line": 483,
+                  "end_line": 504,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Coverage",
+                  "start_line": 513,
+                  "end_line": 527,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "4.6",
+          "name": "Bedrock LLM",
+          "description": "A thin boto3 wrapper: `classify` on Nova Micro, `decide` on Nova Pro, plus `NullLLM` for model-free runs.",
+          "key_entities": [
+            {
+              "qualified_name": "BedrockLLM",
+              "reference_file": "agent/llm.py",
+              "reference_start_line": 311,
+              "reference_end_line": 462
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/llm.py",
+              "methods": [
+                {
+                  "qualified_name": "BedrockLLM",
+                  "start_line": 311,
+                  "end_line": 462,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "NullLLM",
+                  "start_line": 518,
+                  "end_line": 532,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "LLM",
+                  "start_line": 84,
+                  "end_line": 96,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "parse_json_object",
+                  "start_line": 104,
+                  "end_line": 147,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Classification",
+                  "start_line": 61,
+                  "end_line": 68,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "TurnDecision",
+                  "start_line": 72,
+                  "end_line": 81,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "4.7",
+          "name": "Step Ontology",
+          "description": "The canonical step ids and the taxonomy-id to candidate-step map. It lives in the `eval/` package but is imported by the runtime core, policy, state and server.",
+          "key_entities": [
+            {
+              "qualified_name": "legal_candidates",
+              "reference_file": "eval/ontology.py",
+              "reference_start_line": 1067,
+              "reference_end_line": 1101
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "eval/ontology.py",
+              "methods": [
+                {
+                  "qualified_name": "legal_candidates",
+                  "start_line": 1067,
+                  "end_line": 1101,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "validate",
+                  "start_line": 1113,
+                  "end_line": 1136,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "AttemptedStep",
+                  "start_line": 1002,
+                  "end_line": 1040,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "Step",
+                  "start_line": 169,
+                  "end_line": 188,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "Family",
+                  "start_line": 45,
+                  "end_line": 50,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "every graph node is a step function from core.py",
+          "src_name": "State Graph",
+          "dst_name": "Step Functions and Output Guard",
+          "src_id": "4.2",
+          "dst_id": "4.3",
+          "is_static": false,
+          "evidence": [
+            "agent/graph.py:build_graph"
+          ]
+        },
+        {
+          "relation": "checkpoints the typed record",
+          "src_name": "State Graph",
+          "dst_name": "Diagnostic State",
+          "src_id": "4.2",
+          "dst_id": "4.1",
+          "is_static": false,
+          "evidence": [
+            "agent/graph.py:make_checkpointer"
+          ]
+        },
+        {
+          "relation": "asks for the legal candidates and the escalation decision",
+          "src_name": "Step Functions and Output Guard",
+          "dst_name": "Next-Step Policy",
+          "src_id": "4.3",
+          "dst_id": "4.4",
+          "is_static": false,
+          "evidence": [
+            "agent/core.py:step_select_step"
+          ]
+        },
+        {
+          "relation": "calls classify and decide",
+          "src_name": "Step Functions and Output Guard",
+          "dst_name": "Bedrock LLM",
+          "src_id": "4.3",
+          "dst_id": "4.6",
+          "is_static": false,
+          "evidence": [
+            "agent/core.py:step_triage"
+          ]
+        },
+        {
+          "relation": "reads typed answers and checks symptom coverage",
+          "src_name": "Step Functions and Output Guard",
+          "dst_name": "Answers and Symptom Coverage",
+          "src_id": "4.3",
+          "dst_id": "4.5",
+          "is_static": false,
+          "evidence": [
+            "agent/core.py:step_triage"
+          ]
+        },
+        {
+          "relation": "filters candidates from the ontology",
+          "src_name": "Next-Step Policy",
+          "dst_name": "Step Ontology",
+          "src_id": "4.4",
+          "dst_id": "4.7",
+          "is_static": false,
+          "evidence": [
+            "agent/policy.py:candidate_steps"
+          ]
+        },
+        {
+          "relation": "reads the ledger and device identification",
+          "src_name": "Next-Step Policy",
+          "dst_name": "Diagnostic State",
+          "src_id": "4.4",
+          "dst_id": "4.1",
+          "is_static": false,
+          "evidence": [
+            "agent/policy.py:candidate_steps"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "5",
+      "name": "Hybrid Retrieval",
+      "description": "Filter first, then search. `retrieval.retrieve` applies model, category and speakable filters, fuses BM25 and dense scores, reranks and returns the top three Tier-1 chunks. The chunk store is Postgres plus pgvector (Titan embeddings); a JSONL backend takes over when Postgres does not answer.",
+      "key_entities": [
+        {
+          "qualified_name": "retrieve",
+          "reference_file": "agent/retrieval.py",
+          "reference_start_line": 565,
+          "reference_end_line": 655
+        },
+        {
+          "qualified_name": "connect",
+          "reference_file": "agent/store.py",
+          "reference_start_line": 112,
+          "reference_end_line": 132
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "agent/retrieval.py",
+          "methods": [
+            {
+              "qualified_name": "retrieve",
+              "start_line": 565,
+              "end_line": 655,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "rerank",
+              "start_line": 523,
+              "end_line": 557,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "model_filter",
+              "start_line": 189,
+              "end_line": 219,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Chunk",
+              "start_line": 105,
+              "end_line": 134,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "RetrievalResult",
+              "start_line": 497,
+              "end_line": 520,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "Hit",
+              "start_line": 484,
+              "end_line": 493,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "Backend",
+              "start_line": 227,
+              "end_line": 246,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "PostgresBackend",
+              "start_line": 249,
+              "end_line": 288,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "JsonlBackend",
+              "start_line": 291,
+              "end_line": 340,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "default_backend",
+              "start_line": 415,
+              "end_line": 422,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "agent/store.py",
+          "methods": [
+            {
+              "qualified_name": "connect",
+              "start_line": 112,
+              "end_line": 132,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "migrate",
+              "start_line": 449,
+              "end_line": 623,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "embed",
+              "start_line": 216,
+              "end_line": 243,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "embed_query",
+              "start_line": 246,
+              "end_line": 271,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "bm25_scores",
+              "start_line": 717,
+              "end_line": 734,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "dense_scores",
+              "start_line": 737,
+              "end_line": 749,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "fetch_chunk_rows",
+              "start_line": 649,
+              "end_line": 654,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "model_predicate",
+              "start_line": 657,
+              "end_line": 671,
+              "node_type": "function"
+            }
+          ]
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "5.1",
+          "name": "Filter, Fuse and Rerank",
+          "description": "The retrieval chain over a `Backend`: model filter (confirmed / probable / unknown), fusion of lexical and dense scores, rerank, top 3 with chunk ids.",
+          "key_entities": [
+            {
+              "qualified_name": "retrieve",
+              "reference_file": "agent/retrieval.py",
+              "reference_start_line": 565,
+              "reference_end_line": 655
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/retrieval.py",
+              "methods": [
+                {
+                  "qualified_name": "retrieve",
+                  "start_line": 565,
+                  "end_line": 655,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "rerank",
+                  "start_line": 523,
+                  "end_line": 557,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "model_filter",
+                  "start_line": 189,
+                  "end_line": 219,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Chunk",
+                  "start_line": 105,
+                  "end_line": 134,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "RetrievalResult",
+                  "start_line": 497,
+                  "end_line": 520,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "Hit",
+                  "start_line": 484,
+                  "end_line": 493,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "5.2",
+          "name": "Retrieval Backends",
+          "description": "`PostgresBackend` runs the filter and both halves of the search as SQL; `JsonlBackend` serves `data/processed/chunks.jsonl` with stdlib BM25; `default_backend` picks one once.",
+          "key_entities": [
+            {
+              "qualified_name": "Backend",
+              "reference_file": "agent/retrieval.py",
+              "reference_start_line": 227,
+              "reference_end_line": 246
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/retrieval.py",
+              "methods": [
+                {
+                  "qualified_name": "Backend",
+                  "start_line": 227,
+                  "end_line": 246,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "PostgresBackend",
+                  "start_line": 249,
+                  "end_line": 288,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "JsonlBackend",
+                  "start_line": 291,
+                  "end_line": 340,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "default_backend",
+                  "start_line": 415,
+                  "end_line": 422,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "5.3",
+          "name": "Postgres and pgvector Store",
+          "description": "Schema (`source_registry`, `chunks`, `chunk_lexemes`, `lexeme_df`, `corpus_stats`, `embedding_model`, `chunk_embeddings`), the migration that loads the corpus, Titan embedding calls, and the SQL halves of the hybrid search.",
+          "key_entities": [
+            {
+              "qualified_name": "connect",
+              "reference_file": "agent/store.py",
+              "reference_start_line": 112,
+              "reference_end_line": 132
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "agent/store.py",
+              "methods": [
+                {
+                  "qualified_name": "connect",
+                  "start_line": 112,
+                  "end_line": 132,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "migrate",
+                  "start_line": 449,
+                  "end_line": 623,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "embed",
+                  "start_line": 216,
+                  "end_line": 243,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "embed_query",
+                  "start_line": 246,
+                  "end_line": 271,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "bm25_scores",
+                  "start_line": 717,
+                  "end_line": 734,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "dense_scores",
+                  "start_line": 737,
+                  "end_line": 749,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "fetch_chunk_rows",
+                  "start_line": 649,
+                  "end_line": 654,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "model_predicate",
+                  "start_line": 657,
+                  "end_line": 671,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "asks the backend for a pool, lexical scores and dense scores",
+          "src_name": "Filter, Fuse and Rerank",
+          "dst_name": "Retrieval Backends",
+          "src_id": "5.1",
+          "dst_id": "5.2",
+          "is_static": false,
+          "evidence": [
+            "agent/retrieval.py:retrieve"
+          ]
+        },
+        {
+          "relation": "PostgresBackend calls the store's SQL halves",
+          "src_name": "Retrieval Backends",
+          "dst_name": "Postgres and pgvector Store",
+          "src_id": "5.2",
+          "dst_id": "5.3",
+          "is_static": false,
+          "evidence": [
+            "agent/retrieval.py:PostgresBackend"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "6",
+      "name": "RAG Corpus and Ingest",
+      "description": "The offline path that builds the Tier-1 corpus: `python -m ingest.run` chunks the saved manuals and help-center pages under `data/raw/` and `data/text/`, attaches metadata and the source registry, and writes `data/processed/chunks.jsonl` and `data/processed/sources.json`. `agent.store.migrate` loads those into Postgres. Tier-2 and Tier-3 collection scripts live in `scripts/` and never feed the speech path.",
+      "key_entities": [
+        {
+          "qualified_name": "chunk_corpus",
+          "reference_file": "ingest/chunk.py",
+          "reference_start_line": 928,
+          "reference_end_line": 933
+        },
+        {
+          "qualified_name": "build_metadata",
+          "reference_file": "ingest/metadata.py",
+          "reference_start_line": 1388,
+          "reference_end_line": 1503
+        },
+        {
+          "qualified_name": "main",
+          "reference_file": "ingest/run.py",
+          "reference_start_line": 156,
+          "reference_end_line": 163
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "ingest/chunk.py",
+          "methods": [
+            {
+              "qualified_name": "chunk_corpus",
+              "start_line": 928,
+              "end_line": 933,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "chunk_source",
+              "start_line": 868,
+              "end_line": 925,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "parse_html",
+              "start_line": 273,
+              "end_line": 299,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "parse_manual",
+              "start_line": 532,
+              "end_line": 601,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "pack",
+              "start_line": 805,
+              "end_line": 825,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "ingest/metadata.py",
+          "methods": [
+            {
+              "qualified_name": "build_metadata",
+              "start_line": 1388,
+              "end_line": 1503,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Source",
+              "start_line": 155,
+              "end_line": 183,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "Chunk",
+              "start_line": 1283,
+              "end_line": 1323,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "redact_firmware_versions",
+              "start_line": 1234,
+              "end_line": 1268,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "ingest/run.py",
+          "methods": [
+            {
+              "qualified_name": "main",
+              "start_line": 156,
+              "end_line": 163,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "build_registry",
+              "start_line": 31,
+              "end_line": 82,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "write_outputs",
+              "start_line": 85,
+              "end_line": 93,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "ingest/validate.py",
+          "methods": [
+            {
+              "qualified_name": "check_chunks",
+              "start_line": 96,
+              "end_line": 179,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "check_procedures_atomic",
+              "start_line": 182,
+              "end_line": 210,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "check_step_ids",
+              "start_line": 228,
+              "end_line": 247,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "main",
+              "start_line": 303,
+              "end_line": 346,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "ingest/known_issues.py",
+          "methods": [
+            {
+              "qualified_name": "assert_monitor_output_is_tier2",
+              "start_line": 314,
+              "end_line": 342,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "KnownIssueRecord",
+              "start_line": 222,
+              "end_line": 311,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "confirm_with_tier1",
+              "start_line": 345,
+              "end_line": 383,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "WatchedPage",
+              "start_line": 157,
+              "end_line": 162,
+              "node_type": "class"
+            }
+          ]
+        },
+        {
+          "file_path": "scripts/collect_app_reviews.py",
+          "methods": []
+        },
+        {
+          "file_path": "scripts/html2txt.py",
+          "methods": []
+        },
+        {
+          "file_path": "scripts/probe_amazon_aggregators.py",
+          "methods": []
+        },
+        {
+          "file_path": "scripts/probe_amazon_round2.py",
+          "methods": []
+        },
+        {
+          "file_path": "scripts/probe_play.py",
+          "methods": []
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "6.1",
+          "name": "Chunking",
+          "description": "Parses HTML and manual text and packs chunks; a procedure is never split.",
+          "key_entities": [
+            {
+              "qualified_name": "chunk_corpus",
+              "reference_file": "ingest/chunk.py",
+              "reference_start_line": 928,
+              "reference_end_line": 933
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "ingest/chunk.py",
+              "methods": [
+                {
+                  "qualified_name": "chunk_corpus",
+                  "start_line": 928,
+                  "end_line": 933,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "chunk_source",
+                  "start_line": 868,
+                  "end_line": 925,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "parse_html",
+                  "start_line": 273,
+                  "end_line": 299,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "parse_manual",
+                  "start_line": 532,
+                  "end_line": 601,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "pack",
+                  "start_line": 805,
+                  "end_line": 825,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "6.2",
+          "name": "Metadata and Registry",
+          "description": "Declared (not inferred) model applicability, clearance flags and the source registry; `run.py` writes both output files.",
+          "key_entities": [
+            {
+              "qualified_name": "build_metadata",
+              "reference_file": "ingest/metadata.py",
+              "reference_start_line": 1388,
+              "reference_end_line": 1503
+            },
+            {
+              "qualified_name": "main",
+              "reference_file": "ingest/run.py",
+              "reference_start_line": 156,
+              "reference_end_line": 163
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "ingest/metadata.py",
+              "methods": [
+                {
+                  "qualified_name": "build_metadata",
+                  "start_line": 1388,
+                  "end_line": 1503,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Source",
+                  "start_line": 155,
+                  "end_line": 183,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "Chunk",
+                  "start_line": 1283,
+                  "end_line": 1323,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "redact_firmware_versions",
+                  "start_line": 1234,
+                  "end_line": 1268,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "ingest/run.py",
+              "methods": [
+                {
+                  "qualified_name": "main",
+                  "start_line": 156,
+                  "end_line": 163,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "build_registry",
+                  "start_line": 31,
+                  "end_line": 82,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "write_outputs",
+                  "start_line": 85,
+                  "end_line": 93,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "6.3",
+          "name": "Corpus Validation",
+          "description": "`python -m ingest.validate` checks the corpus against the design rules; breaches exit non-zero.",
+          "key_entities": [
+            {
+              "qualified_name": "check_chunks",
+              "reference_file": "ingest/validate.py",
+              "reference_start_line": 96,
+              "reference_end_line": 179
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "ingest/validate.py",
+              "methods": [
+                {
+                  "qualified_name": "check_chunks",
+                  "start_line": 96,
+                  "end_line": 179,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "check_procedures_atomic",
+                  "start_line": 182,
+                  "end_line": 210,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "check_step_ids",
+                  "start_line": 228,
+                  "end_line": 247,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "main",
+                  "start_line": 303,
+                  "end_line": 346,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "6.4",
+          "name": "Known-Issue Watch",
+          "description": "A watcher over public pages whose output is asserted to be Tier 2; it is not a vendor feed and is never speakable.",
+          "key_entities": [
+            {
+              "qualified_name": "assert_monitor_output_is_tier2",
+              "reference_file": "ingest/known_issues.py",
+              "reference_start_line": 314,
+              "reference_end_line": 342
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "ingest/known_issues.py",
+              "methods": [
+                {
+                  "qualified_name": "assert_monitor_output_is_tier2",
+                  "start_line": 314,
+                  "end_line": 342,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "KnownIssueRecord",
+                  "start_line": 222,
+                  "end_line": 311,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "confirm_with_tier1",
+                  "start_line": 345,
+                  "end_line": 383,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "WatchedPage",
+                  "start_line": 157,
+                  "end_line": 162,
+                  "node_type": "class"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "6.5",
+          "name": "Tier 2 and 3 Collection Scripts",
+          "description": "Scripts for discovery-only samples (app-store reviews) and for reading saved pages; their output is never a verified fix.",
+          "key_entities": [],
+          "file_methods": [
+            {
+              "file_path": "scripts/collect_app_reviews.py",
+              "methods": []
+            },
+            {
+              "file_path": "scripts/html2txt.py",
+              "methods": []
+            },
+            {
+              "file_path": "scripts/probe_amazon_aggregators.py",
+              "methods": []
+            },
+            {
+              "file_path": "scripts/probe_amazon_round2.py",
+              "methods": []
+            },
+            {
+              "file_path": "scripts/probe_play.py",
+              "methods": []
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "run.py calls chunk_corpus and attaches metadata to each chunk",
+          "src_name": "Metadata and Registry",
+          "dst_name": "Chunking",
+          "src_id": "6.2",
+          "dst_id": "6.1",
+          "is_static": false,
+          "evidence": [
+            "ingest/run.py:main"
+          ]
+        },
+        {
+          "relation": "checks the files run.py writes",
+          "src_name": "Corpus Validation",
+          "dst_name": "Metadata and Registry",
+          "src_id": "6.3",
+          "dst_id": "6.2",
+          "is_static": false,
+          "evidence": [
+            "ingest/validate.py:check_chunks"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "7",
+      "name": "Eval Harnesses",
+      "description": "The 30-scenario golden set (`eval/scenarios.json`) scored three ways: Harness A (text, single turn), Harness B (scripted multi-turn) and Harness C (synthesised speech through a real LiveKit room), plus grounding, latency-ladder and prefetch measurements and the two-grader pack with Cohen's kappa.",
+      "key_entities": [
+        {
+          "qualified_name": "run_harness",
+          "reference_file": "eval/harness.py",
+          "reference_start_line": 570,
+          "reference_end_line": 593
+        },
+        {
+          "qualified_name": "main",
+          "reference_file": "eval/run.py",
+          "reference_start_line": 30,
+          "reference_end_line": 80
+        },
+        {
+          "qualified_name": "DumbBaselineAgent",
+          "reference_file": "eval/baseline.py",
+          "reference_start_line": 68,
+          "reference_end_line": 110
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "eval/harness.py",
+          "methods": [
+            {
+              "qualified_name": "run_harness",
+              "start_line": 570,
+              "end_line": 593,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "score",
+              "start_line": 413,
+              "end_line": 492,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "state_from_scenario",
+              "start_line": 286,
+              "end_line": 307,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "Scenario",
+              "start_line": 72,
+              "end_line": 107,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "build_agent",
+              "start_line": 357,
+              "end_line": 373,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/run.py",
+          "methods": [
+            {
+              "qualified_name": "main",
+              "start_line": 30,
+              "end_line": 80,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/baseline.py",
+          "methods": [
+            {
+              "qualified_name": "DumbBaselineAgent",
+              "start_line": 68,
+              "end_line": 110,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "match_taxonomy",
+              "start_line": 59,
+              "end_line": 65,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/harness_b.py",
+          "methods": [
+            {
+              "qualified_name": "run_script",
+              "start_line": 1025,
+              "end_line": 1139,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "ScriptedResponder",
+              "start_line": 676,
+              "end_line": 714,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "CoreDriver",
+              "start_line": 813,
+              "end_line": 825,
+              "node_type": "class"
+            },
+            {
+              "qualified_name": "validate_scripts",
+              "start_line": 609,
+              "end_line": 656,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/run_b.py",
+          "methods": [
+            {
+              "qualified_name": "main",
+              "start_line": 42,
+              "end_line": 114,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/harness_c.py",
+          "methods": [
+            {
+              "qualified_name": "run_harness_c",
+              "start_line": 1262,
+              "end_line": 1295,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "run_case",
+              "start_line": 969,
+              "end_line": 1010,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "build_cases",
+              "start_line": 298,
+              "end_line": 375,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "synthesize_case",
+              "start_line": 489,
+              "end_line": 535,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/run_c.py",
+          "methods": [
+            {
+              "qualified_name": "main",
+              "start_line": 97,
+              "end_line": 225,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/grounding.py",
+          "methods": [
+            {
+              "qualified_name": "run_harness_a",
+              "start_line": 454,
+              "end_line": 464,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "run_harness_b",
+              "start_line": 467,
+              "end_line": 478,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "structural_report",
+              "start_line": 372,
+              "end_line": 384,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "scan_turn",
+              "start_line": 225,
+              "end_line": 262,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/run_grounding.py",
+          "methods": [
+            {
+              "qualified_name": "main",
+              "start_line": 89,
+              "end_line": 189,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/build_grounding_pack.py",
+          "methods": [
+            {
+              "qualified_name": "build",
+              "start_line": 221,
+              "end_line": 325,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "draw_sample",
+              "start_line": 168,
+              "end_line": 218,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/score_grading.py",
+          "methods": [
+            {
+              "qualified_name": "cohens_kappa",
+              "start_line": 186,
+              "end_line": 214,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "report",
+              "start_line": 253,
+              "end_line": 397,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/run_prefetch.py",
+          "methods": [
+            {
+              "qualified_name": "measure",
+              "start_line": 149,
+              "end_line": 210,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "partial_stream",
+              "start_line": 89,
+              "end_line": 99,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "eval/run_ladder.py",
+          "methods": [
+            {
+              "qualified_name": "replay",
+              "start_line": 109,
+              "end_line": 163,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "measured_m7",
+              "start_line": 54,
+              "end_line": 71,
+              "node_type": "function"
+            }
+          ]
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "7.1",
+          "name": "Harness A",
+          "description": "Single turn: pre-populates a `DiagnosticState` from the scenario, calls the agent once, scores the next step. `baseline.py` is the deliberately dumb floor agent.",
+          "key_entities": [
+            {
+              "qualified_name": "run_harness",
+              "reference_file": "eval/harness.py",
+              "reference_start_line": 570,
+              "reference_end_line": 593
+            },
+            {
+              "qualified_name": "main",
+              "reference_file": "eval/run.py",
+              "reference_start_line": 30,
+              "reference_end_line": 80
+            },
+            {
+              "qualified_name": "DumbBaselineAgent",
+              "reference_file": "eval/baseline.py",
+              "reference_start_line": 68,
+              "reference_end_line": 110
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "eval/harness.py",
+              "methods": [
+                {
+                  "qualified_name": "run_harness",
+                  "start_line": 570,
+                  "end_line": 593,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "score",
+                  "start_line": 413,
+                  "end_line": 492,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "state_from_scenario",
+                  "start_line": 286,
+                  "end_line": 307,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "Scenario",
+                  "start_line": 72,
+                  "end_line": 107,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "build_agent",
+                  "start_line": 357,
+                  "end_line": 373,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/run.py",
+              "methods": [
+                {
+                  "qualified_name": "main",
+                  "start_line": 30,
+                  "end_line": 80,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/baseline.py",
+              "methods": [
+                {
+                  "qualified_name": "DumbBaselineAgent",
+                  "start_line": 68,
+                  "end_line": 110,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "match_taxonomy",
+                  "start_line": 59,
+                  "end_line": 65,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "7.2",
+          "name": "Harness B",
+          "description": "Scripted multi-turn: a deterministic responder plays the user down each branch.",
+          "key_entities": [
+            {
+              "qualified_name": "run_script",
+              "reference_file": "eval/harness_b.py",
+              "reference_start_line": 1025,
+              "reference_end_line": 1139
+            },
+            {
+              "qualified_name": "main",
+              "reference_file": "eval/run_b.py",
+              "reference_start_line": 42,
+              "reference_end_line": 114
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "eval/harness_b.py",
+              "methods": [
+                {
+                  "qualified_name": "run_script",
+                  "start_line": 1025,
+                  "end_line": 1139,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "ScriptedResponder",
+                  "start_line": 676,
+                  "end_line": 714,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "CoreDriver",
+                  "start_line": 813,
+                  "end_line": 825,
+                  "node_type": "class"
+                },
+                {
+                  "qualified_name": "validate_scripts",
+                  "start_line": 609,
+                  "end_line": 656,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/run_b.py",
+              "methods": [
+                {
+                  "qualified_name": "main",
+                  "start_line": 42,
+                  "end_line": 114,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "7.3",
+          "name": "Harness C",
+          "description": "End to end spoken: synthesised speech with road noise, injected at real-time pace through a real LiveKit participant, with an ASR-corruption pass.",
+          "key_entities": [
+            {
+              "qualified_name": "run_harness_c",
+              "reference_file": "eval/harness_c.py",
+              "reference_start_line": 1262,
+              "reference_end_line": 1295
+            },
+            {
+              "qualified_name": "main",
+              "reference_file": "eval/run_c.py",
+              "reference_start_line": 97,
+              "reference_end_line": 225
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "eval/harness_c.py",
+              "methods": [
+                {
+                  "qualified_name": "run_harness_c",
+                  "start_line": 1262,
+                  "end_line": 1295,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "run_case",
+                  "start_line": 969,
+                  "end_line": 1010,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "build_cases",
+                  "start_line": 298,
+                  "end_line": 375,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "synthesize_case",
+                  "start_line": 489,
+                  "end_line": 535,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/run_c.py",
+              "methods": [
+                {
+                  "qualified_name": "main",
+                  "start_line": 97,
+                  "end_line": 225,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "7.4",
+          "name": "Grounding and Grader Pack",
+          "description": "Structural grounding rate from the output guard's verdicts, the two-grader pack, and Cohen's kappa scoring.",
+          "key_entities": [
+            {
+              "qualified_name": "run_harness_a",
+              "reference_file": "eval/grounding.py",
+              "reference_start_line": 454,
+              "reference_end_line": 464
+            },
+            {
+              "qualified_name": "main",
+              "reference_file": "eval/run_grounding.py",
+              "reference_start_line": 89,
+              "reference_end_line": 189
+            },
+            {
+              "qualified_name": "build",
+              "reference_file": "eval/build_grounding_pack.py",
+              "reference_start_line": 221,
+              "reference_end_line": 325
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "eval/grounding.py",
+              "methods": [
+                {
+                  "qualified_name": "run_harness_a",
+                  "start_line": 454,
+                  "end_line": 464,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "run_harness_b",
+                  "start_line": 467,
+                  "end_line": 478,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "structural_report",
+                  "start_line": 372,
+                  "end_line": 384,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "scan_turn",
+                  "start_line": 225,
+                  "end_line": 262,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/run_grounding.py",
+              "methods": [
+                {
+                  "qualified_name": "main",
+                  "start_line": 89,
+                  "end_line": 189,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/build_grounding_pack.py",
+              "methods": [
+                {
+                  "qualified_name": "build",
+                  "start_line": 221,
+                  "end_line": 325,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "draw_sample",
+                  "start_line": 168,
+                  "end_line": 218,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/score_grading.py",
+              "methods": [
+                {
+                  "qualified_name": "cohens_kappa",
+                  "start_line": 186,
+                  "end_line": 214,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "report",
+                  "start_line": 253,
+                  "end_line": 397,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "7.5",
+          "name": "Prefetch and Ladder Measurements",
+          "description": "Replays that measure what speculative prefetch is worth and drive the degradation ladder until it fires and recovers.",
+          "key_entities": [
+            {
+              "qualified_name": "measure",
+              "reference_file": "eval/run_prefetch.py",
+              "reference_start_line": 149,
+              "reference_end_line": 210
+            },
+            {
+              "qualified_name": "replay",
+              "reference_file": "eval/run_ladder.py",
+              "reference_start_line": 109,
+              "reference_end_line": 163
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "eval/run_prefetch.py",
+              "methods": [
+                {
+                  "qualified_name": "measure",
+                  "start_line": 149,
+                  "end_line": 210,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "partial_stream",
+                  "start_line": 89,
+                  "end_line": 99,
+                  "node_type": "function"
+                }
+              ]
+            },
+            {
+              "file_path": "eval/run_ladder.py",
+              "methods": [
+                {
+                  "qualified_name": "replay",
+                  "start_line": 109,
+                  "end_line": 163,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "measured_m7",
+                  "start_line": 54,
+                  "end_line": 71,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "runs the core over Harness A and captures guard verdicts",
+          "src_name": "Grounding and Grader Pack",
+          "dst_name": "Harness A",
+          "src_id": "7.4",
+          "dst_id": "7.1",
+          "is_static": false,
+          "evidence": [
+            "eval/grounding.py:run_harness_a"
+          ]
+        },
+        {
+          "relation": "runs the scripted branches the same way",
+          "src_name": "Grounding and Grader Pack",
+          "dst_name": "Harness B",
+          "src_id": "7.4",
+          "dst_id": "7.2",
+          "is_static": false,
+          "evidence": [
+            "eval/grounding.py:run_harness_b"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "8",
+      "name": "HTTPS and wss Relay",
+      "description": "A page served over https may not open `ws://`, and `livekit-server` does not terminate TLS on its signalling port. When the server runs with `ROVE_TLS_CERT` and `ROVE_TLS_KEY`, uvicorn terminates TLS and `/lk` relays only the signalling (`rtc` paths) to `settings.livekit_url` (default `ws://127.0.0.1:7880`). Media stays browser to media server. A testing-only certificate script and a headless wss verifier ship with it.",
+      "key_entities": [
+        {
+          "qualified_name": "register_livekit_relay",
+          "reference_file": "server/livekit_relay.py",
+          "reference_start_line": 65,
+          "reference_end_line": 130
+        },
+        {
+          "qualified_name": "ROVE_TLS_CERT",
+          "reference_file": "scripts/serve_https_testing.sh",
+          "reference_start_line": 9,
+          "reference_end_line": 9
+        },
+        {
+          "qualified_name": "main",
+          "reference_file": "server/verify_wss.py",
+          "reference_start_line": 27,
+          "reference_end_line": 50
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "server/livekit_relay.py",
+          "methods": [
+            {
+              "qualified_name": "register_livekit_relay",
+              "start_line": 65,
+              "end_line": 130,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "scripts/serve_https_testing.sh",
+          "methods": [
+            {
+              "qualified_name": "ROVE_TLS_CERT",
+              "start_line": 9,
+              "end_line": 9,
+              "node_type": "reference"
+            }
+          ]
+        },
+        {
+          "file_path": "server/verify_wss.py",
+          "methods": [
+            {
+              "qualified_name": "main",
+              "start_line": 27,
+              "end_line": 50,
+              "node_type": "function"
+            }
+          ]
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "8.1",
+          "name": "wss Signalling Relay",
+          "description": "`register_livekit_relay` mounts `/lk/{path}` as a WebSocket and HTTP pass-through; only `rtc` and `rtc/...` paths (signalling and its validate probe) are forwarded to `settings.livekit_url`; anything else is closed with 1008.",
+          "key_entities": [
+            {
+              "qualified_name": "register_livekit_relay",
+              "reference_file": "server/livekit_relay.py",
+              "reference_start_line": 65,
+              "reference_end_line": 130
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/livekit_relay.py",
+              "methods": [
+                {
+                  "qualified_name": "register_livekit_relay",
+                  "start_line": 65,
+                  "end_line": 130,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "8.2",
+          "name": "TLS Testing Server",
+          "description": "`scripts/serve_https_testing.sh` generates a throwaway CA and leaf certificate under `server/testing-tls/` and starts `python -m server` with `ROVE_TLS_CERT` and `ROVE_TLS_KEY`. Testing only. In `server/config.py`, `Settings.scheme` and `Settings.livekit_public_url` decide whether the page is handed `wss://<host>/lk`.",
+          "key_entities": [
+            {
+              "qualified_name": "ROVE_TLS_CERT",
+              "reference_file": "scripts/serve_https_testing.sh",
+              "reference_start_line": 9,
+              "reference_end_line": 9
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "scripts/serve_https_testing.sh",
+              "methods": [
+                {
+                  "qualified_name": "ROVE_TLS_CERT",
+                  "start_line": 9,
+                  "end_line": 9,
+                  "node_type": "reference"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "8.3",
+          "name": "wss Verifier",
+          "description": "`python -m server.verify_wss` mints through the https page, asserts the browser would receive `wss://<host>/lk`, and joins a room through it.",
+          "key_entities": [
+            {
+              "qualified_name": "main",
+              "reference_file": "server/verify_wss.py",
+              "reference_start_line": 27,
+              "reference_end_line": 50
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/verify_wss.py",
+              "methods": [
+                {
+                  "qualified_name": "main",
+                  "start_line": 27,
+                  "end_line": 50,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "starts the TLS server that hosts the relay",
+          "src_name": "TLS Testing Server",
+          "dst_name": "wss Signalling Relay",
+          "src_id": "8.2",
+          "dst_id": "8.1",
+          "is_static": false,
+          "evidence": [
+            "scripts/serve_https_testing.sh:ROVE_TLS_CERT"
+          ]
+        },
+        {
+          "relation": "joins a room through /lk over wss",
+          "src_name": "wss Verifier",
+          "dst_name": "wss Signalling Relay",
+          "src_id": "8.3",
+          "dst_id": "8.1",
+          "is_static": false,
+          "evidence": [
+            "server/verify_wss.py:main"
+          ]
+        }
+      ]
+    },
+    {
+      "component_id": "9",
+      "name": "Support Console",
+      "description": "The human side of escalation. A no-framework browser console (`support/`, built with `node support/build.mjs`) and the server routes it calls (`/api/support/*`, `/ws/support`): observer tokens, a room list, the handoff panel, disclosure, joining the same room, and collecting a consented transcript.",
+      "key_entities": [
+        {
+          "qualified_name": "register_support_routes",
+          "reference_file": "server/support.py",
+          "reference_start_line": 189,
+          "reference_end_line": 532
+        }
+      ],
+      "file_methods": [
+        {
+          "file_path": "server/support.py",
+          "methods": [
+            {
+              "qualified_name": "register_support_routes",
+              "start_line": 189,
+              "end_line": 532,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "authorise_observer",
+              "start_line": 102,
+              "end_line": 149,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "check_support_key",
+              "start_line": 87,
+              "end_line": 99,
+              "node_type": "function"
+            },
+            {
+              "qualified_name": "room_summary",
+              "start_line": 152,
+              "end_line": 181,
+              "node_type": "function"
+            }
+          ]
+        },
+        {
+          "file_path": "support/src/main.js",
+          "methods": []
+        },
+        {
+          "file_path": "support/src/panels.js",
+          "methods": []
+        },
+        {
+          "file_path": "support/src/api.js",
+          "methods": []
+        },
+        {
+          "file_path": "support/src/socket.js",
+          "methods": []
+        },
+        {
+          "file_path": "support/src/console.css",
+          "methods": []
+        },
+        {
+          "file_path": "support/index.html",
+          "methods": []
+        },
+        {
+          "file_path": "support/build.mjs",
+          "methods": []
+        },
+        {
+          "file_path": "support/selftest.mjs",
+          "methods": []
+        }
+      ],
+      "can_expand": true,
+      "components": [
+        {
+          "component_id": "9.1",
+          "name": "Support API",
+          "description": "`register_support_routes` adds the observer, rooms, handoff, trace, disclose, join, leave and collect routes plus `/ws/support`.",
+          "key_entities": [
+            {
+              "qualified_name": "register_support_routes",
+              "reference_file": "server/support.py",
+              "reference_start_line": 189,
+              "reference_end_line": 532
+            }
+          ],
+          "file_methods": [
+            {
+              "file_path": "server/support.py",
+              "methods": [
+                {
+                  "qualified_name": "register_support_routes",
+                  "start_line": 189,
+                  "end_line": 532,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "authorise_observer",
+                  "start_line": 102,
+                  "end_line": 149,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "check_support_key",
+                  "start_line": 87,
+                  "end_line": 99,
+                  "node_type": "function"
+                },
+                {
+                  "qualified_name": "room_summary",
+                  "start_line": 152,
+                  "end_line": 181,
+                  "node_type": "function"
+                }
+              ]
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        },
+        {
+          "component_id": "9.2",
+          "name": "Browser Console",
+          "description": "Pure panel renderers (`panels.js`), the DOM and network layer (`main.js`), the REST and WebSocket clients, a stdlib-only build and a self-test.",
+          "key_entities": [],
+          "file_methods": [
+            {
+              "file_path": "support/src/main.js",
+              "methods": []
+            },
+            {
+              "file_path": "support/src/panels.js",
+              "methods": []
+            },
+            {
+              "file_path": "support/src/api.js",
+              "methods": []
+            },
+            {
+              "file_path": "support/src/socket.js",
+              "methods": []
+            },
+            {
+              "file_path": "support/src/console.css",
+              "methods": []
+            },
+            {
+              "file_path": "support/index.html",
+              "methods": []
+            },
+            {
+              "file_path": "support/build.mjs",
+              "methods": []
+            },
+            {
+              "file_path": "support/selftest.mjs",
+              "methods": []
+            }
+          ],
+          "can_expand": false,
+          "components": [],
+          "components_relations": []
+        }
+      ],
+      "components_relations": [
+        {
+          "relation": "calls /api/support/* and opens /ws/support",
+          "src_name": "Browser Console",
+          "dst_name": "Support API",
+          "src_id": "9.2",
+          "dst_id": "9.1",
+          "is_static": false,
+          "evidence": [
+            "server/support.py:register_support_routes"
+          ]
+        }
+      ]
+    }
+  ],
+  "components_relations": [
+    {
+      "relation": "mints a session, opens the /ws control socket, sends typed turns",
+      "src_name": "React Client",
+      "dst_name": "FastAPI Server",
+      "src_id": "1",
+      "dst_id": "2",
+      "is_static": false,
+      "evidence": [
+        "client/src/api.js:openSession",
+        "server/app.py:create_app"
+      ]
+    },
+    {
+      "relation": "joins the LiveKit room and streams mic audio",
+      "src_name": "React Client",
+      "dst_name": "LiveKit Voice Pipeline",
+      "src_id": "1",
+      "dst_id": "3",
+      "is_static": false,
+      "evidence": [
+        "client/src/livekit.js:LiveKitLink",
+        "server/livekit_agent.py:AgentWorker"
+      ]
+    },
+    {
+      "relation": "joins over wss://host/lk when the page is https and the host is a bare name[:port]",
+      "src_name": "React Client",
+      "dst_name": "HTTPS and wss Relay",
+      "src_id": "1",
+      "dst_id": "8",
+      "is_static": false,
+      "evidence": [
+        "server/config.py:Settings.livekit_public_url",
+        "server/livekit_relay.py:register_livekit_relay"
+      ]
+    },
+    {
+      "relation": "forwards signalling to the LiveKit media server at settings.livekit_url (default ws://127.0.0.1:7880)",
+      "src_name": "HTTPS and wss Relay",
+      "dst_name": "LiveKit Voice Pipeline",
+      "src_id": "8",
+      "dst_id": "3",
+      "is_static": false,
+      "evidence": [
+        "server/livekit_relay.py:register_livekit_relay",
+        "server/config.py:Settings"
+      ]
+    },
+    {
+      "relation": "under the livekit transport registers /lk; uvicorn terminates TLS when a cert and key are set",
+      "src_name": "FastAPI Server",
+      "dst_name": "HTTPS and wss Relay",
+      "src_id": "2",
+      "dst_id": "8",
+      "is_static": false,
+      "evidence": [
+        "server/app.py:create_app",
+        "server/__main__.py:main"
+      ]
+    },
+    {
+      "relation": "under the livekit transport, starts the in-process agent worker and mints LiveKit tokens",
+      "src_name": "FastAPI Server",
+      "dst_name": "LiveKit Voice Pipeline",
+      "src_id": "2",
+      "dst_id": "3",
+      "is_static": false,
+      "evidence": [
+        "server/livekit_agent.py:AgentWorker",
+        "server/livekit_tokens.py:mint"
+      ]
+    },
+    {
+      "relation": "runs each turn through core_bridge into agent.core.diagnose",
+      "src_name": "FastAPI Server",
+      "dst_name": "LangGraph Diagnostic Core",
+      "src_id": "2",
+      "dst_id": "4",
+      "is_static": false,
+      "evidence": [
+        "server/core_bridge.py:run_typed_turn",
+        "agent/core.py:diagnose"
+      ]
+    },
+    {
+      "relation": "dispatches finalised utterances through core_bridge sessions",
+      "src_name": "LiveKit Voice Pipeline",
+      "dst_name": "FastAPI Server",
+      "src_id": "3",
+      "dst_id": "2",
+      "is_static": false,
+      "evidence": [
+        "server/livekit_agent.py:RoomVoiceAgent",
+        "server/core_bridge.py:Session"
+      ]
+    },
+    {
+      "relation": "prefetch retrieves on category-bearing ASR partials",
+      "src_name": "LiveKit Voice Pipeline",
+      "dst_name": "Hybrid Retrieval",
+      "src_id": "3",
+      "dst_id": "5",
+      "is_static": false,
+      "evidence": [
+        "server/prefetch.py:SpeculativePrefetch",
+        "agent/retrieval.py:retrieve"
+      ]
+    },
+    {
+      "relation": "retrieves cleared Tier-1 chunks (in step_hypothesise) before the policy runs",
+      "src_name": "LangGraph Diagnostic Core",
+      "dst_name": "Hybrid Retrieval",
+      "src_id": "4",
+      "dst_id": "5",
+      "is_static": false,
+      "evidence": [
+        "agent/core.py:step_hypothesise",
+        "agent/retrieval.py:retrieve"
+      ]
+    },
+    {
+      "relation": "store.migrate loads chunks.jsonl and sources.json into Postgres",
+      "src_name": "RAG Corpus and Ingest",
+      "dst_name": "Hybrid Retrieval",
+      "src_id": "6",
+      "dst_id": "5",
+      "is_static": false,
+      "evidence": [
+        "agent/store.py:migrate",
+        "ingest/run.py:write_outputs"
+      ]
+    },
+    {
+      "relation": "reads the model vocabulary from ingest.metadata",
+      "src_name": "Hybrid Retrieval",
+      "dst_name": "RAG Corpus and Ingest",
+      "src_id": "5",
+      "dst_id": "6",
+      "is_static": false,
+      "evidence": [
+        "agent/retrieval.py:model_filter",
+        "ingest/metadata.py:build_metadata"
+      ]
+    },
+    {
+      "relation": "scores core.CoreAgent through Harness A and B",
+      "src_name": "Eval Harnesses",
+      "dst_name": "LangGraph Diagnostic Core",
+      "src_id": "7",
+      "dst_id": "4",
+      "is_static": false,
+      "evidence": [
+        "eval/harness.py:build_agent",
+        "agent/core.py:CoreAgent"
+      ]
+    },
+    {
+      "relation": "Harness C drives a real LiveKit room with synthesised speech",
+      "src_name": "Eval Harnesses",
+      "dst_name": "LiveKit Voice Pipeline",
+      "src_id": "7",
+      "dst_id": "3",
+      "is_static": false,
+      "evidence": [
+        "eval/harness_c.py:run_case",
+        "server/livekit_peer.py:open_session"
+      ]
+    },
+    {
+      "relation": "registers the /api/support routes",
+      "src_name": "FastAPI Server",
+      "dst_name": "Support Console",
+      "src_id": "2",
+      "dst_id": "9",
+      "is_static": false,
+      "evidence": [
+        "server/app.py:create_app",
+        "server/support.py:register_support_routes"
+      ]
+    },
+    {
+      "relation": "reads live sessions, handoff and traces from AppState",
+      "src_name": "Support Console",
+      "dst_name": "FastAPI Server",
+      "src_id": "9",
+      "dst_id": "2",
+      "is_static": false,
+      "evidence": [
+        "server/support.py:room_summary",
+        "server/app.py:AppState"
+      ]
+    }
+  ]
+}

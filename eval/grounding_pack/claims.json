@@ -1,0 +1,860 @@
+{
+  "what_this_is": "The two-grader grounding pack for docs/06 §7.4 item 1. Twenty spoken, cited claims from a fresh run of Harness A and Harness B, each with the full text of every chunk it cites, ready for two independent human graders. Nothing here is graded: §7.4 requires human labels before an LLM judge ships, and the published semantic rate (70% post-4.4) has one grader and no κ, which is why this pack exists. The previous grader's verdicts are deliberately NOT in this pack.",
+  "measured_commit": "7cd2277",
+  "built_from": [
+    ".runs/pack_a.json",
+    ".runs/pack_b.json"
+  ],
+  "sample_size": 20,
+  "pool": {
+    "distinct_cited_claims": 68,
+    "cited_line_instances": 106,
+    "distinct_chunks_cited_by_pool": 16,
+    "distinct_chunks_cited_by_sample": 11,
+    "per_harness_instances": {
+      "A": 44,
+      "B": 62
+    }
+  },
+  "how_the_sample_was_drawn": {
+    "carried_from_previous_sample": 13,
+    "replacements": 7,
+    "replacement_rule": "in order from eval.grounding.sample_claims(pool, size=20, seed=45), skipping claims already carried",
+    "seed": 45,
+    "caveat": "Claims carried forward keep the denominator comparable with the pre-4.4 and post-4.4 gradings. They also mean this is not an independent redraw of the population — read the rate as a property of these claims, not of the agent."
+  },
+  "rubric": [
+    "supported — the cited chunk states the fact the line asserts, or documents the condition/procedure the line asks about.",
+    "partial — the chunk is on the same topic but does not contain the specific thing asserted or asked. Scores 0: the measurement is whether the chunk supports the claim AS STATED.",
+    "unsupported — the chunk does not bear on the line at all. Scores 0.",
+    "Where a line cites several chunks, one supporting chunk is enough; the note says which one carried it.",
+    "A question that offers an option the corpus does not name (a battery pack, an OS version) is still supported if the chunk carries the distinction the question turns on. The option is offered, not asserted."
+  ],
+  "grading_is_a_human_step": "Two independent human graders fill sheet.csv (one copy each), then eval/score_grading.py prints Cohen's κ and the rates. No model grades these claims.",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "claim": "A corrupted or incompatible memory card is preventing the camera from booting.",
+      "line_kind": "prose",
+      "chunk_ids": [
+        "H:camera-does-not-turn-on#MY_CAMERA_DOES_NOT_TURN_ON#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:camera-does-not-turn-on#MY_CAMERA_DOES_NOT_TURN_ON#c1",
+          "section": "My Camera does NOT Turn ON",
+          "doc_code": "H:camera-does-not-turn-on",
+          "tier": 1,
+          "text": "My Camera does NOT Turn ON\n\nROVE Dash Cam Troubleshooting\n\nMy camera does not turn on — here's how to fix it.\n\nFollow these step-by-step options to identify what's preventing your ROVE dash cam from powering on and get back on the road quickly.\n\nStart troubleshooting Contact support\n\nCheck the power source\n\nA faulty cable or charger is the most common reason a dash cam won't power on.\n\nTry without memory card\n\nA corrupted or incompatible memory card can sometimes prevent the camera from booting.\n\nReset the camera\n\nA quick reset with a paper clip can resolve a frozen or unresponsive dash cam.\n\nBefore you begin\n\nBring the camera indoors and use your iPhone or Android smartphone's USB charger along with the short USB cable included in the ROVE box. Plug everything into a standard 110V wall outlet — not your car — to eliminate vehicle power as a variable.\n\nWork through each option below in order. This process helps pinpoint whether the issue is the cable, the charger, or the camera itself.\n\nStep-by-step troubleshooting\n\nTry these options one by one\n\nOption 1\n\nTest with a different USB cable\n\nSwap to the 12FT long L-shaped power cable or the short 1M USB cable — both are included in your ROVE box. Connect it to your smartphone's USB charger and plug it into a wall outlet.\n\n✅ What to look for: If the camera powers on with a different cable, the original cable is defective and needs to be replaced.\n\nOption 2\n\nRemove the memory card\n\nEject the microSD card from the camera. Unplug the power cable, then plug it back in. Check if the camera powers on without the memory card inserted.\n\n✅ What to look for: If the camera turns on without the card, the memory card may be corrupted or incompatible. Try a new card.\n\nOption 3\n\nPress the Power button once\n\nWith the power cable plugged in, press the Power button once. On some ROVE models, the camera does not automatically power on when connected — a single press of the power button is required.\n\n✅ What to look for: The screen should light up within a few seconds of pressing the button.\n\nOption 4\n\nPerform a hard reset\n\nLocate the Reset button at the bottom of the dash cam. Use a straightened paper clip or a pen tip to press and hold the reset button once while the power cord is plugged in.\n\nIf the camera still does not turn on, unplug the power cable first, then repeat the reset process.\n\n⚠️ Where to find it: The Reset button is located at the bottom of the camera, near the Serial Number label (R2XXXXXXXXX).\n\nQuick troubleshooting order\n\nSwap cable → Remove memory card → Press Power button → Perform hard reset → Contact ROVE support\n\nDiagnosis Guide\n\nWhat each test tells you\n\nCamera turns on with a different cable The original USB cable is defective. Contact ROVE support to request a replacement cable under warranty.\n\nCamera turns on without the memory card The microSD card may be corrupted, full, or incompatible. Try formatting the card or replacing it with a new one (Class 10 / U3 recommended).\n\nCamera does not turn on after all options The camera unit itself may be defective. Please reach out to ROVE support — we'll promptly replace any defective item under the warranty to ensure your complete satisfaction.\n\nStill need help? No worries.\n\nAt ROVE, your satisfaction means the world to us. Our customer care team is here 7 days a week and will promptly replace any defective item to ensure your complete satisfaction.\n\nEmail\n\nText (faster response)\n\n1-844-ROVE-CAM\n\n1-844-768-3226\n\nWebsite\n\nrovedashcam.com\n\nYesNo"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-30",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-30",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": false
+    },
+    {
+      "claim_id": "C02",
+      "claim": "Can I ask: how old the camera is and whether it has ever held the date before.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:know-your-dashcam-how-to#KNOW_YOUR_DASHCAM_HOW_TO#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:know-your-dashcam-how-to#KNOW_YOUR_DASHCAM_HOW_TO#c1",
+          "section": "Know your Dashcam | How To",
+          "doc_code": "H:know-your-dashcam-how-to",
+          "tier": 1,
+          "text": "Know your Dashcam | How To\n\nKnow your camera and it's hidden superpowers\n\nHow to set GPS Time Zone Setting for your ROVE Dash Cam?\n\nSet the correct GPS Time Zone so your dash cam displays accurate timestamps on your video recordings. This guide explains how GPS time works, how to choose the correct GMT/UTC value, and what to check if the time still looks wrong. There are two ways\n\nHow to Hide the Status Icons on the LCD Screen\n\nWant a cleaner, less distracting dash cam screen while driving? The Hide Status Icons setting lets your ROVE dash cam automatically remove the on-screen status icons after your selected timer period. When enabled, the dash cam will automatically hide\n\nHow To Format Memory Card From The Dash Cam\n\nFollow the below instructions to format the memory card From The Dash Cam. >> then press DOWN button to highlight the FORMAT >> Then press the OK button to confirm to format the memory card (The formatting process super quick. SIM card Micro SD\n\nWhich memory card should I get?\n\nWe strongly recommend ROVE Ultimate Micro-SD Cards. At ROVE, We have higher standards, 1-Year Hassle Free Warranty and we have specifically designed our memory cards to work with our dash cams. In order to save time, money, and hassle in the SIM card\n\nElectrostatic film (Purpose and how to use)\n\nThere are two ways to set the date and time on your dash cam: manually or using the GPS time zone setting. With GPS time, the camera automatically adjusts the date and time based on the received GPS signal and your chosen UTC/GMT offset\n\nHow does the WiFi feature work?\n\nThe WiFi feature has been designed to allow you to wirelessly pair your Rove dash camera with your smartphone, granting instant access to your recordings directly from the dash cam. With this feature, you can effortlessly view, download, and share yo\n\nHow much video recording time can a memory card store?\n\nThese are the approximate values of how much recording time the memory card can store. This is approximate but close, give or take a few minutes, depending on the memory card. The lower the resolution, the more it will hold; the Micro SD SIM Card\n\nCan I mount the dashcam on a flat windshield?\n\nThe short answer is - NO. Due to the camera and lens design, our mounts will NOT work properly on a flat windshield as they require at least a 20° slope/angle. You may want to try using a universal mount, but please use it with caution and, of course\n\nHow do I get the GPS map to display in the app?\n\nYou may view the recorded GPS route from the ROVE APP by tapping on the orange icon and downloading the video recording from the Dashcam videos tab. Once downloaded, you can find it under the video folder of the Local Album. Ensure that you have inte\n\nI need the User Manual\n\nYou may download a soft copy of the User Manual from our website. Please visit our website: www.rovedashcam.com. Then, hover your mouse over to the Support Tab, wait for the window, and select \"Downloads.\". Click the Download, select \"Download: User\n\nShould I always connect dashcam to my smartphone?\n\nIt is Not Always Necessary to connect your dashcam to your smartphone while driving. The dashcam can operate independently of your smartphone, functioning effectively without needing to be connected via WIFI. The WIFI feature primarily serves for eme\n\nHow can I remove the icons?"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-20",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-20",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-20",
+          "branch": "old_camera_held_date_before",
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-20",
+          "branch": "young_camera_never_held_date",
+          "turn": 1
+        }
+      ],
+      "instances": 3,
+      "carried_from_previous_sample": false
+    },
+    {
+      "claim_id": "C03",
+      "claim": "Can I ask: how the camera is powered with the ignition off -- hardwire kit, battery pack, or the cigarette-lighter socket.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:troubleshoot-index#TROUBLESHOOT#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:troubleshoot-index#TROUBLESHOOT#c1",
+          "section": "Troubleshoot",
+          "doc_code": "H:troubleshoot-index",
+          "tier": 1,
+          "text": "Troubleshoot\n\nStep by step DIY information\n\nWhy does my video play in a fast motion? (Time-Lapse)\n\nYour footage looks like a time-lapse because the Time-Lapse Record setting is turned on. This is a quick, one-step fix directly in your camera's video settings menu. Time-Lapse mode intentionally records video at a very low frame rate — capturing onl\n\nROVE dash cam repeatedly saying “WiFi Is Connected- WiFi Is Disconnected”?\n\nYour dash cam keeps repeating the messages \"WiFi Connected\" and \"WiFi Disconnected\", and you're wondering why this happens and how to fix it. This is because we added Voice Guidance to our dash cam to make it more user-friendly, confirming when the W\n\nMy Camera does NOT Turn ON\n\nFollow these step-by-step options to identify what's preventing your ROVE dash cam from powering on and get back on the road quickly. Bring the camera indoors and use your iPhone or Android smartphone's USB charger along with the short USB cable incl\n\nI have missing videos on my ROVE Dash Cam\n\nMissing videos can happen if the camera loses power, the memory card has an issue, the date/time is incorrect, or settings were changed. Use this overnight test to confirm whether your dash cam can record continuously without interruption. If videos\n\nWhy my video recording has no Audio/Sound\n\nIf your recorded video plays with no sound, the microphone may be muted, the speaker volume may be turned off, or your phone/computer may be playing audio through the wrong output device.\n\nHardwire kit Not Detected\n\nWhen receiving the notification Hardwire Kit not Detected, please ensure that the wires are connected properly and in the correct position. Double-check all wiring connections to ensure they are securely attached and properly positioned. REPAIR\n\nMy Camera does NOT Turn OFF (Always stays ON)\n\nYour dash cam stays on because your vehicle's 12V socket keeps supplying power after the engine turns off. This is a vehicle wiring issue — not a camera defect — and there are 5 ways to fix it. ROVE dash cams are designed to automatically power on an\n\nWiFi NOT Connecting\n\nPlease follow the steps below to resolve the WiFi Connectivity Issue with your dash cam:. First, make sure that the dash cam is Turned ON and a memory card is already inserted. Also, kindly note that the WiFi signal range is about 10 meters when ther\n\nI did not receive verification code (account creation)\n\nVerification emails are almost always blocked, filtered, or routed to the wrong folder — not lost. Work through these 6 steps in order and you'll be into your account in minutes. The ROVE App sends a verification email automatically when you register\n\nReceiving “Memory Card Too Slow” Error\n\nReceiving “Memory Card Too Slow” Error. Please note that all memory cards have a finite life span. So they may become corrupted or develop issues/bad sectors, especially with regular use. SIM CARD Micro SD\n\nDash cam not playing Automatically and giving three options\n\n3 options, three options, Operate camera Normally, Use as a webcam, Use as a storage device\n\nMemory card error – how to safely reformat and test your card\n\nMy dashcam is randomly restarting – how to diagnose the issue\n\nI am getting an error when I sign-in to my ROVE APP\n\nROVE WIFI name not showing on my phone.\n\nWhy Is My Dashcam Overheating — What Causes It and How Can I Prevent It?\n\nIt’s normal for your ROVE dash cam to feel warm during regular use, especially when recording in 4K, operating in Parking Mode, or running under direct sunlight. However, if your device becomes unusually hot, shuts down unexpectedly, or displays a hi"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-15",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-15",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C04",
+      "claim": "Can I ask: whether any other device works from that same socket in the car.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:camera-does-not-turn-on#MY_CAMERA_DOES_NOT_TURN_ON#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:camera-does-not-turn-on#MY_CAMERA_DOES_NOT_TURN_ON#c1",
+          "section": "My Camera does NOT Turn ON",
+          "doc_code": "H:camera-does-not-turn-on",
+          "tier": 1,
+          "text": "My Camera does NOT Turn ON\n\nROVE Dash Cam Troubleshooting\n\nMy camera does not turn on — here's how to fix it.\n\nFollow these step-by-step options to identify what's preventing your ROVE dash cam from powering on and get back on the road quickly.\n\nStart troubleshooting Contact support\n\nCheck the power source\n\nA faulty cable or charger is the most common reason a dash cam won't power on.\n\nTry without memory card\n\nA corrupted or incompatible memory card can sometimes prevent the camera from booting.\n\nReset the camera\n\nA quick reset with a paper clip can resolve a frozen or unresponsive dash cam.\n\nBefore you begin\n\nBring the camera indoors and use your iPhone or Android smartphone's USB charger along with the short USB cable included in the ROVE box. Plug everything into a standard 110V wall outlet — not your car — to eliminate vehicle power as a variable.\n\nWork through each option below in order. This process helps pinpoint whether the issue is the cable, the charger, or the camera itself.\n\nStep-by-step troubleshooting\n\nTry these options one by one\n\nOption 1\n\nTest with a different USB cable\n\nSwap to the 12FT long L-shaped power cable or the short 1M USB cable — both are included in your ROVE box. Connect it to your smartphone's USB charger and plug it into a wall outlet.\n\n✅ What to look for: If the camera powers on with a different cable, the original cable is defective and needs to be replaced.\n\nOption 2\n\nRemove the memory card\n\nEject the microSD card from the camera. Unplug the power cable, then plug it back in. Check if the camera powers on without the memory card inserted.\n\n✅ What to look for: If the camera turns on without the card, the memory card may be corrupted or incompatible. Try a new card.\n\nOption 3\n\nPress the Power button once\n\nWith the power cable plugged in, press the Power button once. On some ROVE models, the camera does not automatically power on when connected — a single press of the power button is required.\n\n✅ What to look for: The screen should light up within a few seconds of pressing the button.\n\nOption 4\n\nPerform a hard reset\n\nLocate the Reset button at the bottom of the dash cam. Use a straightened paper clip or a pen tip to press and hold the reset button once while the power cord is plugged in.\n\nIf the camera still does not turn on, unplug the power cable first, then repeat the reset process.\n\n⚠️ Where to find it: The Reset button is located at the bottom of the camera, near the Serial Number label (R2XXXXXXXXX).\n\nQuick troubleshooting order\n\nSwap cable → Remove memory card → Press Power button → Perform hard reset → Contact ROVE support\n\nDiagnosis Guide\n\nWhat each test tells you\n\nCamera turns on with a different cable The original USB cable is defective. Contact ROVE support to request a replacement cable under warranty.\n\nCamera turns on without the memory card The microSD card may be corrupted, full, or incompatible. Try formatting the card or replacing it with a new one (Class 10 / U3 recommended).\n\nCamera does not turn on after all options The camera unit itself may be defective. Please reach out to ROVE support — we'll promptly replace any defective item under the warranty to ensure your complete satisfaction.\n\nStill need help? No worries.\n\nAt ROVE, your satisfaction means the world to us. Our customer care team is here 7 days a week and will promptly replace any defective item to ensure your complete satisfaction.\n\nEmail\n\nText (faster response)\n\n1-844-ROVE-CAM\n\n1-844-768-3226\n\nWebsite\n\nrovedashcam.com\n\nYesNo"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-03",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-03",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-13",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 2,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C05",
+      "claim": "Can I ask: whether the caller can see their own dashboard or car interior in the footage.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:blurry-video#WHY_IS_MY_VIDEO_BLURRY_OR_OUT_OF_FOCUS#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:blurry-video#WHY_IS_MY_VIDEO_BLURRY_OR_OUT_OF_FOCUS#c1",
+          "section": "Why is my video blurry or out of focus?",
+          "doc_code": "H:blurry-video",
+          "tier": 1,
+          "text": "Why is my video blurry or out of focus?\n\nROVE Dash Cam Video Quality Guide\n\nWhy is my video blurry or out of focus?\n\nIf your dash cam video looks blurry, foggy, hazy, or out of focus, the cause is usually something simple: a protective film, a dirty lens, windshield haze, low-light conditions, or a lower video resolution setting.\n\n✅ Start with the lens and windshield first — they are the most common causes of blurry footage.\n\nRemove lens film\n\nNew dash cams may have a clear protective film over the lens that must be removed.\n\nClean glass and lens\n\nFingerprints, dust, windshield fog, and interior haze can make footage look soft or cloudy.\n\nCheck resolution\n\nLower recording resolutions will look less detailed than 4K or 2.5K settings.\n\nBefore you begin\n\nBlurry video is usually caused by something in front of the lens\n\nThe dash cam can only record clearly if the lens and windshield are clear. Protective film, fingerprints, dust, fog, windshield residue, glare, or condensation can all make the video appear blurry even when the camera is working normally.\n\nFollow the steps below in order. After each step, record a short test video in daylight and review the original video file.\n\nStep-by-step fix\n\nHow to improve blurry or out-of-focus video\n\nStep 1\n\nCheck this first\n\nRemove the protective lens film\n\nMany new dash cams have a clear protective plastic film over the lens. If this film is still attached, videos may look blurry, foggy, or out of focus.\n\n✅ Tip: Check both the front camera lens and rear camera lens if your model includes a rear camera.\n\nStep 2\n\nClean lens\n\nClean the dash cam lens\n\nFingerprints, dust, residue, or smudges can affect video clarity. Gently wipe the lens using a soft, clean microfiber cloth.\n\n⚠️ Important: Do not use harsh chemicals or rough materials on the lens. A soft microfiber cloth is best.\n\nStep 3\n\nCheck windshield\n\nClean the windshield inside and outside\n\nFog, condensation, dust, dirt, or oily film on the windshield can make the video look hazy or soft. Clean the glass inside and outside, especially the area directly in front of the camera lens.\n\n✅ Best result: Test the camera again in daylight after cleaning the windshield and lens.\n\nStep 4\n\nLow light\n\nUnderstand low-light video limits\n\nNight driving, very dark scenes, rain, glare, or strong headlights may make the video appear grainy or less sharp. This can be normal in low-light conditions.\n\nWhat may help:\n\n• Test again during daylight\n\n• Check if HDR is available and enabled on your model\n\n• Avoid placing the camera behind heavy tint or dirty glass\n\n• Adjust exposure if your model supports it\n\nStep 5\n\nResolution setting\n\nCheck the video resolution setting\n\nIf the camera is set to a lower resolution, the video will look less detailed. Go to the video settings and select a higher resolution, such as 4K or 2.5K, if your model supports it.\n\n✅ Tip: For the clearest review, transfer the original video file to a computer and play it using a compatible video player.\n\nQuick Summary\n\nWhat usually fixes blurry or foggy video?\n\n🎞️ Remove protective film Make sure the clear plastic film has been removed from the lens.\n\n🧼 Clean the lens and windshield Smudges, dust, fog, and windshield haze are the most common causes of blurry footage.\n\n🎥 Check resolution and lighting Low resolution or low-light conditions can make footage appear less sharp.\n\nStill need help? We're here."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-18",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-18",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C06",
+      "claim": "Can I ask: whether the camera comes back on by itself once the car has cooled down.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1",
+          "section": "Why Is My Dashcam Overheating — What Causes It and How Can I Prevent It?",
+          "doc_code": "H:overheating",
+          "tier": 1,
+          "text": "Why Is My Dashcam Overheating — What Causes It and How Can I Prevent It?\n\nIt’s normal for your ROVE dash cam to feel warm during regular use, especially when recording in 4K, operating in Parking Mode, or running under direct sunlight.\n\nHowever, if your device becomes unusually hot, shuts down unexpectedly, or displays a high-temperature warning, it may be overheating—and that’s something we want to help you avoid.\n\n1. Extended Exposure to Direct Sunlight\n\nWhen your vehicle is parked under the sun, especially during summer, cabin temperatures can exceed 140°F (60°C). Prolonged exposure can cause your dash cam’s internal temperature to rise above its normal operating range.\n\nROVE dash cams are designed to operate between -4°F and 140°F (-20°C to 60°C). To protect itself, the device may slow down, shut off, or stop recording beyond that.\n\n2. Incompatible or Faulty MicroSD Card\n\nA low-quality or non-U3-rated memory card can force the camera’s processor to work harder when saving video files, generating additional heat. Some cards may also fail to write correctly, causing the camera to freeze or overheat.\n\n3. Using Unsupported Power Sources\n\nPower banks, OBD2 adapters, and third-party USB chargers may not supply consistent voltage or include built-in protections. This can cause the dash cam to draw unstable current, increasing heat buildup over time.\n\n4. Parking Mode Running in Extreme Heat\n\nWhen Parking Mode is active, the dash cam remains on standby or records at a low bitrate while the vehicle is off. Without air circulation or A/C, interior temperatures can spike quickly, increasing the risk of overheating—especially if Parking Mode is left running for long periods.\n\nHere are some practical steps to keep your dash cam running safely and efficiently:\n1. Use a High-Quality, U3-Class MicroSD Card\n\nWe recommend using a ROVE PRO, ROVE Ultimate, or ROVE Industrial U3 microSD card. These are designed for high-speed 4K recording and maintain stable write speeds, reducing stress on the camera’s processor.\n\n2. Format the Memory Card Regularly\n\nTo prevent file system errors and minimize write stress, format your SD card in-camera once every 1-2 weeks.\n\n3. Avoid Direct Sunlight\n\nWhenever possible, park in the shade or use a windshield sunshade to keep the cabin temperature lower. If your vehicle allows, mount the dash cam away from direct sunlight.\n\n4. Use Only ROVE-Approved Power Sources\n\nUse the original ROVE USB-C car charger or the ROVE Ultimate 3-Lead Hardwire Kit for stable and safe operation. These provide a regulated 5V/3.4A output and include built-in protection for your dash cam and your vehicle’s battery.\n\n5. Adjust Parking Mode Settings\n\nIf you're in a high-heat region, consider setting a shorter Parking Mode timer (1-3 hours) or disabling it during hotter days. This helps prevent your camera from running too long while the cabin temperature rises.\n\n6. Keep Firmware Up to Date\n\nWe release firmware updates to improve performance, fix bugs, and optimize heat management. If you’re unsure of your current version, contact our support team, and we’ll provide the latest version and installation instructions.\n\nIs This Covered Under Warranty?\n\nIf your dash cam consistently overheats, shuts off without warning, or displays a “High Temperature” error, it could be a sign of a hardware issue. Please stop using the device and contact us right away. If it’s still under warranty, we’ll work with you on repair or replacement options."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-23",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-23",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-24",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-23",
+          "branch": "camera_restarts_in_heat",
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-23",
+          "branch": "wifi_drops_only",
+          "turn": 1
+        }
+      ],
+      "instances": 4,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C07",
+      "claim": "Can I ask: whether the drop happens even while actively using the app, or only when the phone has been idle on the connection.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2",
+          "section": "WiFi NOT Connecting",
+          "doc_code": "H:wifi-not-connecting",
+          "tier": 1,
+          "text": "Join the “ROVE_R***_*******” network using the default password “12345678” displayed on your dash camera’s screen\n\nFor an Android user, there is one extra step you will have to take for the first time. Once you connect to Dash Cam’s WiFi, it will say “No Internet”. Which is fine. Wait about 10-15 seconds until you see the below pop-up or notification. You just have to tap on the pop-up notification that will show up in a few seconds to select that you still want to stay connected even though there is NO Internet. Once you select this OK, you are set to go.\n\nOnce your smartphone is connected to the ROVE Dash Cam WiFi, go back to the ROVE APP and you should see the live video feed from the camera on the main home screen of the ROVE APP. Now you are all set to access your recording from the ROVE app and explore it further.\n\nWe hope this guide has been helpful in understanding how the WiFi feature works for ROVE Dash Cameras. Please feel free to reach out to us if you have any questions or concerns.\n\nIf You Still Unable To Connect The Wifi, Please Follow These Additional Step Below:\n\nCheck Dash Cam Power and Memory Card: Ensure that your dash cam is powered on, and a compatible memory card is properly inserted. Sometimes, connectivity issues can arise if the dash cam is not powered on or if the memory card is not inserted correctly.\n\nSignal Interference: WiFi signals can be affected by interference from other electronic devices or physical obstructions. Make sure the phone is within the 10M Range from the dash cam and there is not obstructions between the camera and your phone. Additionally, try moving closer to the dash cam to strengthen the WiFi signal.\n\nFirmware Update: Check if there are any available firmware updates for your dash cam. Updating the firmware can often resolve connectivity issues and improve overall performance. You can usually find firmware update files on the ROVE’s website or when the Wi-Fi is connected you can remotely update your firmware over the air using the ROVE App.\n\nReset Network Settings: If you continue to experience WiFi connectivity issues, you can try resetting the network settings on your mobile device. This will reset all network-related settings to default configurations, potentially resolving any underlying network configuration issues.\n\nIf none of the above steps resolve the WiFi connectivity problem, please don't hesitate to contact our customer support team for further assistance. Our dedicated support team is available to help troubleshoot any issues you may encounter and provide personalized assistance to ensure your ROVE dash cam operates smoothly."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-16",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-16",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-16",
+          "branch": "idle_only",
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-16",
+          "branch": "drops_mid_transfer",
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-23",
+          "branch": "wifi_drops_only",
+          "turn": 2
+        }
+      ],
+      "instances": 4,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C08",
+      "claim": "Can I ask: whether the phone is an iPhone or Android, and roughly which OS version.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2",
+          "section": "WiFi NOT Connecting",
+          "doc_code": "H:wifi-not-connecting",
+          "tier": 1,
+          "text": "Join the “ROVE_R***_*******” network using the default password “12345678” displayed on your dash camera’s screen\n\nFor an Android user, there is one extra step you will have to take for the first time. Once you connect to Dash Cam’s WiFi, it will say “No Internet”. Which is fine. Wait about 10-15 seconds until you see the below pop-up or notification. You just have to tap on the pop-up notification that will show up in a few seconds to select that you still want to stay connected even though there is NO Internet. Once you select this OK, you are set to go.\n\nOnce your smartphone is connected to the ROVE Dash Cam WiFi, go back to the ROVE APP and you should see the live video feed from the camera on the main home screen of the ROVE APP. Now you are all set to access your recording from the ROVE app and explore it further.\n\nWe hope this guide has been helpful in understanding how the WiFi feature works for ROVE Dash Cameras. Please feel free to reach out to us if you have any questions or concerns.\n\nIf You Still Unable To Connect The Wifi, Please Follow These Additional Step Below:\n\nCheck Dash Cam Power and Memory Card: Ensure that your dash cam is powered on, and a compatible memory card is properly inserted. Sometimes, connectivity issues can arise if the dash cam is not powered on or if the memory card is not inserted correctly.\n\nSignal Interference: WiFi signals can be affected by interference from other electronic devices or physical obstructions. Make sure the phone is within the 10M Range from the dash cam and there is not obstructions between the camera and your phone. Additionally, try moving closer to the dash cam to strengthen the WiFi signal.\n\nFirmware Update: Check if there are any available firmware updates for your dash cam. Updating the firmware can often resolve connectivity issues and improve overall performance. You can usually find firmware update files on the ROVE’s website or when the Wi-Fi is connected you can remotely update your firmware over the air using the ROVE App.\n\nReset Network Settings: If you continue to experience WiFi connectivity issues, you can try resetting the network settings on your mobile device. This will reset all network-related settings to default configurations, potentially resolving any underlying network configuration issues.\n\nIf none of the above steps resolve the WiFi connectivity problem, please don't hesitate to contact our customer support team for further assistance. Our dedicated support team is available to help troubleshoot any issues you may encounter and provide personalized assistance to ensure your ROVE dash cam operates smoothly."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-09",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-09",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-16",
+          "branch": "idle_only",
+          "turn": 2
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-16",
+          "branch": "drops_mid_transfer",
+          "turn": 2
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-23",
+          "branch": "wifi_drops_only",
+          "turn": 4
+        }
+      ],
+      "instances": 4,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C09",
+      "claim": "Could you check the lens for a clear plastic film still stuck on it, and whether lens and glass are clean.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:blurry-video#WHY_IS_MY_VIDEO_BLURRY_OR_OUT_OF_FOCUS#c1",
+        "H:licence-plate#WHY_CAN_T_I_READ_THE_LICENSE_PLATE_NUMBE#c1",
+        "H:blurry-video#WHAT_USUALLY_FIXES_BLURRY_OR_FOGGY_VIDEO#c2"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:blurry-video#WHY_IS_MY_VIDEO_BLURRY_OR_OUT_OF_FOCUS#c1",
+          "section": "Why is my video blurry or out of focus?",
+          "doc_code": "H:blurry-video",
+          "tier": 1,
+          "text": "Why is my video blurry or out of focus?\n\nROVE Dash Cam Video Quality Guide\n\nWhy is my video blurry or out of focus?\n\nIf your dash cam video looks blurry, foggy, hazy, or out of focus, the cause is usually something simple: a protective film, a dirty lens, windshield haze, low-light conditions, or a lower video resolution setting.\n\n✅ Start with the lens and windshield first — they are the most common causes of blurry footage.\n\nRemove lens film\n\nNew dash cams may have a clear protective film over the lens that must be removed.\n\nClean glass and lens\n\nFingerprints, dust, windshield fog, and interior haze can make footage look soft or cloudy.\n\nCheck resolution\n\nLower recording resolutions will look less detailed than 4K or 2.5K settings.\n\nBefore you begin\n\nBlurry video is usually caused by something in front of the lens\n\nThe dash cam can only record clearly if the lens and windshield are clear. Protective film, fingerprints, dust, fog, windshield residue, glare, or condensation can all make the video appear blurry even when the camera is working normally.\n\nFollow the steps below in order. After each step, record a short test video in daylight and review the original video file.\n\nStep-by-step fix\n\nHow to improve blurry or out-of-focus video\n\nStep 1\n\nCheck this first\n\nRemove the protective lens film\n\nMany new dash cams have a clear protective plastic film over the lens. If this film is still attached, videos may look blurry, foggy, or out of focus.\n\n✅ Tip: Check both the front camera lens and rear camera lens if your model includes a rear camera.\n\nStep 2\n\nClean lens\n\nClean the dash cam lens\n\nFingerprints, dust, residue, or smudges can affect video clarity. Gently wipe the lens using a soft, clean microfiber cloth.\n\n⚠️ Important: Do not use harsh chemicals or rough materials on the lens. A soft microfiber cloth is best.\n\nStep 3\n\nCheck windshield\n\nClean the windshield inside and outside\n\nFog, condensation, dust, dirt, or oily film on the windshield can make the video look hazy or soft. Clean the glass inside and outside, especially the area directly in front of the camera lens.\n\n✅ Best result: Test the camera again in daylight after cleaning the windshield and lens.\n\nStep 4\n\nLow light\n\nUnderstand low-light video limits\n\nNight driving, very dark scenes, rain, glare, or strong headlights may make the video appear grainy or less sharp. This can be normal in low-light conditions.\n\nWhat may help:\n\n• Test again during daylight\n\n• Check if HDR is available and enabled on your model\n\n• Avoid placing the camera behind heavy tint or dirty glass\n\n• Adjust exposure if your model supports it\n\nStep 5\n\nResolution setting\n\nCheck the video resolution setting\n\nIf the camera is set to a lower resolution, the video will look less detailed. Go to the video settings and select a higher resolution, such as 4K or 2.5K, if your model supports it.\n\n✅ Tip: For the clearest review, transfer the original video file to a computer and play it using a compatible video player.\n\nQuick Summary\n\nWhat usually fixes blurry or foggy video?\n\n🎞️ Remove protective film Make sure the clear plastic film has been removed from the lens.\n\n🧼 Clean the lens and windshield Smudges, dust, fog, and windshield haze are the most common causes of blurry footage.\n\n🎥 Check resolution and lighting Low resolution or low-light conditions can make footage appear less sharp.\n\nStill need help? We're here."
+        },
+        {
+          "chunk_id": "H:licence-plate#WHY_CAN_T_I_READ_THE_LICENSE_PLATE_NUMBE#c1",
+          "section": "Why can’t I read the license plate number clearly?",
+          "doc_code": "H:licence-plate",
+          "tier": 1,
+          "text": "Why can’t I read the license plate number clearly?\n\nROVE Dash Cam Video Quality Guide\n\nWhy can’t I read the license plate number clearly?\n\nLicense plate clarity depends on lighting, distance, speed, angle, windshield glare, video resolution, and how the video is played back. This guide explains what affects plate readability and how to get the best possible footage from your ROVE dash cam.\n\n✅ For best results, review original video files using VLC Media Player or the ROVE GPS Player.\n\nLighting matters\n\nBright glare, darkness, headlights, shadows, and reflections can affect plate readability.\n\nDistance & speed matter\n\nThe farther or faster the vehicle is, the harder it is for any dash cam to capture clear plate details.\n\nUse the right player\n\nWindows Media Player may play high-bitrate 4K videos poorly. VLC or ROVE GPS Player is recommended.\n\nWhy this happens\n\nLicense plate capture is affected by real-world driving conditions\n\nYour ROVE dash cam records high-quality video, but reading license plates depends on multiple factors, including proper lighting, focal distance, how close the vehicle is, driving speed, camera angle, glare, reflections, and video playback quality.\n\nFor example, a plate may be easy to read when the vehicle is close, centered, and well-lit, but difficult to read if the vehicle is far away, moving quickly, at an angle, or affected by headlights or windshield glare.\n\nStep-by-step improvement guide\n\nHow to improve license plate readability\n\nStep 1\n\nDriving conditions\n\nUnderstand real-world capture limits\n\nLicense plates are easier to read when the vehicle is close, centered, and moving at a similar speed. Plates may be harder to read when the vehicle is far away, at a sharp angle, moving quickly, or affected by glare, headlights, shadows, rain, or dirty glass.\n\n✅ Best chance for plate capture: Good lighting, close distance, straight angle, clean windshield, and stable playback from the original file.\n\nStep 2\n\nImprove clarity\n\nClean the windshield and lens\n\nA dirty windshield, a fingerprint on the lens, glare, or reflection can reduce clarity. Clean the windshield area in front of the lens and gently clean the dash cam lens with a soft microfiber cloth.\n\nStep 3\n\nCheck playback first\n\nPlay the original file using VLC Media Player\n\nDo not judge video quality from a compressed copy, social media upload, text message, or phone preview. Transfer the original video file to your computer and play it using VLC Media Player.\n\n⚠️ Important: Windows Media Player is not recommended for high-bitrate 4K dash cam videos because playback may appear choppy or unclear.\n\nStep 4\n\nUse ROVE GPS Player\n\nTry the ROVE GPS Player\n\nYou can also use the ROVE GPS Player from our website to view your videos with Google Maps, G-sensor data, date, direction, and speed during playback.\n\nDOWNLOAD LINK\n\nROVE GPS Player / Firmware Downloads Page\n\nQuick Summary\n\nWhat gives you the best chance of reading plates?\n\n▶️ Use VLC or ROVE GPS Player Review the original video file using a player made for high-bitrate video.\n\n💡 Lighting and distance matter most Close distance, good lighting, and a straight angle give the best chance of plate readability.\n\n🧼 Keep the lens and windshield clean Glare, dirt, fingerprints, and windshield reflection can reduce video clarity.\n\nStill need help? We're here.\n\nIf you still have issues with the video quality or if you have any other questions about your ROVE dash cam, our support team is available 7 days a week from 9:00 AM - 5:00 PM PST.\n\n1-844-ROVE-CAM\n\n1-844-768-3226\n\n🌐 Website\n\nrovedashcam.com\n\nYesNo"
+        },
+        {
+          "chunk_id": "H:blurry-video#WHAT_USUALLY_FIXES_BLURRY_OR_FOGGY_VIDEO#c2",
+          "section": "What usually fixes blurry or foggy video?",
+          "doc_code": "H:blurry-video",
+          "tier": 1,
+          "text": "We're here.\n\nIf your video recording is still blurry or foggy, or if you have any other questions about your ROVE dash cam, our support team is available 7 days a week from 9:00 AM - 5:00 PM PST.\n\n1-844-ROVE-CAM\n\n1-844-768-3226\n\n🌐 Website\n\nrovedashcam.com\n\nYesNo"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-05",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-05",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C10",
+      "claim": "Could you confirm the camera is powered on and awake right now, and say what its screen is showing.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:wifi-name-not-showing#ROVE_WIFI_NAME_NOT_SHOWING_ON_MY_PHONE#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:wifi-name-not-showing#ROVE_WIFI_NAME_NOT_SHOWING_ON_MY_PHONE#c1",
+          "section": "ROVE WIFI name not showing on my phone.",
+          "doc_code": "H:wifi-name-not-showing",
+          "tier": 1,
+          "text": "ROVE WIFI name not showing on my phone.\n\nPlease turn OFF/disable those temporarily before you connect your dashcam to the ROVE App.\n\n🔶 Turn OFF the VPN on your phone.\n\n🔶 Turn OFF the Cellular Data.\n\n🔶 Disable the CarPlay or Android Auto.\n\n🔶 Turn OFF the WIFI Calling.\n\n🔶 Turn OFF Bluetooth.\n\nNext, ensure that the dash cam is Turned ON and a memory card is inserted.\n\nAlso, kindly note that the WIFI signal range is about 10 meters when there are NO obstructions in the middle, so please stay within that range when connecting your phone to the dash cam.\n\n1. Navigate to the dashcam system settings > default settings\n\n(Please back up all of your footage before proceeding.)\n\n2. Forget the ROVE WIFI name\n3. Re-install the ROVE APP and ALLOW ALL PERMISSIONS once installed.\n4. Turn OFF your VPN/anti-virus software/WI-FI calling if you have any.\n5. Restart your phone by turning it OFF and then turning it ON again.\n6. If your font size is large, please set the phone's Font Size to the Default Setting.\n7. Now, please turn the WIFI ON from the Dashcam.\n8. Open the ROVE APP. Please ensure that the CORRECT ROVE DASH CAM MODEL is selected in the ROVE APP. Once you choose your dash cam model, please click CONNECT TO THE WIFI NETWORK.\n\nThis will open up your smartphone's WIFI settings, so look for a WIFI network and connect.\n\nWe hope this clarifies the issue. Please feel free to contact us if you have any further questions or concerns."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-01",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-01",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C11",
+      "claim": "Could you power off, remove and firmly reseat the card, and power back on.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1",
+          "section": "Receiving “Memory Card Too Slow” Error",
+          "doc_code": "H:memory-card-too-slow",
+          "tier": 1,
+          "text": "Receiving “Memory Card Too Slow” Error\n\nROVE Troubleshooting Guide\n\nGetting a “Memory Card Too Slow” Error\n\nLearn why your ROVE dash cam displays a “Memory Card Too Slow” warning and follow the troubleshooting steps below to fix the issue.\n\nWhy does this error happen?\n\nIf your ROVE dash cam displays a “Memory Card Too Slow” message, it usually means the memory card can no longer maintain the required write speed for continuous video recording.\n\nMemory cards have a limited lifespan. Over time, repeated recording and overwriting may cause the card to slow down, develop bad sectors, or become corrupted.\n\nIn most cases, this warning means your dash cam is functioning properly and is simply alerting you that the memory card may need maintenance or replacement.\n\nBefore you begin\n\nA “Memory Card Too Slow” message usually means the memory card can no longer maintain the required write speed for continuous recording.\n\nIn most cases, formatting or replacing the memory card resolves the issue immediately.\n\nSTEP 1\n\nFormat the Memory Card\n\nTry formatting the memory card using the dash cam settings menu or a computer.\n\nSTEP 2\n\nReplace the Memory Card\n\nReplace the memory card with a Class 10 U3 high-speed microSD card recommended for dash cam use.\n\nSTEP 3\n\nUpgrade to a High-Speed ROVE Memory Card\n\nROVE memory cards are specifically designed for continuous dash cam recording and high-performance video writing speeds.\n\nImportant Notes\n\nAlways safely eject the memory card when using a computer.\nRegularly format the memory card inside the dash cam for best performance.\nLow-quality or counterfeit cards may cause recording issues.\nReplace memory cards periodically depending on recording usage.\n\nStill need help? We're here.\n\nIf you are still getting the same Memory Card Too Slow Error or if you have any other questions about your ROVE dash cam, our support team is available 7 days a week from 9:00 AM - 5:00 PM PST.\n\nEmail\n\nText\n\n1-844-768-3226\n\nWebsite\n\nrovedashcam.com\n\nYesNo"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-27",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-27",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_frozen_in_time",
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_still_taking_writes",
+          "turn": 1
+        }
+      ],
+      "instances": 3,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C12",
+      "claim": "Could you re-connect and, when the phone offers to stay on a network with no internet, accept and keep it.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:know-your-dashcam-how-to#KNOW_YOUR_DASHCAM_HOW_TO#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:know-your-dashcam-how-to#KNOW_YOUR_DASHCAM_HOW_TO#c1",
+          "section": "Know your Dashcam | How To",
+          "doc_code": "H:know-your-dashcam-how-to",
+          "tier": 1,
+          "text": "Know your Dashcam | How To\n\nKnow your camera and it's hidden superpowers\n\nHow to set GPS Time Zone Setting for your ROVE Dash Cam?\n\nSet the correct GPS Time Zone so your dash cam displays accurate timestamps on your video recordings. This guide explains how GPS time works, how to choose the correct GMT/UTC value, and what to check if the time still looks wrong. There are two ways\n\nHow to Hide the Status Icons on the LCD Screen\n\nWant a cleaner, less distracting dash cam screen while driving? The Hide Status Icons setting lets your ROVE dash cam automatically remove the on-screen status icons after your selected timer period. When enabled, the dash cam will automatically hide\n\nHow To Format Memory Card From The Dash Cam\n\nFollow the below instructions to format the memory card From The Dash Cam. >> then press DOWN button to highlight the FORMAT >> Then press the OK button to confirm to format the memory card (The formatting process super quick. SIM card Micro SD\n\nWhich memory card should I get?\n\nWe strongly recommend ROVE Ultimate Micro-SD Cards. At ROVE, We have higher standards, 1-Year Hassle Free Warranty and we have specifically designed our memory cards to work with our dash cams. In order to save time, money, and hassle in the SIM card\n\nElectrostatic film (Purpose and how to use)\n\nThere are two ways to set the date and time on your dash cam: manually or using the GPS time zone setting. With GPS time, the camera automatically adjusts the date and time based on the received GPS signal and your chosen UTC/GMT offset\n\nHow does the WiFi feature work?\n\nThe WiFi feature has been designed to allow you to wirelessly pair your Rove dash camera with your smartphone, granting instant access to your recordings directly from the dash cam. With this feature, you can effortlessly view, download, and share yo\n\nHow much video recording time can a memory card store?\n\nThese are the approximate values of how much recording time the memory card can store. This is approximate but close, give or take a few minutes, depending on the memory card. The lower the resolution, the more it will hold; the Micro SD SIM Card\n\nCan I mount the dashcam on a flat windshield?\n\nThe short answer is - NO. Due to the camera and lens design, our mounts will NOT work properly on a flat windshield as they require at least a 20° slope/angle. You may want to try using a universal mount, but please use it with caution and, of course\n\nHow do I get the GPS map to display in the app?\n\nYou may view the recorded GPS route from the ROVE APP by tapping on the orange icon and downloading the video recording from the Dashcam videos tab. Once downloaded, you can find it under the video folder of the Local Album. Ensure that you have inte\n\nI need the User Manual\n\nYou may download a soft copy of the User Manual from our website. Please visit our website: www.rovedashcam.com. Then, hover your mouse over to the Support Tab, wait for the window, and select \"Downloads.\". Click the Download, select \"Download: User\n\nShould I always connect dashcam to my smartphone?\n\nIt is Not Always Necessary to connect your dashcam to your smartphone while driving. The dashcam can operate independently of your smartphone, functioning effectively without needing to be connected via WIFI. The WIFI feature primarily serves for eme\n\nHow can I remove the icons?"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "B",
+        "scenario_id": "EVAL-20",
+        "branch": "old_camera_held_date_before",
+        "turn": 3
+      },
+      "spoken_at": [
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-20",
+          "branch": "old_camera_held_date_before",
+          "turn": 3
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": false
+    },
+    {
+      "claim_id": "C13",
+      "claim": "Could you re-connect and, when the phone offers to stay on a network with no internet, accept and keep it.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2",
+          "section": "WiFi NOT Connecting",
+          "doc_code": "H:wifi-not-connecting",
+          "tier": 1,
+          "text": "Join the “ROVE_R***_*******” network using the default password “12345678” displayed on your dash camera’s screen\n\nFor an Android user, there is one extra step you will have to take for the first time. Once you connect to Dash Cam’s WiFi, it will say “No Internet”. Which is fine. Wait about 10-15 seconds until you see the below pop-up or notification. You just have to tap on the pop-up notification that will show up in a few seconds to select that you still want to stay connected even though there is NO Internet. Once you select this OK, you are set to go.\n\nOnce your smartphone is connected to the ROVE Dash Cam WiFi, go back to the ROVE APP and you should see the live video feed from the camera on the main home screen of the ROVE APP. Now you are all set to access your recording from the ROVE app and explore it further.\n\nWe hope this guide has been helpful in understanding how the WiFi feature works for ROVE Dash Cameras. Please feel free to reach out to us if you have any questions or concerns.\n\nIf You Still Unable To Connect The Wifi, Please Follow These Additional Step Below:\n\nCheck Dash Cam Power and Memory Card: Ensure that your dash cam is powered on, and a compatible memory card is properly inserted. Sometimes, connectivity issues can arise if the dash cam is not powered on or if the memory card is not inserted correctly.\n\nSignal Interference: WiFi signals can be affected by interference from other electronic devices or physical obstructions. Make sure the phone is within the 10M Range from the dash cam and there is not obstructions between the camera and your phone. Additionally, try moving closer to the dash cam to strengthen the WiFi signal.\n\nFirmware Update: Check if there are any available firmware updates for your dash cam. Updating the firmware can often resolve connectivity issues and improve overall performance. You can usually find firmware update files on the ROVE’s website or when the Wi-Fi is connected you can remotely update your firmware over the air using the ROVE App.\n\nReset Network Settings: If you continue to experience WiFi connectivity issues, you can try resetting the network settings on your mobile device. This will reset all network-related settings to default configurations, potentially resolving any underlying network configuration issues.\n\nIf none of the above steps resolve the WiFi connectivity problem, please don't hesitate to contact our customer support team for further assistance. Our dedicated support team is available to help troubleshoot any issues you may encounter and provide personalized assistance to ensure your ROVE dash cam operates smoothly."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-11",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-11",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": false
+    },
+    {
+      "claim_id": "C14",
+      "claim": "Could you read me what is printed on the card itself — the brand, the size, and any markings — and tell me roughly how long it has been in use?",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1",
+          "section": "Receiving “Memory Card Too Slow” Error",
+          "doc_code": "H:memory-card-too-slow",
+          "tier": 1,
+          "text": "Receiving “Memory Card Too Slow” Error\n\nROVE Troubleshooting Guide\n\nGetting a “Memory Card Too Slow” Error\n\nLearn why your ROVE dash cam displays a “Memory Card Too Slow” warning and follow the troubleshooting steps below to fix the issue.\n\nWhy does this error happen?\n\nIf your ROVE dash cam displays a “Memory Card Too Slow” message, it usually means the memory card can no longer maintain the required write speed for continuous video recording.\n\nMemory cards have a limited lifespan. Over time, repeated recording and overwriting may cause the card to slow down, develop bad sectors, or become corrupted.\n\nIn most cases, this warning means your dash cam is functioning properly and is simply alerting you that the memory card may need maintenance or replacement.\n\nBefore you begin\n\nA “Memory Card Too Slow” message usually means the memory card can no longer maintain the required write speed for continuous recording.\n\nIn most cases, formatting or replacing the memory card resolves the issue immediately.\n\nSTEP 1\n\nFormat the Memory Card\n\nTry formatting the memory card using the dash cam settings menu or a computer.\n\nSTEP 2\n\nReplace the Memory Card\n\nReplace the memory card with a Class 10 U3 high-speed microSD card recommended for dash cam use.\n\nSTEP 3\n\nUpgrade to a High-Speed ROVE Memory Card\n\nROVE memory cards are specifically designed for continuous dash cam recording and high-performance video writing speeds.\n\nImportant Notes\n\nAlways safely eject the memory card when using a computer.\nRegularly format the memory card inside the dash cam for best performance.\nLow-quality or counterfeit cards may cause recording issues.\nReplace memory cards periodically depending on recording usage.\n\nStill need help? We're here.\n\nIf you are still getting the same Memory Card Too Slow Error or if you have any other questions about your ROVE dash cam, our support team is available 7 days a week from 9:00 AM - 5:00 PM PST.\n\nEmail\n\nText\n\n1-844-768-3226\n\nWebsite\n\nrovedashcam.com\n\nYesNo"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-12",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-12",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_frozen_in_time",
+          "turn": 2
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_still_taking_writes",
+          "turn": 2
+        }
+      ],
+      "instances": 3,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C15",
+      "claim": "Could you read the password aloud character by character, stating upper or lower case for each.",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:know-your-dashcam-how-to#HOW_CAN_I_REMOVE_THE_ICONS#c2",
+        "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:know-your-dashcam-how-to#HOW_CAN_I_REMOVE_THE_ICONS#c2",
+          "section": "How can I remove the icons?",
+          "doc_code": "H:know-your-dashcam-how-to",
+          "tier": 1,
+          "text": "The WIFI feature primarily serves for eme  How can I remove the icons?\n\nI'd like to see the full view of the screen when driving. How can I remove the icons?. You cannot remove the icons, but you can definitely hide them. The Hide Status Icon feature allows you to hide all icons on the camera's LCD screen so you can have\n\nWhat is the best set up for my dash camera?\n\nWhat is the best setup for my dash camera?. We're thrilled to let you know that the dashcam comes with pre-configured default settings that are expertly optimized for your use. And if you want to further modify the settings to your liking, we've got\n\nShould I format the memory card?\n\nIf you regularly use the device, periodically format the memory card. We recommend that you format the memory card every 2-3 weeks. This will wipe all the files from the card and set it up afresh for continued use with your Dash Micro SD SIM Card\n\nWhy do I need hardwire kit for 24-Hour (24-HR) parking mode?\n\nThe Hardwire Kit is essential for 24-Hour Parking Mode because it provides continuous power, enables automatic mode switching when the engine is off, and includes voltage monitoring to prevent battery drain. Without it, your dash cam cannot operate i\n\nHow To Transfer video files\n\nYou can transfer videos from your ROVE dash cam to a computer or smartphone using three simple methods: direct USB connection, a memory card reader, or the ROVE App through WiFi. Normal recordings are usually stored in the Videos folder. Emergency lo\n\nWhy does it says Connect to USB or Connect to PC or Operate camera normally whenever I start my car?\n\nThis usually happens if the dashcam is plugged into a USB port using the short data cable. If you try connecting your dash cam to your car's direct USB port using the 2.5FT data cable, it may connect to your car's music system or computer. In this ca\n\nInitial screen asking how to use the dash cam\n\nThe initial screen asks how to use the dash cam. Selecting this will give you access to the memory card inserted into the dash cam. This option is normally used for transferring files from the dash cam to a laptop or PC. Pretty much straightforward i\n\nHow to change the WiFi name and password of my dash cam?\n\nHow can I change the WiFi name and password of my dash cam?. To change the password of the dash cam WIFI. First, please ensure that you are connected to the dash cam's WIFI. We hope this guide has been helpful in understanding how the WiFi feature wo\n\nHow to transfer Video files from dashcam to computer/mobile\n\nHow do you transfer video files from a dashcam to a computer/mobile?. There are three ways this can be done. NOTE: For both options above, navigate to the \"Videos\" folder; copy and paste the specific videos into your computer storage. You may also ch\n\nCan I rotate my dashcam's view?\n\nCan I rotate my dashcam's view?. We recognize that regulations regarding the placement of dashcams on windshields vary across states. For those who have opted to install their dashcams on the dashboard or have customized their installation (such as m\n\nWhy does it say Connect to USB or Connect to PC or Operate camera normally whenever I start my car?\n\nHow to use GPS Player - for PC and Mac\n\nThe ROVE GPS Player is a media player capable of showing the map with the recorded GPS route you took on your travel. We hope this guide has been helpful in understanding how to use the GPS Player. Please feel free to reach out to us if you have any"
+        },
+        {
+          "chunk_id": "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2",
+          "section": "WiFi NOT Connecting",
+          "doc_code": "H:wifi-not-connecting",
+          "tier": 1,
+          "text": "Join the “ROVE_R***_*******” network using the default password “12345678” displayed on your dash camera’s screen\n\nFor an Android user, there is one extra step you will have to take for the first time. Once you connect to Dash Cam’s WiFi, it will say “No Internet”. Which is fine. Wait about 10-15 seconds until you see the below pop-up or notification. You just have to tap on the pop-up notification that will show up in a few seconds to select that you still want to stay connected even though there is NO Internet. Once you select this OK, you are set to go.\n\nOnce your smartphone is connected to the ROVE Dash Cam WiFi, go back to the ROVE APP and you should see the live video feed from the camera on the main home screen of the ROVE APP. Now you are all set to access your recording from the ROVE app and explore it further.\n\nWe hope this guide has been helpful in understanding how the WiFi feature works for ROVE Dash Cameras. Please feel free to reach out to us if you have any questions or concerns.\n\nIf You Still Unable To Connect The Wifi, Please Follow These Additional Step Below:\n\nCheck Dash Cam Power and Memory Card: Ensure that your dash cam is powered on, and a compatible memory card is properly inserted. Sometimes, connectivity issues can arise if the dash cam is not powered on or if the memory card is not inserted correctly.\n\nSignal Interference: WiFi signals can be affected by interference from other electronic devices or physical obstructions. Make sure the phone is within the 10M Range from the dash cam and there is not obstructions between the camera and your phone. Additionally, try moving closer to the dash cam to strengthen the WiFi signal.\n\nFirmware Update: Check if there are any available firmware updates for your dash cam. Updating the firmware can often resolve connectivity issues and improve overall performance. You can usually find firmware update files on the ROVE’s website or when the Wi-Fi is connected you can remotely update your firmware over the air using the ROVE App.\n\nReset Network Settings: If you continue to experience WiFi connectivity issues, you can try resetting the network settings on your mobile device. This will reset all network-related settings to default configurations, potentially resolving any underlying network configuration issues.\n\nIf none of the above steps resolve the WiFi connectivity problem, please don't hesitate to contact our customer support team for further assistance. Our dedicated support team is available to help troubleshoot any issues you may encounter and provide personalized assistance to ensure your ROVE dash cam operates smoothly."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-06",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-06",
+          "branch": null,
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C16",
+      "claim": "Could you switch the camera into photo mode and take one picture, and tell me whether you hear a shutter sound?",
+      "line_kind": "step",
+      "chunk_ids": [
+        "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1",
+          "section": "Receiving “Memory Card Too Slow” Error",
+          "doc_code": "H:memory-card-too-slow",
+          "tier": 1,
+          "text": "Receiving “Memory Card Too Slow” Error\n\nROVE Troubleshooting Guide\n\nGetting a “Memory Card Too Slow” Error\n\nLearn why your ROVE dash cam displays a “Memory Card Too Slow” warning and follow the troubleshooting steps below to fix the issue.\n\nWhy does this error happen?\n\nIf your ROVE dash cam displays a “Memory Card Too Slow” message, it usually means the memory card can no longer maintain the required write speed for continuous video recording.\n\nMemory cards have a limited lifespan. Over time, repeated recording and overwriting may cause the card to slow down, develop bad sectors, or become corrupted.\n\nIn most cases, this warning means your dash cam is functioning properly and is simply alerting you that the memory card may need maintenance or replacement.\n\nBefore you begin\n\nA “Memory Card Too Slow” message usually means the memory card can no longer maintain the required write speed for continuous recording.\n\nIn most cases, formatting or replacing the memory card resolves the issue immediately.\n\nSTEP 1\n\nFormat the Memory Card\n\nTry formatting the memory card using the dash cam settings menu or a computer.\n\nSTEP 2\n\nReplace the Memory Card\n\nReplace the memory card with a Class 10 U3 high-speed microSD card recommended for dash cam use.\n\nSTEP 3\n\nUpgrade to a High-Speed ROVE Memory Card\n\nROVE memory cards are specifically designed for continuous dash cam recording and high-performance video writing speeds.\n\nImportant Notes\n\nAlways safely eject the memory card when using a computer.\nRegularly format the memory card inside the dash cam for best performance.\nLow-quality or counterfeit cards may cause recording issues.\nReplace memory cards periodically depending on recording usage.\n\nStill need help? We're here.\n\nIf you are still getting the same Memory Card Too Slow Error or if you have any other questions about your ROVE dash cam, our support team is available 7 days a week from 9:00 AM - 5:00 PM PST.\n\nEmail\n\nText\n\n1-844-768-3226\n\nWebsite\n\nrovedashcam.com\n\nYesNo"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-02",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-02",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_frozen_in_time",
+          "turn": 4
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_still_taking_writes",
+          "turn": 4
+        }
+      ],
+      "instances": 3,
+      "carried_from_previous_sample": true
+    },
+    {
+      "claim_id": "C17",
+      "claim": "The SD card is not properly seated in the camera.",
+      "line_kind": "prose",
+      "chunk_ids": [
+        "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:memory-card-too-slow#RECEIVING_MEMORY_CARD_TOO_SLOW_ERROR#c1",
+          "section": "Receiving “Memory Card Too Slow” Error",
+          "doc_code": "H:memory-card-too-slow",
+          "tier": 1,
+          "text": "Receiving “Memory Card Too Slow” Error\n\nROVE Troubleshooting Guide\n\nGetting a “Memory Card Too Slow” Error\n\nLearn why your ROVE dash cam displays a “Memory Card Too Slow” warning and follow the troubleshooting steps below to fix the issue.\n\nWhy does this error happen?\n\nIf your ROVE dash cam displays a “Memory Card Too Slow” message, it usually means the memory card can no longer maintain the required write speed for continuous video recording.\n\nMemory cards have a limited lifespan. Over time, repeated recording and overwriting may cause the card to slow down, develop bad sectors, or become corrupted.\n\nIn most cases, this warning means your dash cam is functioning properly and is simply alerting you that the memory card may need maintenance or replacement.\n\nBefore you begin\n\nA “Memory Card Too Slow” message usually means the memory card can no longer maintain the required write speed for continuous recording.\n\nIn most cases, formatting or replacing the memory card resolves the issue immediately.\n\nSTEP 1\n\nFormat the Memory Card\n\nTry formatting the memory card using the dash cam settings menu or a computer.\n\nSTEP 2\n\nReplace the Memory Card\n\nReplace the memory card with a Class 10 U3 high-speed microSD card recommended for dash cam use.\n\nSTEP 3\n\nUpgrade to a High-Speed ROVE Memory Card\n\nROVE memory cards are specifically designed for continuous dash cam recording and high-performance video writing speeds.\n\nImportant Notes\n\nAlways safely eject the memory card when using a computer.\nRegularly format the memory card inside the dash cam for best performance.\nLow-quality or counterfeit cards may cause recording issues.\nReplace memory cards periodically depending on recording usage.\n\nStill need help? We're here.\n\nIf you are still getting the same Memory Card Too Slow Error or if you have any other questions about your ROVE dash cam, our support team is available 7 days a week from 9:00 AM - 5:00 PM PST.\n\nEmail\n\nText\n\n1-844-768-3226\n\nWebsite\n\nrovedashcam.com\n\nYesNo"
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "A",
+        "scenario_id": "EVAL-27",
+        "branch": null,
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "A",
+          "scenario_id": "EVAL-27",
+          "branch": null,
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_frozen_in_time",
+          "turn": 1
+        },
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-27",
+          "branch": "card_still_taking_writes",
+          "turn": 1
+        }
+      ],
+      "instances": 3,
+      "carried_from_previous_sample": false
+    },
+    {
+      "claim_id": "C18",
+      "claim": "The Wi-Fi drop is related to the device's activity level.",
+      "line_kind": "prose",
+      "chunk_ids": [
+        "H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1",
+          "section": "Why Is My Dashcam Overheating — What Causes It and How Can I Prevent It?",
+          "doc_code": "H:overheating",
+          "tier": 1,
+          "text": "Why Is My Dashcam Overheating — What Causes It and How Can I Prevent It?\n\nIt’s normal for your ROVE dash cam to feel warm during regular use, especially when recording in 4K, operating in Parking Mode, or running under direct sunlight.\n\nHowever, if your device becomes unusually hot, shuts down unexpectedly, or displays a high-temperature warning, it may be overheating—and that’s something we want to help you avoid.\n\n1. Extended Exposure to Direct Sunlight\n\nWhen your vehicle is parked under the sun, especially during summer, cabin temperatures can exceed 140°F (60°C). Prolonged exposure can cause your dash cam’s internal temperature to rise above its normal operating range.\n\nROVE dash cams are designed to operate between -4°F and 140°F (-20°C to 60°C). To protect itself, the device may slow down, shut off, or stop recording beyond that.\n\n2. Incompatible or Faulty MicroSD Card\n\nA low-quality or non-U3-rated memory card can force the camera’s processor to work harder when saving video files, generating additional heat. Some cards may also fail to write correctly, causing the camera to freeze or overheat.\n\n3. Using Unsupported Power Sources\n\nPower banks, OBD2 adapters, and third-party USB chargers may not supply consistent voltage or include built-in protections. This can cause the dash cam to draw unstable current, increasing heat buildup over time.\n\n4. Parking Mode Running in Extreme Heat\n\nWhen Parking Mode is active, the dash cam remains on standby or records at a low bitrate while the vehicle is off. Without air circulation or A/C, interior temperatures can spike quickly, increasing the risk of overheating—especially if Parking Mode is left running for long periods.\n\nHere are some practical steps to keep your dash cam running safely and efficiently:\n1. Use a High-Quality, U3-Class MicroSD Card\n\nWe recommend using a ROVE PRO, ROVE Ultimate, or ROVE Industrial U3 microSD card. These are designed for high-speed 4K recording and maintain stable write speeds, reducing stress on the camera’s processor.\n\n2. Format the Memory Card Regularly\n\nTo prevent file system errors and minimize write stress, format your SD card in-camera once every 1-2 weeks.\n\n3. Avoid Direct Sunlight\n\nWhenever possible, park in the shade or use a windshield sunshade to keep the cabin temperature lower. If your vehicle allows, mount the dash cam away from direct sunlight.\n\n4. Use Only ROVE-Approved Power Sources\n\nUse the original ROVE USB-C car charger or the ROVE Ultimate 3-Lead Hardwire Kit for stable and safe operation. These provide a regulated 5V/3.4A output and include built-in protection for your dash cam and your vehicle’s battery.\n\n5. Adjust Parking Mode Settings\n\nIf you're in a high-heat region, consider setting a shorter Parking Mode timer (1-3 hours) or disabling it during hotter days. This helps prevent your camera from running too long while the cabin temperature rises.\n\n6. Keep Firmware Up to Date\n\nWe release firmware updates to improve performance, fix bugs, and optimize heat management. If you’re unsure of your current version, contact our support team, and we’ll provide the latest version and installation instructions.\n\nIs This Covered Under Warranty?\n\nIf your dash cam consistently overheats, shuts off without warning, or displays a “High Temperature” error, it could be a sign of a hardware issue. Please stop using the device and contact us right away. If it’s still under warranty, we’ll work with you on repair or replacement options."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "B",
+        "scenario_id": "EVAL-23",
+        "branch": "camera_restarts_in_heat",
+        "turn": 1
+      },
+      "spoken_at": [
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-23",
+          "branch": "camera_restarts_in_heat",
+          "turn": 1
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": false
+    },
+    {
+      "claim_id": "C19",
+      "claim": "The camera is cycling on the hot days, indicating a thermal behavior issue.",
+      "line_kind": "prose",
+      "chunk_ids": [
+        "H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:overheating#WHY_IS_MY_DASHCAM_OVERHEATING_WHAT_CAUSE#c1",
+          "section": "Why Is My Dashcam Overheating — What Causes It and How Can I Prevent It?",
+          "doc_code": "H:overheating",
+          "tier": 1,
+          "text": "Why Is My Dashcam Overheating — What Causes It and How Can I Prevent It?\n\nIt’s normal for your ROVE dash cam to feel warm during regular use, especially when recording in 4K, operating in Parking Mode, or running under direct sunlight.\n\nHowever, if your device becomes unusually hot, shuts down unexpectedly, or displays a high-temperature warning, it may be overheating—and that’s something we want to help you avoid.\n\n1. Extended Exposure to Direct Sunlight\n\nWhen your vehicle is parked under the sun, especially during summer, cabin temperatures can exceed 140°F (60°C). Prolonged exposure can cause your dash cam’s internal temperature to rise above its normal operating range.\n\nROVE dash cams are designed to operate between -4°F and 140°F (-20°C to 60°C). To protect itself, the device may slow down, shut off, or stop recording beyond that.\n\n2. Incompatible or Faulty MicroSD Card\n\nA low-quality or non-U3-rated memory card can force the camera’s processor to work harder when saving video files, generating additional heat. Some cards may also fail to write correctly, causing the camera to freeze or overheat.\n\n3. Using Unsupported Power Sources\n\nPower banks, OBD2 adapters, and third-party USB chargers may not supply consistent voltage or include built-in protections. This can cause the dash cam to draw unstable current, increasing heat buildup over time.\n\n4. Parking Mode Running in Extreme Heat\n\nWhen Parking Mode is active, the dash cam remains on standby or records at a low bitrate while the vehicle is off. Without air circulation or A/C, interior temperatures can spike quickly, increasing the risk of overheating—especially if Parking Mode is left running for long periods.\n\nHere are some practical steps to keep your dash cam running safely and efficiently:\n1. Use a High-Quality, U3-Class MicroSD Card\n\nWe recommend using a ROVE PRO, ROVE Ultimate, or ROVE Industrial U3 microSD card. These are designed for high-speed 4K recording and maintain stable write speeds, reducing stress on the camera’s processor.\n\n2. Format the Memory Card Regularly\n\nTo prevent file system errors and minimize write stress, format your SD card in-camera once every 1-2 weeks.\n\n3. Avoid Direct Sunlight\n\nWhenever possible, park in the shade or use a windshield sunshade to keep the cabin temperature lower. If your vehicle allows, mount the dash cam away from direct sunlight.\n\n4. Use Only ROVE-Approved Power Sources\n\nUse the original ROVE USB-C car charger or the ROVE Ultimate 3-Lead Hardwire Kit for stable and safe operation. These provide a regulated 5V/3.4A output and include built-in protection for your dash cam and your vehicle’s battery.\n\n5. Adjust Parking Mode Settings\n\nIf you're in a high-heat region, consider setting a shorter Parking Mode timer (1-3 hours) or disabling it during hotter days. This helps prevent your camera from running too long while the cabin temperature rises.\n\n6. Keep Firmware Up to Date\n\nWe release firmware updates to improve performance, fix bugs, and optimize heat management. If you’re unsure of your current version, contact our support team, and we’ll provide the latest version and installation instructions.\n\nIs This Covered Under Warranty?\n\nIf your dash cam consistently overheats, shuts off without warning, or displays a “High Temperature” error, it could be a sign of a hardware issue. Please stop using the device and contact us right away. If it’s still under warranty, we’ll work with you on repair or replacement options."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "B",
+        "scenario_id": "EVAL-23",
+        "branch": "camera_restarts_in_heat",
+        "turn": 2
+      },
+      "spoken_at": [
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-23",
+          "branch": "camera_restarts_in_heat",
+          "turn": 2
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": false
+    },
+    {
+      "claim_id": "C20",
+      "claim": "The issue may be specific to the phone's operating system.",
+      "line_kind": "prose",
+      "chunk_ids": [
+        "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2"
+      ],
+      "cited_chunks": [
+        {
+          "chunk_id": "H:wifi-not-connecting#WIFI_NOT_CONNECTING#c2",
+          "section": "WiFi NOT Connecting",
+          "doc_code": "H:wifi-not-connecting",
+          "tier": 1,
+          "text": "Join the “ROVE_R***_*******” network using the default password “12345678” displayed on your dash camera’s screen\n\nFor an Android user, there is one extra step you will have to take for the first time. Once you connect to Dash Cam’s WiFi, it will say “No Internet”. Which is fine. Wait about 10-15 seconds until you see the below pop-up or notification. You just have to tap on the pop-up notification that will show up in a few seconds to select that you still want to stay connected even though there is NO Internet. Once you select this OK, you are set to go.\n\nOnce your smartphone is connected to the ROVE Dash Cam WiFi, go back to the ROVE APP and you should see the live video feed from the camera on the main home screen of the ROVE APP. Now you are all set to access your recording from the ROVE app and explore it further.\n\nWe hope this guide has been helpful in understanding how the WiFi feature works for ROVE Dash Cameras. Please feel free to reach out to us if you have any questions or concerns.\n\nIf You Still Unable To Connect The Wifi, Please Follow These Additional Step Below:\n\nCheck Dash Cam Power and Memory Card: Ensure that your dash cam is powered on, and a compatible memory card is properly inserted. Sometimes, connectivity issues can arise if the dash cam is not powered on or if the memory card is not inserted correctly.\n\nSignal Interference: WiFi signals can be affected by interference from other electronic devices or physical obstructions. Make sure the phone is within the 10M Range from the dash cam and there is not obstructions between the camera and your phone. Additionally, try moving closer to the dash cam to strengthen the WiFi signal.\n\nFirmware Update: Check if there are any available firmware updates for your dash cam. Updating the firmware can often resolve connectivity issues and improve overall performance. You can usually find firmware update files on the ROVE’s website or when the Wi-Fi is connected you can remotely update your firmware over the air using the ROVE App.\n\nReset Network Settings: If you continue to experience WiFi connectivity issues, you can try resetting the network settings on your mobile device. This will reset all network-related settings to default configurations, potentially resolving any underlying network configuration issues.\n\nIf none of the above steps resolve the WiFi connectivity problem, please don't hesitate to contact our customer support team for further assistance. Our dedicated support team is available to help troubleshoot any issues you may encounter and provide personalized assistance to ensure your ROVE dash cam operates smoothly."
+        }
+      ],
+      "chunk_ids_not_in_corpus": [],
+      "first_spoken_at": {
+        "harness": "B",
+        "scenario_id": "EVAL-23",
+        "branch": "wifi_drops_only",
+        "turn": 4
+      },
+      "spoken_at": [
+        {
+          "harness": "B",
+          "scenario_id": "EVAL-23",
+          "branch": "wifi_drops_only",
+          "turn": 4
+        }
+      ],
+      "instances": 1,
+      "carried_from_previous_sample": true
+    }
+  ]
+}

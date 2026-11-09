@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      The support console (`docs/06` §5.3, `docs/07` D-17, §9.3 item 14).
+
+      `noindex` and `noreferrer` are not decoration. This page renders another
+      person's troubleshooting session; it is an internal tool and the only
+      correct number of search engines that have seen it is zero.
+    -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Rove support console</title>
+    <link rel="stylesheet" href="__BASE__/assets/console.css" />
+  </head>
+  <body>
+    <noscript>
+      The support console is a live view of a running session and needs
+      JavaScript. There is no static rendering of a conversation in progress.
+    </noscript>
+
+    <header class="bar">
+      <span class="brand">Rove <b>support console</b></span>
+      <span class="build" title="build id">__BUILD__</span>
+      <span class="spacer"></span>
+      <span id="connection" class="pill pill-idle">not connected</span>
+    </header>
+
+    <main id="app">
+      <!-- Everything below is rendered by `assets/main.js`. The markup here is
+           only the gate: a console that showed a session before anyone had
+           identified themselves would be the wrong default. -->
+      <section id="gate" class="gate">
+        <h1>Open a session</h1>
+        <p class="muted">
+          The support key authorises the <em>mint</em>, not the session. What it
+          returns is a short-lived observer token for one room — a separate
+          scope and a separate identity from the caller's, never the caller's
+          own token (<code>docs/06</code> §1.4.2, §5.3).
+        </p>
+        <form id="gate-form" autocomplete="off">
+          <label for="support-key">Support key</label>
+          <input id="support-key" type="password" placeholder="ROVE_SUPPORT_KEY" />
+          <button type="submit">List live rooms</button>
+        </form>
+        <p id="gate-error" class="error" hidden></p>
+        <div id="room-list"></div>
+      </section>
+
+      <section id="session" hidden>
+        <div class="session-head">
+          <div>
+            <h1 id="session-room">—</h1>
+            <p id="session-meta" class="muted">—</p>
+          </div>
+          <div class="session-actions">
+            <span id="agent-mode" class="pill">agent: —</span>
+            <!--
+              The name the caller hears in the join announcement. Not a
+              credential and not an identity: the observer identity is minted
+              per admission by the server (§5.3) and this is only what the
+              agent says out loud when it announces that somebody arrived.
+            -->
+            <input id="display-name" type="text" placeholder="your name" autocomplete="off" />
+            <button id="btn-disclose" class="secondary">1 · Disclose the join</button>
+            <button id="btn-join" class="primary" disabled>2 · Join the room</button>
+            <button id="btn-leave" class="secondary" hidden>Leave</button>
+            <button id="btn-collect" class="secondary">Collect transcript</button>
+            <button id="btn-close" class="ghost">Close</button>
+          </div>
+        </div>
+        <p id="session-error" class="error" hidden></p>
+        <p id="session-notice" class="notice" hidden></p>
+
+        <div class="grid">
+          <div class="col">
+            <article class="panel" id="panel-consent"></article>
+            <article class="panel" id="panel-transcript"></article>
+          </div>
+          <div class="col">
+            <article class="panel" id="panel-state"></article>
+            <article class="panel" id="panel-ledger"></article>
+            <article class="panel" id="panel-claims"></article>
+          </div>
+          <div class="col">
+            <article class="panel" id="panel-handoff"></article>
+            <article class="panel" id="panel-trace"></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="__BASE__/assets/main.js"></script>
+  </body>
+</html>

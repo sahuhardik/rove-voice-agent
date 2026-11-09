@@ -1,0 +1,21 @@
+OK 200 559950 https://www.rovedashcam.com/pages/firmware-update-downloads -> /home/ubuntu/projects/rove-voice-agent/data/raw/official/firmware-update-downloads.html
+OK 200 575969 https://www.rovedashcam.com/blogs/rove-dash_cam/connect-rove-dash-cam-to-phone-app -> /home/ubuntu/projects/rove-voice-agent/data/raw/official/connect-rove-to-phone.html
+OK 200 531500 https://www.rovedashcam.com/pages/update-firmware-rove-r2-4k-dash-cam -> /home/ubuntu/projects/rove-voice-agent/data/raw/official/update-firmware-r2-4k.html
+OK 200 523821 https://hc1.gorgias.help/en-US/articles/troubleshoot-128437 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/troubleshoot-index.html
+OK 200 174944 https://hc1.gorgias.help/en-US/wifi-not-connecting-477922 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/wifi-not-connecting.html
+OK 200 162797 https://hc1.gorgias.help/en-US/rove-dash-cam-repeatedly-saying-%E2%80%9Cwifi-is-connected--wifi-is-disconnected%E2%80%9D-472820 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/wifi-connected-disconnected.html
+OK 200 192673 https://hc1.gorgias.help/en-US/i-have-missing-videos-on-my-rove-dash-cam-472877 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/missing-videos.html
+OK 200 178946 https://hc1.gorgias.help/en-US/my-camera-does-not-turn-on-472872 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/camera-does-not-turn-on.html
+OK 200 151845 https://hc1.gorgias.help/en-US/r3--no-gps-live-speed-477968 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/r3-no-gps-live-speed.html
+OK 200 182532 https://hc1.gorgias.help/en-US/why-my-video-recording-has-no-audiosound-476108 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/no-audio-sound.html
+OK 200 164855 https://hc1.gorgias.help/en-US/receiving-%E2%80%9Cmemory-card-too-slow%E2%80%9D-error-503340 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/memory-card-too-slow.html
+OK 200 210708 https://hc1.gorgias.help/en-US/my-camera-does-not-turn-off-(always-stays-on)-477921 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/camera-does-not-turn-off.html
+OK 200 155480 https://hc1.gorgias.help/en-US/rove-wifi-name-not-showing-on-my-phone-2106568 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/wifi-name-not-showing.html
+OK 200 163351 https://hc1.gorgias.help/en-US/i-am-getting-an-error-when-i-sign-in-to-my-rove-app-2041277 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/sign-in-error-rove-app.html
+OK 200 655156 https://hc1.gorgias.help/en-US/articles/know-your-dashcam-%7C-how-to-128439 -> /home/ubuntu/projects/rove-voice-agent/data/raw/help-center/know-your-dashcam-how-to.html
+FAIL https://manuals.plus/m/40deab8b387341f91679395691256607a3a5aac946af42d95895dcdf2969b1ae : HTTP Error 403: Forbidden
+FAIL https://manuals.plus/m/a27226c6a9e8699afa2c5cd58f247a3d38499b76318e11f3d9195cb7b67765b5.pdf : HTTP Error 403: Forbidden
+FAIL https://manuals.plus/asin/B0DB7261DP.pdf : HTTP Error 403: Forbidden
+FAIL https://manuals.plus/asin/B0F9SX3JB9 : HTTP Error 403: Forbidden
+OK 200 141435 https://cdn.prod.website-files.com/6724e2eaaa40b55848edd7ed/67b4fdf3c7d8bc594263f46b_bezog.pdf -> /home/ubuntu/projects/rove-voice-agent/data/raw/manuals/r3-manual-website-files.pdf
+FAIL https://www.manualslib.com/manual/1825179/Rove-R2-4k.html : HTTP Error 403: Forbidden

@@ -1,0 +1,100 @@
+digraph LangGraph {
+    rankdir=TB;
+    splines=true;
+    nodesep=0.6;
+    ranksep=0.7;
+    dpi=200;
+    label="LangGraph State Machine  —  Rove Voice Troubleshooting Agent  (docs/06 §3.2, agent/graph.py)\nOne node per state (13). Edges are agent.state.LEGAL_TRANSITIONS, imported — never re-typed.";
+    labelloc=t;
+    fontsize=20;
+    fontname="Helvetica";
+
+    node [shape=box, style="rounded,filled", fillcolor="#eef4ff", color="#2b4a7a", fontname="Helvetica", fontsize=13];
+    edge [fontname="Helvetica", fontsize=11, color="#2b4a7a"];
+
+    GREET [label=<<B>GREET</B><BR/>consent disclosure, spoken and shown<BR/><FONT POINT-SIZE="10">core.step_greet  ·  ceiling 1 turn</FONT>>];
+    SYMPTOM_CAPTURE [label=<<B>SYMPTOM_CAPTURE</B><BR/>verbatim symptom + change event<BR/>+ already-tried  ·  ceiling 3 turns<BR/><FONT POINT-SIZE="10">core.step_symptom_capture</FONT>>];
+    TRIAGE [label=<<B>TRIAGE</B><BR/>category → taxonomy ID → KNOWN-GAP? → NO_MATCH?<BR/>intake agent runs here when the symptom is vague<BR/><FONT POINT-SIZE="10">core.step_triage  ·  ceiling 1 turn</FONT>>];
+    MODEL_ID [label=<<B>MODEL_ID</B><BR/>7-probe ladder — identify by FEATURE, never by name<BR/>CONFIRMED / PROBABLE / UNKNOWN  ·  ceiling 4 turns<BR/><FONT POINT-SIZE="10">core.step_model_id</FONT>>];
+    HYPOTHESISE [label=<<B>HYPOTHESISE</B><BR/>rank causes from docs/02 · re-rank on change event<BR/><FONT POINT-SIZE="10">core.step_hypothesise</FONT>>];
+    SELECT_STEP [label=<<B>SELECT_STEP</B><BR/>policy (§3.5) — source · model · no-repeat · safety<BR/>rank by discriminating power · cap at ONE action<BR/><FONT POINT-SIZE="10">core.step_select_step</FONT>>];
+    DESTRUCTIVE_GATE [label=<<B>DESTRUCTIVE_GATE</B><BR/>cause + consequence-spoken-first + explicit consent<BR/>refusal is final for that step<BR/><FONT POINT-SIZE="10">core.step_destructive_gate</FONT>>];
+    PROPOSE_STEP [label=<<B>PROPOSE_STEP</B><BR/>exactly ONE action (enforced by the output guard)<BR/><FONT POINT-SIZE="10">core.step_propose_step</FONT>>];
+    AWAIT_OUTCOME [label=<<B>AWAIT_OUTCOME</B><BR/>“tell me when you’ve done that” · no turn limit<BR/>a 90 s silence prompts once<BR/><FONT POINT-SIZE="10">core.step_await_outcome</FONT>>];
+    EVALUATE_OUTCOME [label=<<B>EVALUATE_OUTCOME</B><BR/>symptom gone?<BR/><FONT POINT-SIZE="10">core.step_evaluate_outcome</FONT>>];
+    VERIFY_RESOLVED [label=<<B>VERIFY_RESOLVED</B><BR/>user states the symptom is gone<BR/><FONT POINT-SIZE="10">core.step_verify_resolved</FONT>>];
+
+    ESCALATE [shape=doubleoctagon, style=filled, fillcolor="#fde8e8", color="#a33a3a", label=<<B>ESCALATE</B><BR/>handoff built and delivered<BR/><FONT POINT-SIZE="10">core.step_escalate  ·  TERMINAL</FONT>>];
+    CLOSE [shape=doubleoctagon, style=filled, fillcolor="#e6f4ea", color="#2e7d32", label=<<B>CLOSE</B><BR/>resolved_verified · non_fault_closed_honestly<BR/>deferred_retest · not-closed<BR/><FONT POINT-SIZE="10">core.step_close  ·  TERMINAL</FONT>>];
+
+    // The main chain, in order top to bottom. Only these edges constrain the ranking;
+    // every other edge is constraint=false so it cannot pull a node out of the chain.
+    GREET -> SYMPTOM_CAPTURE;
+    SYMPTOM_CAPTURE -> TRIAGE;
+    TRIAGE -> MODEL_ID [label="taxonomy ID"];
+    MODEL_ID -> HYPOTHESISE;
+    HYPOTHESISE -> SELECT_STEP;
+    SELECT_STEP -> DESTRUCTIVE_GATE [label="step is destructive"];
+    DESTRUCTIVE_GATE -> PROPOSE_STEP [label="consent granted"];
+    PROPOSE_STEP -> AWAIT_OUTCOME;
+    AWAIT_OUTCOME -> EVALUATE_OUTCOME;
+    EVALUATE_OUTCOME -> VERIFY_RESOLVED [label="yes"];
+    VERIFY_RESOLVED -> CLOSE [label="confirmed"];
+    ESCALATE -> CLOSE [constraint=false];
+
+    // TRIAGE can also skip MODEL_ID when the model is known or not needed.
+    TRIAGE -> HYPOTHESISE [label="model known / not needed", constraint=false];
+    // SELECT_STEP can go straight to PROPOSE_STEP when the step is not destructive.
+    SELECT_STEP -> PROPOSE_STEP [label="step is not destructive", constraint=false];
+
+    // Self-loops (do not affect ranking)
+    SYMPTOM_CAPTURE -> SYMPTOM_CAPTURE [color="#777777", label="more to capture", constraint=false];
+    MODEL_ID -> MODEL_ID [color="#777777", label="next probe", constraint=false];
+
+    // Loop-backs / retries (do not affect ranking)
+    DESTRUCTIVE_GATE -> SELECT_STEP [color="#1a66cc", label="refused", constraint=false];
+    SELECT_STEP -> MODEL_ID [color="#1a66cc", label="needs model", constraint=false];
+    EVALUATE_OUTCOME -> HYPOTHESISE [color="#1a66cc", label="no — re-hypothesise", constraint=false];
+    EVALUATE_OUTCOME -> SELECT_STEP [color="#1a66cc", label="no — next step", constraint=false];
+    VERIFY_RESOLVED -> HYPOTHESISE [color="#1a66cc", label="not resolved", constraint=false];
+
+    // Escalation edges (do not affect ranking) — every state can reach ESCALATE
+    TRIAGE -> ESCALATE [style=dashed, color="#c0392b", label="NO_MATCH / KNOWN-GAP", constraint=false];
+    SELECT_STEP -> ESCALATE [style=dashed, color="#c0392b", label="legal set empty", constraint=false];
+    GREET -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    SYMPTOM_CAPTURE -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    MODEL_ID -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    HYPOTHESISE -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    DESTRUCTIVE_GATE -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    PROPOSE_STEP -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    AWAIT_OUTCOME -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    EVALUATE_OUTCOME -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+    VERIFY_RESOLVED -> ESCALATE [style=dashed, color="#c0392b", constraint=false];
+
+    // TRIAGE can close directly (nothing to diagnose)
+    TRIAGE -> CLOSE [style=dashed, color="#2e7d32", label="nothing to diagnose", constraint=false];
+
+    // Notes
+    INTERRUPTS [shape=note, style=filled, fillcolor="#fff8e1", color="#b58900", label=<<B>INTERRUPTS — evaluated before EVERY transition</B><BR/>HAZARD_STOP · DRIVING_GATE · PRESERVE_FOOTAGE<BR/>OUT_OF_SCOPE · USER_REQUESTS_HUMAN<BR/>any one fires → leaves the main path for ESCALATE>];
+    CEILINGS [shape=note, style=filled, fillcolor="#fff8e1", color="#b58900", label=<<B>GLOBAL CEILINGS — any one forces ESCALATE</B><BR/>· 2 next-steps attempted, symptom unchanged<BR/>· same top hypothesis survives 3 turns, no new information<BR/>· 12 total diagnostic turns<BR/>· legal candidate set is empty<BR/>· taxonomy entry UNVERIFIED, no cross-model cleared step>];
+    INTERRUPTS -> ESCALATE [style=dotted, color="#b58900", label="any fires", constraint=false];
+    CEILINGS -> ESCALATE [style=dotted, color="#b58900", label="ceiling reached", constraint=false];
+
+    // Legend
+    LEGEND [shape=plaintext, label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4">
+      <TR><TD ALIGN="LEFT"><B>Legend</B></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#2b4a7a">───</FONT>  main diagnostic flow</TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#1a66cc">───</FONT>  loop-back / retry (to an earlier state)</TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#777777">───</FONT>  self-loop (stay in the same state)</TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#c0392b">- - -</FONT>  to ESCALATE (interrupt, policy trigger, or NO_MATCH)</TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#2e7d32">- - -</FONT>  TRIAGE → CLOSE (nothing to diagnose)</TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#b58900">·····</FONT>  interrupts / ceilings force ESCALATE</TD></TR>
+      <TR><TD ALIGN="LEFT">Double border = terminal state (ESCALATE, CLOSE)</TD></TR>
+      <TR><TD ALIGN="LEFT">The LLM is called only inside step_triage and step_select_step.</TD></TR>
+    </TABLE>>];
+
+    // Keep ESCALATE beside the lower half of the chain, and the notes + legend at the bottom.
+    { rank=same; EVALUATE_OUTCOME; ESCALATE; }
+    { rank=same; INTERRUPTS; CEILINGS; }
+    { rank=same; LEGEND; }
+}

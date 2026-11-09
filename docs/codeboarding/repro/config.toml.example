@@ -1,0 +1,22 @@
+# CodeBoarding provider config, for reproducing this run with the real engine.
+# Copy to ~/.codeboarding/config.toml (the engine creates that file on first run).
+#
+# CodeBoarding 0.15.3 selects its Bedrock provider only when AWS_BEARER_TOKEN_BEDROCK
+# is set (agents/llm_config.py, the "aws" provider: selection_envs). It does not pick
+# up an IAM instance profile on its own. Create a Bedrock API key in the console and
+# put it here, or export it; do not commit it. This repo's run had no such key.
+#
+# The engine's default Bedrock model is anthropic.claude-sonnet-4-6. The models this
+# project has access to are Amazon Nova Micro / Pro / Lite and Titan Embeddings, so
+# set agent_model explicitly. Nova Pro is the closest fit for component descriptions.
+
+[provider]
+# aws_bearer_token_bedrock = "<paste a Bedrock API key; never commit it>"
+
+[llm]
+# agent_model = "amazon.nova-pro-v1:0"
+
+# Equivalent shell variables (these take precedence over the file):
+#   export AWS_BEARER_TOKEN_BEDROCK=...
+#   export AWS_DEFAULT_REGION=us-east-1
+#   export AGENT_MODEL=amazon.nova-pro-v1:0

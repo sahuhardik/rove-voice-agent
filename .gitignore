@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Build output. `support/dist` is `node support/build.mjs`; `client/dist` is
+# already ignored by `client/.gitignore`. A build output in git is a second
+# source of truth that will eventually disagree with the first.
+support/dist/
+
+# The Polly greeting cache (`server/polly.py`). Synthesised on demand and
+# re-synthesisable; it is audio, and `docs/06` §6.3 is clear about audio.
+data/cache/
+
+# Session traces (`data/traces/phase2b/`, `data/traces/phase3/`). Run
+# outputs, written by the verifiers on every run; never committed.
+data/traces/
+
+# Captured-turn dumps from `eval.run_grounding --dump` (`.runs/m47_a.json` and
+# friends). Run outputs: re-derivable by re-running, and large. The *pack* built
+# from a dump is committed (`eval/grounding_pack/`); the dump itself is not.
+.runs/
