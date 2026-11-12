@@ -109,7 +109,9 @@ HAZARD_REPLY = (
     "and if anything is still hot or smoking, keep away from it. That needs a person from "
     "Rove to look at, so I'm passing you to the support team now."
 )
-HUMAN_REPLY = "Of course. I'm passing you to a person from Rove's support team now, along with everything we've covered so far."
+OUT_OF_SCOPE_REPLY = ("Refunds, returns, warranty and billing are handled by Rove's support team, and I can't speak for them. "
+                      "You can reach them at help@rovedashcam.com, and I'm passing this on with everything we've covered.")
+HUMAN_REPLY ="Of course. I'm passing you to a person from Rove's support team now, along with everything we've covered so far."
 
 # --------------------------------------------------------------------------
 # Reviewing replies
@@ -223,12 +225,16 @@ def _sentences(text: str) -> list[str]:
     return [s for s in re.split(r"(?<=[.!?])\s+|\n+", text) if s.strip()]
 
 
-def _instructed(pattern: re.Pattern, text: str) -> list[str]:
-    """Sentences that tell the user to do the thing (not 'don't do the thing')."""
+def _instructed(pattern: re.Pattern, text: str, *, questions_count: bool = False) -> list[str]:
+    """Sentences that tell the user to do the thing (not 'don't do the thing').
+
+    A question ("Is the card in?") is not an instruction, but "Can you press the menu button?" is;
+    `questions_count` treats questions as instructions too (used while the customer is driving).
+    """
     hits = []
     for s in _sentences(text):
         m = pattern.search(s)
-        if m and not NEGATED.search(s[: m.start()]) and not s.strip().endswith("?"):
+        if m and not NEGATED.search(s[: m.start()]) and (questions_count or not s.strip().endswith("?")):
             hits.append(s.strip())
     return hits
 
@@ -245,7 +251,7 @@ def review(reply: str, *, confirmed_destructive: bool, footage_at_risk: bool, dr
         rev.add("destructive", "gives a step that erases footage or settings without the user's confirmation; say what will be lost and ask first")
     if footage_at_risk and _instructed(WRITES_TO_CARD, reply):
         rev.add("footage", "asks the user to record, photograph or drive while the footage they need is on the card; that can overwrite it")
-    if driving and _instructed(HANDS_ON, reply):
+    if driving and _instructed(HANDS_ON, reply, questions_count=True):
         rev.add("driving", "gives a hands-on step while the user is driving; ask them to wait until they are parked")
     if len(reply.split()) > MAX_WORDS:
         rev.add("length", f"is {len(reply.split())} words long; say it in under 60 words with one question or step")

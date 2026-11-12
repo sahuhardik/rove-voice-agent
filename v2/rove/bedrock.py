@@ -64,13 +64,16 @@ def _ollama(model, messages, system, max_tokens, temperature):
         msgs.append({"role": "system", "content": system if isinstance(system, str) else "".join(b.get("text", "") for b in system)})
     for m in messages:
         msgs.append({"role": m["role"], "content": "".join(b.get("text", "") for b in m["content"])})
+    if "qwen3" in model and msgs:  # Qwen3 reasons out loud unless told not to; that text would be spoken
+        msgs[-1]["content"] += " /no_think"
     body = {"model": model, "messages": msgs, "stream": False, "think": False, "keep_alive": "30m",
             "options": {"num_predict": max_tokens, "num_ctx": config.OLLAMA_NUM_CTX,
                         **({"temperature": temperature} if temperature is not None else {})}}
     req = urllib.request.Request(config.OLLAMA_URL + "/api/chat", json.dumps(body).encode(), {"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=900) as r:
         d = json.loads(r.read())
-    return {"output": {"message": {"role": "assistant", "content": [{"text": d["message"]["content"]}]}},
+    text = re.sub(r"<think>.*?</think>", "", d["message"]["content"], flags=re.S).strip()
+    return {"output": {"message": {"role": "assistant", "content": [{"text": text}]}},
             "stopReason": "end_turn",
             "usage": {"inputTokens": d.get("prompt_eval_count", 0), "outputTokens": d.get("eval_count", 0)},
             "metrics": {"latencyMs": int(d.get("total_duration", 0) / 1e6)}}

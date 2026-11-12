@@ -21,6 +21,7 @@ from typing import Any, Callable
 
 from . import bedrock, config, knowledge, safety
 from .case import Case
+from . import scope
 from .prompt import METHOD, TURN_NOTE
 
 AFFIRMATIVE = re.compile(r"^\s*(yes|yeah|yep|yup|sure|ok(ay)?|go ahead|do it|fine|that'?s fine|please do|alright|right|correct)\b", re.I)
@@ -76,8 +77,11 @@ class Agent:
         self.case = Case()
         self.history: list[dict[str, Any]] = []
         self._llm = llm or self._bedrock_llm
-        self.use_backstop = use_backstop and llm is None
+        # A tiny local model is a poor safety classifier (it marked a card error as 'driving'); rules alone then.
+        self.use_backstop = use_backstop and llm is None and not self.backstop_model.startswith("ollama:")
         self.closed = False
+        self.diagnostic_turns = 0   # turns that passed the scope gate and reached the model
+        self.off_topic_strikes = 0  # consecutive off-topic messages
 
     # ---- model calls --------------------------------------------------------
     def _bedrock_llm(self, system: str, messages: list[dict[str, Any]]) -> str:
@@ -120,6 +124,14 @@ class Agent:
             hard = self._apply_screen(rules)
             if hard:
                 return self._finish(hard, t0, text)
+            gate = scope.check(text, mid_diagnosis=self.diagnostic_turns > 0)
+            if not gate.ok:
+                self.off_topic_strikes += 1
+                case.turns -= 1  # an off-topic message is not a diagnostic turn
+                say = scope.redirect(gate.reason, self.off_topic_strikes, case.model != "unknown")
+                return self._finish(Reply(say, action="continue", safety_notes=[f"scope: {gate.reason}"], raw="scope-gate"), t0)
+            self.off_topic_strikes = 0
+            self.diagnostic_turns += 1
             reply = self._diagnose(text)
             if backstop is not None:
                 extra = backstop.result()
@@ -151,6 +163,9 @@ class Agent:
         if s.wants_human:
             case.status = "escalated"
             return Reply(safety.HUMAN_REPLY, action="escalate", safety_notes=["customer asked for a person"])
+        if s.out_of_scope:  # never let the model improvise warranty, refund or billing policy
+            case.status = "escalated"
+            return Reply(safety.OUT_OF_SCOPE_REPLY, action="escalate", safety_notes=["out of scope: refund/warranty/billing"])
         return None
 
     def _diagnose(self, text: str, extra_note: str = "") -> Reply:

@@ -59,14 +59,17 @@ def wire_ui_events(session: AgentSession, room) -> None:
     """Tell the browser what the call is doing, so the page can show live captions and state."""
     @session.on("user_input_transcribed")
     def _heard(ev) -> None:
+        log.info("heard final=%s %r", ev.is_final, ev.transcript[:80])
         publish(room, "rove.transcript", {"type": "user", "text": ev.transcript, "final": bool(ev.is_final)})
 
     @session.on("agent_state_changed")
     def _state(ev) -> None:
+        log.info("agent -> %s", ev.new_state)
         publish(room, "rove.state", {"type": "agent", "state": ev.new_state})
 
     @session.on("user_state_changed")
     def _user_state(ev) -> None:
+        log.info("user -> %s", ev.new_state)
         publish(room, "rove.state", {"type": "user", "state": ev.new_state})
 
 
@@ -102,6 +105,7 @@ class RoveVoiceAgent(VoiceAgent):
 
 
 async def entrypoint(ctx: JobContext) -> None:
+    logging.getLogger("rove").setLevel(logging.INFO)  # job processes do not inherit the __main__ setting
     await ctx.connect()
     session = AgentSession(
         vad=silero.VAD.load(),
@@ -112,6 +116,22 @@ async def entrypoint(ctx: JobContext) -> None:
         allow_interruptions=True,
     )
     wire_ui_events(session, ctx.room)
+
+    @ctx.room.on("data_received")
+    def _control(packet) -> None:
+        """Manual controls from the page: 'commit' = I'm done speaking, 'interrupt' = stop talking."""
+        if packet.topic != "rove.control":
+            return
+        import json
+        try:
+            kind = json.loads(packet.data).get("type")
+        except ValueError:
+            return
+        log.info("control %s", kind)
+        if kind == "commit":
+            session.commit_user_turn()
+        elif kind == "interrupt":
+            session.interrupt()
     await session.start(agent=RoveVoiceAgent(), room=ctx.room)
 
 
