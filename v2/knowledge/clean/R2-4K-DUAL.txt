@@ -1,0 +1,222 @@
+===== SOURCE: data/text/manuals/ROVE R2-4K Dual Dash Cam Instruction Manual.txt =====
+Manuals+
+
+ ☰
+
+Manuals.plus /
+ › ROVE /
+ › ROVE R2-4K Dual Dash Cam Instruction Manual
+
+ROVE R2-4K
+
+ ROVE R2-4K Dual Dash Cam Instruction Manual
+ Model: R2-4K
+ Brand: ROVE
+
+ 1. INTRODUCTION
+ This manual provides detailed instructions for the installation, operation, and maintenance of your ROVE R2-4K
+ Dual Dash Cam. Designed for optimal road safety and evidence recording, this advanced dash cam captures high-
+ quality footage from both front and rear perspectives. Please read this manual thoroughly to ensure proper usage
+ and to maximize the benefits of your device.
+
+ 2. PACKAGE CONTENTS
+ Verify that all items listed below are included in your product package:
+
+ ROVE R2-4K Dual Dash Cam (Front & Rear)
+ ROVE Ultimate 3-Lead Type-C Hardwire Kit
+ CPL Filter
+ 128GB ROVE PRO microSD Card (Pre-installed or included separately)
+ 360° Rotational Suction Mount
+ 360° Rotational 3M Sticky Mount
+ Dual USB Car Charger with Spare USB-C Port
+ 6.5M USB Type-C Rear Camera Cable
+ 12FT Type-C USB Power Cable for Front Dash Cam
+ 1M USB Type-C Data Cable
+ 2x Spare 3M Sticky Tapes for Front & Rear Cam
+ 5x Cable Clips & Car Wiring Tools
+ 2x Wet Cleaning Pads
+ Notice Sticker & 1x Front + 1x Rear Electrostatic Films
+ Quick Start Guide
+ Image: All components included in the ROVE R2-4K Dual Dash Cam package.
+
+3. FEATURES
+The ROVE R2-4K Dual Dash Cam is equipped with advanced features to provide comprehensive recording and
+enhanced driving safety:
+
+ 4K Dual Recording: Simultaneously records 4K 2160P front and 1080P rear footage for total protection.
+Sony STARVIS 2 Image Sensor: Captures minute details even in low-light conditions, ensuring superior night
+vision.
+Fast 5G WiFi: Experience blazing-fast 20MBps download speeds for quick footage transfer to your mobile
+device.
+Included 128GB microSD Card: Ample storage for your recordings right out of the box. Supports up to 1TB.
+24-HR Auto-trigger Parking Mode: Automatically activates parking mode or motion detection when using the
+ROVE Ultimate 3-Lead Type-C Hardwire Kit.
+CPL Filter: Enhances image quality by reducing glare and reflections, improving color saturation and contrast.
+Built-in GPS: Records precise location and speed data directly into your video footage.
+G-Sensor: Built-in three-axis impact G-sensor activates upon collision to lock video evidence.
+Supercapacitor: Provides enhanced durability and withstands extreme temperatures, offering longer product
+life and improved safety.
+Seamless Loop Recording: Continuously records, automatically deleting the oldest files when the memory
+card is full.
+Voice Guidance: Provides important fail-safe voice feedback and alerts, such as parking mode activation.
+OTA Firmware Updates: Free firmware updates via the ROVE App using a 5G WiFi connection.
+Image: Overview of the advanced features of the ROVE R2-4K Dual Dash Cam.
+Image: Illustrates the simultaneous 4K front and 1080P rear recording capabilities.
+Image: Highlights the STARVIS 2 sensor for superior night vision performance.
+Image: Demonstrates the 24-hour auto-trigger parking mode feature with the hardwire kit.
+Image: Shows the CPL filter and its benefits for improving video clarity and color.
+ Image: Highlights the dual-band WiFi connectivity and fast transfer speeds.
+
+4. SETUP
+Follow these steps for a successful installation of your ROVE R2-4K Dual Dash Cam:
+
+ 1. Prepare the Windshield: Clean the area where the dash cam will be mounted. Apply the electrostatic film to
+ the desired location on the windshield for both front and rear cameras.
+2. Mount Front Camera: Attach the front dash cam to the passenger side of your windshield using the suction
+ mount. Ensure it does not obstruct your view.
+
+3. Mount Rear Camera: Apply the electrostatic film to the rear windshield and attach the rear camera.
+
+4. Connect Rear Camera Cable: Connect the 6.5M USB Type-C rear camera cable to the rear camera and
+ route it discreetly along the roof liner or panels to the front camera. Use the provided cable clips and car wiring
+ tools to secure the cable.
+
+5. Power Up: Plug the 12FT Type-C USB power cable into the front dash cam and then into the dual USB car
+ charger. Insert the car charger into your vehicle's cigarette lighter socket. Alternatively, use the ROVE Ultimate
+ 3-Lead Type-C Hardwire Kit for 24-hour parking mode functionality (professional installation recommended for
+ hardwire kit).
+
+6. Adjust Camera Angle: Loosen the screw on the suction mount to adjust the front camera's view angle.
+ Rotate the camera 360° to record any direction you prefer. Adjust and rotate the rear camera view according
+ to your preferred direction. Tighten the screw to lock the angle.
+
+7. Insert MicroSD Card: Ensure the included 128GB ROVE PRO microSD card is properly inserted into the
+ designated slot on the dash cam.
+ Image: Step-by-step visual guide for easy DIY installation of the dash cam.
+
+5. OPERATING INSTRUCTIONS
+
+5.1 Basic Operation
+
+ Automatic Recording: The dash cam will automatically power on and begin recording when your vehicle's
+ ignition is turned on.
+ Manual Recording: Press the 'OK' button to manually start or stop recording.
+ Screen Display: The 3-inch IPS display shows live footage from both cameras. You can switch between front,
+ rear, or picture-in-picture views.
+ Menu Navigation: Use the 'MENU' button to access settings and the arrow buttons to navigate. Press 'OK' to
+ confirm selections.
+
+5.2 Advanced Features
+
+ Parking Mode: If the hardwire kit is installed, the dash cam will automatically enter parking mode when the
+ car is turned off. It can detect motion or collision and record accordingly.
+ Emergency Lock: The built-in G-sensor detects sudden impacts or collisions and automatically locks the
+ current video segment to prevent it from being overwritten. You can also manually lock footage by pressing
+ the emergency lock button.
+ Loop Recording: Footage is recorded in continuous loops (e.g., 1, 3, or 5-minute segments). When the
+ memory card is full, the oldest unlocked files are automatically overwritten.
+ Wi-Fi Connectivity & ROVE App: Download the ROVE App on your smartphone (iOS/Android). Connect to
+ the dash cam's Wi-Fi network (5G/2.4GHz) to:
+
+ View live video feed.
+ Manage camera settings.
+ Play back recorded footage.
+ Download videos directly to your phone.
+ Share footage easily with social media or insurance agencies.
+
+ Firmware Updates (OTA): The ROVE App facilitates Over-The-Air (OTA) firmware updates, ensuring your
+ dash cam always has the latest features and improvements.
+ GPS Playback: Use the ROVE Dash Cam GPS Player software on your PC/Mac to view recordings along
+ with GPS logs and G-Sensor data.
+
+6. MAINTENANCE
+ Cleaning: Use a soft, dry cloth to clean the camera lens and screen. For stubborn smudges, use the provided
+ wet cleaning pads. Avoid harsh chemicals.
+ MicroSD Card Care: Regularly format the microSD card (at least once a month) within the dash cam's
+ settings to maintain optimal performance and prevent data corruption. Use only high-quality, compatible
+ microSD cards (ROVE PRO or ROVE Ultimate recommended).
+ Temperature: Avoid exposing the dash cam to extreme temperatures for prolonged periods. The
+ supercapacitor design helps with temperature resilience, but prolonged direct sunlight in a hot car can still
+ affect longevity.
+
+7. TROUBLESHOOTING
+If you encounter issues with your ROVE R2-4K Dual Dash Cam, refer to the following common problems and
+solutions:
+
+ Problem Possible Cause Solution
+
+ Dash cam does No power supply; loose Check the car charger connection to the cigarette lighter
+ not power on. connection. socket and the dash cam. Ensure the vehicle's ignition is on.
+
+ Recording stops Full or corrupted microSD Format the microSD card. Check power connections. Use a
+ unexpectedly. card; power interruption. high-quality microSD card.
+
+ Video footage is Dirty lens; protective film Clean the lens. Remove any protective film. Ensure the CPL
+ blurry or unclear. still on lens; incorrect focus. filter is clean and correctly installed.
+
+ Wi-Fi connection Incorrect password; too far Ensure correct Wi-Fi password. Stay within close proximity to
+ issues. from device; app issues. the dash cam. Restart the app and dash cam.
+
+ Dash cam
+ Software glitch; memory Press and hold the power button to force restart. Format or
+ freezes or
+ card issue. replace the microSD card. Check for firmware updates.
+ crashes.
+
+8. SPECIFICATIONS
+
+ Feature Detail
+
+ Model Name R2-4K
+
+ Video Capture Resolution 4K (Front), 1080P (Rear)
+
+ Connectivity Technology Wi-Fi (5G + 2.4GHz Dual Band)
+
+ Special Feature Motion Sensing, GPS, G-Sensor
+
+ Included Components Hardwire Kit, CPL Filter, 128GB microSD Card
+
+ Mounting Type Windshield Mount (Suction & 3M Sticky)
+
+ Color Black
+
+ Manufacturer ROVE
+
+ Vehicle Service Type Car
+
+9. WARRANTY AND SUPPORT
+Your ROVE R2-4K Dual Dash Cam and Hardwire Kit are backed by a full, hassle-free 1-YEAR WARRANTY.
+For any questions, technical assistance, or to resolve arising issues, please contact ROVE customer care. You can
+text for a faster response or email their customer care team.
+Additionally, the product is eligible for a 30-day refund/replacement return policy from the date of purchase, as
+ per Amazon's standard return policy.
+ For the latest information, firmware updates, and support resources, please visit the official ROVE website or
+ contact their customer service directly.
+
+ © 2024 ROVE. All rights reserved.
+
+ASK A QUESTION ABOUT THIS MANUAL
+Ask about setup, troubleshooting, compatibility, parts, safety, or missing instructions. Manuals+ will review the question
+and use this page’s manual context to help answer it.
+
+Name
+
+ Anonymous
+
+Email
+
+ you@example.com
+
+After a successful submission, we securely hash the supplied account or form email before sending it to Microsoft Advertising for
+conversion attribution. Privacy details.
+
+Question
+
+ Example: How do I reset this device or fix this error?
+
+Details
+
+ Model number, symptoms, what you tried, or the section of the manual you are using.
+
+ Submit question

@@ -379,6 +379,26 @@ deployment.
 | [docs/codeboarding/overview.md](docs/codeboarding/overview.md) | As-built component map |
 | [docs/langgraph-state-machine.jpg](docs/langgraph-state-machine.jpg) | LangGraph state machine, drawn from `agent.state.LEGAL_TRANSITIONS` |
 
+### As-built component map — CodeBoarding
+
+`docs/codeboarding/` is the as-built map of the code, in CodeBoarding's
+output format. Start at [docs/codeboarding/overview.md](docs/codeboarding/overview.md)
+— the top-level diagram (9 components, 16 relations) — then one page per
+component: [React Client](docs/codeboarding/React_Client.md),
+[FastAPI Server](docs/codeboarding/FastAPI_Server.md),
+[LiveKit Voice Pipeline](docs/codeboarding/LiveKit_Voice_Pipeline.md),
+[LangGraph Diagnostic Core](docs/codeboarding/LangGraph_Diagnostic_Core.md),
+[Hybrid Retrieval](docs/codeboarding/Hybrid_Retrieval.md),
+[RAG Corpus and Ingest](docs/codeboarding/RAG_Corpus_and_Ingest.md),
+[Eval Harnesses](docs/codeboarding/Eval_Harnesses.md),
+[HTTPS and wss Relay](docs/codeboarding/HTTPS_and_wss_Relay.md), and
+[Support Console](docs/codeboarding/Support_Console.md). The set was
+hand-authored from reading the code — the CodeBoarding engine itself could
+not run on the build machine — so read
+[docs/codeboarding/README.md](docs/codeboarding/README.md) first: it says
+why, what was cross-checked against docs 06 and 08, and where the map
+disagrees with them.
+
 See also [docs/README.md](docs/README.md), [agent/README.md](agent/README.md),
 [server/README.md](server/README.md), [client/README.md](client/README.md),
 [eval/README.md](eval/README.md), [ingest/README.md](ingest/README.md) and

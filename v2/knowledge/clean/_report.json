@@ -1,0 +1,44 @@
+{
+  "R2-4K": {
+    "sources": 1,
+    "chars": 65389,
+    "ligatures_fixed": 151,
+    "ligatures_guessed": 2
+  },
+  "R2-4K-USB-C": {
+    "sources": 2,
+    "chars": 167629,
+    "ligatures_fixed": 173,
+    "ligatures_guessed": 0
+  },
+  "R2-4K-PRO": {
+    "sources": 1,
+    "chars": 82754,
+    "ligatures_fixed": 185,
+    "ligatures_guessed": 1
+  },
+  "R2-4K-DUAL": {
+    "sources": 1,
+    "chars": 10133,
+    "ligatures_fixed": 0,
+    "ligatures_guessed": 0
+  },
+  "R2-4K-DUAL-PRO": {
+    "sources": 2,
+    "chars": 106237,
+    "ligatures_fixed": 0,
+    "ligatures_guessed": 0
+  },
+  "R3": {
+    "sources": 1,
+    "chars": 15768,
+    "ligatures_fixed": 0,
+    "ligatures_guessed": 0
+  },
+  "general": {
+    "sources": 21,
+    "chars": 72109,
+    "ligatures_fixed": 0,
+    "ligatures_guessed": 0
+  }
+}

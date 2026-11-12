@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rove Live Support</title>
+<style>
+:root{--bg:#f4f5f7;--panel:#fff;--ink:#16202b;--muted:#5d6a78;--line:#dfe3e8;--accent:#c8321e;--accent-ink:#fff;
+  --agent:#eef2f6;--me:#16202b;--me-ink:#fff;--ok:#2e7d4f;--warn:#a86a00;--bad:#c8321e;--orb:#c8321e;
+  font-family:"Segoe UI",system-ui,-apple-system,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0f141a;--panel:#161d26;--ink:#e6ebf1;--muted:#94a1b2;--line:#2a3542;
+  --agent:#1f2934;--me:#e6ebf1;--me-ink:#0f141a;--accent:#ff6a52;--ok:#5cc489;--warn:#e0a640;--bad:#ff6a52;--orb:#ff6a52}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+header{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header .dot{width:10px;height:10px;border-radius:50%;background:var(--muted)}
+header .dot.live{background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 25%,transparent)}
+header h1{font-size:17px;margin:0;font-weight:600}
+header .sub{color:var(--muted);font-size:13px;margin-left:auto}
+header a{color:var(--muted);font-size:13px}
+main{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;padding:16px 20px;max-width:1200px;margin:0 auto;min-height:calc(100vh - 56px)}
+@media (max-width:860px){main{grid-template-columns:1fr;padding:12px 16px}}
+.stage{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:10px;min-width:0;min-height:0}
+.call{display:flex;flex-direction:column;align-items:center;gap:6px;padding:22px 16px 14px;border-bottom:1px solid var(--line)}
+#orb{width:170px;height:170px}
+#state{font-size:18px;font-weight:600;min-height:28px}
+#substate{font-size:13px;color:var(--muted);min-height:20px;text-align:center}
+.btns{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center}
+button{font:inherit;cursor:pointer}
+button.primary{padding:13px 28px;border:none;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:16px}
+button.ghost{padding:11px 18px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink)}
+button.ghost.on{border-color:var(--bad);color:var(--bad)}
+button:disabled{opacity:.5;cursor:default}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stats{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-top:6px}
+#log{flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:8px;min-height:220px;max-height:46vh}
+.msg{max-width:80%;padding:9px 13px;border-radius:12px;white-space:pre-wrap}
+.msg.agent{background:var(--agent);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.me{background:var(--me);color:var(--me-ink);align-self:flex-end;border-bottom-right-radius:4px}
+.msg.interim{opacity:.6;font-style:italic}
+.meta{font-size:12px;color:var(--muted);align-self:flex-start;margin-top:-4px}
+.empty{color:var(--muted);text-align:center;margin:auto;padding:12px}
+.note{font-size:12px;color:var(--muted);padding:0 18px 12px}
+.err{color:var(--bad);font-size:14px;text-align:center;max-width:420px}
+aside{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:14px;min-width:0}
+aside h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0}
+.field{display:flex;flex-direction:column;gap:2px}
+.field .k{font-size:12px;color:var(--muted)}
+.field .v{font-weight:500;overflow-wrap:anywhere}
+ul{margin:0;padding-left:18px}li{margin:2px 0}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);margin:2px 4px 2px 0}
+.pill.open{color:var(--ok);border-color:var(--ok)}.pill.escalated{color:var(--bad);border-color:var(--bad)}
+.pill.resolved,.pill.answered{color:var(--ok);border-color:var(--ok)}.pill.flag{color:var(--warn);border-color:var(--warn)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><span class="dot" id="dot"></span><h1>Rove Support</h1><a href="/classic">Push-to-talk / typing</a><span class="sub">Live voice call</span></header>
+<main>
+  <section class="stage">
+    <div class="call">
+      <canvas id="orb" width="340" height="340" aria-hidden="true"></canvas>
+      <div id="state" role="status" aria-live="polite">Ready</div>
+      <div id="substate">Press Start call and just talk. You can interrupt at any time.</div>
+      <div class="btns">
+        <button class="primary" id="start">Start call</button>
+        <button class="ghost" id="mute" hidden>Mute</button>
+        <button class="ghost" id="end" hidden>End call</button>
+      </div>
+      <div class="stats" id="stats" hidden><span id="last">Last reply: –</span><span id="avg">Average: –</span><span id="net">Connection: –</span></div>
+      <div class="err" id="err" role="alert"></div>
+    </div>
+    <div id="log" aria-live="polite"><div class="empty">The conversation will appear here as you speak.</div></div>
+    <div class="note">Audio travels live over WebRTC. Use headphones if the agent hears itself.</div>
+  </section>
+  <aside>
+    <h2>Case file</h2>
+    <div class="field"><span class="k">Status</span><span class="v" id="status">—</span></div>
+    <div class="field"><span class="k">Camera</span><span class="v" id="model">Not known yet</span></div>
+    <div class="field"><span class="k">Problem</span><span class="v" id="symptom">—</span></div>
+    <div class="field"><span class="k">What you've told us</span><ul id="facts"><li>—</li></ul></div>
+    <div class="field"><span class="k">Tried so far</span><ul id="tried"><li>—</li></ul></div>
+    <div class="field"><span class="k">Likely causes</span><ol id="hyp" style="margin:0;padding-left:18px"><li>—</li></ol></div>
+  </aside>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/livekit-client@2.9.9/dist/livekit-client.umd.min.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const LK = window.LivekitClient;
+let room = null, muted = false, agentState = 'idle', userSpeaking = false, tStop = 0, replyTimes = [];
+let interimEl = null, levels = {me: 0, agent: 0}, analysers = {};
+
+// ---------- conversation + case panel ----------
+function clearEmpty() { const e = $('#log .empty'); if (e) e.remove(); }
+function bubble(role, text, cls = '') {
+  clearEmpty(); const d = document.createElement('div'); d.className = `msg ${role} ${cls}`; d.textContent = text; $('#log').append(d);
+  $('#log').scrollTop = $('#log').scrollHeight; return d;
+}
+function meta(text) { const m = document.createElement('div'); m.className = 'meta'; m.textContent = text; $('#log').append(m); }
+function list(el, items) { el.replaceChildren(...(items.length ? items : ['—']).map(t => { const li = document.createElement('li'); li.textContent = t; return li; })); }
+function showCase(c, action) {
+  const st = action && action !== 'continue' && c.status === 'open' ? 'escalated' : c.status;
+  $('#status').innerHTML = `<span class="pill ${st}">${st}</span>` + c.flags.map(f => `<span class="pill flag">${f.replace(/_/g, ' ')}</span>`).join('');
+  $('#model').textContent = c.model === 'unknown' ? 'Not known yet' : `${c.model} (${c.model_confidence})`;
+  $('#symptom').textContent = c.symptom || '—';
+  list($('#facts'), c.facts); list($('#tried'), c.tried.map(t => `${t.step}: ${t.result}`)); list($('#hyp'), c.hypotheses);
+}
+
+// ---------- call state ----------
+const LABEL = {idle: 'Ready', initializing: 'Connecting…', listening: 'Listening', thinking: 'Thinking…', speaking: 'Speaking'};
+function setState(s) {
+  agentState = s;
+  $('#state').textContent = userSpeaking && s !== 'speaking' ? 'Hearing you…' : (LABEL[s] || s);
+  $('#substate').textContent = s === 'speaking' ? 'Start talking any time to interrupt.' : s === 'listening' ? 'Go ahead, I’m listening.' : s === 'thinking' ? '' : $('#substate').textContent;
+}
+function onAgentState(s) {
+  if (s === 'speaking' && tStop) {
+    const dt = (performance.now() - tStop) / 1000; tStop = 0; replyTimes.push(dt);
+    $('#last').textContent = `Last reply: ${dt.toFixed(1)}s`;
+    $('#avg').textContent = `Average: ${(replyTimes.reduce((a, b) => a + b) / replyTimes.length).toFixed(1)}s`;
+  }
+  setState(s);
+}
+function onUserState(s) {
+  userSpeaking = s === 'speaking';
+  if (userSpeaking) { tStop = 0; } else { tStop = performance.now(); }
+  setState(agentState);
+}
+function onTranscript(m) {
+  if (m.type === 'user') {
+    if (!interimEl) interimEl = bubble('me', m.text, 'interim'); else interimEl.textContent = m.text;
+    if (m.final) { interimEl.classList.remove('interim'); interimEl = null; }
+    $('#log').scrollTop = $('#log').scrollHeight;
+  } else if (m.type === 'agent') {
+    bubble('agent', m.text); if (m.latency_s != null) meta(`model ${m.latency_s}s`);
+  }
+}
+
+// ---------- live level orb ----------
+function watch(name, track) {
+  try {
+    const ctx = analysers.ctx || (analysers.ctx = new AudioContext());
+    const src = ctx.createMediaStreamSource(new MediaStream([track.mediaStreamTrack]));
+    const an = ctx.createAnalyser(); an.fftSize = 512; src.connect(an); analysers[name] = {an, buf: new Uint8Array(an.fftSize)};
+  } catch (e) {}
+}
+function level(name) {
+  const a = analysers[name]; if (!a) return 0;
+  a.an.getByteTimeDomainData(a.buf); let s = 0; for (const v of a.buf) { const x = (v - 128) / 128; s += x * x; }
+  return Math.min(1, Math.sqrt(s / a.buf.length) * 5);
+}
+const cv = $('#orb'), g = cv.getContext('2d');
+function draw() {
+  const css = getComputedStyle(document.documentElement), col = css.getPropertyValue('--orb').trim();
+  levels.me += (level('me') - levels.me) * .3; levels.agent += (level('agent') - levels.agent) * .3;
+  const lv = agentState === 'speaking' ? levels.agent : (muted ? 0 : levels.me), t = performance.now() / 1000;
+  const base = agentState === 'thinking' ? 44 + Math.sin(t * 4) * 5 : 44 + lv * 40;
+  g.clearRect(0, 0, 340, 340);
+  for (let i = 3; i >= 0; i--) {
+    g.beginPath(); g.arc(170, 170, base + i * 16 + lv * i * 14, 0, 7);
+    g.fillStyle = col; g.globalAlpha = i === 0 ? .95 : .13 / i; g.fill();
+  }
+  g.globalAlpha = 1; requestAnimationFrame(draw);
+}
+draw();
+
+// ---------- connect ----------
+function fail(msg) { $('#err').textContent = msg; }
+async function startCall() {
+  fail(''); $('#start').disabled = true; setState('initializing');
+  try {
+    const t = await fetch('/api/livekit/token').then(async r => { if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || 'Could not get a call token.'); return r.json(); });
+    room = new LK.Room({adaptiveStream: true, dynacast: true,
+      audioCaptureDefaults: {echoCancellation: true, noiseSuppression: true, autoGainControl: true}});
+    room.on(LK.RoomEvent.TrackSubscribed, (track) => {
+      if (track.kind === 'audio') { const el = track.attach(); el.style.display = 'none'; document.body.append(el); watch('agent', track); }
+    });
+    room.on(LK.RoomEvent.DataReceived, (payload, p, kind, topic) => {
+      let m; try { m = JSON.parse(new TextDecoder().decode(payload)); } catch { return; }
+      if (topic === 'rove.state') { m.type === 'agent' ? onAgentState(m.state) : onUserState(m.state); }
+      else if (topic === 'rove.transcript') onTranscript(m);
+      else if (topic === 'rove.case') showCase(m.case, m.action);
+    });
+    room.on(LK.RoomEvent.ConnectionQualityChanged, (q, p) => { if (p === room.localParticipant) $('#net').textContent = `Connection: ${q}`; });
+    room.on(LK.RoomEvent.Reconnecting, () => { $('#substate').textContent = 'Connection dropped, reconnecting…'; });
+    room.on(LK.RoomEvent.Reconnected, () => { $('#substate').textContent = 'Back online.'; });
+    room.on(LK.RoomEvent.Disconnected, () => endUi());
+    await room.connect(t.url, t.token);
+    await room.startAudio();
+    await room.localParticipant.setMicrophoneEnabled(true);
+    const pub = room.localParticipant.getTrackPublication(LK.Track.Source.Microphone);
+    if (pub && pub.track) watch('me', pub.track);
+    $('#dot').classList.add('live'); ['#mute', '#end', '#stats'].forEach(s => $(s).hidden = false); $('#start').hidden = true;
+    $('#substate').textContent = 'Connected. Waiting for the agent to pick up…';
+  } catch (e) {
+    fail(e.name === 'NotAllowedError' ? 'The microphone is blocked. Allow it in the browser and try again, or use the typing page.'
+      : `Could not start the call: ${e.message || e}. You can still use the typing page.`);
+    if (room) room.disconnect(); endUi();
+  }
+}
+function endUi() {
+  $('#dot').classList.remove('live'); $('#start').hidden = false; $('#start').disabled = false;
+  ['#mute', '#end', '#stats'].forEach(s => $(s).hidden = true); muted = false; $('#mute').textContent = 'Mute'; $('#mute').classList.remove('on');
+  userSpeaking = false; setState('idle'); $('#substate').textContent = 'Call ended. Start a new call any time.'; room = null; analysers = {};
+}
+$('#start').addEventListener('click', startCall);
+$('#end').addEventListener('click', () => room && room.disconnect());
+$('#mute').addEventListener('click', async () => {
+  if (!room) return; muted = !muted; await room.localParticipant.setMicrophoneEnabled(!muted);
+  $('#mute').textContent = muted ? 'Unmute' : 'Mute'; $('#mute').classList.toggle('on', muted);
+  $('#substate').textContent = muted ? 'Your microphone is muted.' : 'Go ahead, I’m listening.';
+});
+document.addEventListener('keydown', e => { if (e.code === 'Space' && room && e.target === document.body) { e.preventDefault(); $('#mute').click(); } });
+window.addEventListener('beforeunload', () => room && room.disconnect());
+</script>
+</body>
+</html>

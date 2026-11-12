@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rove Support</title>
+<style>
+:root{--bg:#f4f5f7;--panel:#fff;--ink:#16202b;--muted:#5d6a78;--line:#dfe3e8;--accent:#c8321e;--accent-ink:#fff;
+  --agent:#eef2f6;--me:#16202b;--me-ink:#fff;--ok:#2e7d4f;--warn:#a86a00;--bad:#c8321e;
+  font-family:"Segoe UI",system-ui,-apple-system,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0f141a;--panel:#161d26;--ink:#e6ebf1;--muted:#94a1b2;--line:#2a3542;
+  --agent:#1f2934;--me:#e6ebf1;--me-ink:#0f141a;--accent:#ff6a52;--ok:#5cc489;--warn:#e0a640;--bad:#ff6a52}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5}
+header{display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid var(--line);background:var(--panel)}
+header .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+header h1{font-size:17px;margin:0;font-weight:600}
+header .sub{color:var(--muted);font-size:13px;margin-left:auto}
+main{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;padding:16px 20px;max-width:1200px;margin:0 auto;height:calc(100vh - 56px)}
+@media (max-width:860px){main{grid-template-columns:1fr;height:auto}}
+.chat{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:10px;min-height:0;min-width:0}
+#log{flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;min-height:300px}
+.msg{max-width:78%;padding:10px 14px;border-radius:12px;white-space:pre-wrap}
+.msg.agent{background:var(--agent);align-self:flex-start;border-bottom-left-radius:4px}
+.msg.me{background:var(--me);color:var(--me-ink);align-self:flex-end;border-bottom-right-radius:4px}
+.meta{font-size:12px;color:var(--muted);align-self:flex-start;margin-top:-6px}
+.meta.me{align-self:flex-end}
+.controls{border-top:1px solid var(--line);padding:12px;display:flex;gap:10px;align-items:center}
+#mic{flex:none;width:56px;height:56px;border-radius:50%;border:none;background:var(--accent);color:var(--accent-ink);font-size:13px;font-weight:600;cursor:pointer}
+#mic.rec{animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(200,50,30,.5)}50%{box-shadow:0 0 0 10px rgba(200,50,30,0)}}
+#mic:disabled,#send:disabled{opacity:.5;cursor:default}
+#text{flex:1;min-width:0;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+#send{padding:12px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);font:inherit;cursor:pointer}
+button:focus-visible,#text:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hint{font-size:12px;color:var(--muted);padding:0 12px 10px}
+aside{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:14px;min-width:0}
+aside h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0}
+.field{display:flex;flex-direction:column;gap:2px}
+.field .k{font-size:12px;color:var(--muted)}
+.field .v{font-weight:500;overflow-wrap:anywhere}
+ul{margin:0;padding-left:18px}
+li{margin:2px 0}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);margin:2px 4px 2px 0}
+.pill.open{color:var(--ok);border-color:var(--ok)} .pill.escalated{color:var(--bad);border-color:var(--bad)}
+.pill.resolved,.pill.answered{color:var(--ok);border-color:var(--ok)} .pill.flag{color:var(--warn);border-color:var(--warn)}
+#new{margin-top:auto;padding:10px;border:1px solid var(--line);border-radius:8px;background:none;color:var(--ink);font:inherit;cursor:pointer}
+.err{color:var(--bad);font-size:13px}
+</style>
+</head>
+<body>
+<header><span class="dot"></span><h1>Rove Support</h1><span class="sub">Dash cam troubleshooting by voice</span></header>
+<main>
+  <section class="chat">
+    <div id="log" aria-live="polite"></div>
+    <div class="controls">
+      <button id="mic" title="Hold to talk" aria-label="Hold to talk">Hold</button>
+      <input id="text" placeholder="Or type here: card markings, Wi-Fi names, error text…" autocomplete="off">
+      <button id="send">Send</button>
+    </div>
+    <div class="hint">Hold the red button while you speak, then let go. Typing works too.</div>
+  </section>
+  <aside>
+    <h2>Case file</h2>
+    <div class="field"><span class="k">Status</span><span class="v" id="status"></span></div>
+    <div class="field"><span class="k">Camera</span><span class="v" id="model">Not known yet</span></div>
+    <div class="field"><span class="k">Problem</span><span class="v" id="symptom">—</span></div>
+    <div class="field"><span class="k">What you've told us</span><ul id="facts"></ul></div>
+    <div class="field"><span class="k">Tried so far</span><ul id="tried"></ul></div>
+    <div class="field"><span class="k">Likely causes</span><ol id="hyp" style="margin:0;padding-left:18px"></ol></div>
+    <button id="new">Start a new conversation</button>
+  </aside>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+let sid = null, busy = false, player = new Audio();
+
+function add(role, text, meta) {
+  const d = document.createElement('div'); d.className = 'msg ' + role; d.textContent = text; $('#log').append(d);
+  if (meta) { const m = document.createElement('div'); m.className = 'meta ' + role; m.textContent = meta; $('#log').append(m); }
+  $('#log').scrollTop = $('#log').scrollHeight;
+}
+function play(b64) { if (!b64) return; player.src = 'data:audio/mpeg;base64,' + b64; player.play().catch(() => {}); }
+function list(el, items) { el.replaceChildren(...(items.length ? items : ['—']).map(t => { const li = document.createElement('li'); li.textContent = t; return li; })); }
+function showCase(c, closed) {
+  const st = closed && c.status === 'open' ? 'escalated' : c.status;
+  $('#status').innerHTML = `<span class="pill ${st}">${st}</span>` + c.flags.map(f => `<span class="pill flag">${f.replace(/_/g, ' ')}</span>`).join('');
+  $('#model').textContent = c.model === 'unknown' ? 'Not known yet' : `${c.model} (${c.model_confidence})`;
+  $('#symptom').textContent = c.symptom || '—';
+  list($('#facts'), c.facts); list($('#tried'), c.tried.map(t => `${t.step}: ${t.result}`)); list($('#hyp'), c.hypotheses);
+}
+let closed = false;
+function setBusy(b) { busy = b; $('#mic').disabled = b || closed; $('#send').disabled = b || closed; }
+
+async function start() {
+  $('#log').replaceChildren(); closed = false; setBusy(true);
+  const r = await fetch('/api/sessions', {method: 'POST'}).then(r => r.json());
+  sid = r.id; add('agent', r.greeting); play(r.audio);
+  showCase({status: 'open', flags: [], model: 'unknown', symptom: '', facts: [], tried: [], hypotheses: []}, false);
+  setBusy(false);
+}
+async function handle(resp) {
+  if (!resp.ok) { const e = await resp.json().catch(() => ({})); add('agent', e.detail || 'Something went wrong. Please try again.'); return; }
+  const r = await resp.json();
+  if (r.transcript !== undefined) add('me', r.transcript || '(nothing heard)', 'heard by voice');
+  add('agent', r.say, `${r.latency_s ?? ''}s`); play(r.audio); showCase(r.case, r.closed);
+  if (r.closed) { closed = true; add('agent', 'A person from Rove will pick this up with everything above.'); }
+}
+async function sendText() {
+  const t = $('#text').value.trim(); if (!t || busy) return;
+  $('#text').value = ''; add('me', t); setBusy(true);
+  try { await handle(await fetch(`/api/sessions/${sid}/message`, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({text: t})})); }
+  finally { setBusy(false); }
+}
+
+// ---- hold-to-talk: capture 16 kHz mono PCM in the browser ----
+let ctx, stream, node, chunks = [];
+const WORKLET = `class R extends AudioWorkletProcessor{process(i){if(i[0][0])this.port.postMessage(i[0][0].slice());return true}}registerProcessor('rec',R)`;
+async function micDown() {
+  if (busy) return; player.pause();
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({audio: {echoCancellation: true, noiseSuppression: true}});
+    ctx = new AudioContext({sampleRate: 16000});
+    await ctx.audioWorklet.addModule(URL.createObjectURL(new Blob([WORKLET], {type: 'text/javascript'})));
+    node = new AudioWorkletNode(ctx, 'rec'); chunks = [];
+    node.port.onmessage = e => chunks.push(e.data);
+    ctx.createMediaStreamSource(stream).connect(node);
+    $('#mic').classList.add('rec'); $('#mic').textContent = 'Talk';
+  } catch (e) { add('agent', 'I could not use your microphone. Check the browser permission, or type below.'); }
+}
+async function micUp() {
+  if (!ctx) return;
+  $('#mic').classList.remove('rec'); $('#mic').textContent = 'Hold';
+  stream.getTracks().forEach(t => t.stop()); await ctx.close(); ctx = null;
+  const n = chunks.reduce((a, c) => a + c.length, 0), pcm = new Int16Array(n); let o = 0;
+  for (const c of chunks) for (let i = 0; i < c.length; i++) pcm[o++] = Math.max(-1, Math.min(1, c[i])) * 0x7fff;
+  if (n < 3200) return;
+  setBusy(true);
+  try { await handle(await fetch(`/api/sessions/${sid}/voice`, {method: 'POST', body: pcm.buffer})); }
+  finally { setBusy(false); }
+}
+$('#mic').addEventListener('pointerdown', micDown);
+['pointerup', 'pointerleave'].forEach(ev => $('#mic').addEventListener(ev, micUp));
+$('#send').addEventListener('click', sendText);
+$('#text').addEventListener('keydown', e => { if (e.key === 'Enter') sendText(); });
+$('#new').addEventListener('click', start);
+start();
+</script>
+</body>
+</html>

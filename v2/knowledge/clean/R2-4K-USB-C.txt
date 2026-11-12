@@ -1,0 +1,4572 @@
+===== SOURCE: data/text/manuals/User Manual For New R2-4K.txt =====
+Smart & Beautiful
+ ROVE APP For
+
+Please Read
+ iOS & Android
+
+ Wanna meet
+ other ROVERS (ROVE Owners)?
+ Join the vibrant ROVE Dash
+ Cam Community on FB.
+ Ask questions, share your
+ dash cam videos or just
+ hangout directly with us.
+
+ 16.2K
+
+ SCAN to join ROVE Dash Cam
+ Community on Facebook
+
+USER MANUAL www.rovedashcam.com
+Copyright (C) 2025, All rights reserved
+ EXPERIENCING
+ STOP PROBLEMS
+ Item NOT as described?
+ Damaged or defective?
+ Missing items?
+ Any issues what so ever?
+ CONTACT US BEFORE RETURNING THE ITEM
+ WE WILL HELP YOU RESOLVE ANY ISSUES ASAP.
+
+ CUSTOMER SERVICE
+ 7 Days a Week: 9 AM - 5 PM (PST)
+
+ Response in just 6 hours
+ EMAIL US help@rovedashcam.com
+
+ For faster response text us
+ TEXT US 1-844-ROVE-CAM
+ 1-844-768-3226
+
+Scan the QR Code to Email US Scan the QR Code to Text US
+
+ Just Scan the QR Code with your iPhone or Android’s
+ Camera to get in touch with us.
+ www.rovedashcam.com
+ WATCH
+ HOW TO VIDEOS
+ Visit our website
+ www.rovedashcam.com/pages/videos
+
+ Understanding ROVE R2-4K
+ Watch HOW-TO VIDEOS to learn & understand all the
+features so you can get the maximum benefit out of it.
+ USER MANUAL
+Introduction .............................................................................................................................. 5
+Product Overview ............................................................................................................... 5
+Features ........................................................................................................................................ 6
+User Agreement.................................................................................................................... 7
+Precautions ............................................................................................................................... 7
+Warnings ..................................................................................................................................... 7
+Getting Started ..................................................................................................................... 9
+Camera Specifications .................................................................................................. 11
+Firmware Update ................................................................................................................ 12
+Package Contents .............................................................................................................. 13
+Unit Structure Appearance & Buttons......................................................... 14
+Shortcuts & Understanding Buttons ............................................................. 15
+Installation ................................................................................................................................. 16
+Turning Your Camera ON / OFF ......................................................................... 20
+About Supercapacitor .................................................................................................... 21
+Home Screen ........................................................................................................................... 23
+LED Status Light Indicator ....................................................................................... 24
+Which Memory Card Should I Get?................................................................ 25
+Inserting/ Removing Memory Card................................................................ 28
+Formatting Memory Card........................................................................................... 30
+Time-Zone Setting ............................................................................................................ 31
+Using WiFi Feature ............................................................................................................ 32
+Pairing your R2-4K with your Smart Phone using WiFi........... 33
+Understanding 3 – Camera Modes.................................................................. 37
+Playback Your Recorded Videos ......................................................................... 39
+Understanding Camera Settings ....................................................................... 45
+Video Settings ........................................................................................................................ 45
+Playback Settings ............................................................................................................... 60
+System Settings................................................................................................................... 61
+Resetting The Camera .................................................................................................. 68
+GPS Player Installation................................................................................................. 69
+One year Limited Warranty..................................................................................... 71
+Safety & Legal Aspects................................................................................................. 73
+Troubleshooting Your ROVE R2-4K................................................................. 76
+A Big Thank You .................................................................................................................. 79
+
+ 4
+INTRODUCTION
+Thank you for purchasing ROVETM R2-4K Digital Vehicle Dash
+Cam (Automobile Black Box). This product provides high-quality
+image capture and irrefutable evidence for what goes on from
+the perspective of your dashboard. ROVE Dash Cam is a very
+elegant, convenient, and durable multi-vehicle driving recorder.
+
+PRODUCT OVERVIEW
+
+This Product is a leading Ultra HD Digital Vehicle Black Box
+Recorder. Equipped with ULTRA-HD 2160P @30fps with SONY
+STARVIS Sensor for excellent low light sensitivity and high
+dynamic range which allows you to record continuous
+high-quality video playbacks and brings phenomenal 4K
+Ultra-HD resolution videos even at night without the need for
+infrared sensors. It has superior night vision technology which
+captures superb video under all low-light conditions. It has
+advanced built-in Wi-Fi, built-in GPS, G-Sensor, Emergency
+Video lock button, Audio recording, Loop cycle recording, 180º
+auto video rotation, Wide dynamic range, 24-HR Auto Trigger
+Parking Mode and so much more. When compared to most dash
+cameras, this exclusive product design provides an elegant
+appearance, is packed with top-rated unique features, records
+superb unbeatable videos, and is very easy to use.
+
+5
+ USER MANUAL
+FEATURES
+
+ 2.4” IPS Display Auto Power OFF
+
+ Built-In WiFi 6 Live Speed
+
+ G-Sensor Live Compass
+
+ WDR - Wide Dynamic Range LCD ON/OFF Setting
+
+ Status LED ON/OFF Indicator Screensaver
+
+ Time Lapse Video USB Type-C Input/Output
+
+ Built-In GPS for Geo Tagging Built-In Speaker & Microphone
+
+ 24hr Auto Trigger Parking Mode Voice Guidance
+ (ROVE Ultimate USB Type-C HWK Required - Not Included)
+
+ Over-The-Air Firmware Update via
+ SONY STARVIS Sensor iOS/Android ROVE Dash Cam APP
+
+ Pre Threaded for Optional CPL
+ 4K UHD 3840x2160P @30fps
+ Filter (Not Included, Purchase Separately)
+
+ 150° Ultra-wide A+ Viewing Angle
+
+ Loop Cycle and Split Recording Mode
+
+ Emergency Video Lock Button
+
+ Supports up to 512GB microSD Card (Class 10, U3 Speed Only-Not Included-
+ We recommend ROVE Ultimate (Premium Choice) or ROVE PRO (Everyday Affordable) microSD Cards).
+
+ Time, Date, Driver ID, Driving Speed, GPS stamp support
+
+ Supercapacitor
+
+ Video Rotate
+
+ 6
+USER AGREEMENT
+By purchasing the ROVE Dash cam, it is assumed that by default
+you agree with precautions, user warnings, and all the terms &
+conditions of warranty. If for any reason you do not agree with
+any of the terms mentioned in this manual, then you may return
+the product in its original packaging unused within its return
+window for a full refund.
+PRECAUTIONS
+Please read this manual very carefully before using the camera or
+installation and keep it safe for future reference. It will be helpful
+if you have any questions or encounter any operational problems.
+ WARNINGS
+ Failure to comply with safety warnings and regulations
+ can result in serious injury or death.
+Please read and understand all instructions before using this
+product. If any damage is caused by failure to follow the
+instructions, the warranty will be voided.
+ Do not expose this product to rain, moisture, or water under any
+ circumstances or it will result in external or internal damage.
+ Do not put the unit in a damp environment. This device is not
+ designed to be damp-proof.
+ Do not try to open the cover or try to repair it yourself. If the
+ accessories for this device have any problem, please contact
+ the seller for assistance.
+ Don’t install it where it will block the driver’s view of the road
+ including mirrors or the deployment of airbags.
+ Do not place the camera loose on top of the dashboard or in
+ front of the airbags.
+ Do not mount the camera where it can be a distraction if it
+ became loose and falls off the windshield while driving.
+
+7
+ USER MANUAL
+Do not expose this device to excessive heat, fire, or dust or
+use any chemical substance or cleaning solvent to clean this
+device. Instead use soft moist cloth for cleaning.
+Pay careful attention when cleaning the lens surface. Use a
+soft, moist cloth to clean the lens to avoid scratches that may
+compromise video quality.
+Do not operate or install the camera while driving, or attempt
+to change any settings, etc. Pull off the road first and only do
+so when it is safe.
+Do not drop, puncture, or disassemble this product.
+Do not use the charger if the cord is broken or damaged.
+Do NOT connect the camera directly to your vehicle's 12V/24V
+battery. You must use ROVE's provided USB Car charger or
+hardwire kit (sold separately) to provide power to the dash cam.
+Use only supplied ROVE's USB Type-C Car Charger or ROVE
+Ultimate USB Type-C Hardwire Kit and power cables to power
+the ROVE R2-4K dash cam.
+This is NOT a toy. Keep out of reach of children.
+For indoor use ONLY. This camera is intended to use inside a
+motor vehicle.
+Memory Card: Before inserting the external memory card,
+make sure to inspect for physical damage or cracks. Do NOT
+use a memory card that shows the sign of physical damage or
+cracks, as it can short-circuit the memory card.
+
+Some countries or USA states prohibit drivers from mounting
+anything on a windshield or prohibit mounting on certain areas of
+the windshield. It is the owner/operator’s responsibility to mount or
+use of this device in incompliance with local laws.
+The company is NOT responsible for the loss of any data or your
+content during operation or in any circumstance.
+
+ 8
+Getting Started
+ OUT OF THE BOX INSTRUCTIONS
+Please read and understand warnings & safety instructions
+before operating.
+1 Make sure to always keep the camera plugged into the power
+ during its operation as ROVE R2-4K uses Supercapacitor (NOT
+ an internal battery). You can plug the camera into your
+ home’s 110V outlet during set up. For the power, you can use
+ your cellphone’s USB charger and included USB Type-C Cable.
+ Just make sure that the USB charger has a 5V, 1.5 AMP
+ power output (Max 3.4 AMP), otherwise, the camera will not
+ work properly.
+2 You will need to insert a memory card before you can start
+ recording. Please insert only a brand name Class-10, U3, or
+ higher speed microSD card up to 512 GB max for reliable
+ operation. (Memory card is NOT included in the packaging)
+ (We recommend ROVE Ultimate (Premium Choice) or ROVE
+ PRO (Everyday Affordable) microSD Card up to 512 GB MAX.)
+3 Before first time use, you MUST format the memory card in
+ the camera to prevent any errors and for smooth operation.
+ (See Page 30)
+
+9
+ USER MANUAL
+4 ROVE R2-4K Car dash cam is programmed to turn ON and
+ START RECORDING automatically when it receives power,
+ and STOPS RECORDING, saves the last video file, and turns
+ OFF automatically when power gets disconnected within 1-2
+ seconds. (i.e., when you start /turn off your car)
+5 Setting Date & Time: Please set the correct date and time
+ Based on your location under the TIME ZONE SETTING by going
+ to the camera’s system settings menu.(See page 31 for details)
+6 How to hide the power cable inside your car’s dashboard?
+ Many people on YouTube already demonstrated
+ how and where to hide the power cable inside
+ your car. You can view one of the possible ways
+ on the link, this video is NOT recorded by us.
+ https://youtu.be/xwD8Ilk-MHU
+ Scan to visit the link
+
+7 How to transfer videos to PC/MAC?
+ Insert memory cards directly into your PC/MAC to view or
+ download them.
+ You can also connect your camera to your PC/MAC with the
+ included short Type-C USB data cable. Then Select Connect
+ as a Flash Drive.
+ We recommend VLC Media Player to view your videos. You
+ can get it free at www.videolan.org
+ NOTE
+Do NOT use Windows Media Player or QuickTime Player (Mac). They
+are NOT made to play 4K videos. Hence your video playback will lag.
+8 Wi-Fi: You can also connect ROVE R2-4K Car Dashcam to
+ your smartphone directly by using the built-in Wi-Fi feature.
+ (See Page 32)
+
+ 10
+ CAMERA SPECIFICATIONS
+ Image Sensor SONY STARVIS
+ Screen 2.4 Inch IPS
+ Lens 150° A+ Ultra HD Wide Angle
+ Video Resolution 4K 3840x2160 @30FPS
+ 2K 2560x1440 @30FPS
+ 1080P 1920x1080 @60FPS
+ 1080P 1920x1080 @30FPS
+ Photo Resolution VGA, 2MHD, 3M, 4M, 5M, 8M, 10M, 12M
+ Lens Aperture F 1.5
+ GPS Built-in GPS Geo-Tagging Support
+ WiFi Built-in WiFi 6 at 2.4GHz
+ Photo / Video Format JPEG / MP4
+ Video Bit Rate Low/Standard/Max
+ AV Interface / TV Mode AV Out / NTSC- PAL
+ Memory Card Max Support 512 GB (NOT Included)
+ (We recommend ROVE Ultimate (Premium Choice)
+ or ROVE PRO (More Affordable) Micro-SD Card)
+
+ Built-in 3-Axis Impact Accelerometer Gravitational
+ G-Sensor
+ Sensor to lock & protect current video.
+ Anti Flicker 60 Hz, 50 Hz
+ Color Color / B&W / Sepia
+ Video Rotate 180 degree video rotate support
+ Voice Guidance Support
+ Mobile Apps Yes, ROVE App for iOS & Android Devices
+ Video Player FREE ROVE Dash Cam GPS Player for PC & Mac Available
+ Loop Recording Support – seamless recording
+ Motion Detection Support
+
+11
+ USER MANUAL
+
+24hr Auto Trigger Support (ROVE Ultimate Type-C INPUT
+ 12V/24V 2A
+ POWER
+ GND USB-C for R2-4K, R2-4K PRO,
+ R2-4K DUAL and R3
+
+Parking Mode
+ ACC
+ FOR 24-HR AUTO TRIGGER PARKING MONITOR
+ OUTPUT BATTERY DRAIN PROTECTION STARTING AT
+ 5V 2A
+ 11.8V 12.0V 12.2V 12.4V
+ 23.6V 24.0V 24.4V 24.8V
+
+ Hardwire kit Required, NOT Included)
+ www.rovedashcam.com
+
+ Support (Pre Threaded for Optional CPL
+CPL Filter
+ Filter, Not Included-Purchase Separately)
+
+Year/Month/Day/Hour/
+ Support
+ Minute/Second
+
+Mic / Speaker Built-in Microphone & Speaker
+Type-C USB Function 1. Storage, 2. Charging, 3. Webcam
+Auto Power ON/OFF Support
+Power Interface 5V, 1.5A
+Battery / Supercapacitor Supercapacitor
+Temperature Guideline Operating Temperature: -4°F (-20°C) ~ 140°F (60°C)
+ Working Humidity: 15 – 60%RH
+ Storage Temperature: -22°F (-30°C) ~ 158°F (70°C)
+
+FIRMWARE UPDATE
+Firmware updates for R2-4K are provided OTA (over-the-air)
+using the ROVE Dash Cam APP for iOS and Android Devices.
+To check/Update Firmware:
+1 Please connect your R2-4K to the ROVE Dash Cam APP using
+ the WiFi Feature. (See Page 33)
+2 Click “Firmware Update” from the left navigation menu while
+ staying connected to R2-4K using WiFi Feature.
+3 Please follow on-screen directions to complete firmware updates.
+ NOTE
+Please reach out to customer care if you are having trouble installing
+firmware using the ROVE APP.
+
+ 12
+ PACKAGE CONTENTS
+
+ Dash Cam
+
+ 1X Electrostatic Film For 3M
+ 3600 Rotational Suction Mount 3600 Rotational 3M Sticky Mount Sticky Mount, 1x Notice Sticker
+
+ 5X Cable Hiding Clip, Spare 3M
+ Sticky Tape, 2x Wet Cleaning
+ 12FT Type-C Car Charging Cable 1M USB Type-C Data Cable
+ Pads & Car Wire Trim Tool
+
+ ROVE Dual USB Car Charger Quick Start Guide User Manual
+ PLEASE NOTE: Memory Card Is NOT Included. We Recommend ROVE PRO or ROVE Ultimate microSD Card, UP to 512GB
+
+13
+ USER MANUAL
+
+ UNIT STRUCTURE APPEARANCE & BUTTONS
+
+ 4 Reset
+ Built-In GPS 1
+
+ Serial Number
+ Windshield 2
+ 5
+ Label
+ Mount Latch
+ TV Out 3
+ 6 Mic
+
+ LED Status Indicator 7
+
+ 2.4” IPS Display 8
+
+ Menu/Mode Button 9 11
+ Rec. On/Off, OK or
+ Confirm Button
+
+UP or Mute on/off Button 10 12
+ Down or LCD
+ on/off Button
+ 13
+
+ Emergency Lock or
+ WiFi on/off Button
+
+ TYPE-C USB Power 14
+Input / Data Output Port
+ 15 microSD Card Slot
+
+ 16
+ Power On/Off or
+ Shutter Button
+
+ 18 LENS
+ Speaker 17
+
+ 14
+ SHORTCUTS & UNDERSTANDING BUTTONS
+BUTTON IMAGE BUTTON NAME SHORTCUTS / FUNCTIONS
+
+ To Turn ON The Camera: Press power button once.
+
+ POWER
+ BUTTON
+ To Turn OFF The Camera: Long press power button for 3-seconds.
+
+ Press once while video is being recorded to take a snapshot.
+
+ Press Once - to enter/exit menu settings
+ MENU / MODE
+ LONG PRESS for 2-Seconds - to Switch Modes
+
+ Press Once - to Mute/UN-Mute Microphone while in Video Mode
+
+ Press Once - to Scroll UP while in Any Menu Settings
+ UP
+ Press Once - to Scroll to Previous Video Files while in Play Mode
+
+ Press Once - to Reverse Playback while video is being played in Play Mode
+
+ Press Once - to Lock the Current Loop Cycle Video File while Video
+ EMERGENCY is being recorded
+ LOCK
+ LONG PRESS for 2-Seconds - to Turn ON/OFF WiFi
+
+ Press Once - to Turn OFF/ON LCD while in Video Mode
+
+ Press Once - to Scroll DOWN while in Any Menu Settings
+ DOWN
+ Press Once - to Scroll to Next Video Files while in Play Mode
+
+ Press Once - to Fast Forward while video is being played in Play Mode
+
+ Press Once - to Start/Stop Video Recording
+
+ Press Once - to Take Snap-Shot while in Photo Mode
+ OK / CONFIRM
+ Press Once - to Play/Pause Current Video while in Play Mode
+
+ Press Once - to Enter / Confirm Specific Settings while in Menu Settings.
+
+15
+ USER MANUAL
+
+INSTALLATION
+The camera comes with the default settings which allows you to
+start using your camera right out of the box without changing
+any settings. Make sure to format the memory card before
+first-time use.
+1 Installation Position: Most people will install their R2-4K
+ next to the rear view mirror and opposite side of the driver.
+ First, Stop the engine where there is some light and in a safe
+ place, and then remove the key.
+
+2 Make sure to clean your windshield from dust particles and
+ evaporated grease from the dashboard surface.
+
+3 Attach the ROVE R2-4K with the suction mount. Set the
+ camera lens to point forward to the center when installing it.
+ NOTE
+ Make sure that the camera’s view is not obstructed by any window tint
+ or any other objects.
+
+ WARNING:
+If your vehicle has side curtain airbags please be very careful when
+running any cables along your vehicle windows. Ensure that you are
+not running a cable that passes any of the airbags as this can prevent
+the airbags from deploying.
+
+ 16
+ 4 To Lock The Suction Mount: Press & hold it tight towards the
+ windshield to remove any air between the suction mount
+ and the windshield. While pressing & holding towards the
+ windshield, turn the LOCKING Knob towards CLOCKWISE to
+ LOCK in place.
+
+ AVOID THIS
+ dot-matrix pattern, as
+ suction mount will
+ NOT be able to get a
+ strong suction, hence
+ it will fall down if you
+ mount on top of it.
+
+ Press the suction mount against the windshield and
+ while pressing, turn the LOCKING Knob towards
+ the LOCK position to lock the mount in place.
+ 5 Use the power cord to connect the USB Port of the product
+ to the car's cigarette lighter socket.
+
+ CAUTION:
+
+ Only use ROVE’s USB Car Charger, otherwise the camera may
+ frequently reboot or flicker LCD due to insufficient power.
+ 6 Hide the cable inside the trim and use the included cable
+ clips for additional support to organize the cable if needed so
+ it does not interfere with the driver’s vision.
+
+17
+ USER MANUAL
+7 Adjust the lens angle of the camera.
+
+ Loosen the screw
+ to adjust the
+ camera’s view/tilt
+ Simply rotate the
+ angle and then tighten
+ camera 360o to
+ it to lock that angle.
+ record any direction
+ you prefer.
+
+8 Start the engine and check if the product works properly.
+
+ CAUTION:
+
+ Make sure to remove the Plastic Lens Screen Protector from the
+ lens before recording videos. Otherwise, your videos will look blurry
+ and blocked.
+ Do not remove the microSD card while the camera is turned ON.
+ Otherwise, it may cause the memory card to be write protected and
+ possible loss of data or damage your memory card. Remove/Insert
+ the memory card only when the camera is turned OFF.
+
+ NOTE
+After a test drive, check and make sure that all the videos are recorded correctly.
+
+ 18
+ 12FT USB-C Charging Cable
+
+ Car Cigarette Car Cigarette ROVE R2-4K
+ Lighter Socket Lighter Plug Dash Cam
+
+ Wiring at a glance
+
+ Charging
+
+Only use the supplied charger to power and charge the ROVE
+R2-4K dash cam.
+
+ NOTE
+ You can use your iPhone or Android Phone’s USB Charger, and plug
+ into your home’s 110V wall outlet to power/charge the camera while in
+ your home. Just make sure it is NOT a super heavy-duty charger over
+ 3.4 AMP. Otherwise, it can damage the camera.
+
+ 1 The car charger connects to the car cigarette lighter socket.
+ 2 The device will start up automatically and record as soon as
+ power is supplied, and the device will save the last video file
+ and power off automatically after cutting the power supply.
+
+19
+ USER MANUAL
+
+TURNING YOUR CAMERA ON/OFF
+AUTO POWER ON/OFF
+ Auto Power ON: ROVE R2-4K Dash Cam is designed to turn
+ ON and start recording automatically when it receives power.
+ i.e. when the car engine is started.
+ Auto Power OFF: The camera is also pre-configured to turn itself
+ OFF automatically within a few seconds when the power gets
+ disconnected, i.e. when the car key is turned to LOCK position.
+ CAUTION:
+Some trucks/car’s 12V cigarette outlet is always HOT, which means it
+provides constant power even when the car is turned OFF and
+LOCKED. If this is the case for your vehicle, then the auto ON/OFF
+feature will not work. And If you leave the camera continuously
+recording when the car is turned off, then it will drain your car/truck’s
+battery and you might not have enough power to start your car for next
+time. To Remedy this situation, you can do one of the two options.
+ Hardwire your dash cam to your car’s fuse box with ROVE Ultimate
+ USB Type-C Hardwire Kit.
+ Visit www.rovedashcam.com to purchase one separately.
+ Change the connection in the fuse box for your 12V outlet to the socket
+ which only supplies power when the car key is turned to ACC or ON
+ position. (See this example-only video: https://youtu.be/F5VL-pUClnc)
+MANUAL POWER ON/OFF
+ To manually turn ON: Press the power button once.
+ To manually turn OFF: Press and hold the power button for
+ at least 2-3 seconds
+ NOTE
+Be sure to insert the Memory card before powering up the device. Do
+NOT insert/remove the memory card while the camera is turned ON.
+Only do so when it is turned OFF.
+
+ 20
+ ABOUT SUPERCAPACITOR
+
+ Important Info
+First, understand that all dash cams, regardless of which brand
+the user uses, they either have very small Li-ion batteries or
+built-in Supercapacitor (i.e., ROVE R1, R2-4K PRO, R2-4K DUAL,
+R3) to save that last video file safely before shutting off the dash
+cam, in case if the power gets disconnected due to accident and
+also during daily turning off your vehicle.
+Now, all dash cams must be plugged into the power at all times
+for continuous recording, regardless of which brand you will
+purchase.
+ROVE R2-4K uses a Supercapacitor instead of a small internal
+battery.
+
+ Main Benefit
+The main benefit of using a supercapacitor in a dash cam is that
+it drastically increases the product’s life span compared to
+internal battery dash cams, which are only good for as long as
+the internal battery lasts. You can’t even replace the internal
+batteries easily as they are built-in. Therefore super capacitor
+dash cams last for years and they do not pose a risk of fire
+compared to Li-ion battery dash cams.
+The secondary benefits of a supercapacitor dash cam are as follows:
+• Supercapacitor is more reliable because it is more heat resistant
+ compared to Li-ion batteries.
+• Supercapacitors don’t pose a risk of fire compared to Li-ion
+ batteries.
+
+21
+ USER MANUAL
+
+ How does Supercapacitor work?
+• A capacitor uses conductive plates with an insulating barrier
+ (dielectric) in between them. The dielectric stops the electrical
+ current entering the capacitor, and this builds up a charge
+ which is stored between the plates.
+• It charges faster than a battery. The amount of charge a
+ capacitor can hold depends upon its capacitance or the charge
+ storage capacity.
+• ROVE R2-4K’s Supercapacitor will hold the charge for about 2
+ seconds.
+
+ Why Supercapacitor?
+ROVE R2-4K dash cam uses a supercapacitor, making it a unique,
+reliable dash cam on power consumption and safety. Moreover, it
+is more resistant to heat, unlike batteries, and it extends the
+overall product life span of the camera.
+
+ 22
+ HOME SCREEN
+
+ GPS Recording Status
+ Time Lapse Video Loop Recording Timer
+ (Resets every loop)
+ Video Mode
+ Video Resolution
+ Loop Recording Total Trip Time
+ Wide Dynamic Range (Resets at every restart)
+ Exposure Value Parking Mode Indicator
+ G-Sensor Microphone Indicator
+Emergency Video Lock Memory Card Indicator
+ Current Time WiFi On/Off Indicator
+ Current Date Live Speed
+ Compass Direction
+
+ Menu Up Emergency Lock Down OK / Confirm
+
+ Home Screen Status Icons
+ ICONS WHAT DOES IT MEAN? ICONS WHAT DOES IT MEAN?
+
+ Video Mode Video Recording Started
+ Loop Recording ON +
+ 00:02:09 Loop Recording Timer
+ Number Indicates your selection
+
+ Photo Mode 4KP30 Current Video Resolution
+ 24HR Auto Trigger Parking
+ Playback Mode
+ Mode ON - HWK Connected
+ Wide Dynamic Range (WDR) Parking Mode OFF
+
+ Exposure Value Microphone ON
+
+ G-Sensor Microphone OFF
+
+ Emergency Video Lock Memory Card Installed
+
+ 02:35:21 PM Memory Card NOT Installed
+ Current Time & Current Date
+ 01/01/2023 Memory Card Is Defective
+
+ Time Lapse Video WiFi On/Off Indicator
+
+ Live Speed
+ GPS - looking for signal
+
+ GPS - Now has Signal Compass Direction
+
+23
+ USER MANUAL
+
+LED STATUS LIGHT INDICATOR
+
+BLINKING RED LED - Recording Video
+SOLID RED LED - Not Recording Video
+NO RED LED - Camera is Turned OFF
+
+ DIFFERENT SCENARIOS
+
+ When Camera Is Plugged Into The POWER
+
+ Solid Camera Idle
+
+ Blinking Camera Recording Video
+
+ 24
+ WHICH MEMORY CARD SHOULD I GET?
+ ANSWER: We strongly
+recommend ROVE Ultimate
+(Premium Choice) or ROVE
+PRO (Everyday Affordable)
+microSD Card. At ROVE, We
+have higher standards,
+1-Year Hassle Free Warranty
+and we have specifically Premium Everyday
+ Choice Affordable
+designed our memory cards
+to work with our dash cams.
+In order to save time, money, and hassle in the long run, we
+simply recommend our ROVE Ultimate (Premium Choice) or ROVE
+PRO (Everyday Affordable) microSD Card. See a few details below
+to understand why?
+
+ FAQ ABOUT MEMORY CARDS:
+
+ WHY SHOULD I GET ROVE ULTIMATE OR
+ 1
+ ROVE PRO MEMORY CARDS?
+
+ ANSWER:
+Memory card is an important part of your dash cam setup. The
+most important piece of evidence is collected in your memory
+card which is the video evidence.
+- Over the years of experience, we have recommended various
+memory cards to our customers, because we thought a memory
+card is a memory card, how bad it can be, especially from big
+brand names. However, based on our experience since 2015, we
+have learned that there are too many different types of memory
+cards there in the market. Some are cheap, some are expensive,
+
+25
+ USER MANUAL
+some are fast, some are slow, some are good and some are bad,
+some will last for long and some will last short duration. There are
+too many factors to consider when it comes to memory cards,
+sizes, types, and their quality and reliability.
+- Every now and then a customer will reach out to us stating their
+dash cam didn’t record the video of an event that they were
+involved in. This happens when the memory card has failed too
+soon and they didn’t check. What’s the point of having a good dash
+cam but a cheap memory card will fail you? Then the whole point
+of investing in a peace of mind dash cam is simply to fail. That is
+why, to save time, money, and hassle in the long run, we strongly
+recommend you to invest in a ROVE Ultimate (Premium Choice) or
+ROVE PRO (Everyday Affordable) microSD Card.
+
+ SHOULD I ONLY GET THE ROVE ULTIMATE
+ 2
+ OR ROVE PRO MEMORY CARDS?
+
+ ANSWER:
+NO, you can get any brand memory card as long as it is class 10,
+U3 speed. We absolutely do NOT recommend Samsung or
+SanDisk memory cards, based on our experience over the years
+helping our customers with troubleshooting issues.
+However, one thing to note is that if you get another brand card,
+we can't say anything about its quality and how long it will last.
+Generally, your return window closes within 30 days of purchase.
+So, for example, if your other branded memory card becomes
+bad after three months, etc., then you have to take the warranty
+with them, and we can't promise how they will help with the
+replacement process. Therefore, with that said, to save time,
+money, and hassle on going back and forth fighting with which
+
+ 26
+card to get, we simply now recommend our ROVE Ultimate
+(Premium Choice) or ROVE PRO (Everyday Affordable) microSD
+Card. At ROVE, we have higher standards. Because in the long
+run, we all want the camera and memory card to just work without
+any issues because we need peace of mind, and we have better
+things to do in life than fight to find a simple memory card.
+
+ WHAT COULD HAPPEN IF I USE
+ 3
+ A THIRD PARTY MEMORY CARD?
+
+ ANSWER:
+Most likely it will work just fine. However here are the lessons
+learned over the years from helping our customers.
+- You might get missing videos after some months of usage of
+other brand memory cards. Why?
+- Because after a certain write cycle, depending on the type of
+flash memory being used inside, the data cell may become bad
+sectors. When that happens, the dash cam might freeze up or may
+have missing videos. Which is something we don’t want. Your dash
+cam may also give you an error related to your memory card
+stating the memory card speed is too slow or defective memory
+card etc.
+We hope this was helpful and informative in choosing the right
+memory card. Please feel free to reach out to us if you have any
+questions or concerns.
+
+27
+ USER MANUAL
+
+INSERTING / REMOVING A microSD CARD
+ Must use only Brand Name, Class-10, U3, or higher speed
+ microSD Card. Max supports 512GB.
+ We Recommend ROVE Ultimate or ROVE PRO Class 10, U3
+ Speed microSD Card. You can purchase it from Amazon here:
+ Search: “ROVE Ultimate microSD Card”
+ Visit: www.amazon.com/dp/B0BGW1N9TD
+ or
+ Search: “ROVE PRO microSD Card”
+ Visit: www.amazon.com/dp/B0D2PC2QK8
+
+1 TO INSTALL
+ Make sure the camera is turned OFF First. Then align the
+ GOLD CONTACTS facing towards the front of the camera
+ (Lens Side). Then insert the memory card halfway in. Then
+ use the fingernail or a paper clip to push the card all the way
+ inward until it clicks and locks in place.
+ CAUTION:
+Do not insert/remove the microSD card while the camera is turned ON.
+Otherwise it may cause memory card to be write protected and possible
+loss of data or damage your memory card. Always remove/insert
+memory card while camera is turned OFF.
+
+ 28
+ 2 TO REMOVE
+ To remove the microSD card, gently push its edge inward until
+ it clicks, and once it pops out, simply pull it out of the slot.
+ NOTE
+ If you experience camera FREEZING or LAGGING or STOPS
+ Recording after few seconds. Then it is the issue of the MEMORY
+ CARD (NOT THE CAMERA ISSUE). Please Contact US.
+ ROVE R2-4K Dash Camera is a High Bit-Rate 4K Video recording
+ device, which requires High Speed Rating SPECIFIC microSD Cards.
+ Absolutely do NOT buy Sandisk or Samsung Cards. Do NOT Purchase
+ it from third party seller on eBay or any online place. Otherwise they
+ may be a fake cards and will NOT work.
+
+29
+ USER MANUAL
+
+FORMATTING MEMORY CARD
+1 Press OK to STOP video recording first or to clear the error
+ message. If you have any on the screen.
+2 Please press the button once to enter the Video Settings.
+3 Press the M button again to switch to the System Settings.
+
+4 Then press theDO button to scroll down until you see
+ FORMAT >> Then press the O button to enter format
+ submenu. >> then pressDO button to highlight the FORMAT
+ >> Then press the button to confirm to format the memory
+ card (The formatting process will be super quick. Now press
+ the M button to exit the settings).
+
+ Press OK button
+ to make sure your
+ Memory card is
+ formatted.
+
+ NOTE
+
+ We recommend that you format the memory card every 3 months to
+ keep it clean for smooth operation.
+ Please note that memory cards have their self life span, after so
+ many uses of writing data over and over, eventually they will become
+ inoperable. When that happens, please replace your memory card.
+
+ 30
+ TIME-ZONE SETTING
+To set the date & time, choose one of the following options below:
+ 1 You can choose the date and time of your choice manually, go
+ to System Settings > Date/Time and select the date and
+ time of your choice.
+ OR
+ 2 You can also set the GMT/UTC time-zone value instead, so the
+ camera will set the date and time based on the GMT/UTC value
+ selection when it receives the GPS signal lock automatically.
+
+ USA Time Zones - GMT (Greenwich Mean Time) Values
+
+ When DayLight Savings When DayLight Savings
+ Time Zones
+ Ends Nov - March Begins March - Nov
+
+ Hawaii GMT (-10:00)
+
+ Alaska GMT (-9:00) GMT (-8:00)
+
+ Pacific Time Zone GMT (-8:00) GMT (-7:00)
+
+ Mountain Time Zone GMT (-7:00) GMT (-6:00)
+
+ Central Time Zone GMT (-6:00) GMT (-5:00)
+
+ Eastern Time Zone GMT (-5:00) GMT (-4:00)
+
+ Go to https://greenwichmeantime.com/time-zone/abbreviations/
+ to find out your Correct GMT (Greenwich Mean Time) value based
+ on your location outside of the USA
+
+ NOTE
+ The Time zone setting will not change time automatically when driving
+ through different time zones. It will only set the accurate date and time
+ based on the selected GMT timezone.
+
+31
+ USER MANUAL
+
+USING WiFi FEATURE
+
+What is a WiFi Feature?
+
+The WiFi feature has been designed so you can pair your dash
+camera wirelessly with your smartphone and access your
+recording instantly from the dash cam. Here you can view,
+download and share your videos easily with your friends and
+family. Just like how you would connect your Bluetooth speaker
+to your smartphone for wireless music play, the same way dash
+cameras use a WiFi signal (instead of Bluetooth) to pair your
+smartphone with ROVE R2-4K.
+
+What is the WiFi Range?
+The WiFi signal range is about 10M when there are NO
+obstructions in the middle. Please NOTE that just like your home
+WiFi network, you can't have a WiFi signal outside your home, in
+the same way, the WiFi range is 10M from this small device.
+
+Can I watch the videos or surveillance around my car remotely?
+NO. ROVE R2-4K dash cam is NOT made to broadcast footage
+over the cloud or internet. It is NOT a cloud or an IP camera and
+it is NOT meant to do that. You can get live video and footage on
+ROVE R2-4K’s APP as long as you stay within the 10M range from
+the dash cam.
+
+ 32
+ Pairing your R2-4K with your Smart Phone using WiFi
+
+ STEP 1: Search & Install the ROVE APP
+
+ Download on the ANDROID APP ON
+
+ 1 Search for “ROVE” in App Store or
+ Google Play Store to find the App and then
+ download and install it on your phone.
+ NOTE
+ ROVE R2-4K's WiFi Connection paring does NOT broadcast the internet.
+ The WiFi Connection to ROVE R2-4K is meant to transfer the data
+ between your phone and the ROVE R2-4K dash cam.
+
+ Series
+
+ Scan this QR Code
+
+ Download the
+ ROVE Dash Cam APP.
+
+33
+ USER MANUAL
+
+ STEP 2: Sign Up (For First Time Users Only), Skip this step
+ if you already have a ROVE APP account.
+
+ IMPORTANT:
+
+ Do NOT Connect your iOS/Android device to ROVE R2-4K's WiFi yet.
+
+ 1 2 3
+
+ Select
+ R2-4K
+
+First Time
+ Users
+
+FIRST-TIME USERS:
+You will need to register and create a free account using ROVE
+APP, so you can keep your videos and data secure on your
+device. (To register - you will need internet access, so make sure
+to stay connected to the internet using your home wifi or cellular
+data while registering for the first time) - You will only need to
+do this once. You should stay logged in to your ROVE account
+mostly unless you get logged out.
+
+If you ever need to sign back into your ROVE account again, then
+you will need to be connected to the internet first, then login to
+your account before pairing with ROVE R2-4K’s WiFi.
+
+ 34
+ STEP 3: Turn the WiFi ON from the R2-4K's Settings
+
+ WiFi
+
+ Format
+
+ Date / Time
+
+ 1
+
+ CONNECTING ROVE R2-4K DASH CAM WITH SMART PHONE:
+
+1 TURN ON WIFI FROM THE CAMERA: Long press the
+ Emergency LOCK BUTTON for 2 seconds or go to the camera's
+ SYSTEM SETTINGS to turn ON the WiFi feature.
+2 Now open the ROVE app on your smartphone, and click on the
+ "Connect to ROVE Dash Cam WiFi" button.”
+ This will open up your smartphone’s WIFI setting now; look for
+ a WiFi network named “ROVE_R2-4K_*******”on the lists.
+3 Join the “ROVE_R2-4K_*******” network using a default
+ password displayed on your dash camera’s screen. (Default
+ Password: 12345678)
+4 After connecting your smartphone to the ROVE Dash Cam's
+ WiFi, open the ROVE App. If you’ve previously added this
+ Dash Cam, select & press PROCEED. Otherwise, tap "Add New
+ Device" and follow the on-screen steps to add your R2-4K
+ Dash Cam.
+ Now you are all set to access your recording from the ROVE
+ app and explore it further.
+
+35
+ USER MANUAL
+
+For Android phones:
+There is one extra step you will have to take for the first time. Once you connect to
+ROVE R2-4K WiFi, it will say “No Internet”, which is fine. Wait about 10-15 seconds until
+you see the below pop up or notification. You just have to tap on the pop up notification
+that will show up in few seconds to select that you still want to stay connected even
+though there is NO Internet. Once you select this OK, you are set to go. Please contact
+us if you need any help.
+
+ If this pop up
+ shows up, make
+ sure you select
+ “Don’t ask again”
+ and then select
+ OR “YES”
+ If this pop up
+ shows up, make 1
+ sure to select 2
+“Always Connect”
+
+For iPhone:
+
+For iPhone, it will display or show "No Internet Connection", which is
+normal and you can ignore this message. As ROVE R2-4K does NOT
+provide the internet, so the iPhone will show this message. You are only
+making a connection between your iPhone and ROVE R2-4K using the WiFi.
+Once you see this o Blue Check Mark, you are connected to the ROVE
+R2-4K'S WiFi. You can simply proceed to open the ROVE Dash Cam APP at
+this point.
+
+ 36
+ UNDERSTANDING 3 – CAMERA MODES
+
+ROVE R2-4K has 3 different camera modes:
+ 1 VIDEO MODE 2 PHOTO MODE 3 PLAYBACK MODE
+
+ TO SWITCH MODE:
+Press & Hold “M button for 2-seconds.
+
+ • Each Mode has their own separated Menu settings.
+ NOTE
+ • System Settings are common among all three Modes.
+
+ 1. VIDEO MODE:
+Video mode lets you record live videos and
+store them on the installed microSD card.
+
+ While in the Video Mode:
+• Press OKbutton to Start/Stop video recording manually.
+
+• Press Pw button Once to take a snapshot.
+
+• Press DO button to Turn Off/On LCD. (Camera still stays ON if
+ you use this button - Red LED indicates camera is still ON)
+• Press MEbutton to enter Video Setting.
+
+• Press while video is being recorded to manually lock the
+ video, so it will not get deleted by loop cycle function.
+• Press & Hold “ ” to turn ON/OFF WiFi.
+
+37
+ USER MANUAL
+
+2. PHOTO MODE:
+Photo mode lets you take a snapshot.
+
+While in the Photo Mode:
+• Press button to take a snapshot
+• Press button to enter Photo Mode’s Menu Settings
+• Press & Hold to turn ON/OFF WiFi
+• Press & Hold button to switch to the Playback Mode
+
+3. PLAYBACK MODE:
+Playback mode lets you play your Video
+file or photos. It can even let you delete
+or lock any videos while viewing it.
+
+While in the Playback Mode:
+• Press button to Play/Pause Video.
+• Press button to scroll to Previous ( < ) video file.
+• Press button to scroll to Next ( > ) video file.
+• While Video is being played, press button to FF Video
+ playback up to 8x.
+• While Video is being played, Press button to REVERSE FF
+ Video playback up to -8x.
+• Press button to enter Playback Setting Menu.
+• Press & Hold to turn ON/OFF WiFi.
+
+ 38
+ Playback Your Recorded Videos
+There are 3 different ways you can access your videos.
+ A. Directly On The CAMERA by switching to the PLAYBACK MODE
+
+ 1
+
+ You can do this by pressing and
+ holding the M button for two
+ seconds so it will switch from
+ Video mode to Photo mode.
+
+ 2
+
+ Then Press and hold the M’
+ button again to switch from
+ Photo mode to Playback mode
+
+ 3
+
+ 2023_0202_185411_0450 Use the on-screen navigation
+ 00:00:05
+ button and use the upd/wn
+ button to scroll your videos.
+ Press OK to play video. Press
+ X1
+
+ -- to go back to video list.
+
+39
+ USER MANUAL
+
+B. On PC/MAC
+To play on your PC/Mac, simply connect the camera using
+included short USB Type-C Data cable and choose the Connect
+as USB Flash Drive on the camera when this message pops up.
+
+ Connect to PC/MAC
+
+ Connect as USB Flash Drive
+
+ Connect as PC/MAC Webcam
+
+ Operate Camera Normally
+
+ OK
+
+Or,
+You can simply remove the memory card from the camera and
+insert it directly into your PC if you have a memory slot or by
+using the ROVE USB Type-C Card reader into the PC's USB
+Type-C port. (The ROVE USB Type-C Card reader is included in
+the package of ROVE Ultimate Memory Card)
+
+ OR SD Card
+ Adaptor
+
+Then find the added memory card drive on your computer and
+then simply double-click on the video to play them.
+
+ 40
+Then simply go to MY PC or Folder, then look for the added flash
+drive. You should be able to see drive "D" or "E" or another name
+depending on the pre-installed hard drives.
+Once you find the added flash drive, double-click on it, then you will
+see the R2-4K folder where you will find your unlocked videos.
+You will also see a folder named "EVENT" which means read-only,
+where you will see your locked videos.
+
+ A. PC
+
+ B. MAC
+
+41
+ USER MANUAL
+
+Correct Video Player To Play 4K VIDEOS
+
+We recommend VLC Media player. You can get it free at
+www.videolan.org
+
+You can also utilize our ROVE Dash Cam GPS Player. Simply visit
+the Mac App Store, search for 'ROVE Dash Cam,' and download the
+ROVE Dash Cam GPS Player.
+
+ 42
+ ROVE Dash Cam GPS Player
+
+ C. On Smart Phone
+To play on Smart Phone, simply turn on WiFi first from the
+camera, then connect the ROVE R2-4K WiFi by entering the
+default password “1 2 3 4 5 6 7 8 ”
+
+Once connected, simply open the correct ROVE APP for your
+model. Please note that the ROVE R2-4K model uses “ROVE
+Dash Cam” App only. So make sure you are using the correct
+App And make sure to select the correct model from the left
+navigation menu within the APP.
+(For more step-by-step instructions about the WiFi features see
+page 32 for details)
+
+43
+ USER MANUAL
+
+ VIDEO SETTINGS
+
+Video Resolution WDR Video Compression
+
+Loop Recording Exposure Video Bit Rate
+
+Video Recording G-Sensor Time Lapse Record 24-HR Auto Parking Mode
+
+Parking Mode G-sensor Speed Unit Rotate Video
+
+Record Audio Hide Status Icons
+
+Video Stamps Live Speed & Compress
+
+ SYSTEM SETTINGS
+
+WiFi Date Format Screen Saver Settings Speaker Volume
+
+Format Time Format Screen Brightness Voice Guidance
+
+Date / Time GPS Time Zone Setting Beep Sound Boot Up Tone
+
+ N42o 50’ 15” W88o 54’ 10”
+
+TV Mode GPS Info Storage Space Legal
+ Number 0 Time 13:24:04
+ Speed 0 Longitude 0.000
+ Direction 0 Latitude 0.000
+
+ 0 0 0 0 0 0 0 0 0 0 0 0
+
+License Plate GPS Format Default Settings System Information
+
+Frequency LED Status Indicator Customer Care
+
+ 44
+ UNDERSTANDING CAMERA SETTINGS
+Short press Me Key to enter the setting interface after power on.
+In this case, the video recording will be stopped and you get the
+Settings Menu.
+Attention: To EXIT the Settings Menu, Press the button to go back.
+
+ VIDEO SETTINGS
+
+ VIDEO RESOLUTION
+You can choose the video resolution you like. Higher resolution
+videos will take more storage space.
+
+ 4K 3840x2160P @ 30fps 1920x1080P @ 60fps
+
+ 2K 2560x1440P @ 30fps 1920x1080P @ 30fps
+
+Below are the estimation on how much time is stored on the
+memory card in the loop feature:
+
+ Resolution 32GB 64GB 128GB 256GB 512GB
+
+ 3840x2160 30fps 2 hrs 4 hrs 8 hrs 17 hrs 35 hrs
+ 13 min 26 min 53 min 45 min 33 min
+
+ 1920*1080 60fps 2 hrs 5 hrs 11 hrs 23 hrs 46 hrs
+ 53 min 45 min 31 min 4 min 8 min
+
+This is approximate but close, give or take a few mins depending
+on the memory card. The lower the resolution, the more it will
+hold, and the higher the resolution, the less it will hold.
+
+45
+ USER MANUAL
+
+ LOOP RECORDING
+This feature allows the camera to continuously record loop by
+loop so it can delete the oldest video files automatically when the
+memory card becomes full so you don’t have to manually delete
+them. This feature will split each video file to an appropriate
+length based on your selection.
+ OFF- 4GB MAX 1-MIN (Default), 3-MIN, 5-MIN, 10-MIN
+OFF: When you choose off, the camera will continue to record each
+file 4GB in size until the memory card becomes full and then it will
+give you a “Card Full” message. It will NOT record any further until
+you either delete files to make room or format the memory card.
+ IMPORTANT:
+ The logic for the loop recording feature is designed as follows:
+ Let’s say the total capacity of the memory card is 100%. When the normal
+ + event videos reach > 90%, the dash cam will start the loop recording.
+ The pre-allocation of directory space for normal and event videos is as
+ follows:
+ Normal Videos = 60%, Event Videos = 30%
+ If the number of event files is less than 30%, then the normal video files
+ can occupy the unused space of the event allocation until it reaches 90%,
+ and then the loop recording begins.
+ When more event (Locked) video files are present, the space of the event
+ directory is reserved for a maximum of 30%.
+ If the event video files reach their max allocation of 30%, then the camera
+ will also delete your oldest locked video to add that new latest event video.
+ Therefore it is important to understand that you can’t lock unlimited videos
+ to your memory card. If you lock any videos files that are important, please
+ note that even lock videos will be deleted similarly to the loop cycle
+ function with the oldest file first so if an event occurs and if your locked
+ video allocation is exhausted, to ensure proper room for a new locked
+ event video in case of a real event. We recommend that you download
+ any locked video ASAP to prevent it from being deleted.
+
+ 46
+ VIDEO RECORDING G-SENSOR
+G-Sensor is a 3-axis impact gravitational accelerometer which is
+designed to detect physical and gravitational forces on the camera.
+
+While Video is Being Recorded: In the event when G-Sensor is
+triggered due to physical or gravitational impact force on the
+camera, the current loop cycle length of the video file will be
+locked so it will NOT be deleted by the normal loop cycle function.
+
+ CAUTION:
+ In the event of an accident please make sure you retrieve your footage
+ before using your camera again to prevent the loss of important video
+ files due to the loop cycle function, in case the force was minor and did
+ NOT trigger the G-Sensor to lock the video file automatically. It is a best
+ practice and recommended to you to retrieve all necessary video footage
+ after any event of an accident before using your camera to prevent the
+ loss of vital video files.
+
+ WDR
+
+Wide Dynamic Range (WDR) improves the exposure by taking the
+combinations of over-exposed and under-exposed images into one
+robust wide range of lighting with higher depth images.
+• ON (Default)
+• OFF
+
+47
+ USER MANUAL
+
+ EXPOSURE
+This feature allows you to adjust the brightness of a captured image.
+• 0.0 (Default)
+• -2, -1.7, -1.3, -1.0, -0.7, -0.3, 0.0, +0.3, +0.7, +1.0, +1.3, +1.7, +2
+
+ TIME LAPSE RECORD
+Time Lapse recording mode allows you to capture specific images
+per second at a much lower rate. So when you combine and play
+those images at the normal 30fps rate, everything seems to be
+moving faster in time-lapse.
+
+• OFF
+• 4 frame/second (Smoother)
+• 2 frame/second (Smooth)
+• 1 frame/second (Normal)
+
+ NOTE
+ Enabling this feature will keep it activated at all times, even after the
+ camera restarts, resulting in time-lapse speed (faster playing) for
+ your videos. If you prefer regular speed playback, please ensure to
+ turn this feature OFF before powering off your camera.
+ GPS Coordinates will be disabled for Time Lapse Video when
+ viewing the route taken on GPS Player's Map if Time Lapse recording
+ is enabled.
+
+ 48
+ VIDEO COMPRESSION
+
+H.265 HEVC = High-Efficiency Video Coding - This advanced
+compression algorithm improves video quality with a smaller
+file size compared to H.264.
+
+• H.264 (Default)
+• H.265
+
+ WARNING:
+ H.265 playback can be laggy and might NOT play smoothly if your
+ PC/MAC or other devices are NOT compatible with H.265. So if you don’t
+ have advanced new devices, then keep this setting at H.264 (Default).
+
+ VIDEO BIT RATE
+Video bitrate represents how much data is used to record each
+second of video.
+Higher bitrates mean better video quality but larger file sizes. This
+requires specific high-speed memory cards and longer download
+times when using the ROVE APP due to the large file size.
+Lower bitrates save space but may reduce video quality. It's
+important to find a balance that suits your needs.
+• Low
+• Standard (Default)
+• Max
+
+49
+ USER MANUAL
+
+ 24-HR AUTO PARKING MODE
+ROVE has custom-designed its parking monitor for the best user
+experience and automation. Please see the details below.
+
+ Triggers automatically when you turn
+ OFF your car. (Hardwiring Kit Required)
+
+ NOTE: ROVE Ultimate USB Type-C Hardwire Kit is
+ Required to Use This Feature. Purchase separately
+ from, “www.rovedashcam.com”
+
+ OFF
+
+ Time-Lapse 1fps & G-Sensor
+
+ Motion Detection & G-Sensor
+
+ Collision Detection Only
+
+ CAUTION:
+ Never connect the dash cam directly to your car’s 12/24V battery by
+ modifying wires. The dash cam is not designed to handle direct current
+ from the battery. It needs a step-down circuit in the middle (Hardwire Kit)
+ to adjust the current required by the dash cam. You must connect the
+ dash cam using the ROVE Ultimate USB Type-C Hardwire Kit and
+ connect it to the car’s fuse box (NOT to battery terminals directly).
+
+ NOTE:
+
+ The camera has a built-in temperature sensor. During sunny afternoons
+ and direct sunlight with a locked car, the temperature inside the car
+ turns into a greenhouse effect, and depending on your geographical
+ location the temperature can exceed the recommended guidelines for
+ this product. When this happens, the camera will automatically shut
+ down to prevent damage to the unit to ensure longer product life.
+
+ 50
+ ROVE R2-4K & PARKING MODE
+ HOW DOES IT WORK?
+
+ ANSWER ROVE R2-4K has a built-in Parking Mode Feature,
+allowing you to record in the following two ways after parking
+your vehicle.
+ Before we go into details, please NOTE that
+ INPUT
+ 12V/24V 2A
+
+ the ROVE Ultimate USB Type-C Hardwire Kit
+ POWER
+ GND USB-C for R2-4K, R2-4K PRO,
+ R2-4K DUAL and R3
+ ACC
+ FOR 24-HR AUTO TRIGGER PARKING MONITOR
+ OUTPUT BATTERY DRAIN PROTECTION STARTING AT
+ 5V 2A
+ 11.8V 12.0V 12.2V 12.4V
+ 23.6V 24.0V 24.4V 24.8V
+ www.rovedashcam.com
+
+ is required for the parking mode to work.
+
+ WHY DO I NEED TO PURCHASE
+ AN ADDITIONAL HARDWIRE KIT?
+
+ ANSWER
+ 1 To utilize a 24-HR parking monitor, you need to provide
+ power to your dash cam while away from your car.
+ Hardwiring your dash cam to your car's fuse box is
+ necessary to give power to the dash cam. ROVE Ultimate
+ USB Type-C Hardwire Kit is NOT Included in the packaging.
+ Purchase separately.
+ 2 We understand that not all users prefer the hardwire kit for
+ their specific installation needs. By not including it in the
+ default packaging, it allows us to keep the cost down and
+ minimize electronic waste mitigating the environmental
+ impact associated with unnecessary accessories.
+ 3 The hardwire kit also monitors battery voltage, and it is
+ designed to cut off power to the dash cam when it detects
+ low voltage to preserve enough power in the car’s battery
+ for you to start your car next time.
+
+51
+ USER MANUAL
+
+HOW DOES THE "TIME-LAPSE + G-SENSOR"
+PARKING MODE WORK?
+
+ Time-Lapse 1fps & G-Sensor: (See how this feature works)
+
+1 When this feature is set to ON and ROVE Ultimate USB
+ Type-C Hardwire Kit is installed properly.
+2 Then, when you turn OFF the car’s engine and turn the key
+ to the lock position.
+3 Then the camera will STOP the continuous video recording
+ and it will go into the timelapse 1fps recording mode
+ automatically.
+4 Now while this timelapse is being recorded, If someone
+ hits your car and the impact reaches the set G-Sensor
+ level, then the camera will stop the timelapse video > then
+ it will start to record a 1-min continuous video, save & lock
+ that video in the EVENT folder > then return to recording
+ the timelapse 1fps.
+
+ NOTE
+(When the Parking Mode got activated, the camera will give you a voice
+alert stating “Parking Mode got activated while you were away” when you
+turn ON your car the next time. If you hear this, you should check the
+locked videos to see what happened.)
+
+5 Now when you start your car for the next time, the camera
+ will automatically STOP the timelapse 1fps & G-Sensor
+ parking mode. Then it will go into normal video mode
+ automatically to start the continuous video recording.
+
+ 52
+ HOW DOES THE "COLLISION DETECTION ONLY"
+ PARKING MODE WORK?
+
+ ANSWER When you turn OFF your car's engine, and if the
+Hardwire Kit is installed properly > then the dash cam will -
+
+ 1 STOP the Continuous Recording from the normal video
+ mode.
+ 2 Then the R2-4K will turn OFF. However, it actively senses
+ any impact while the car is turned OFF.
+ 3 Now, if someone hits your car & if the impact reaches the set
+ "Parking Mode G-Sensor" level, then >> the dash cam will
+ turn ON and START RECORDING 1-min video. Then it will
+ LOCK & SAVE that video in the events folder and turn OFF.
+ 4 Then the dash cam will be actively sensing any impact until
+ someone hits your car again (which we hope you won't get hit
+ twice in one day - LOL) or until you start your car's engine.
+ 5 When you start your car's engine for the next time, the dash
+ cam will give you an alert stating that the "Parking Mode Got
+ Activated While You Were Away" (You will hear an audible
+ alert & also an on-screen pop-up).
+
+53
+ USER MANUAL
+
+ PARKING MODE GOT ACTIVATED!
+
+ The parking mode got activated
+ while you were away.
+ Check the LOCKED Video to see
+ what happened.
+
+ OK
+
+6 You will need to tap the OK button on the screen to
+ acknowledge that pop-up. Then you can check and see
+ what happened by going through the last event video.
+7 However, let's say No One hits your car, and if the "Parking
+ Mode G-Sensor" didn't get activated, you will NOT get any
+ parking mode alert. >> In this case, when you start your
+ car's engine for the next time, the dash cam will switch to
+ the normal continuous recording mode, and it will say
+ "recording started" and the Parking + Timelapse icons will
+ disappear. This means that now your dash cam is in normal
+ continuous recording mode, which is what you want.
+8 If you need to watch the activated parking mode videos,
+ you will find them under the Events folder.
+
+ NOTE
+
+ The parking mode time-lapse videos will NOT be saved under the
+ events folder. You can find them under normal video folders.
+ While in parking mode, the GPS and WiFi are designed to turn off
+ automatically to save power while in the parking mode.
+
+ 54
+ HOW DOES THE "MOTION DETECTION &
+ G-SENSOR" PARKING MODE WORK?
+
+ Motion Detection & G-Sensor: (See how this feature works)
+ 1 When this feature is set to ON and ROVE Ultimate USB
+ Type-C Hardwire Kit is installed properly.
+ 2 Then, when you turn OFF the car’s engine and turn the key
+ to the lock position.
+ 3 Then the camera will STOP the continuous video recording
+ and it will go into the motion detection mode and the camera
+ will stay ON and idle, but LCD will be off after some seconds.
+ 4 Now the camera will only record video when it detects
+ motion in front of the FOV of the camera and then it will
+ record until there is no more motion is detected.
+ 5 Now while the camera stays in Motion Detection mode, If
+ someone hits your car and the impact reaches the set
+ G-Sensor level, then the camera will stop the motion
+ detection mode > then it will start to record 1-min
+ continuous video, save & lock that video in EVENT folder >
+ then return back to the motion detection mode.
+ NOTE
+ (When the Parking Mode got activated, the camera will give you a voice
+ alert stating “Parking Mode got activated while you were away” when you
+ turn ON your car the next time. If you hear this, you should check the
+ locked videos to see what happened.)
+ 6 Now when you start your car for the next time, the camera
+ will automatically STOP the motion detection & G-Sensor
+ parking mode, and it will go back into normal video mode
+ automatically to start the continuous video recording.
+
+55
+ USER MANUAL
+
+ WHAT LEVEL SHOULD I SET MY "PARKING
+ MODE G-SENSOR" SETTING AT?
+
+ ANSWER This depends on your various factors and your
+personal preference. We will discuss a few most common
+scenarios to educate yourself.
+
+For the Parking Mode G-Sensor setting, you can select between
+1 to 9 different Gravitational Sensor (G-Sensor) levels.
+Where 1 = Lowest (Smallest) Impact Detection and 9 = Higher
+(Larger) Impact Detection.
+
+ 1 = Triggers at Lower Impact
+
+ 2
+
+ 3
+
+ 4
+
+ 5 = Triggers at Medium Impact
+
+ 6
+
+ 7
+
+ 8
+
+ 9 = Triggers at Higher Impact
+
+ 56
+ 1 If you set your parking mode G-Sensor at 1, the dash cam
+ will be extremely sensitive. Even the lowest vibration, such
+ as hard tapping the LCD or Closing the Car's Door, will
+ activate the R2-4K dash cam.
+ You would want this if you want your dash cam activated
+ with the slightest hit to the car.
+ However, there are downsides to this. Your dash cam will
+ activate even when you close the car's door while exiting
+ your vehicle. This will give you false parking mode got
+ activated alerts. However, the positive side of this is that
+ your car/dash cam is sensitive to minor bumps/hits to
+ your car.
+ 2 If you set your parking mode G-sensor at just the right
+ setting, where it will NOT trigger the false alerts by closing
+ your car's door, you will NOT get false signals. Then when
+ you do get alerts, you know to check the last locked videos
+ to see what happened because you didn't anticipate the
+ false alerts.
+ However, the downside is that your dash cam is not extra
+ sensitive to more minor bumps/hits because you have set
+ your G-sensor to a higher level so that you may miss some
+ smaller bumps/hit events.
+ However, there is one more positive side; if you have
+ used time-lapse + collision detection, you should have
+ your parking mode time-lapse videos saved in normal
+ folders. So if you suspect someone might have hit your
+ car or something, then you can still always go look at the
+ time-lapse videos. We hoped this made sense and was
+ helpful.
+
+57
+ USER MANUAL
+
+ RECORD AUDIO
+
+Rove r2-4k-- has a built-in microphone to record audio with
+video. You can choose to record mute video by choosing OFF.
+You can also press the UP button to mute/un-mute while the
+video is being recorded.
+• ON (Default)
+• OFF
+ VIDEO STAMPS
+
+This stamps menu allows you to choose your choice of stamps
+for the bottom of the video. By default, they are all ON.
+• Date/Time Stamp
+• Speed Stamp
+• GPS Location Stamp
+• Logo Stamp
+ NOTE
+ 1. By turning OFF Speed stamps the camera will NOT attach the
+ speed-embedded data with the video. So when you play your video on
+ GPS Player, you will NOT see any speed associated with the video.
+ 2. By turning OFF GPS Location the camera will NOT attach the GPS
+ Coordinates or the Driving Route Location with the video. So when
+ you play your video on the GPS Player, you will NOT see any GPS
+ tracker on Google/Baidu maps.
+
+ SPEED UNIT
+You can choose desired speed option stamp to be displayed and
+recorded on video stamp based on your selection.
+• KM/H
+• MPH (Default)
+
+ 58
+ HIDE STATUS ICON
+This feature allows you to hide all icons on the LCD screen of the
+camera so you can have a full view of the image.
+ OFF (Default)
+ 1-minute
+ 3-minutes
+ 5-minutes
+
+ LIVE SPEED & COMPASS
+
+This feature allows you to see LIVE SPEED & COMPASS Direction
+on the HOME SCREEN.
+• Live Speed
+• Compass
+ NOTE
+ By turning off this feature, it does NOT turn OFF the Driving Speed or the
+ GPS metadata. To turn OFF speed stamps, see the "VIDEO STAMPS" menu.
+
+ ROTATE VIDEO
+This feature will allow you to flip your video 180° so you can still
+have the correct side of the image when the camera is mounted
+upside-down.
+ OFF (Default)
+ ON
+
+59
+ USER MANUAL
+ PLAYBACK SETTINGS
+ To Enter Playback Setting
+
+ 1 Press & Hold "M" button two times to enter Playback Mode.
+ 2 Press "M" button ONCE to enter Play Settings.
+ 3 Press "D" button to access Play settings.
+4 Now use "U" or "D" buttons to scroll through > then press
+ " Obutton to enter particular setting > then press O" button
+ again to confirm that setting and exit to Play setting's menu.
+
+ DELETE
+
+This menu will allow you to delete the current video or Delete All.
+• Delete Current (Delete current video file on LCD)
+• Delete All (CAUTION: This will Delete Entire Video & Photos
+
+ from memory card - Except the protected files)
+ NOTE
+ To delete a locked or protected video, you need to unlock it first by going
+ to the Playback Settings>Protect.
+
+ PROTECT
+This feature will allow you to make desired changes to saved
+video & photo files on the memory card.
+• Lock Current • Unlock Current • Lock All • Unlock All
+
+ 60
+ SYSTEM SETTINGS
+
+ WIFI
+
+This feature will allow you to turn the WiFi broadcast ON from
+the camera so you can connect your phone with ROVE R2-4K
+Dash Cam to access videos, photos, and settings.
+• OFF
+• ON - Once (WiFi will turn off at restart)
+• Always On (WiFi will always stay on even after restart in the background)
+
+ WiFi Name SSID ROVE_R2-4K_*********
+
+ Password 12345678
+
+You can also turn WiFi ON by pressing & holding button for
+2 seconds.
+(To View/Save Video Files to your Phone via WiFi See Page 32)
+
+ FORMAT
+
+This feature will allow you to format an inserted memory card, all
+the data will be deleted.
+• Cancel
+• Format
+
+61
+ USER MANUAL
+
+ DATE / TIME
+Here you can choose the date and time of your choice manually.
+ NOTE
+ The GPS Time Zone will be automatically set to OFF if you manually set
+ the date and time.
+
+ DATE FORMAT
+This feature allows you to select the date format.
+• MM/DD/YY (Default)
+• DD/MM/YY
+• YY/MM/DD
+
+ TIME FORMAT
+This feature allows you to choose the clock time format to
+12 or 24 hours.
+• 12-Hours (Default)
+• 24-Hours
+ GPS TIME ZONE SETTING
+Here you can choose your desired or local time zone setting
+based on UTC/ GMT value. Please make sure to adjust the time
+zone setting during standard vs. daylight savings time.
+• OFF (Default)
+• UTC/GMT -12:00 to UTC/GMT +12:00
+
+To find your correct UTC/GMT time zone setting, please visit :
+https://greenwichmeantime.com/time-zone/usa/(See page 31)
+
+ 62
+ 5. SCREEN SAVER SETTING
+
+Live Video Always ON: This will keep the video LCD ON all the time.
+Screen Saver ON After 1-Min: This will turn ON the screen saver
+as shown in the photo below after 1-min if NO button is pressed.
+LCD OFF After 1-Min: This will only turn OFF the LCD after 1-min if
+NO button is pressed (NOTE only the LCD Will turn OFF, the camera
+still be operational)
+
+ SCREEN SAVER
+
+ 5. SCREEN BRIGHTNESS
+This menu will allow you to set the screen brightness.
+• High
+• Medium (Default)
+• Low (Recommended to Prevent Heating)
+ BEEP SOUND
+This feature allows you to turn ON/OFF camera button’s beep
+sound & any voice confirmation.
+• OFF
+• ON (Default)
+
+63
+ USER MANUAL
+
+ SPEAKER VOLUME
+This feature allows you to set the volume level for the button’s
+beep volume, playback video volume, and boot up chime volume
+through the camera's internal built-in speaker.
+• Low
+• Med
+• High (Default)
+• OFF
+
+ VOICE GUIDANCE
+Voice guidance is the female voice feedback you receive on your
+camera. If you prefer to not receive voice feedback, you can set
+this feature to OFF.
+• OFF
+• ON (Default)
+
+ CAUTION:
+ ROVE R2-4K has an important failsafe voice feedback if the camera is
+ not recording the video when it is turned ON and sitting idle. Therefore
+ the camera will remind you every 30 seconds that it is NOT recording the
+ video. If you hear this feedback, then you should check and investigate
+ to see why your camera is NOT recording the video. This prevents the
+ missed video on an accident when you need the most because your
+ memory card can fail after a certain life cycle and if you don’t check
+ daily, you could possibly not know that the camera was only turned ON
+ but was not recording the video. Therefore to avoid this failure, we
+ strongly suggest that you keep the Voice Guidance turned ON.
+
+ 64
+ BOOT UP TONE
+This feature allows you to choose the camera's boot-up chime to
+be set to ON/OFF.
+• OFF
+• ON (Default)
+
+ TV MODE
+Here you can choose your TV mode based on your country’s TV
+setting.
+• NTSC (Default)
+• PAL
+
+ LICENSE PLATE
+This feature will allow you to insert a custom vehicle ID or Driver
+ID to be stamped on video.
+• Use / button to select desired character.
+• To add more characters' press button to switch to next character.
+• When Done press button to confirm & exit.
+
+ FREQUENCY
+Here you should choose the frequency accordingly to your power
+supply specification used in your country based on your
+geographical location.
+• 60 Hz (USA – North America)
+• 50 Hz (Europe – Most Asian Countries)
+
+65
+ USER MANUAL
+
+ GPS INFO
+ N42o 50’ 15” W88o 54’ 10”
+Number 0 Time 13:24:04
+Speed 0 Longitude 0.000
+Direction 0 Latitude 0.000
+
+0 0 0 0 0 0 0 0 0 0 0 0
+
+This feature allows you to see your current geographical location
+in Latitude & Longitude.
+ N42o 50’ 15” W88o 54’ 10”
+ Number 0 Time 13:24:04
+ Speed 0 Longitude 0.000
+ Direction 0 Latitude 0.000
+
+ 0 0 0 0 0 0 0 0 0 0 0 0
+
+ GPS FORMAT
+Here you can choose the GPS format as Decimal or Degrees,
+Minutes, Seconds.
+• Decimal Degrees • Degrees, Minutes, Seconds
+ LED STATUS INDICATOR
+This feature allows you to choose the camera's LED status
+indicator to be set to ON/OFF.
+• OFF
+• ON (Default)
+
+ STORAGE SPACE
+This feature will allow you to check the storage of inserted
+memory card into the camera.
+• Total: (Memory Card Capacity)
+• Free: (Free Space in memory card)
+• Event: (Occupied space from Locked/Protected Video Files)
+• Movie: (Occupied space from normal video files)
+• Picture: (Occupied space from photo images)
+
+ 66
+ DEFAULT SETTINGS
+
+Here you can restore all the settings to the factory default settings.
+• Cancel
+• OK
+
+ CUSTOMER CARE
+
+ CUSTOMER SERVICE
+
+ 7 Days a Week: 9 AM - 5 PM (PST)
+
+ EMAIL US help@rovedashcam.com
+
+ For faster response text us
+ TEXT US 1-844-ROVE-CAM
+ 1-844-768-3226
+
+ LEGAL
+
+Copyright 2025, All rights are reserved by ROVE.
+
+FCC ID: 2A3IW-R2-4K IC: 30265-R24K
+This device complies with part 15 of the FCC rules. Operation is
+subject to the following two conditions.
+1 This device may not cause harmful interference, and
+2 This device must accept any interference received, including
+ interference that may cause undesired operation.
+
+67
+ USER MANUAL
+
+ SYSTEM INFORMATION
+
+Here you can check the current firmware version installed on
+your camera. You will need this information in the future to
+check if a newer version of firmware is available.
+Please visit: www.rovedashcam.com For the latest firmware
+upgrade instructions. Firmware updates are provided for R2-4K
+using iOS or Android APP. (See page 12)
+
+RESETTING THE CAMERA
+Resetting Hardware & Software are two different things.
+1. Reset The Hardware/Camera:
+Press the RESET Button at the bottom of the camera once. If the
+camera is freezing or stuck where no buttons will respond, then
+please press the RESET button only ONCE at the bottom of the
+camera with a paper clip or tip of the pen while it is turned ON.
+This will restart the camera.
+
+2. Setting Firmware/Camera to the default settings:
+If you get stuck with any settings and if you would like the
+camera's all settings to be set back to the factory default
+settings, then simply go to System Settings > and then scroll
+down until you see the DEFAULT settings then set them to
+default settings to reset all the settings.
+
+ 68
+ GPS player Software Installation (PC/MAC Only)
+(Only suitable for the units with GPS function)
+To download FREE GPS Player, visit www.rovedashcam.com
+ Why GPS Player? What are the features?
+
+ Check G-Sensor data
+ Play back your recorded videos
+ To see the Exact GPS route with the video on google maps
+ Check driving speed
+ Check driving direction (i.e. N, S, NW, SE, etc.)
+
+ Using the GPS Player
+ Please open the customized video player and install it for the
+ first time use.
+ Click to browse on your added drive and select the video file
+ that you prefer to play in the player.
+
+69
+ USER MANUAL
+
+1 Date & Time
+Shows Date & Time of video was recorded
+2 Past Viewed Files
+These are you previously viewed files. Click on to view them again.
+3 Driving Speed
+
+This is where your driving speed will be displayed.
+4 Playback Controls
+
+• Reverse
+• Play
+• Stop
+• Fast Forward
+5 GPS Coordinates
+These are you coordinates longitude and latitude recorded by GPS
+Geo Tagging Device.
+6 Playback Time
+
+This is where your video play back time is shown.
+7 Volume Control
+
+Slide Right or Left to Increase or Decrease Volume
+8 G-Sensor Indicator
+
+This is where you can measure camera movement that is caused and recorded
+by G-sensor force. I.e. when vehicle hits pot-hole or bump you can see it here.
+9 Vehicle Speed
+
+Speed of vehicle recorded at specific point of time.
+10 Map Location
+
+Maps showing vehicle’s driving route recorded by GPS Geo Tagging
+Device based on coordinates.
+11 Vehicle Direction
+Direction at vehicle was driving at specific point of time.
+
+ 70
+ ONE-YEAR LIMITED WARRANTY
+We at would like to provide One (1) full year of limited
+warranty for your product from the date of purchase to be free
+from defects in materials and craftsmanship.
+ IMPORTANT:
+ Please save your warranty/serial number card as a piece of evidence.
+ Proof of original purchase is required for any warranty service (Online
+ order receipt is also accepted).
+ Warranty Terms Conditions
+1. The warranty is confined to the first purchaser of the product and
+ is not transferable.
+2. Service / Repairs during the warranty period shall be carried out
+ by company-authorized personal only.
+3. It is the responsibility of the purchaser to bring the product to the
+ authorized service center at the purchaser's cost and risk.
+4. The company will not be liable for any hardware and/or data loss
+ arising from the use of any third-party software whether
+ downloaded or otherwise.
+5. In the event of repairs and/or replacement of any part(s) of the
+ product, this warranty will remain in force only for the unexpired
+ period of the warranty.
+6. In case of any physical damage to the product and/or misuse
+ detected by the Authorized service center personal, the warranty
+ be void and service/repairs will be done on a chargeable basis
+ only and subject to the availability of parts.
+7. The company's obligation under this warranty shall be limited to
+ repair or providing replacement of part(s) only. The maximum
+ claim(s) if entertained by the company will be subject to the
+ maximum retail price of the product purchased or the purchase price,
+ whichever is lower, and on production of original proof of purchase.
+ During the warranty period in the event of any unforeseen
+ circumstances where spares not available a commercial solution in
+
+71
+ USER MANUAL
+ lieu of repairs will be calculated based on company's prevailing
+ depreciation rules and the same will be binding on the purchaser.
+ The replacement unit will be either new or refurbished based on the
+ availability. We reserve the right to even upgrade you to the newest
+ version be it similar or not if we have discontinued the current model.
+
+LIMITATIONS / DISCLAIMER OF WARRANTY / LIABILITY
+1. The company shall not be liable/responsible directly or indirectly
+ for any claim for compensations, damages, any losses, etc.
+ Under this "Limited Warranty" due to inconvenience, loss of
+ time, loss of profits, loss of business opportunity, loss of data,
+ loss of goodwill, work stoppage, any personal and/or commercial
+ loss, compensation for mental agony, anxiety, etc. Resulting
+ from the use of the product(s) or any direct or indirect loss of
+ any nature whatsoever (incl. any personal injury or death).
+2. Except for the warranties set forth herein, of the company
+ disclaims all other warranties, expressed or implied or statutory,
+ including but not limited to the implied warranties of
+ merchantability or fitness for a particular purpose.
+3. The maximum liability of the company under any circumstances
+ shall be limited to an amount equal to the invoice amount paid
+ by the purchaser to the company or a company-authorized
+ reseller for the Product(s).
+4. Company shall not be liable directly or indirectly for any claim
+ for compensation if the Product has been exposed to
+ moisture and/or dampness and/or extreme thermal and/or
+ extreme environmental conditions or to rapid changes in
+ such conditions, to corrosion, to oxidation, to spillage of food
+ or liquid or to influence from external chemical products.
+5. (hereinafter referred to as "the company") guarantees to
+ the purchaser that this product carries a warranty for the period
+ mentioned above, commencing from the date of purchase.
+
+ 72
+ SAFETY & LEGAL ASPECTS:
+All rights are reserved. Duplication, transfer, distribution of the
+contents herein in any manner without the prior written permission
+of is prohibited. reserves the right to add, modify or
+delete, any of the contents herein or withdraw this documents at any
+time without prior notice and without assigning any reasons thereof.
+For detailed terms and conditions refer www.rovedashcam.com
+• Please check your local or state laws before using in car recording
+ device. It is user's responsibility to comply with all local and state laws.
+• Dash Cam must be placed at proper location so
+ it does not obstruct your view while driving.
+• Do not use or manipulate any functions or any accessories of ROVE
+ Dash Cam while driving. Distraction is a leading cause of accidents.
+• The images and icons displayed in this user manual are intended
+ for illustrative purposes only. They are not real examples captured
+ by the ROVE dash cam. The purpose of these visuals is to provide
+ a visual representation of the features, functions, and user
+ interface of the product.
+ FCC ID: 2A3IW-R2-4K IC: 30265-R2-4K
+
+This device complies with part 15 of the FCC rules. Operation is
+subject to the following two conditions.
+1 This device many not cause harmful interference, and
+2 This device must accept any interference received, including
+ interference that may cause undesired operation.
+
+ Copyright 2025, All rights are reserved by ROVE.
+
+73
+ USER MANUAL
+
+ FCC Statement:
+This device complies with part 15 of the FCC Rules. Operation is
+subject to the following two conditions:
+1 This device may not cause harmful interference, and
+2 This device must accept any interference received, including
+ interference that may cause undesired operation.
+This equipment has been tested and found to comply with the limits
+for a Class B digital device, pursuant to part 15 of the FCC Rules.
+These limits are designed to provide reasonable protection against
+harmful interference in a residential installation. This equipment
+generates, uses and can radiate radio frequency energy and, if not
+installed and used in accordance with the instructions, may cause
+harmful interference to radio communications. However, there is
+no guarantee that interference will not occur in a particular
+installation. If this equipment does cause harmful interference to
+radio or television reception, which can be determined by turning
+the equipment off and on, the user is encouraged to try to correct
+the interference by one or more of the following measures:
+• Reorient or relocate the receiving antenna.
+• Increase the separation between the equipment and receiver.
+• Connect the equipment into an outlet on a circuit different from
+ that to which the receiver is connected.
+• Consult the dealer or an experienced radio/TV technician for help.
+ CAUTION:
+ Any changes or modifications not expressly approved by the party
+ responsible for compliance could void the user's authority to operate the
+ equipment. This equipment complies with FCC radiation exposure limits set
+ forth for an uncontrolled environm ent. This transmitter must not be
+ co‐located or operating in conjunction with any other antenna or transmitter.
+
+ 74
+ IC STATEMENT:
+This device complies with Industry Canada’s licence‐exempt
+RSSs. Operation is subject to the following two conditions:
+1 This device may not cause interference; and
+2 This device must accept any interference, including
+ interference that may cause undesired operation of the device.
+Le présent appareil est conforme aux CNR d'Industrie Canada
+applicables aux appareils radio exempts de licence. L'exploitation
+est autorisée aux deux conditions suivantes : (1) l'appareil ne
+doit pas produire de brouillage, et (2) l'utilisateur de l'appareil
+doit accepter tout brouillage radioélectrique subi, même si le
+brouillage est susceptible d'en compromettre le fonctionnement.
+ AGREEMENTS
+By purchasing ROVE Dash Cam, you hereby agree with all the
+terms and conditions of warranty, warnings and precautions. If
+for any reason you do not agree with these terms, you may
+return the product in its original packaging unused within its
+return window for a full refund.
+
+75
+ USER MANUAL
+
+TROUBLESHOOTING YOUR ROVE™ R2-4K
+
+Camera does not turn ON
+1 Use the different Included USB Cable & your smart phone’s USB
+ charger. Now plug it into your home’s 110V wall outlet.
+2 When you plug it in, the camera should turn ON. If NOT, then press
+ the Power Button Once to see if it turns ON? If it still does NOT turn
+ ON, then remove the memory card.
+3 Keep the camera plugged in. Now Press the RESET button (Located
+ at the bottom) ONCE with a pen’s tip or a paper clip. Now the camera
+ should turn ON. If it still doesn’t turn ON, then please CONTACT US.
+
+Error/Message “Card Full”
+Format card by going into system settings > format > 0K > Select
+Format > 0K. Then Go to Video Mode settings > Loop Recording >
+Choose either I-min, 3-min, 5-min, 10-min. This will allow loop cycle
+function to be turn ON and it will keep recording over and over.
+
+ NOTE Formatting will delete all the data from the memory card.
+
+Camera Freezing/Lagging or Crashing.
+Guys Please TRUST US on this. If your camera is freezing, lagging or does NOT
+record video after some seconds etc. while operating: Then it is the Memory
+Card Issue. Either you are using the WRONG, FAKE or BAD Memory Card.
+(Please be aware of the Fake Ones out there. If you have purchased your
+memory card from eBay or any third party seller online then it is most likely a
+fake one, even though it looks exactly real. Please trust us. We have sold
+thousands of ROVE dash cameras, and they do NOT lag, we stand by our
+product and we do extensive testing. Some customers simply thinks the camera
+is bad or not stable, but that is NOT the case here. It’s the Memory Card Issue.
+PleaseisCONTACT
+Video fuzzy US and we are dedicated in resolving this for you ASAP.
+
+Video is fuzzy
+Please make sure the lens of the camera is clean and there is no dirt or
+grease on the windshield also. If the lens is out of focus, we are
+extremely sorry in advance. This can be a manufacturing defect. Please
+send us an email with a screenshot or a sample video so we can get this
+resolved for you ASAP.
+
+ 76
+ Camera gets HOT
+ It is normal for your camera to run slightly hot. (Please see temperature
+ guidelines on page 12)
+ Camera turns ON / OFF frequently automatically.
+ Please reset your camera. Try updating the firmware again to see if this
+ fixes the issue. If still having issue, please reach out to customer care.
+ My oldest video files are missing
+ Your ROVE Dash Cam has Loop Cycle Recording. When it is set to either 1, 3,
+ 5 or 10-mins, it will delete oldest files and record newer files over and over
+ when the memory card is full.
+ To test again: Set the date and time correctly, then FORMAT the memory card,
+ then do the continuous recording test again and check if all videos are present.
+ Camera Locks many videos automatically.
+ Please change your G-Sensor Setting to higher setting. This setting
+ depends on type of car or truck you are driving and how much vibration
+ your car/truck is creating based on suspensions and road condition.
+ microSD Card is crooked or not going in slot easily
+ Please make sure you align microSD card correctly with gold contacts
+ facing towards the Lens. (See Page 28)
+ My Video playback on PC is lagging.
+ You are viewing high-bit rate version of video files. Slower PC may have
+ problem with faster data processing. Please record videos at lower
+ resolution and try again. Contact us if problem still persists.
+
+77
+ USER MANUAL
+
+ Camera showing "Memory Card Error" or "Please Insert microSD Card"
+ even though memory card is already installed into the camera.
+ 1 Please make sure memory card is at least Class 10, U3 and purchased
+ from trusted vendor such as Walmart, target, best buy, Ship & Sold by
+ Amazon etc. (there are many fake cards out there Online, remember if it's
+ cheap, its fake.)
+ 2 Now go to camera's system settings and FORMAT your memory card.
+ (make sure to backup your videos first before formatting the memory
+ card.) After formatting memory card, please press and hold power button
+ to turn the camera off. Now unplug power cable, and re-plug the power
+ cable, camera should now turn ON automatically and start recording.
+ 3 If you still getting the same error, then let’s switch the camera mode to
+ PHOTO mode by pressing and holding the MENU button. Once in the
+ PHOTO MODE, press OK button to take the photo.
+ -> If you hear the shutter sound > then your camera is fine. Replace your
+ memory card.
+ -> If you still get the same memory card error message, then your
+ camera’s memory card assembly has become defective. Please contact us.
+
+ My date and time is not staying the same even after I set date and time.
+
+Please go to camera's system settings > Time Zone Setting > Set your
+correct GMT value > OK to confirm. That’s it. Now wait until you get GPS
+signal LOCK and then every-time you have GPS signal, you will always
+have correct date and time.
+
+Please visit https://greenwichmeantime.com/time-zone/usa/ to find your
+correct GMT time zone based on your location. (See details on Page. 31)
+
+Still Need Help or Have Questions?
+Please feel free to
+ contact our personalized support at
+help@rovedashcam.com Most e-mails are typically replied
+within 4-6 hours during normal business hours. However, all
+questions are answered within 24 Hours. No Exceptions !! For
+customer service PHONE SUPPORT number please visit:
+https://www.rovedashcam.com
+
+ 78
+ A BIG THANK YOU!!
+
+Thank you for purchasing your new Dash Cam. We
+hope you find your new dash cam useful and fun to use.
+
+If you are having difficulties setting it up, please email us at
+help@rovedashcam.com 99% of all setup problems can easily be
+resolved and should be able to get you up and running in no time.
+
+In the unlikely event that we can't help, we're always happy to
+provide full, hassle-free refund. We just want our customer to be
+happy and proud to use Dash Cam!
+
+There is no perfect product, however we will always do our best
+to provide perfect customer service to you.
+
+A Great care was taken while creating this user manual. It is
+possible that there are minor typos are there. If you find any
+mistakes or suggestions, please do let us know so we can correct
+it. Please visit our website for latest and updated user manual if
+available. We also frequently update other great contents that is
+very useful to our customers.
+
+Camera upgrades, firmware, box contents can be changed
+without notice. Always see up to date information by visiting
+our website.
+
+79
+ GOT QUESTIONS
+ CUSTOMER SERVICE:
+ For faster response text us
+ Response in just 6 hours
+ EMAIL US TEXT US 1-844-ROVE-CAM
+ help@rovedashcam.com 1-844-768-3226
+
+ 7 DAYS A WEEK
+ 9 AM - 5 PM (PST)
+
+ Scan the QR Code to
+ CONTACT US
+
+ Scan to Email US: Scan to Text US:
+ help@rovedashcam.com 1-844-ROVE-CAM
+ 1-844-768-3226
+
+ FCC ID: 2A3IW-R2-4K IC: 30265-R24K
+This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions. (1) This device may not cause harmful
+interference, and (2) this device must accept any interference received, including interference that may cause undesired operation.
+Apple logo, iPhone Model & App Store are trademarks of Apple Inc., Google logo and Google Play are trademarks of Google Inc.
+
+===== SOURCE: data/text/manuals/ROVE R2-4K User Manual.txt =====
+Smart & Beautiful
+ ROVE APP For
+ Please Read iOS & Android
+
+ Wanna meet
+ other ROVERS (ROVE Owners)?
+Join the vibrant ROVE Dash
+ Cam Community on FB.
+ Ask questions, share your
+ dash cam videos or just
+ hangout directly with us.
+
+ NEW
+
+ NEW! Limited Time Launch Offer
+
+SCAN to join ROVE Dash Cam
+ Community on Facebook
+
+ ULTRA-HD
+
+ USER MANUAL www.rovedashcam.com
+ Copyright (C) 2024, All rights reserved
+ EXPERIENCING
+ STOP PROBLEMS
+ Item NOT as described?
+ Damaged or defective?
+ Missing items?
+ Any issues what so ever?
+ CONTACT US BEFORE RETURNING THE ITEM
+ WE WILL HELP YOU RESOLVE ANY ISSUES ASAP.
+
+ CUSTOMER SERVICE
+ Hours: Mon - Fri 9am-5pm PST
+
+ Response in just 6 hours
+ EMAIL US help@rovedashcam.com
+
+ For faster response text us
+ TEXT US 1 (401) 484-ROVE(7683)
+
+Scan the QR Code to Email US Scan the QR Code to Text US
+
+Just Scan the QR Code with your iPhone or Android’s
+ Camera to get in touch with us.
+ WATCH
+ HOW TO VIDEOS
+ Visit our website
+www.rovedashcam.com/pages/videos
+
+ Understanding ROVE R2-4K
+Watch HOW-TO VIDEOS to learn & understand all the
+features so you can get the maximum benefit out of it.
+ USER MANUAL
+Introduction 5
+ ..............................................................................................................................
+
+Product Overview ................................................................................................................. 5
+Features ........................................................................................................................................ 6
+User Agreement .................................................................................................................... 7
+Precautions ............................................................................................................................... 7
+Warnings ..................................................................................................................................... 7
+Getting Started ....................................................................................................................... 9
+Camera Specifications ...................................................................................................... 11
+Firmware Update ................................................................................................................. 12
+Package Contents ................................................................................................................ 13
+Unit Structure Appearance & Buttons ............................................................... 14
+Shortcuts & Understanding Buttons ................................................................... 15
+Installation .................................................................................................................................. 16
+Turning Your Camera ON / OFF ............................................................................... 20
+About Supercapacitor ........................................................................................................ 21
+Home Screen ............................................................................................................................. 23
+LED Status Light Indicator ............................................................................................. 24
+Which Memory Card Should I Get? ....................................................................... 25
+Inserting/ Removing Memory Card ....................................................................... 28
+Formatting Memory Card ............................................................................................... 30
+Time-Zone Setting ................................................................................................................. 31
+Using WiFi Feature ............................................................................................................... 32
+Pairing your R2-4K with your Smart Phone using WiFi ...................... 33
+Understanding 3 – Camera Modes ........................................................................ 37
+Playback Your Recorded Videos ............................................................................... 39
+Understanding Camera Settings .............................................................................. 45
+Video Settings ........................................................................................................................... 45
+Playback Settings ................................................................................................................... 59
+System Settings ....................................................................................................................... 60
+Resetting The Camera ....................................................................................................... 67
+GPS Player Installation ..................................................................................................... 68
+One year Limited Warranty .......................................................................................... 70
+Safety & Legal Aspects ..................................................................................................... 72
+Troubleshooting Your ROVE R2-4K ...................................................................... 75
+A Big Thank You ...................................................................................................................... 78
+
+ 4
+ INTRODUCTION
+Thank you for purchasing ROVETM R2-4K Digital Vehicle Dash
+Cam (Automobile Black Box). This product provides high-quality
+image capture and irrefutable evidence for what goes on from the
+perspective of your dashboard. ROVE Dash Cam is a very
+elegant, convenient, and durable multi-vehicle driving recorder.
+
+PRODUCT OVERVIEW
+This Product is a leading Ultra HD Digital Vehicle Black Box
+Recorder. Equipped with ULTRA-HD 2160P @30fps with SONY
+IMX335 Sensor for excellent low light sensitivity and high dynamic
+range which allows you to record continuous high-quality video
+playbacks and brings phenomenal 4K Ultra-HD resolution videos
+even at night without the need for infrared sensors. It has superior
+night vision technology which captures superb video under all
+low-light conditions. It has advanced built-in Wi-Fi, built-in GPS,
+G-Sensor, Emergency Video lock button, Audio recording, Loop
+cycle recording, 180º auto video rotation, Wide dynamic range,
+24-HR Auto Trigger Parking Mode and so much more. When
+compared to most dash cameras, this exclusive product design
+provides an elegant appearance, is packed with top-rated unique
+features, records superb unbeatable videos, and is very easy to use.
+
+5
+ USER MANUAL
+
+FEATURES
+ 2.4” IPS Display Live Speed
+
+ Built-In WiFi6 Live Compass
+
+ G-Sensor LCD ON/OFF Setting
+
+ WDR - Wide Dynamic Range Screensaver
+
+ Time Lapse Video USB Type-C Input/Output
+
+ Built-In GPS for Geo Tagging Built-In Speaker & Microphone
+
+ 24hr Auto Trigger Parking Mode Remote Firmware Updates using
+ (ROVE Ultimate USB Type-C HWK Required - Not Included) iOS/Android ROVE Dash Cam APP
+
+ SONY IMX335 Sensor
+
+ 4K Ultra-HD 3840x2160P @30fps
+
+ 150° Ultra-wide A+ Viewing Angle
+
+ Loop Cycle and Split Recording Mode
+
+ Emergency Video Lock Button
+
+ Supports up to 512GB microSD Card (Class 10, U3 Speed Only-Not Included)
+ We recommend ROVE Ultimate microSD Cards
+
+ Time, Date, Driver ID, Driving Speed, GPS stamp support
+
+ Supercapacitor
+
+ Video Rotate
+
+ Auto Power OFF
+
+ 6
+ USER AGREEMENT
+By purchasing the ROVE Dash cam, it is assumed that by default
+you agree with precautions, user warnings, and all the terms &
+conditions of warranty. If for any reason you do not agree with
+any of the terms mentioned in this manual, then you may return
+the product in its original packaging unused within its return
+window for a full refund.
+ PRECAUTIONS
+Please read this manual very carefully before using the camera or
+installation and keep it safe for future reference. It will be helpful
+if you have any questions or encounter any operational problems.
+ WARNINGS
+ Failure to comply with safety warnings and regulations can
+ result in serious injury or death.
+Please read and understand all instructions before using this
+product. If any damage is caused by failure to follow the
+instructions, the warranty will be voided.
+ Do not expose this product to rain, moisture, or water under any
+ circumstances or it will result in external or internal damage.
+ Do not put the unit in a damp environment. This device is not
+ designed to be damp-proof.
+ Do not try to open the cover or try to repair it yourself. If the
+ accessories for this device have any problem, please contact
+ the seller for assistance.
+ Don’t install it where it will block the driver’s view of the road
+ including mirrors or the deployment of airbags.
+ Do not place the camera loose on top of the dashboard or in
+ front of the airbags.
+ Do not mount the camera where it can be a distraction if it
+
+7
+ USER MANUAL
+became loose and falls off the windshield while driving.
+Do not expose this device to excessive heat, fire, or dust or use
+any chemical substance or cleaning solvent to clean this
+device. Instead use soft moist cloth for cleaning.
+Pay careful attention when cleaning the lens surface. Use a
+soft, moist cloth to clean the lens to avoid scratches that may
+compromise video quality.
+Do not operate or install the camera while driving, or attempt
+to change any settings, etc. Pull off the road first and only do
+so when it is safe.
+Do not drop, puncture, or disassemble this product.
+Do not use the charger if the cord is broken or damaged. Keep
+out of reach of children.
+This is NOT a toy. Keep away from children.
+For indoor use ONLY. This camera is intended to use inside a
+motor vehicle.
+Memory Card: Before inserting the external memory card,
+make sure to inspect for physical damage or cracks. Do NOT
+use a memory card that shows the sign of physical damage or
+cracks, as it can short-circuit the memory card.
+
+Some countries or USA states prohibit drivers from mounting
+anything on a windshield or prohibit mounting on certain areas of the
+windshield. It is the owner/operator’s responsibility to mount or use of
+this device in incompliance with local laws.
+The company is NOT responsible for the loss of any data or your
+content during operation or in any circumstance.
+
+ 8
+Getting Started
+ OUT OF THE BOX INSTRUCTIONS
+Please read and understand warnings & safety instructions
+before operating.
+ 1 Make sure to always keep the camera plugged into the power
+ during its operation as ROVE R2-4K uses Supercapacitor (NOT
+ an internal battery). You can plug the camera into your home’s
+ 110V outlet during set up. For the power, you can use your
+ cellphone’s USB charger and included USB Type-C Cable.
+ Just make sure that the USB charger has a 5V, 1.5 AMP
+ power output (Max 3.1 AMP), otherwise, the camera will not
+ work properly.
+2 You will need to insert a memory card before you can start
+ recording. Please insert only a brand name Class-10, U3, or
+ higher speed microSD card up to 512 GB max for reliable
+ operation. (Memory card is NOT included in the packaging)
+ (We recommend ROVE Ultimate microSD Card up to 512 GB MAX.)
+3 Before first time use, you MUST format the memory card in
+ the camera to prevent any errors and for smooth operation.
+ (See Page 30)
+
+9
+ USER MANUAL
+4 ROVE R2-4K Car dash cam is programmed to turn ON and
+ START RECORDING automatically when it receives power,
+ and STOPS RECORDING, save the last video file, and turns
+ OFF automatically when power gets disconnected within 1-2
+ seconds. (i.e., when you start /turn off your car)
+5 Setting Date & Time: Please set the correct date and time
+ Based on your location under the TIME ZONE SETTING by
+ going to the camera’s system settings menu.(See page 31 for details)
+6 How to hide the power cable inside your car’s dashboard?
+ Many people on YouTube already demonstrated
+ how and where to hide the power cable inside
+ your car. You can view one of the possible ways
+ on the link, this video is NOT recorded by us.
+ https://youtu.be/xwD8Ilk-MHU
+ Scan to visit the link
+7 How to transfer videos to PC/MAC?
+ Insert memory cards directly into your PC/MAC to view or
+ download them.
+ You can also connect your camera to your PC/MAC with the
+ included short Type-C USB data cable. Then Select Connect as
+ a Flash Drive.
+ We recommend VLC Media Player to view your videos. You can
+ get it free at www.videolan.org
+ NOTE
+Do NOT use Windows Media Player or QuickTime Player (Mac). They are
+NOT made to play 4K videos hence, your video playback will lag.
+
+8 Wi-Fi: You can also connect ROVE R2-4K Car Dashcam to
+ your smartphone directly by using the built-in Wi-Fi feature.
+ (See Page 32)
+
+ 10
+CAMERA SPECIFICATIONS
+ Image Sensor SONY IMX335
+ Screen 2.4 Inch IPS
+ Lens 150° A+ Ultra HD Wide Angle
+ Video Resolution 4K 3840x2160 @30FPS
+ 2K 2560x1440 @30FPS
+ 1080P 1920x1080 @60FPS
+ 1080P 1920x1080 @30FPS
+ Photo Resolution VGA, 2MHD, 3M, 4M, 5M, 8M, 10M, 12M
+ Lens Aperture F 1.5
+ GPS Built-in GPS Geo-Tagging Support
+ WiFi Built-in WiFi6 at 2.4GHz
+ Photo / Video Format JPEG / MP4
+ AV Interface / TV Mode AV Out / NTSC- PAL
+ Memory Card TF Card Class 10, U3 Speed
+ (Max Support 512 GB, NOT Included)
+ G-Sensor Built-in 3-Axis Impact Accelerometer Gravitational
+ Sensor to lock & protect current video.
+ Anti Flicker 60 Hz, 50 Hz
+ Color Color / B&W / Sepia
+ Video Rotate 180 degree video rotate support
+ Loop Recording Support – seamless recording
+ Motion Detection Support
+ 24hr Auto Trigger
+ Support (ROVE Ultimate Type-C Hardwirekit Required, NOT Included)
+ Parking Mode
+ Year/Month/Day/Hour/
+ Support
+ Minute/Second
+ Mic / Speaker Built-in Micro Phone & Speaker
+
+11
+ USER MANUAL
+
+Type-C USB Function 1. Storage, 2. Charging, 3. Webcam
+Auto Power ON/OFF Support
+Power Interface 5V, 1.5A
+Battery / Supercapacitor Supercapacitor
+Temperature Guideline Operating Temperature: -4°F (-20°C) ~ 140°F (60°C)
+ Working Humidity: 15 – 60%RH
+ Storage Temperature: -22°F (-30°C) ~ 158°F (70°C)
+
+FIRMWARE UPDATE
+Firmware updates for R2-4K are provided over the air/remotely
+using the ROVE Dash Cam APP.
+
+To check/Update Firmware:
+1 Please connect your R2-4K to the ROVE Dash Cam APP using
+ the WiFi Feature. (See Page 33)
+2 Click “Firmware Update” from the left navigation menu
+ while staying connected to R2-4K using WiFi Feature.
+3 Please follow on-screen directions to complete firmware
+ updates.
+
+ NOTE
+Please reach out to customer care if you are having trouble installing
+firmware using the ROVE APP.
+
+ 12
+ PACKAGE CONTENTS
+
+ Electrostatic Film
+ 3600 Rotational Suction Mount 3600 Rotational 3M Sticky Mount For 3M Sticky Mount
+
+ 5X Cable Hiding Clip, 2x Wet
+ 12FT Type-C Car Charging Cable 2.5FT Type-C USB Data Cable
+ Cleaning Pads & Car Wire Trim Tool
+
+ ROVE Dual USB Car Charger Quick Start Guide User Manual
+ PLEASE NOTE: Memory Card Is NOT Included. We Recommend ROVE Ultimate Class 10, U3 Speed microSD Card, UP to 512GB
+
+13
+ USER MANUAL
+
+UNIT STRUCTURE APPEARANCE & BUTTONS
+
+ 4 Reset
+ Built-In GPS 1
+ Serial Number
+ Windshield 2 5
+ Label
+ Mount Latch
+ TV Out 3
+ 6 MIC
+
+ LED Status Indicator 7
+
+ 2.4” IPS Display 8
+
+ Menu/Mode Button 9 11 Rec. On/Oﬀ, OK or
+ Confirm Button
+ Down or LCD
+ UP or Mute on/oﬀ Button 10 12
+ on/oﬀ Button
+ 13
+
+ Emergency Lock or
+ WiFi on/oﬀ Button
+
+TYPE-C USB Power Input / 14
+ Data output slot
+ 15 microSD Card Slot
+
+ 16
+ Power On/Oﬀ or
+ Photo Button
+
+ 18 LENS
+ Speaker 17
+
+ 14
+ SHORTCUTS & UNDERSTANDING BUTTONS
+ BUTTON IMAGE BUTTON NAME SHORTCUTS / FUNCTIONS
+
+ To Turn ON The Camera: Press power button once.
+ POWER
+ To Turn OFF The Camera: Long press power button for 3-seconds.
+ BUTTON
+ Press once while video is being recorded to take a quick snap shot.
+
+ Press Once - to enter/exit menu settings
+ MENU / MODE
+ LONG PRESS for 2-Seconds - to Switch Modes
+
+ Press Once - to Mute/UN-Mute Microphone while in Video Mode
+
+ Press Once - to Scroll UP while in Any Menu Settings
+ UP
+ Press Once - to Scroll to Previous Video Files while in Play Mode
+
+ Press Once - to Reverse Playback while video is being played in Play Mode
+
+ Press Once - to Lock the Current Loop Cycle Video File while Video is
+ EMERGENCY being recorded
+ LOCK
+ LONG PRESS for 2-Seconds - to Turn ON/OFF WiFi
+
+ Press Once - to Turn OFF/ON LCD while in Video Mode
+
+ Press Once - to Scroll DOWN while in Any Menu Settings
+ DOWN
+ Press Once - to Scroll to Next Video Files while in Play Mode
+
+ Press Once - to Fast Forward while video is being played in Play Mode
+
+ Press Once - to Start/Stop Video Recording
+
+ Press Once - to Take Snap-Shot while in Photo Mode
+ OK / CONFIRM
+ Press Once - to Play/Pause Current Video while in Play Mode
+
+ Press Once - to Enter / Confirm Specific Settings while in Menu Settings.
+
+15
+ USER MANUAL
+
+INSTALLATION
+The camera comes with the default settings which allows you to
+start using your camera right out of the box without changing any
+settings. Make sure to format the memory card before first-time use.
+1 Installation Position: Most people will install their R2-4K next
+ to the rear view mirror and opposite side of the driver. First,
+ Stop the engine where there is some light and in a safe place,
+ and then remove the key.
+
+2 Make sure to clean your windshield from dust particles and
+ evaporated grease from the dashboard surface.
+3 Attach the ROVE R2-4K with the suction mount. Set the camera
+ lens to point forward to the center when installing it.
+ NOTE
+ Make sure that the camera’s view is not obstructed by any window tint or
+ any other objects.
+
+ WARNING:
+ If your vehicle has side curtain airbags please be very careful when running
+ any cables along your vehicle windows. Ensure that you are not running a
+ cable past any of the airbags as this can prevent the airbags from deploying.
+
+ 16
+ 4 To Lock The Suction Mount: Press & hold it tight towards the
+ windshield to remove any air between the suction mount and the
+ windshield. While pressing & holding towards the windshield,
+ turn the LOCKING Knob towards CLOCKWISE to LOCK in place.
+
+ AVOID THIS
+ DOT-MATRIX
+ PATTERN, as suction
+ mount will NOT be
+ able to get a strong
+ suction, hence it will
+ fall down if you mount
+ on top of it.
+
+ Press the suction mount against the windshield and
+ while pressing, turn the LOCKING Knob towards
+ the LOCK position to lock the mount in place.
+ 5 Use the power cord to connect the USB Port of the product to
+ the car's cigarette lighter socket.
+
+ CAUTION:
+ Only use ROVE’s USB Car Charger, otherwise the camera may
+ frequently reboot or flicker LCD due to insufficient power.
+
+ 6 Hide the cable inside the trim and use the included cable clips
+ for additional support to organize the cable if needed so it
+ does not interfere with the driver’s vision.
+
+17
+ USER MANUAL
+7 Adjust the lens angle of the camera.
+
+ Loosen the screw
+ to adjust the
+ camera’s view/tilt
+ angle and then tighten Simply rotate the
+ it to lock that angle. camera 360o to
+ record any direction
+ you prefer.
+
+8 Start the engine and check if the product works properly.
+
+ CAUTION:
+ Make sure to remove the Plastic Lens Screen Protector from the lens before
+ recording videos. Otherwise, your videos will look blurry and blocked.
+ Do not remove the microSD card while the camera is turned ON.
+ Otherwise, it may cause the memory card to be write protected and
+ possible loss of data or damage your memory card. Remove/Insert the
+ memory card only when the camera is turned OFF.
+
+ NOTE
+After a test drive, check and make sure that all the videos are recorded correctly.
+
+ 18
+ 12FT USB-C Charging Cable
+
+ Car Cigarette Car Cigarette ROVE R2-4K
+ Lighter Socket Lighter Plug Dash Cam
+
+ Wiring at a glance
+
+ Charging
+Only use the supplied charger to power and charge the ROVE
+R2-4K dash cam.
+ NOTE
+ You can use your iPhone or Android Phone’s USB Charger, and plug into
+ your home’s 110V wall outlet to power/charge the camera while in your
+ home. Just make sure it is NOT a super heavy-duty charger over 3.1 AMP.
+ Otherwise, it can damage the camera.
+
+ 1 The car charger connects to the car cigarette lighter socket.
+ 2 The device will start up automatically and record as soon as
+ power is supplied, and the device will save the last video file
+ and power off automatically after cutting the power supply.
+
+19
+ USER MANUAL
+
+TURNING YOUR CAMERA ON/OFF
+AUTO POWER ON/OFF
+ Auto Power ON: ROVE R2-4K Dash Cam is designed to turn
+ ON and start recording automatically when it receives power.
+ i.e. when the car engine is started.
+ Auto Power OFF: The camera is also pre-configured to turn itself
+ OFF automatically within a few seconds when the power gets
+ disconnected, i.e. when the car key is turned to LOCK position.
+ CAUTION:
+ Some trucks/car’s 12V cigarette outlet is always HOT, which means it
+ provides constant power even when the car is turned OFF and LOCKED.
+ If this is the case for your vehicle, then the auto ON/OFF feature will not
+ work. And If you leave the camera continuously recording when the car
+ is turned off, then it will drain your car/truck’s battery and you might
+ not have enough power to start your car for next time. To Remedy this
+ situation, you can do one of the two options.
+ Hardwire your dash cam to your car’s fuse box with ROVE’S 3-Lead
+ Auto Trigger Hardwire Kit.
+ Visit www.rovedashcam.com to purchase one separately.
+ Change the connection in the fuse box for your 12V outlet to the socket which
+ only supplies power when the car key is turned to ACC or ON position.
+ (See this example-only video: https://youtu.be/F5VL-pUClnc)
+
+MANUAL POWER ON/OFF
+ To manually turn ON: Press the power button once.
+ To manually turn OFF: Press and hold the power button for at
+ least 2-3 seconds
+ NOTE
+ Be sure to insert the Memory card before powering up the device. Do NOT
+ insert/remove the memory card while the camera is turned ON. Only do so
+ when it is turned OFF.
+
+ 20
+ ABOUT SUPERCAPACITOR
+ Important Info
+First, understand that all dash cams, regardless of which brand
+the user uses, they either have very small Li-ion batteries or
+built-in Supercapacitor (i.e., ROVE R1, R2-4K PRO, R3) to save
+that last video file safely before shutting off the dash cam, in case
+if the power gets disconnected due to accident and also during
+daily turning off your vehicle.
+Now, all dash cams must be plugged into the power at all times
+for continuous recording, regardless of which brand you will
+purchase.
+ROVE R2-4K uses a Supercapacitor instead of a small internal
+battery.
+
+ Main Benefit
+The main benefit of using a supercapacitor in a dash cam is that it
+drastically increases the product’s life span compared to internal
+battery dash cams, which are only good for as long as the internal
+battery lasts. You can’t even replace the internal batteries easily as
+they are built-in. Therefore super capacitor dash cams last for
+years and they do not pose a risk of fire compared to Li-ion battery
+dash cams.
+The secondary benefits of a supercapacitor dash cam are as follows:
+• Supercapacitor is more reliable because it is more heat resistant
+ compared to Li-ion batteries.
+• Supercapacitors don’t pose a risk of fire compared to Li-ion
+ batteries.
+
+21
+ USER MANUAL
+
+ How does Supercapacitor work?
+• A capacitor uses conductive plates with an insulating barrier
+ (dielectric) in between them. The dielectric stops the electrical
+ current entering the capacitor, and this builds up a charge
+ which is stored between the plates.
+• It charges faster than a battery. The amount of charge a capacitor
+ can hold depends upon its capacitance or the charge storage
+ capacity.
+• ROVE R2-4K’s Supercapacitor will hold the charge for about 2
+ seconds.
+
+ Why Supercapacitor?
+ROVE R2-4K dash cam uses a supercapacitor, making it a unique,
+reliable dash cam on power consumption and safety. Moreover, it
+is more resistant to heat, unlike batteries, and it extends the overall
+product life span of the camera.
+
+ 22
+ HOME SCREEN
+ GPS Recording Status
+ Time Lapse Video Loop Recording Timer
+ Video Mode (Resets every loop)
+ Video Resolution
+ Loop Recording Total Trip Time
+ Wide Dynamic Range (Resets at every restart)
+ Exposure Value Parking Mode Indicator
+ G-Sensor Microphone Indicator
+ Emergency Video Lock Memory Card Indicator
+ Current Time WiFi On/Off Indicator
+ Current Date Live Speed
+ Compass Direction
+
+ Menu Up Emergency Lock Down OK / Confirm
+
+ Home Screen Status Icons
+ ICONS WHAT DOES IT MEAN? ICONS WHAT DOES IT MEAN?
+
+ Video Mode Video Recording Started
+ Loop Recording ON +
+ Number Indicates your selection
+ 00:02:09 Loop Recording Timer
+
+ Photo Mode 4KP30 Current Video Resolution
+ 24HR Auto Trigger Parking Mode
+ Play Mode
+ ON - 3-Lead Hardwire Connected
+ Wide dynamic range (WDR) Parking Mode OFF
+
+ Exposure Value Microphone ON
+
+ G-Sensor Microphone OFF
+
+ Emergency Video Lock Memory Card Installed
+ 02:35:21 PM Memory Card NOT Installed
+ 01/01/2023
+ Current Time & Current Date Memory Card Is Defective
+
+ Time Lapse Video WiFi On/Off Indicator
+
+ Live Speed
+ GPS - looking for signal
+
+ GPS - Now has Signal Compass Direction
+
+23
+ USER MANUAL
+
+LED STATUS LIGHT INDICATOR
+
+BLINKING RED LED - Recording Video
+SOLID RED LED - Not Recording Video
+NO RED LED - Camera is Turned OFF
+
+ DIFFERENT SCENARIOS
+
+ When Camera Is Plugged Into The POWER
+
+ Solid Camera Idle
+
+ Blinking Camera Recording Video
+
+ 24
+ WHICH MEMORY CARD SHOULD I GET?
+ ANSWER: We strongly
+ recommend ROVE Ultimate
+ microSD Cards. At ROVE,
+ We have higher standards,
+ 1-Year Hassle Free Warranty
+ and we have specifically
+ designed our memory cards
+ to work with our dash cams.
+ In order to save time, money,
+ and hassle in the long run,
+ we simply recommend our ROVE Ultimate microSDXC Cards.
+ See a few details below to understand why?
+
+ FAQ ABOUT MEMORY CARDS:
+ WHY SHOULD I GET
+ 1
+ ROVE ULTIMATE MEMORY CARD?
+ ANSWER:
+ Memory card is an important part of your dash cam setup. The
+ most important piece of evidence is collected in your memory
+ card which is the video evidence.
+ - Over the years of experience, we have recommended various
+ memory cards to our customers, because we thought a memory
+ card is a memory card, how bad it can be, especially from big
+ brand names. However, based on our experience since 2015, we
+ have learned that there are too many different types of memory
+ cards there in the market. Some are cheap, some are
+
+25
+ USER MANUAL
+
+expensive, some are fast, some are slow, some are good and some
+are bad, some will last for long and some will last short duration.
+There are too many factors to consider when it comes to memory
+cards, sizes, types, and their quality and reliability.
+- Every now and then a customer will reach out to us stating their
+dash cam didn’t record the video of an event that they were
+involved in. This happens when the memory card has failed too
+soon and they didn’t check. What’s the point of having a good
+dash cam but a cheap memory card will fail you? Then the whole
+point of investing in a peace of mind dash cam is simply to fail.
+That is why, to save time, money, and hassle in the long run, we
+strongly recommend you to invest in a ROVE Ultimate microSD
+Card.
+ SHOULD I ONLY GET THE
+ 2
+ ROVE ULTIMATE MEMORY CARDS?
+ ANSWER:
+NO, you can get any brand memory card as long as it is class 10,
+U3 speed. We absolutely do NOT recommend Samsung or
+SanDisk memory cards, based on our experience over the years
+helping our customers with troubleshooting issues.
+However, one thing to note is that if you get another brand card,
+we can't say anything about its quality and how long it will last.
+Generally, your return window closes within 30 days of purchase.
+So, for example, if your other branded memory card becomes bad
+after three months, etc., then you have to take the warranty with
+them, and we can't promise how they will help with the
+replacement process. Therefore, with that said, to save time,
+money, and hassle on going back and forth fighting with which
+card to get, we simply now recommend our ROVE Ultimate
+
+ 26
+ microSD Card. At ROVE, we have higher standards. Because in
+ the long run, we all want the camera and memory card to just
+ work without any issues because we need peace of mind, and we
+ have better things to do in life than fight to find a simple memory
+ card.
+
+ WHAT COULD HAPPEN IF I USE
+ 3
+ THIRD PARTY MEMORY CARD?
+ ANSWER:
+ Most likely it will work just fine. However here are the lessons
+ learned over the years from helping our customers.
+ - You might get missing videos after some months of usage of
+ other brand memory cards. Why?
+ - Because after a certain write cycle, depending on the type of
+ flash memory being used inside, the data cell may become bad
+ sectors. When that happens, the dash cam might freeze up or may
+ have missing videos. Which is something we don’t want. Your
+ dash cam may also give you an error related to your memory card
+ stating the memory card speed is too slow or defective memory
+ card etc.
+ We hope this was helpful and informative in choosing the right
+ memory card. Please feel free to reach out to us if you have any
+ questions or concerns.
+
+27
+ USER MANUAL
+
+INSERTING / REMOVING A microSD CARD
+ Must use only Brand Name, Class-10, U3, or higher speed
+ microSD Card. Max supports 512GB.
+ We Recommend ROVE Ultimate Class 10, U3 Speed microSD
+ Card. You can purchase it from Amazon here:
+ Search for “ROVE Ultimate microSD Card”
+ Or
+ Visit: www.amazon.com/dp/B0BGW1N9TD
+
+1 TO INSTALL
+ Make sure the camera is turned OFF First. Then align the
+ GOLD CONTACTS facing towards the front of the camera
+ (Lens Side). Then insert the memory card halfway in. Then
+ use the fingernail or a paper clip to push the card all the way
+ inward until it clicks and locks in place.
+
+ CAUTION:
+ Do not insert/remove the microSD card while the camera is turned ON. Otherwise it
+ may cause memory card to be write protected and possible loss of data or damage
+ your memory card. Always remove/insert memory card while camera is turned OFF.
+
+ 28
+ 2 TO REMOVE
+ To remove the microSD card, gently push its edge inward until
+ it clicks, and once it pops out, simply pull it out of the slot.
+
+ NOTE
+ If you experience camera FREEZING or LAGGING or STOPS Recording after few seconds.
+ Then It is the issue of the MEMORY CARD. (NOT THE CAMERA ISSUE) - Please Contact US.
+ ROVE R2-4K Dash Camera is High Bit-Rate 4K Video recording device. Which requires
+ High Speed Rating SPECIFIC microSD Cards.
+ Absolutely do NOT buy Sandisk or Samsung Cards. Do NOT Purchase it from third party
+ seller on eBay or any online place. Otherwise they may be a fake cards and will NOT work.
+
+29
+ USER MANUAL
+
+FORMATTING MEMORY CARD
+1 Press OK to STOP video recording first or to clear the error
+ message. If you have any on the screen.
+2
+ Please press the button once to enter the video settings.
+3 Press the M button again to switch to the System Settings.
+
+ Format
+
+ Default Setting
+
+ Firmware Version
+
+4 Then press theDO button to scroll down until you see
+ FORMAT >> Then press the O button to enter format
+ submenu. >> then pressDO button to highlight the FORMAT
+ >> Then press the O button to confirm to format the memory
+ card (The formatting process will be super quick. Now press
+ the M button to exit the settings).
+
+ Press OK button
+ to make sure your
+ Memory card is
+ formatted.
+
+ NOTE
+ We recommend that you format the memory card every 3 months to
+ keep it clean for smooth operation.
+ Please note that memory cards have their self life span, after so many
+ uses of writing data over and over, eventually they will become
+ inoperable. When that happens, please replace your memory card.
+
+ 30
+ TIME-ZONE SETTING:
+To set the date & time, choose one of the following options below:
+ 1 You can choose the date and time of your choice manually, go
+ to System Settings > Date/Time and select the date and time
+ of your choice.
+ OR
+ 2 You can also set the GMT/UTC time-zone value instead, so the
+ camera will set the date and time based on the GMT/UTC value
+ selection when it receives the GPS signal lock automatically.
+
+ USA Time Zones - GMT (Greenwich Mean Time) Values
+
+ When DayLight Savings When DayLight Savings
+ Time Zones
+ Ends Nov - March Begins March - Nov
+
+ Hawaii GMT (-10:00)
+ Alaska GMT (-9:00) GMT (-8:00)
+ Pacific Time Zone GMT (-8:00) GMT (-7:00)
+ Mountain Time Zone GMT (-7:00) GMT (-6:00)
+ Central Time Zone GMT (-6:00) GMT (-5:00)
+ Eastern Time Zone GMT (-5:00) GMT (-4:00)
+
+ Go to https://greenwichmeantime.com/time-zone/abbreviations/
+ to find out your Correct GMT (Greenwich Mean Time) value
+ based on your location outside of the USA
+ NOTE
+
+ The Time zone setting will not change time automatically when driving
+ through diﬀerent time zones. It will only set the accurate date and time
+ based on the selected GMT timezone.
+
+31
+ USER MANUAL
+
+USING WiFi FEATURE
+
+What is a WiFi Feature?
+The WiFi feature has been designed so you can pair your dash
+camera wirelessly with your smartphone and access your
+recording instantly from the dash cam. Here you can view,
+download and share your videos easily with your friends and
+family. Just like how you would connect your Bluetooth speaker
+to your smartphone for wireless music play, the same way dash
+cameras use a WiFi signal (instead of Bluetooth) to pair your
+smartphone with ROVE R2-4K.
+
+What is the WiFi Range?
+The WiFi signal range is about 10M when there are NO
+obstructions in the middle. Please NOTE that just like your home
+WiFi network, you can't have a WiFi signal outside your home, in
+the same way, the WiFi range is 10M from this small device.
+
+Can I watch the videos or surveillance around my car remotely?
+NO. ROVE R2-4K dash cam is NOT made to broadcast footage
+over the cloud or internet. It is NOT a cloud or an IP camera and
+it is NOT meant to do that. You can get live video and footage on
+ROVE R2-4K’s APP as long as you stay within the 10M range
+from the dash cam.
+
+ 32
+ Pairing your R2-4K with your Smart Phone using WiFi
+
+ STEP 1: Search & Install the ROVE APP
+
+ Download on the ANDROID APP ON
+
+ 1 Search for “ROVE” in App Store or
+ Google Play Store to find the App and then
+ download and install it on your phone.
+ NOTE
+ ROVE R2-4K's WiFi Connection paring does NOT broadcast the internet.
+ The WiFi Connection to ROVE R2-4K is meant to transfer the data between
+ your phone and the ROVE R2-4K dash cam.
+
+ Scan this QR Code
+
+ download the
+ ROVE Dash Cam APP.
+
+33
+ USER MANUAL
+
+ STEP 2: Sign Up (For First Time Users Only), Skip this step
+ if you already have an account.
+ IMPORTANT:
+ Do NOT Connect your iOS/Android device to ROVE R2-4K's WiFi yet.
+
+ 1 2 3 4
+
+ 2
+
+First
+Time
+Users 5
+
+FIRST-TIME USERS:
+You will need to register and create a free account using ROVE
+APP, so you can keep your videos and data secure on your
+device. (To register - you will need internet access, so make sure
+to stay connected to the internet using your home wifi or cellular
+data while registering for the first time) - You will only need to do
+this once. You should stay logged in to your ROVE account
+mostly unless you get logged out.
+
+If you ever need to sign back into your ROVE account again, then
+you will need to be connected to the internet first, then login to
+your account before pairing with ROVE R2-4K’s WiFi.
+
+ 34
+ STEP 3: Turn the WiFi ON from the R2-4K's Settings
+
+ WiFi
+
+ Format
+
+ Date / Time
+
+ 1
+
+ 1 TURN ON WIFI FROM THE CAMERA: Long press the
+ Emergency LOCK BUTTON for 2 seconds or go to the camera's
+ SYSTEM SETTINGS to turn ON the WiFi feature.
+ 2 Now open the ROVE app on your smartphone, and click on the
+ "Connect to ROVE Dash Cam WiFi" button.”
+ This will open up your smartphone’s WIFI setting now; look for
+ a WiFi network named “ROVE_R2-4K_*******”on the lists.
+ 3 Join the “ROVE_R2-4K_*******” network using a default
+ password displayed on your dash camera’s screen. (Default
+ Password: 12345678)
+ 4 Once your smartphone is connected to the ROVE Dash Cam
+ WiFi, go back to the ROVE APP and choose your dash cam
+ model, then click proceed to be connected. You should see the
+ live video feed from the camera on the main home screen of the
+ ROVE APP.
+ Now you are all set to access your recording from the ROVE app
+ and explore it further.
+
+35
+ USER MANUAL
+
+For Android phones:
+There is one extra step you will have to take for the first time. Once you connect to ROVE
+R2-4K WiFi, it will say “No Internet”. Which is fine. Wait about 10-15 seconds until you see the
+below pop up or notification. You just have to tap on the pop up notification that will show up
+in few seconds to select that you still want to stay connected even though there is NO
+Internet. Once you select this OK, you are set to go. Please contact us if you need any help.
+
+ If this pop up
+ show up, make
+ sure you select
+ “Don’t ask again”
+ and then select
+ OR “YES”
+ If this pop up
+ show up, make 1
+ sure to select 2
+ “Always Connect”
+
+For iPhone:
+
+ For iPhone, it will display or show "No Internet Connection", which is normal
+ and you can ignore this message. As ROVE R2-4K does NOT provide the
+ internet, so the iPhone will show this message. You are only making a
+ connection between your iPhone and ROVE R2-4K using the WiFi. Once you
+ see this o Blue Check Mark, you are connected to the ROVE R2-4K'S WiFi. You
+ can simply proceed to open the ROVE Dash Cam APP at this point.
+
+ 36
+ UNDERSTANDING 3 – CAMERA MODES
+ ROVE R2-4K has 3 different camera modes:
+ 1. VIDEO MODE 2. PHOTO MODE 3. PLAYBACK MODE
+
+ TO SWITCH MODE:
+ Press & Hold “M button for 2-seconds.
+ • Each Mode has their own separated Menu settings.
+ NOTE
+ • System Settings are common between all three Modes.
+
+ 1. VIDEO MODE:
+ Video mode lets you record live videos and
+ store them on the installed microSD card.
+
+ While in the Video Mode:
+• Press OKbutton to Start/Stop video recording manually.
+• Press Pw button Once to take a snapshot.
+• Press DO button to Turn Off/On LCD. (Camera still stays ON
+ if you use this button - Red LED indicates camera is still ON)
+• Press MEbutton to enter Video Setting.
+• Press ” while video is being recorded to manually lock the
+ video, so it will not get deleted by loop cycle function.
+• Press & Hold “ ” to turn ON/OFF WiFi.
+
+37
+ USER MANUAL
+
+ 2. PHOTO MODE:
+Photo mode lets you take a snapshot.
+
+ While in the Photo Mode:
+• Press O button to take a snapshot
+• Press MEbutton to enter Photo Mode’s Menu Settings
+
+• Press & Hold “ ” to turn ON/OFF WiFi
+
+• Press & Hold button to switch to the Playback Mode
+
+ 3. PLAYBACK MODE:
+Playback mode lets you play your Video
+file or photos. It can even let you delete
+or lock any videos while viewing it.
+While in the Playback Mode:
+•Press 0K button to Play/Pause Video.
+• Press 0K button to scroll to Previous ( < ) video file.
+• Press 0K button to scroll to Next ( > ) video file.
+• While Video is being played, press 0K button to FF Video
+ playback up to 8x.
+• While Video is being played, Press U button to REVERSE FF
+ Video playback up to -8x.
+• Press Me button to enter Playback Setting Menu.
+• Press & Hold " " to turn ON/OFF WiFi.
+
+ 38
+ Playback Your Recorded Videos
+
+ There are 3 different ways you can access your videos.
+ A. Directly On The CAMERA by switching to the PLAYBACK MODE
+
+ 1
+
+ You can do this by pressing and
+ holding the M button for two
+ seconds so it will switch from
+ Video mode to Photo mode.
+
+ 2
+
+ Then Press and hold the M’
+ button again to switch from
+ Photo mode to Playback mode
+
+ 3
+
+ 2023_0202_185411_0450
+ 00:00:05
+ Use the on-screen navigation
+ button and use the upd/wn
+ button to scroll your videos.
+ X1
+ Press OK to play video. Press
+ -- to go back to video list.
+
+39
+ USER MANUAL
+
+ B. On PC/MAC
+To play on your PC/Mac, simply connect the camera using
+included short USB Type-C Data cable and choose the Connect as
+USB Flash Drive on the camera when this message pops up.
+
+ Connect to PC/MAC
+
+ Connect as USB Flash Drive
+
+ Connect as PC/MAC Webcam
+
+ Operate Camera Normally
+
+ OK
+
+Or,
+You can simply remove the memory card from the camera and
+insert it directly into your PC if you have a memory slot.
+
+ OR SD Card
+ Adaptor
+
+Then find the added memory card drive on your computer and
+then simply double-click on the video to play them.
+
+ 40
+Then simply go to MY PC or Folder, then look for the added flash
+drive. You should be able to see drive "D" or "E" or another name
+depending on the pre-installed hard drives.
+Once you find the added flash drive, double-click on it, then you will
+see the R2-4K folder where you will find your unlocked videos.
+You will also see a folder named "EVENT" which means read-only,
+where you will see your locked videos.
+
+ A PC
+
+ B MAC
+
+41
+ USER MANUAL
+
+Correct Video Player To Play 4K VIDEOS:
+We recommend VLC Media player. You can get it free at
+www.videolan.org .
+
+You can also use our GPS Player from our website for free to view
+the google maps from www.rovedashcam.com
+
+ 42
+ C. On Smart Phone
+ To play on Smart Phone, simply turn on WiFi first from the
+ camera, then connect the ROVE R2-4K WiFi by entering the defalt
+ password “1 2 3 4 5 6 7 8 ”
+
+ Once connected, simply open the correct ROVE APP for your
+ model. Please note that the ROVE R2-4K model uses “ROVE
+ Dash Cam” App only. So make sure you are using the correct
+ App And make sure to select the correct model from the left
+ navigation menu within the APP.
+ (For more step-by-step instructions about the WiFi features see
+ page 32 for details)
+
+43
+ USER MANUAL
+
+VIDEO SETTINGS
+
+SYSTEM SETTINGS
+
+ 44
+ UNDERSTANDING CAMERA SETTINGS
+ Short press Me Key to enter the setting interface after power on.
+ In this case, the video recording will be stopped and you get the
+ Settings Menu.
+ Attention: To EXIT the Settings Menu, Press the M button to go back.
+
+ VIDEO SETTINGS
+ VIDEO RESOLUTION
+ You can choose the video resolution you like. Higher resolution
+ videos will take more storage space.
+
+ 4K 3840x2160P @ 30fps 1920x1080P @ 60fps
+
+ 2K 2560x1440P @ 30fps 1920x1080P @ 30fps
+
+ Below are the estimation on how much time is stored on the
+ memory card in the loop feature:
+
+ Resolution 32GB 64GB 128GB 256GB 512GB
+ 2160p @ 30fps 5 hrs 24 hrs 48 hrs
+ 3hrs 57 mins 12 hrs 25 mins 49 mins
+ (Default)
+
+ 4 hrs 8 hrs 17 hrs 35 hrs 69 hrs
+ 1080p @ 60fps 20 mins 30 mins 44 mins
+
+ This is approximate but close, give or take a few mins depending
+ on the memory card. The lower the resolution, the more it will
+ hold, and the higher the resolution, the less it will hold.
+
+45
+ USER MANUAL
+
+ LOOP RECORDING
+This feature allows the camera to continuously record loop by
+loop so it can delete the oldest video files automatically when the
+memory card becomes full so you don’t have to manually delete
+them. This feature will split each video file to an appropriate
+length based on your selection.
+ OFF- 4GB MAX 1-MIN (Default), 3-MIN, 5-MIN, 10-MIN
+OFF: When you choose off, the camera will continue to record each
+file 4GB in size until the memory card becomes full and then it will
+give you a “Card Full” message. It will NOT record any further until
+you either delete files to make room or format the memory card.
+ IMPORTANT:
+ The logic for the loop recording feature is designed as follows:
+ Let’s say the total capacity of the memory card is 100%. When the normal
+ + event videos reach > 90%, the dash cam will start the loop recording.
+ The pre-allocation of directory space for normal and event videos is as
+ follows:
+ Normal Videos = 60%, Event Videos = 30%
+ If the number of event files is less than 30%, then the normal video files
+ can occupy the unused space of the event allocation until it reaches 90%,
+ and then the loop recording begins.
+ When more event (Locked) video files are present, the space of the event
+ directory is reserved for a maximum of 30%.
+ If the event video files reach their max allocation of 30%, then the camera
+ will also delete your oldest locked video to add that new latest event video.
+ Therefore it is important to understand that you can’t lock unlimited
+ videos to your memory card. If you lock any videos files that are important,
+ please note that even lock videos will be deleted similarly to the loop cycle
+ function with the oldest file first so if an event occurs and if your locked
+ video allocation is exhausted, to ensure proper room for a new locked
+ event video in case of a real event. We recommend that you download any
+ locked video ASAP to prevent it from being deleted.
+
+ 46
+ VIDEO RECORDING G-SENSOR
+ G-Sensor is a 3-axis impact gravitational accelerometer which is
+ designed to detect physical and gravitational forces on the camera.
+ While Video is Being Recorded: In the event when G-Sensor is
+ triggered due to physical or gravitational impact force on the
+ camera, the current loop cycle length of the video file will be
+ locked so it will NOT be deleted by the normal loop cycle function.
+ CAUTION:
+ In the event of an accident please make sure you retrieve your
+ footage before using your camera again to prevent the loss of
+ important video files due to the loop cycle function, in case the
+ force was minor and did NOT trigger the G-Sensor to lock the
+ video file automatically. It is a best practice and recommended
+ to you to retrieve all necessary video footage after any event of
+ an accident before using your camera to prevent the loss of
+ vital video files.
+
+ WDR
+ Wide Dynamic Range (WDR) improves the exposure by taking
+ the combinations of over-exposed and under-exposed images
+ into one robust wide range of lighting with higher depth images.
+ • ON (Default)
+ • OFF
+ EXPOSURE
+ This feature allows you to adjust the brightness of a captured image.
+ • 0.0 (Default)
+ • -2, -1.7, -1.3, -1.0, -0.7, -0.3, 0.0, +0.3, +0.7, +1.0, +1.3, +1.7, +2
+
+47
+ USER MANUAL
+
+ TIME LAPSE RECORD
+Time Lapse recording mode allows you to capture specific
+images per second at a much lower rate. So when you combine
+and play those images at the normal 30fps rate, everything seems
+to be moving faster in time-lapse.
+• OFF
+• 4 frame/second (Smoother)
+• 2 frame/second (Smooth)
+• 1 frame/second (Normal)
+ NOTE
+ Time-Lapse is OFF by default. It is also programmed to be set to ON, then it
+ will stay ON all the time even after the camera restarts. So all your videos
+ will be in time-lapse speed (Faster motion/movements)
+
+ VIDEO COMPRESSION
+H.265 HEVC = High-Efficiency Video Coding - This advanced
+compression algorithm improves video quality with a smaller
+file size compared to H.264.
+• H.264 (Default)
+• H.265
+
+ WARNING:
+ H.265 playback can be laggy and might NOT play smoothly if your PC/MAC
+ or other devices are NOT compatible with H.265. So if you don’t have
+ advanced new devices, then keep this setting at H.264 (Default).
+
+ 48
+ 24-HR AUTO PARKING MODE
+ ROVE has custom-designed its parking monitor for the best user
+ experience and automation. Please see the details below.
+
+ Triggers automatically when you turn
+ OFF your car. (Hardwiring Kit Required)
+
+ NOTE: 3-Lead Hardwiring Kit is Required to Use
+ This Feature. Purchase separately from,
+ “www.rovedashcam.com”
+
+ OFF
+
+ Time-Lapse 1fps & G-Sensor
+
+ Motion Detection & G-Sensor
+
+ Collision Detection Only
+
+ CAUTION:
+ Never connect the dash cam directly to your car’s 12/24V battery by
+ modifying wires. The dash cam is not designed to handle direct current
+ from the battery. It needs a step-down circuit in the middle (Hardwire Kit)
+ to adjust the current required by the dash cam. You must connect the dash
+ cam using the ROVE Ultimate USB Type-C Hardwire Kit and connect it to
+ the car’s fuse box (NOT to battery terminals directly).
+
+ NOTE:
+ The camera has a built-in temperature sensor. During sunny afternoons
+ and direct sunlight with a locked car, the temperature inside the car turns
+ into a greenhouse eﬀect, and depending on your geographical location
+ the temperature can exceed the recommended guidelines for this
+ product. When this happens, the camera will automatically shut down to
+ prevent damage to the unit to ensure longer product life.
+
+49
+ USER MANUAL
+
+ ROVE R2-4K & PARKING MODE
+ HOW DOES IT WORK?
+ ANSWER ROVE R2-4K has a built-in Parking Mode Feature,
+allowing you to record in the following two ways after parking
+your vehicle.
+ Before we go into details, please NOTE that
+ the ROVE Ultimate USB Type-C Hardwire Kit
+ is required for the parking mode to work.
+
+ WHY DO I NEED TO PURCHASE
+ AN ADDITIONAL HARDWIRE KIT?
+ ANSWER
+ 1 To utilize a 24-HR parking monitor, you need to provide
+ power to your dash cam while away from your car.
+ Hardwiring your dash cam to your car's fuse box is necessary
+ to give power to the dash cam. ROVE Ultimate USB Type-C
+ Hardwire Kit is NOT Included in the packaging. Purchase
+ separately.
+ 2 We understand that not all users prefer the hardwire kit for
+ their specific installation needs. By not including it in the
+ default packaging, it allows us to keep the cost down and
+ minimize electronic waste mitigating the environmental
+ impact associated with unnecessary accessories.
+ 3 The hardwire kit also monitors battery voltage, and it is
+ designed to cut off power to the dash cam when it detects
+ low voltage to preserve enough power in the car’s battery
+ for you to start your car next time.
+
+ 50
+ HOW DOES THE "TIME-LAPSE + G-SENSOR"
+ PARKING MODE WORK?
+ Time-Lapse 1fps & G-Sensor: (See how this feature works)
+ 1 When this feature is set to ON and ROVE Ultimate USB
+ Type-C Hardwire Kit is installed properly.
+ 2 Then, when you turn OFF the car’s engine and turn the key
+ to the lock position.
+ 3 Then the camera will STOP the continuous video recording
+ and it will go into the timelapse 1fps recording mode
+ automatically.
+ 4 Now while this timelapse is being recorded, If someone hits
+ your car and the impact reaches the set G-Sensor level, then
+ the camera will stop the timelapse video > then it will start to
+ record a 1-min continuous video, save & lock that video in the
+ EVENT folder > then return to recording the timelapse 1fps.
+ NOTE
+ (When the Parking Mode got activated, the camera will give you a voice
+ alert stating “Parking Mode got activated while you were away” when you
+ turn ON your car the next time. If you hear this, you should check the locked
+ videos to see what happened.)
+
+ 5 Now when you start your car for the next time, the camera
+ will automatically STOP the timelapse 1fps & G-Sensor
+ parking mode. Then it will go into normal video mode
+ automatically to start the continuous video recording.
+
+51
+ USER MANUAL
+
+ HOW DOES THE "COLLISION DETECTION ONLY"
+ PARKING MODE WORK?
+ ANSWER When you turn OFF your car's engine, and if the
+Hardwire Kit is installed properly > then the dash cam will -
+
+1 STOP the Continuous Recording from the normal video
+ mode.
+2 Then the R2-4K will turn OFF. However, it actively senses
+ any impact while the car is turned OFF.
+3 Now, if someone hits your car & if the impact reaches the set
+ "Parking Mode G-Sensor" level, then >> the dash cam will
+ turn ON and START RECORDING 1-min video. Then it will
+ LOCK & SAVE that video in the events folder and turn OFF.
+4 Then the dash cam will be actively sensing any impact until
+ someone hits your car again (which we hope you won't get hit
+ twice in one day - LOL) or until you start your car's engine.
+5 When you start your car's engine for the next time, the dash
+ cam will give you an alert stating that the "Parking Mode Got
+ Activated While You Were Away" (You will hear an audible
+ alert & also an on-screen pop-up).
+
+ 52
+ PARKING MODE GOT ACTIVATED!
+
+ The parking mode got activated
+ while you were away.
+ Check the LOCKED Video to see
+ what happened.
+
+ OK
+
+ 6 You will need to tap the OK button on the screen to
+ acknowledge that pop-up. Then you can check and see
+ what happened by going through the last event video.
+ 7 However, let's say No One hits your car, and if the "Parking
+ Mode G-Sensor" didn't get activated, you will NOT get any
+ parking mode alert. >> In this case, when you start your
+ car's engine for the next time, the dash cam will switch to
+ the normal continuous recording mode, and it will say
+ "recording started" and the Parking + Timelapse icons will
+ disappear. This means that now your dash cam is in normal
+ continuous recording mode, which is what you want.
+ 8 If you need to watch the activated parking mode videos,
+ you will find them under the Events folder.
+
+ NOTE:
+ The parking mode time-lapse videos will NOT be saved under the events
+ folder. You can find them under normal video folders.
+ While in parking mode, the GPS and WiFi are designed to turn oﬀ
+ automatically to save power while in the parking mode.
+
+53
+ USER MANUAL
+
+HOW DOES THE "MOTION DETECTION &
+G-SENSOR" PARKING MODE WORK?
+
+ Motion Detection & G-Sensor: (See how this feature works)
+1 When this feature is set to ON and ROVE Ultimate USB
+ Type-C Hardwire Kit is installed properly.
+2 Then, when you turn OFF the car’s engine and turn the key to
+ the lock position.
+3 Then the camera will STOP the continuous video recording
+ and it will go into the motion detection mode and the camera
+ will stay ON and idle, but LCD will be off after some seconds.
+4 Now the camera will only record video when it detects
+ motion in front of the FOV of the camera and then it will
+ record until there is no more motion is detected.
+5 Now while the camera stays in Motion Detection mode, If
+ someone hits your car and the impact reaches the set
+ G-Sensor level, then the camera will stop the motion
+ detection mode > then it will start to record 1-min continuous
+ video, save & lock that video in EVENT folder > then return
+ back to the motion detection mode.
+ NOTE
+(When the Parking Mode got activated, the camera will give you a voice
+alert stating “Parking Mode got activated while you were away” when you
+turn ON your car the next time. If you hear this, you should check the locked
+videos to see what happened.)
+6 Now when you start your car for the next time, the camera
+ will automatically STOP the motion detection & G-Sensor
+ parking mode, and it will go back into normal video mode
+ automatically to start the continuous video recording.
+
+ 54
+ WHAT LEVEL SHOULD I SET MY "PARKING
+ MODE G-SENSOR" SETTING AT?
+ ANSWER This depends on your various factors and your
+ personal preference. We will discuss a few most common
+ scenarios to educate yourself.
+
+ For the Parking Mode G-Sensor setting, you can select between 1
+ to 9 different Gravitational Sensor (G-Sensor) levels.
+ Where 1 = Lowest (Smallest) Impact Detection and 9 = Higher
+ (Larger) Impact Detection.
+
+ 1 = Triggers at Lower Impact
+ 2
+ 3
+ 4
+ 5 = Triggers at Medium Impact
+ 6
+ 7
+ 8
+ 9 = Triggers at Higher Impact
+
+55
+ USER MANUAL
+1 If you set your parking mode G-Sensor at 1, the dash cam
+ will be extremely sensitive. Even the lowest vibration, such
+ as hard tapping the LCD or Closing the Car's Door, will
+ activate the R2-4K dash cam.
+ You would want this if you want your dash cam activated
+ with the slightest hit to the car.
+ However, there are downsides to this. Your dash cam will
+ activate even when you close the car's door while exiting
+ your vehicle. This will give you false parking mode got
+ activated alerts. However, the positive side of this is that
+ your car/dash cam is sensitive to minor bumps/hits to
+ your car.
+2 If you set your parking mode G-sensor at just the right
+ setting, where it will NOT trigger the false alerts by closing
+ your car's door, you will NOT get false signals. Then when
+ you do get alerts, you know to check the last locked videos
+ to see what happened because you didn't anticipate the
+ false alerts.
+ However, the downside is that your dash cam is not extra
+ sensitive to more minor bumps/hits because you have set
+ your G-sensor to a higher level so that you may miss some
+ smaller bumps/hit events.
+ However, there is one more positive side; if you have used
+ time-lapse + collision detection, you should have your
+ parking mode time-lapse videos saved in normal folders.
+ So if you suspect someone might have hit your car or
+ something, then you can still always go look at the
+ time-lapse videos. We hoped this made sense and was
+ helpful.
+
+ 56
+ RECORD AUDIO
+ Rove r2-4k-- has a built-in microphone to record audio with
+ video. You can choose to record mute video by choosing OFF.
+ You can also press the UP button to mute/un-mute while the
+ video is being recorded.
+ • ON (Default)
+ • OFF
+ VIDEO STAMPS
+This stamps menu allows you to choose your choice of stamps for
+the bottom of the video. By default, they are all ON.
+• Date/Time Stamp
+• Speed Stamp
+• GPS Location Stamp
+• Logo Stamp
+ NOTE
+
+ 1. By turning OFF Speed stamps the camera will NOT attach the
+ speed-embedded data with the video. So when you play your video on
+ GPS Player, you will NOT see any speed associated with the video.
+ 2. By turning OFF GPS Location the camera will NOT attach the GPS
+ Coordinates or the Driving Route Location with the video. So when you
+ play your video on the GPS Player, you will NOT see any GPS tracker on
+ Google/Baidu maps.
+
+ SPEED UNIT
+ You can choose desired speed option stamp to be displayed and
+ recorded on video stamp based on your selection.
+ • KM/H
+ • MPH (Default)
+
+57
+ USER MANUAL
+
+ HIDE STATUS ICON
+This feature allows you to hide all icons on the LCD screen of the
+camera so you can have a full view of the image.
+ OFF (Default)
+ 1-minute
+ 3-minutes
+ 5-minutes
+ LIVE SPEED & COMPASS
+This feature allows you to see LIVE SPEED & COMPASS
+Direction on the HOME SCREEN.
+• Live Speed
+• Compass
+ NOTE
+ By turning oﬀ this feature, it does NOT turn OFF the Driving Speed or the
+ GPS metadata. To turn OFF speed stamps, see the " VIDEO STAMPS" menu.
+
+ ROTATE VIDEO
+This feature will allow you to flip your video 180° so you can still
+have the correct side of the image when the camera is mounted
+upside-down.
+ OFF (Default)
+ ON
+
+ 58
+ PLAYBACK SETTINGS
+ To Enter Playback Setting
+ 1. Press & Hold "M" button two times to enter Playback Mode.
+ 2. Press "M" button ONCE to enter Play Settings.
+ 3. Press "D" button to access Play settings.
+ 4. Now use "U" or "D" buttons to scroll through > then press
+ " O" button to enter particular setting > then press "O" button
+ again to confirm that setting and exit to Play setting's menu.
+ DELETE
+ This menu will allow you to delete the current video or Delete All.
+• Delete Current (Delete current video file on LCD)
+• Delete All (CAUTION: This will Delete Entire Video & Photos
+ from memory card - Except the protected files)
+ NOTE
+ To delete a locked or protected video, you need to unlock it first by going
+ to the Playback Settings>Protect.
+
+ PROTECT
+This feature will allow you to make desired changes to saved
+video & photo files on the memory card.
+• Lock Current • Unlock Current • Lock All • Unlock All
+
+59
+ USER MANUAL
+
+SYSTEM SETTINGS
+
+ WIFI
+This feature will allow you to turn the WiFi broadcast ON from
+the camera so you can connect your phone with ROVE R2-4K
+Dash Cam to access videos, photos, and settings.
+• OFF
+• ON - Once (WiFi will turn off at restart)
+• Always On (WiFi will always stay on even after restart in the background)
+
+ WiFi Name SSID ROVE R2-4K-*********
+ Password 12345678
+You can also turn WiFi ON by pressing & holding button for
+2 seconds.
+(To View/Save Video Files to your Phone via WiFi See Page 32)
+
+ FORMAT
+This feature will allow you to format an inserted memory card, all
+the data will be deleted.
+• Cancel
+• Format
+
+ 60
+ DATE / TIME
+Here you can choose the date and time of your choice manually.
+ NOTE
+ The GPS Time Zone will be automatically set to OFF if you manually set the
+ date and time.
+
+ DATE FORMAT
+This feature allows you to select the date format.
+• MM/DD/YY (Default)
+• DD/MM/YY
+• YY/MM/DD
+
+ TIME FORMAT
+This feature allows you to choose the clock time format to 12 or 24 hours.
+• 12-Hours (Default)
+• 24-Hours
+
+ GPS TIME ZONE SETTING
+Here you can choose your desired or local time zone setting based
+on UTC/ GMT value. Please make sure to adjust the time zone
+setting during standard vs. daylight savings time.
+• OFF (Default)
+• UTC/GMT -12:00 to UTC/GMT +12:00
+
+To find your correct UTC/GMT time zone setting, please visit :
+https://greenwichmeantime.com/time-zone/usa/ (See page 31)
+
+61
+ USER MANUAL
+
+ 5. SCREEN SAVER SETTING
+Live Video Always ON: This will keep the video LCD ON all the time.
+Screen Saver ON After 1-Min: This will turn ON the screen saver as
+shown in the photo below after 1-min if NO button is pressed.
+LCD OFF After 1-Min: This will only turn OFF the LCD after 1-min if
+NO button is pressed (NOTE only the LCD Will turn OFF, the camera
+still be operational)
+
+ SCREEN SAVER
+
+ 5. SCREEN BRIGHTNESS
+
+This menu will allow you to set the screen brightness.
+• High
+• Medium (Default)
+• Low (Recommended to Prevent Heating)
+
+ BEEP SOUND
+This feature allows you to turn ON/OFF camera button’s beep
+sound & any voice confirmation.
+• OFF
+• ON (Default)
+
+ 62
+ SPEAKER VOLUME
+ This feature allows you to set the volume level for the button’s beep
+ volume, playback video volume, and boot up chime volume through
+ the camera's internal built-in speaker.
+ • Low
+ • Med
+ • High (Default)
+ • OFF
+ VOICE GUIDANCE
+Voice guidance is the female voice feedback you receive on your
+camera. If you prefer to not receive voice feedback, you can set this
+feature to OFF.
+• OFF
+• ON (Default)
+ CAUTION:
+ ROVE R2-4K has an important failsafe voice feedback if the camera is not
+ recording the video when it is turned ON and sitting idle. Therefore the
+ camera will remind you every 30 seconds that it is NOT recording the
+ video. If you hear this feedback, then you should check and investigate to
+ see why your camera is NOT recording the video. This prevents the missed
+ video on an accident when you need the most because your memory card
+ can fail after a certain life cycle and if you don’t check daily, you could
+ possibly not know that the camera was only turned ON but was not
+ recording the video. Therefore to avoid this failure, we strongly suggest
+ that you keep the Voice Guidance turned ON.
+
+ WIFI VOICE GUIDANCE
+ROVE dash cams are equipped with a WiFi feature that can stay ON at
+all times. Additionally, there is a voice guidance function that notifies
+users when the WiFi is connected or disconnected. However, some
+users find this voice guidance to be annoying. By turning OFF this
+
+63
+ USER MANUAL
+feature, you will only disable the voice guidance for WiFi connection
+and disconnection, while all other voice guidance functions will
+remain unaffected.
+• OFF
+• ON
+
+ BOOT UP TONE
+This feature allows you to choose the camera's boot-up chime to
+be set to ON/OFF.
+• OFF
+• ON (Default)
+
+ TV MODE
+Here you can choose your TV mode based on your country’s TV setting.
+•NTSC (Default)
+•PAL
+ LICENSE PLATE
+This feature will allow you to insert a custom vehicle ID or Driver
+ID to be stamped on video.
+• Use UP /D button to select desired character.
+• To add more characters' press "M"button to switch to next character.
+
+• When Done press OK button to confirm & exit.
+
+ FREQUENCY
+Here you should choose the frequency accordingly to your power
+supply specification used in your country based on your
+geographical location.
+• 60 Hz (USA – North America)
+• 50 Hz (Europe – Most Asian Countries)
+
+ 64
+ GPS Info
+ N42o 50’ 15” W88o 54’ 10”
+ Number 0 Time 13:24:04
+ Speed 0 Logitude 0.000
+ Direction 0 Latitude 0.000
+
+ 0 0 0 0 0 0 0 0 0 0 0 0
+
+ This feature allows you to see your current geographical location
+ in Latitude & Longitude.
+ N42o 50’ 15” W88o 54’ 10”
+ Number 0 Time 13:24:04
+ Speed 0 Logitude 0.000
+ Direction 0 Latitude 0.000
+
+ 0 0 0 0 0 0 0 0 0 0 0 0
+
+ GPS FORMAT
+ Here you can choose the GPS format as Decimal or Degrees,
+ Minutes, Seconds.
+ • Decimal Degrees • Degrees, Minutes, Seconds
+
+ LED STATUS INDICATOR
+ This feature allows you to choose the camera's LED status
+ indicator to be set to ON/OFF.
+ • OFF
+ • ON (Default)
+
+ STORAGE SPACE
+ This feature will allow you to check the storage of inserted
+ memory card into the camera.
+ • Total: (Memory Card Capacity)
+ • Free: (Free Space in memory card)
+ • Event: (Occupied space from Locked/Protected Video Files)
+ • Movie: (Occupied space from normal video files)
+ • Picture: (Occupied space from photo images)
+
+65
+ USER MANUAL
+
+ DEFAULT SETTINGS
+Here you can restore all the settings to the factory default settings.
+•Cancel
+•OK
+
+ CUSTOMER CARE
+
+ CUSTOMER SERVICE
+
+ Hours: Mon - Fri 9am-5pm PST
+
+ EMAIL US help@rovedashcam.com
+
+ For faster response text us
+ TEXT US 1 (401) 484-ROVE(7683)
+
+ LEGAL
+Copyright 2024, All rights are reserved by ROVE.
+
+FCC ID: 2A3IW-R2-4K IC: 30265-R24K
+This device complies with part 15 of the FCC rules. Operation is
+subject to the following two conditions.
+1 This device may not cause harmful interference, and
+2 This device must accept any interference received, including
+ interference that may cause undesired operation.
+
+ 66
+ SYSTEM INFORMATION
+ Here you can check the current firmware version installed on
+ your camera. You will need this information in the future to check
+ if a newer version of firmware is available.
+ Please visit: www.rovedashcam.com For the latest firmware
+ upgrade instructions. Firmware updates are provided for R2-4K
+ using iOS or Android APP. (See page 12)
+
+ RESETTING THE CAMERA
+ Resetting Hardware & Software are two different things.
+ 1. Reset The Hardware/Camera:
+ Press the RESET Button at the bottom of the camera once. If the
+ camera is freezing or stuck where no buttons will respond, then
+ please press the RESET button only ONCE at the bottom of the
+ camera with a paper clip or tip of the pen while it is turned ON.
+ This will restart the camera.
+
+ 2. Setting Firmware/Camera to the default settings:
+ If you get stuck with any settings and if you would like the
+ camera's all settings to be set back to the factory default settings,
+ then simply go to System Settings > and then scroll down until
+ you see the DEFAULT settings then set them to default settings to
+ reset all the settings.
+
+67
+ USER MANUAL
+
+GPS player Software Installation (PC/MAC Only)
+(Only suitable for the units with GPS function)
+To download FREE GPS Player, visit www.rovedashcam.com
+Why GPS Player? What are the features?
+ Check G-Sensor data
+ Play back your recorded videos
+ To see the Exact GPS route with the video on google maps
+ Check driving speed
+ Check driving direction (i.e. N, S, NW, SE, etc.)
+
+Using the GPS Player
+ Please open the customized video player and install it for the
+ first time use.
+ Click to browse on your added drive and select the video file
+ that you prefer to play in the player.
+
+ 68
+ 1 Date & Time
+ Shows Date & Time of video was recorded
+ 2 Past Viewed Files
+ These are you previously viewed files. Click on to view them again.
+ 3 Driving Speed
+ This is where your driving speed will be displayed.
+ 4 Playback Controls
+ • Reverse
+ • Play
+ • Stop
+ • Fast Forward
+ 5 GPS Coordinates
+ These are you coordinates longitude and latitude recorded by GPS Geo
+ Tagging Device.
+ 6 Playback Time
+ This is where your video play back time is shown.
+ 7 Volume Control
+ Slide Right or Left to Increase or Decrease Volume
+ 8 G-Sensor Indicator
+ This is where you can measure camera movement that is caused and recorded
+ by G-sensor force. I.e. when vehicle hits pot-hole or bump you can see it here.
+ 9 Vehicle Speed
+ Speed of vehicle recorded at specific point of time.
+ 10 Map Location
+ Maps showing vehicle’s driving route recorded by GPS Geo
+ Tagging Device based on coordinates.
+ 11 Vechile Direction
+ Direction at vehicle was driving at specific point of time.
+
+69
+ USER MANUAL
+
+ONE-YEAR LIMITED WARRANTY
+We at would like to provide One (1) full year of limited
+warranty for your product from the date of purchase to be free
+from defects in materials and craftsmanship.
+IMPORTANT: Please save your warranty/serial number card as a
+piece of evidence. Proof of original purchase is required for any
+warranty service. (Online order receipt is also accepted)
+Warranty Terms Conditions
+1. The warranty is confined to the first purchaser of the product and
+ is not transferable.
+2. Service / Repairs during the warranty period shall be carried out
+ by company-authorized personal only.
+3. It is the responsibility of the purchaser to bring the product to the
+ authorized service center at the purchaser's cost and risk.
+4. The company will not be liable for any hardware and/or data loss
+ arising from the use of any third-party software whether
+ downloaded or otherwise.
+5. In the event of repairs and/or replacement of any part(s) of the
+ product, this warranty will remain in force only for the unexpired
+ period of the warranty.
+6. In case of any physical damage to the product and/or misuse
+ detected by the Authorized service center personal, the warranty
+ be void and service/repairs will be done on a chargeable basis
+ only and subject to the availability of parts.
+7. The company's obligation under this warranty shall be limited to
+ repair or providing replacement of part(s) only. The maximum
+ claim(s) if entertained by the company will be subject to the
+ maximum retail price of the product purchased or the purchase price,
+ whichever is lower, and on production of original proof of purchase.
+ During the warranty period in the event of any unforeseen
+ circumstances where spares not available a commercial solution in
+
+ 70
+ lieu of repairs will be calculated based on company's prevailing
+ depreciation rules and the same will be binding on the purchaser.
+ The replacement unit will be either new or refurbished based on the
+ availability. We reserve the right to even upgrade you to the newest
+ version be it similar or not if we have discontinued the current model.
+ LIMITATIONS / DISCLAIMER OF WARRANTY / LIABILITY
+1. The company shall not be liable/responsible directly or indirectly
+ for any claim for compensations, damages, any losses, etc. Under
+ this "Limited Warranty" due to inconvenience, loss of time, loss of
+ profits, loss of business opportunity, loss of data, loss of goodwill,
+ work stoppage, any personal and/or commercial loss,
+ compensation for mental agony, anxiety, etc. Resulting from
+ the use of the product(s) or any direct or indirect loss of any
+ nature whatsoever (incl. any personal injury or death).
+2. Except for the warranties set forth herein, of the company
+ disclaims all other warranties, expressed or implied or
+ statutory, including but not limited to the implied warranties
+ of merchantability or fitness for a particular purpose.
+3. The maximum liability of the company under any circumstances
+ shall be limited to an amount equal to the invoice amount paid by
+ the purchaser to the company or a company-authorized reseller
+ for the Product(s).
+4. Company shall not be liable directly or indirectly for any
+ claim for compensation if the Product has been exposed to
+ moisture and/or dampness and/or extreme thermal and/or
+ extreme environmental conditions or to rapid changes in such
+ conditions, to corrosion, to oxidation, to spillage of food or
+ liquid or to influence from external chemical products.
+5. (hereinafter referred to as "the company") guarantees to
+ the purchaser that this product carries a warranty for the period
+ mentioned above, commencing from the date of purchase.
+
+71
+ USER MANUAL
+
+ SAFETY & LEGAL ASPECTS:
+All rights are reserved. Duplication, transfer, distribution of the
+contents herein in any manner without the prior written permission
+of is prohibited. reserves the right to add, modify or
+delete, any of the contents herein or withdraw this documents at any
+time without prior notice and without assigning any reasons thereof.
+For detailed terms and conditions refer www.rovedashcam.com
+• Please check your local or state laws before using in car recording
+ device. It is user's responsibility to comply with all local and state laws.
+• Dash Cam must be placed at proper location so it
+ does not obstruct your view while driving.
+• Do not use or manipulate any functions or any accessories of ROVE
+ Dash Cam while driving. Distraction is a leading cause of accidents.
+• The images and icons displayed in this user manual are intended for
+ illustrative purposes only. They are not real examples captured by
+ the ROVE dash cam. The purpose of these visuals is to provide a
+ visual representation of the features, functions, and user interface of
+ the product.
+FCC ID: 2A3IW-R2-4K IC: 30265-R24K
+This device complies with part 15 of the FCC rules. Operation is
+subject to the following two conditions.
+1 This device many not cause harmful interference, and
+2 This device must accept any interference received, including
+ interference that may cause undesired operation.
+
+ Copyright 2024, All rights are reserved by ROVE.
+
+ 72
+ FCC STATEMENT:
+ This device complies with part 15 of the FCC Rules. Operation is
+ subject to the following two conditions:
+ 1 This device may not cause harmful interference, and
+
+ 2 This device must accept any interference received, including
+ interference that may cause undesired operation.
+ This equipment has been tested and found to comply with the limits
+ for a Class B digital device, pursuant to part 15 of the FCC Rules.
+ These limits are designed to provide reasonable protection against
+ harmful interference in a residential installation. This equipment
+ generates, uses and can radiate radio frequency energy and, if not
+ installed and used in accordance with the instructions, may cause
+ harmful interference to radio communications. However, there is no
+ guarantee that interference will not occur in a particular installation.
+ If this equipment does cause harmful interference to radio or
+ television reception, which can be determined by turning the
+ equipment off and on, the user is encouraged to try to correct the
+ interference by one or more of the following measures:
+• Reorient or relocate the receiving antenna.
+• Increase the separation between the equipment and receiver.
+• Connect the equipment into an outlet on a circuit different from that to
+ which the receiver is connected.
+• Consult the dealer or an experienced radio/TV technician for help.
+
+ CAUTION:
+ Any changes or modifications not expressly approved by the party responsible
+ for compliance could void the user's authority to operate the equipment. This
+ equipment complies with FCC radiation exposure limits set forth for an
+ uncontrolled environm ent. This transmitter must not be co-located or
+ operating in conjunction with any other antenna or transmitter.
+
+73
+ USER MANUAL
+
+IC STATEMENT:
+This device complies with Industry Canada’s licence‐exempt RSSs.
+Operation is subject to the following two conditions:
+1 This device may not cause interference; and
+2 This device must accept any interference, including interference
+ that may cause undesired operation of the device.
+Le présent appareil est conforme aux CNR d'Industrie Canada
+applicables aux appareils radio exempts de licence. L'exploitation
+est autorisée aux deux conditions suivantes : (1) l'appareil ne doit
+pas produire de brouillage, et (2) l'utilisateur de l'appareil doit
+accepter tout brouillage radioélectrique subi, même si le brouillage
+est susceptible d'en compromettre le fonctionnement.
+ AGREEMENTS
+By purchasing ROVE Dash Cam, you hereby agree with all the
+terms and conditions of warranty, warnings and precautions. If
+for any reason you do not agree with these terms, you may return
+the product in its original packaging unused within its return
+window for a full refund.
+
+ 74
+ TROUBLESHOOTING YOUR ROVE™ R2-4K
+ Camera does not turn ON
+ 1 Use the diﬀerent Included USB Cable & your smart phone’s USB charger.
+ Now plug it into your home’s 110V wall outlet.
+ 2 When you plug it in, the camera should turn ON. If NOT, then press the
+ Power Button Once to see if it turns ON? If it still does NOT turn ON, then
+ remove the memory card.
+ 3 Keep the camera plugged in. Now Press the RESET button (Located at the
+ bottom) ONCE with a pen’s tip or a paper clip. Now the camera should turn
+ ON. If it still doesn’t turn ON, then please CONTACT US.
+ Error/Message “Card Full”
+ Format card by going into system settings > format > 0K > Select Format > 0K.
+ Then Go to Video Mode settings > Loop Recording > Choose either I-min,
+ 3-min, 5-min, 10-min. This will allow loop cycle function to be turn ON and it
+ will keep recording over and over.
+ NOTE Formatting will delete all the data from the memory card.
+
+ Camera Freezing/Lagging or Crashing.
+ Guys Please TRUST US on this. If your camera is freezing, lagging or does NOT
+ record video after some seconds etc. while operating: Then it is the Memory
+ Card Issue. Either you are using the WRONG, FAKE or BAD Memory Card.
+ (Please be aware of the Fake Ones out there. If you have purchased your
+ memory card from eBay or any third party seller online then it is most likely a
+ fake one, even though it looks exactly real. Please trust us. We have sold
+ thousands of ROVE Dash Camera’s and they do NOT lag, we stand by our
+ product and we do extensive testing. Some customers simply thinks the
+ camera is bad or not stable, but that is NOT the case here. It’s the Memory Card
+ Issue.isPlease
+ Video fuzzy CONTACT US and we are dedicated in resolving this for you ASAP.
+ Video is fuzzy
+ Please make sure the lens of the camera is clean and there is no dirt or grease
+ on the windshield also. If the lens is out of focus, we are extremely sorry in
+ advance. This can be a manufacturing defect. Please send us an email with a
+ screenshot or a sample video so we can get this resolved for you ASAP.
+
+75
+ USER MANUAL
+
+Camera gets HOT
+ It is normal for your camera to run slightly hot. (Please see temperature
+ guidelines on page 12)
+ Camera turns ON / OFF frequently automatically.
+Please reset your camera. Try updating the firmware again to see if this fixes the
+issue. If still having issue, please reach out to customer care.
+ My oldest video files are missing
+Your ROVE Dash Cam has Loop Cycle Recording. When it is set to either 1, 3, 5 or
+10-mins, it will delete oldest files and record newer files over and over when
+the memory card is full.
+To test again: Set the date and time correctly, then FORMAT the memory card,
+then do the continuous recording test again and check if all videos are present.
+Camera Locks many videos automatically.
+Please change your G-Sensor Setting to higher setting. This setting depends
+on type of car or truck you are driving and how much vibration your
+car/truck is creating based on suspensions and road condition.
+microSD Card is crooked or not going in slot easy
+Please make sure you align microSD card correctly with gold contacts facing
+towards the Lens. (See Page 28)
+My Video playback on PC is lagging.
+You are viewing high-bit rate version of video files. Slower PC may have problem
+with faster data processing. Please record videos at lower resolution and try
+again. Contact us if problem still persists.
+
+ 76
+ Camera showing "Memory Card Error" or "Please Insert microSD Card"
+ even though memory card is already installed into the camera.
+ 1 Please make sure memory card is at least Class 10, U3 and purchased from
+ trusted vendor such as Walmart, target, best buy, Ship & Sold by Amazon etc.
+ (there are many fake cards out there Online, remember if it's cheap, its fake.)
+ 2 Now go to camera's system settings and FORMAT your memory card.
+ (make sure to backup your videos first before formatting the memory
+ card.) After formatting memory card, please press and hold power button
+ to turn the camera oﬀ. Now unplug power cable, and re-plug the power
+ cable, camera should now turn ON automatically and start recording.
+ 3 If you still getting the same error, then let’s switch the camera mode to
+ PHOTO mode by pressing and holding the MENU button. Once in the
+ PHOTO MODE, press OK button to take the photo.
+ -> If you hear the shutter sound > then your camera is fine. Replace your
+ memory card.
+ -> If you still get the same memory card error message, then your camera’s
+ memory card assembly has become defective. Please contact us.
+
+ My date and time is not staying the same even after I set date and time.
+ Please go to camera's system settings > Time Zone Setting > Set your correct GMT
+ value > OK to confirm. That’s it. Now wait until you get GPS signal LOCK and then
+ every-time you have GPS signal, you will always have correct date and time.
+
+ Please visit "https://greenwichmeantime.com/time-zone/usa/" to find
+ your correct GMT time zone based on your location. (See details on Page. 31)
+
+ Still Need Help or Have Questions?
+Please feel free to contact our personalized support at
+help@rovedashcam.com. Most e-mails are typically replied
+within 4-6 hours during normal business hours. However, all
+questions are answered within 24 Hours. No Exceptions !! For
+customer service PHONE SUPPORT number please visit:
+https://www.rovedashcam.com
+
+77
+ USER MANUAL
+
+ A BIG THANK YOU!!
+
+Thank you for purchasing your new . Dash Cam. We
+hope you find your new dash cam useful and fun to use.
+
+If you are having difficulties setting it up, please email us at
+help@rovedashcam.com. 99% of all setup problems can easily be
+resolved and should be able to get you up and running in no time.
+
+In the unlikely event that we can't help, we're always happy to
+provide full, hassle-free refund. We just want our customer to be
+happy and proud to use Dash Cam!
+
+There is no perfect product, however we will always do our best
+to provide perfect customer service to you.
+
+A Great care was taken while creating this user manual. It is
+possible that there are minor typos are there. If you find any
+mistakes or suggestions, please do let us know so we can correct
+it. Please visit our website for latest and updated user manual if
+available. We also frequently update other great contents that is
+very useful to our customers.
+
+Camera upgrades, firmware, box contents can be changed without
+notice. Always see up to date information by visiting our website.
+
+ 78
+ QUESTIONS
+ CUSTOMER SERVICE:
+ For faster response text us Response in just 6 hours
+ 1 (401) 484-ROVE(7683) help@rovedashcam.com
+
+ HOURS
+ Mon - Fri 9am-5pm PST
+
+ Scan the QR Code to
+ CONTACT US
+
+ Scan to Text US: Scan to Email US:
+ 1-401-484-7683 help@rovedashcam.com
+
+ FCC ID: 2A3IW-R2-4K IC: 30265-R24K
+This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions. (1) This device may not cause harmful
+interference, and (2) this device must accept any interference received, including interference that may cause undesired operation.
+Apple logo, iPhone Model & App Store are trademarks of Apple Inc., Google logo and Google Play are trademarks of Google Inc.

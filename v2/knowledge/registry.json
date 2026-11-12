@@ -1,0 +1,46 @@
+{
+  "_about": "Rove camera models the agent supports, which source documents describe each one, and the names people use for them. Source paths are relative to the repo root.",
+  "models": {
+    "R2-4K": {
+      "display_name": "ROVE R2-4K (original, mini-USB power)",
+      "aliases": ["r2", "r2 4k", "r2-4k", "original r2", "old r2", "mydash r2-4k"],
+      "sources": ["data/text/manuals/dc3831.txt"]
+    },
+    "R2-4K-USB-C": {
+      "display_name": "ROVE R2-4K (newer, USB-C power)",
+      "aliases": ["new r2", "new r2-4k", "r2-4k usb-c", "r2 usb c"],
+      "sources": [
+        "data/text/manuals/User Manual For New R2-4K.txt",
+        "data/text/manuals/ROVE R2-4K User Manual.txt"
+      ]
+    },
+    "R2-4K-PRO": {
+      "display_name": "ROVE R2-4K PRO",
+      "aliases": ["r2 pro", "r2-4k pro", "r2 4k pro"],
+      "sources": ["data/raw/manuals-tier3/ROVE_R2-4K_PRO_User_Manual_ManualsLib-mirror.pdf"],
+      "source_note": "Only a third-party mirror of this manual is available; treat specifics with care."
+    },
+    "R2-4K-DUAL": {
+      "display_name": "ROVE R2-4K DUAL (front + rear)",
+      "aliases": ["r2 dual", "r2-4k dual", "dual"],
+      "sources": ["data/text/manuals/ROVE R2-4K Dual Dash Cam Instruction Manual.txt"]
+    },
+    "R2-4K-DUAL-PRO": {
+      "display_name": "ROVE R2-4K DUAL PRO (front + rear)",
+      "aliases": ["dual pro", "r2 dual pro", "r2-4k dual pro"],
+      "sources": [
+        "data/text/manuals/ROVE-R2-4K-DUAL-PRO.txt",
+        "data/text/manuals/B0F9SX3JB9.txt"
+      ]
+    },
+    "R3": {
+      "display_name": "ROVE R3 (3-channel, touchscreen)",
+      "aliases": ["r3", "rove r3", "three channel", "3 channel"],
+      "sources": ["data/text/manuals/r3-manual-website-files.txt"]
+    }
+  },
+  "general_sources": [
+    "data/raw/help-center/*.html",
+    "data/raw/official/*.html"
+  ]
+}

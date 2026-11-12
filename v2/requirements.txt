@@ -1,0 +1,25 @@
+# Rove support agent v2 — pinned versions that the test suite passed with (2026-11-12).
+boto3==1.40.61
+botocore==1.40.61
+fastapi==0.162.4
+uvicorn==0.54.0
+pydantic==2.14.3
+httpx==0.28.1
+amazon-transcribe==0.6.4
+numpy==2.5.4
+# Knowledge pipeline (offline)
+pypdf==7.0.1
+beautifulsoup4==4.15.0
+# LiveKit voice worker
+livekit==1.1.21
+livekit-api==1.2.2
+livekit-agents==1.3.5
+livekit-plugins-aws==1.3.5
+livekit-plugins-silero==1.3.5
+# livekit-agents 1.3.5 breaks with OpenTelemetry >= 1.38 (ImportError: LogData)
+opentelemetry-api==1.37.0
+opentelemetry-sdk==1.37.0
+# Tests
+pytest==9.2.0
+# Only for the head-to-head evaluation against the old system (eval/head_to_head.py)
+langgraph==1.2.20
