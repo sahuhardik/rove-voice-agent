@@ -1,5 +1,7 @@
 # Rove Voice Troubleshooting Agent: Complete Project Context (v1 and v2)
 
+> **Layout note (2026-11-12).** The repo root is now v2. The v1 application lives in `v1/`; file paths in Parts A-D refer to v1 and are relative to `v1/` (corpus in `data/raw`, `data/text` is shared at the repo root). Paths in Parts E and E+ are relative to the repo root (formerly `v2/`).
+>
 > **Purpose.** This is the single self-contained context file for the project. It is written so an LLM (or a new engineer) can answer detailed questions about the product, data, architecture, components, decisions, problems, fixes, evaluation results and the v1 to v2 change **without reading the repository**. It was compiled on 2026-11-12 from every Markdown document and the source code in the repo (`sahuhardik/rove-voice-agent`, branch `main`).
 >
 > **How to use it as LLM context.** Read Part 0 first (map and cross-cutting summary). Then jump to the part you need. Every part has numbered headings (`A.x`, `B.x` ...) so you can cite them. Where two source documents disagree, the disagreement is stated explicitly rather than smoothed over. Where something was never measured or never run, the text says so.
